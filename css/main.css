@@ -1,3 +1,9 @@
+* {
+  cursor: url("https://deerblog.xyz/blog-image/Arrow.cur"), auto;
+}
+:link {
+  cursor: url("https://deerblog.xyz/blog-image/Hand.cur"), auto;
+}
 :root {
   --body-bg-color: #eee;
   --content-bg-color: #fff;
@@ -2526,6 +2532,24 @@ mark.search-keyword {
   color: #ff2a2a;
   font-weight: bold;
 }
+.popular-posts-header {
+  border-bottom: 1px solid #eee;
+  font-size: 1.125em;
+  margin-bottom: 10px;
+  margin-top: 60px;
+}
+.popular-posts {
+  padding: 0;
+}
+.popular-posts .popular-posts-item {
+  margin-left: 2em;
+}
+.popular-posts .popular-posts-item .popular-posts-title {
+  font-size: 0.875em;
+  font-weight: normal;
+  line-height: 2.4;
+  margin: 0;
+}
 .use-motion .animated {
   animation-fill-mode: none;
   visibility: inherit;
@@ -2535,7 +2559,7 @@ mark.search-keyword {
 }
 .header-inner {
   background: var(--content-bg-color);
-  border-radius: 0 0 3px 3px;
+  border-radius: 25px 25px 25px 25px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   width: 240px;
 }
@@ -2569,7 +2593,7 @@ mark.search-keyword {
   }
 }
 .main-inner {
-  border-radius: 0 0 3px 3px;
+  border-radius: 25px 25px 25px 25px;
   box-sizing: border-box;
   width: calc(100% - 252px);
 }
@@ -2766,7 +2790,7 @@ mark.search-keyword {
 .main-inner > .comments,
 .main-inner > .pagination {
   background: var(--content-bg-color);
-  border-radius: 0 0 3px 3px;
+  border-radius: 25px 25px 25px 25px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 .main-inner > .sub-menu:not(:first-child):not(.sub-menu),
