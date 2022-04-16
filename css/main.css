@@ -2878,4 +2878,29 @@ body {
   -o-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
+  opacity: 0.88;
+}
+.site-brand-container {
+  border-radius: 25px 25px 0 0;
+}
+.header-inner {
+  margin-top: 30px;
+}
+.sidebar {
+  margin-top: 30px;
+  transition-duration: 0.4s;
+}
+.posts-expand .post-title-link {
+  color: #222;
+}
+.post-block {
+  background: #fff;
+  border-radius: initial;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+#waline-comments {
+  margin-left: 30px;
 }
