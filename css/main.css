@@ -1,9 +1,3 @@
-* {
-  cursor: url("https://deerblog.xyz/blog-image/Arrow.cur"), auto;
-}
-:link {
-  cursor: url("https://deerblog.xyz/blog-image/Hand.cur"), auto;
-}
 :root {
   --body-bg-color: #eee;
   --content-bg-color: #fff;
@@ -1590,6 +1584,7 @@ pre code {
   color: #f00;
   display: inline-block;
   margin: 0 5px;
+  animation: icon-animate 1.33s ease-in-out infinite;
 }
 .busuanzi-count #busuanzi_container_site_uv {
   display: none;
@@ -2865,4 +2860,22 @@ mark.search-keyword {
   .comments {
     padding: 10px 12px;
   }
+}
+/* 鼠标样式 */
+* {
+  cursor: url("https://deerblog.xyz/blog-image/Arrow.cur"), auto;
+}
+:link {
+  cursor: url("https://deerblog.xyz/blog-image/Hand.cur"), auto;
+}
+body {
+  background: url("https://api.ixiaowai.cn/api/api.php");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
 }
