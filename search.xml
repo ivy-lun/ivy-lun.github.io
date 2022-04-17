@@ -715,4 +715,37 @@
         <tag>Blog</tag>
       </tags>
   </entry>
+  <entry>
+    <title>八、进程的状态与转换</title>
+    <url>/2022/04/17/%E5%85%AB%E3%80%81%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<h4 id="1-进程的基本状态"><a href="#1-进程的基本状态" class="headerlink" title="1.进程的基本状态"></a>1.进程的基本状态</h4><p><strong>三种基本状态：</strong></p>
+<ol>
+<li><strong>运行态</strong>：占有cpu，并在cpu上运行</li>
+<li><strong>就绪态</strong>：已具备运行条件，但没有空闲CPU而暂时不能运行</li>
+<li><strong>阻塞态（或称等待态）</strong>：因等待某一事件而暂时不能执行</li>
+</ol>
+<span id="more"></span>
+
+<blockquote>
+<p>运行态：在单核处理及环境，每一时刻最多只能有一个进程处于运行态（双核环境下最多可以同时拥有两个进程处于运行态）</p>
+<p>就绪态：进程已经拥有了除处理及之外所有需要的资源，一旦获得处理机即可立即进入运行态开始运行。（万事俱备，只欠CPU）</p>
+<p>阻塞态：如：等待操作系统扽配打印机，等待读取磁盘操作的结果。为了提高CPU利用率，需要先将其他进程需要的资源分配到位，才能得到CPU的服务。</p>
+</blockquote>
+<p><strong>另外的两种状态：</strong></p>
+<p>进程运行结束（或者由于BUG导致进程无法继续下去，如数组越界）需要撤销进程，操作系统需要完成撤销进程的相关操作，完成将分配给进程的资源回收，撤销进程的PCB等操作。</p>
+<ol>
+<li><strong>创建态</strong>（新建态）：进程正在被创建，操作系统为其分配资源、创建PCB</li>
+<li><strong>终止态</strong>（结束态）：进程正在从系统中撤销，操作系统会回收分配给进程的资源，撤销其PCB</li>
+</ol>
+<h4 id="2-进程的状态转换"><a href="#2-进程的状态转换" class="headerlink" title="2.进程的状态转换"></a>2.进程的状态转换</h4><p><a href="https://imgtu.com/i/La3vzd"><img src="https://s1.ax1x.com/2022/04/18/La3vzd.png" alt="La3vzd.png"></a></p>
+<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p>绿框知识重要</p>
+<p><a href="https://imgtu.com/i/La8kFS"><img src="https://s1.ax1x.com/2022/04/18/La8kFS.png" alt="La8kFS.png"></a></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
 </search>
