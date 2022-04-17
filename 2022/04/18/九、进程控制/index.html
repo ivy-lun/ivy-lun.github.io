@@ -23,25 +23,36 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="算是半个有趣的人。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小魚の干物">
-<meta property="og:url" content="http://example.com/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%AC%94%E8%AE%B0/index.html">
+    <meta name="description" content="1.什么是进程控制进程控制的主要功能是对系统中的所有进程实施有效的管理，它具有创建进程，撤销进程，实现进程间的状态转换等功能。简而言之，进程控制就是要时间进程状态的转换。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="九、进程控制">
+<meta property="og:url" content="http://example.com/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/index.html">
 <meta property="og:site_name" content="小魚の干物">
-<meta property="og:description" content="算是半个有趣的人。">
+<meta property="og:description" content="1.什么是进程控制进程控制的主要功能是对系统中的所有进程实施有效的管理，它具有创建进程，撤销进程，实现进程间的状态转换等功能。简而言之，进程控制就是要时间进程状态的转换。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/18/LaGOvd.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/18/LaY3Y8.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/18/LatY4K.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/18/LatN9O.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/18/LatdjH.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/18/LatDHI.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/18/LatoEq.png">
+<meta property="article:published_time" content="2022-04-17T16:39:23.000Z">
+<meta property="article:modified_time" content="2022-04-17T17:44:53.944Z">
 <meta property="article:author" content="樱花换小鱼干">
+<meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/04/18/LaGOvd.png">
 
 
-<link rel="canonical" href="http://example.com/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="http://example.com/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/杂七杂八的笔记/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/","path":"2022/04/18/九、进程控制/","title":"九、进程控制"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类: 杂七杂八的笔记 | 小魚の干物</title>
+<title>九、进程控制 | 小魚の干物</title>
   
 
 
@@ -130,7 +141,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -143,6 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="nav-text">1.什么是进程控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="nav-text">2.如何实现进程控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6%E7%9B%B8%E5%85%B3%E5%8E%9F%E8%AF%AD"><span class="nav-text">3.进程控制相关原语</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE"><span class="nav-text">4.知识回顾</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -207,51 +219,170 @@
 </noscript>
 
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">杂七杂八的笔记
-          <small>分类</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xiaoyugan.png">
+      <meta itemprop="name" content="樱花换小鱼干">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小魚の干物">
+      <meta itemprop="description" content="算是半个有趣的人。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="九、进程控制 | 小魚の干物">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          九、进程控制
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2022-04-18 00:39:23 / 修改时间：01:44:53" itemprop="dateCreated datePublished" datetime="2022-04-18T00:39:23+08:00">2022-04-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/" data-xid="/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>452</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h4 id="1-什么是进程控制"><a href="#1-什么是进程控制" class="headerlink" title="1.什么是进程控制"></a>1.什么是进程控制</h4><p>进程控制的主要功能是对系统中的所有进程实施有效的管理，它具有创建进程，撤销进程，实现进程间的状态转换等功能。简而言之，<strong>进程控制就是要时间进程状态的转换。</strong></p>
+<span id="more"></span>
+
+<h4 id="2-如何实现进程控制"><a href="#2-如何实现进程控制" class="headerlink" title="2.如何实现进程控制"></a>2.如何实现进程控制</h4><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LaGOvd"><img src="https://s1.ax1x.com/2022/04/18/LaGOvd.png" alt="LaGOvd.png"></a></p>
+<p>进程之间的状态切换中间都需要对PCB进行修改并且放入相应的队列中。假如说某一进程把PCB从某一队列放入另一个队列中，但PCB中状态标志并未被修改，这种情况会导致系统错误，因为PCB所处的队列与PCB中存储的状态标志位数据不一致。于是引入<strong>原语</strong>来实现进程控制。原语的特点是<strong>执行过程中不允许被中断。</strong>这种不可被中断的操作即<strong>原子操作</strong>。原语使用<strong>关中断指令</strong>和<strong>开中断指令</strong>实现。</p>
+<p>当原语开始执行时会先执行关中断指令，此时外部中断信号会被忽略。这样保证原语的操作不会被中断。当原语执行完毕后会执行开中断指令，这样外部中断信号又会被响应了，如下图：</p>
+<p><img src="https://s1.ax1x.com/2022/04/18/LaY3Y8.png" alt="LaY3Y8.png"></p>
+<p>由此可见，<strong>开/关中断指令的权限非常大，必须只允许在核心态下执行的 特权指令 。</strong></p>
+<h4 id="3-进程控制相关原语"><a href="#3-进程控制相关原语" class="headerlink" title="3.进程控制相关原语"></a>3.进程控制相关原语</h4><p>四种原语：</p>
+<ul>
+<li><strong>创建原语</strong></li>
+<li><strong>撤销原语</strong></li>
+<li><strong>阻塞原语</strong></li>
+<li><strong>唤醒原语</strong></li>
+<li><strong>切换原语</strong></li>
+</ul>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatY4K.png" alt="LatY4K.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatN9O.png" alt="LatN9O.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatdjH.png" alt="LatdjH.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatDHI.png" alt="LatDHI.png"></p>
+<hr>
+<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/18/LatoEq.png" alt="LatoEq.png"></p>
+<hr>
+<center>分割线</center>
+
+<hr>
+<p>这章疑问有点多，应该看看书。</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-04-09T11:49:01+08:00"
-              content="2022-04-09">
-          04-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/04/09/%C2%B7%20markdown%E7%AC%94%E8%AE%B0/" itemprop="url">
-            <span itemprop="name">markdown笔记</span>
-          </a>
-      </div>
-
+    
+    
+    
       
-    </header>
+
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag"><i class="fa fa-tag"></i> 操作系统</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/17/%E5%85%AB%E3%80%81%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E8%BD%AC%E6%8D%A2/" rel="prev" title="八、进程的状态与转换">
+                  <i class="fa fa-chevron-left"></i> 八、进程的状态与转换
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
 
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
 </div>
   </main>
 
@@ -332,7 +463,7 @@
 
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://waline-qmkdgwexn-ivy-lun.vercel.app/","placeholder":"请在评论时在上面留下昵称和邮箱哦😊","avatar":"robohash","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"avatarCDN":"https://sdn.geekzu.org/avatar/","meta":["nick","mail","link"],"requiredMeta":[],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%AC%94%E8%AE%B0/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://waline-qmkdgwexn-ivy-lun.vercel.app/","placeholder":"请在评论时在上面留下昵称和邮箱哦😊","avatar":"robohash","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"avatarCDN":"https://sdn.geekzu.org/avatar/","meta":["nick","mail","link"],"requiredMeta":[],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {
   NexT.utils.loadComments(CONFIG.waline.el).then(() => 
