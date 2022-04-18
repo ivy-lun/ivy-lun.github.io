@@ -789,4 +789,88 @@
         <tag>操作系统</tag>
       </tags>
   </entry>
+  <entry>
+    <title>一、启发式搜索</title>
+    <url>/2022/04/18/%E4%B8%80%E3%80%81%E5%90%AF%E5%8F%91%E5%BC%8F%E6%90%9C%E7%B4%A2/</url>
+    <content><![CDATA[<h4 id="1-人工智能中的搜索"><a href="#1-人工智能中的搜索" class="headerlink" title="1.人工智能中的搜索"></a>1.人工智能中的搜索</h4><p>在<strong>海量信息源</strong>中利用<strong>问题求解器</strong>，加上一定的<strong>约束条件</strong>和<strong>额外信息</strong>即可找到<strong>问题所对应的答案</strong>。</p>
+<span id="more"></span>
+
+<p><strong>1.寻找最短路径为例</strong></p>
+<p><a href="https://imgtu.com/i/LdFksH"><img src="https://s1.ax1x.com/2022/04/18/LdFksH.png" alt="LdFksH.png"></a></p>
+<p>寻找出路径最短，时间最少，价钱最经济的路径</p>
+<blockquote>
+<p>搜索算法的形式化描述：<strong>状态，动作，状态转移，路径，测试目标</strong>。</p>
+<p>状态：从原问题转化出的问题描述。</p>
+<p>动作：从当前时刻所处的状态转移到下一时刻所处状态所进行的操作。一般而言这些操作都是离散的。</p>
+<p>状态转移：对面某一时刻对应状态进行某一种操作后，所能够到达的状态。</p>
+<p>路径：一个状态序列。该状态序列被一系列操作所连接。</p>
+<p>测试目标：评估当前状态是否为所求解的目标状态。</p>
+</blockquote>
+<p><strong>2.搜索算法：启发式搜索（有信息搜索）</strong></p>
+<p>在搜索的过程中利用与所求解问题相关的辅助信息，其代表算法为<strong>贪婪最佳优先搜索</strong>和<strong>A*搜索</strong>。</p>
+<p>有信息搜索要定义如下辅助信息：</p>
+<p><a href="https://imgtu.com/i/LdAHRf"><img src="https://s1.ax1x.com/2022/04/18/LdAHRf.png" alt="LdAHRf.png"></a></p>
+<p>贪婪最佳优先搜索：<strong>评价函数f（n）=启发函数h（n）</strong></p>
+<p><a href="https://imgtu.com/i/LdEUYt"><img src="https://s1.ax1x.com/2022/04/18/LdEUYt.png" alt="LdEUYt.png"></a></p>
+<p>根据上图所知，从当前Arad出发，选择相邻的后续节点并找出其最短路径。上图找出的最短直线距离是：Arad→Sibiu→Fagaras→Bucharest。此为贪婪最佳优先算法。</p>
+<p>不足之处：</p>
+<p><a href="https://imgtu.com/i/LdZwqg"><img src="https://s1.ax1x.com/2022/04/18/LdZwqg.png" alt="LdZwqg.png"></a></p>
+<p>为了解决上述问题，提出了<strong>A*算法。</strong></p>
+<p><strong>3.搜索算法：A*搜索</strong></p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>人工智能</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十、进程通信</title>
+    <url>/2022/04/18/%E5%8D%81%E3%80%81%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/</url>
+    <content><![CDATA[<h4 id="1-什么是进程通信"><a href="#1-什么是进程通信" class="headerlink" title="1.什么是进程通信"></a>1.什么是进程通信</h4><p>进程通信是进程之间的信息交换。</p>
+<p>进程是分配系统资源的单位（包括内存地址空间），因此<strong>各进程拥有的内存地址空间相互独立</strong>。</p>
+<span id="more"></span>
+
+<p>为了保证安全，<strong>一个进程不允许直接访问另一个进程的地址空间。</strong>但是进程之间的信息交换又是必须实现的，为了保证进程间的安全通信，操作系统提供了一些方法。</p>
+<blockquote>
+<p>进程通信包括：<strong>共享存储，消息传递和管道通信</strong>。</p>
+</blockquote>
+<h4 id="2-共享存储"><a href="#2-共享存储" class="headerlink" title="2.共享存储"></a>2.共享存储</h4><p>操作系统为进程通信开辟了了共享的地址空间，两个进程对共享空间的<strong>访问</strong>必须是<strong>互斥</strong>的（互斥访问通过操作系统提供的工具实现，如P，V操作）。</p>
+<blockquote>
+<ul>
+<li><p><strong>基于数据结构的共享</strong></p>
+<p>比如空间里只能放一个长度为10的数组，这种共享方式速度慢、限制多，是一种<strong>低级通信</strong>方式。</p>
+</li>
+<li><p><strong>基于存储区的共享</strong></p>
+<p>在内存中画出一块共享存储区，数据的形式、存放位都由进程控制，而不是操作系统。相比之下，这种共享方式速度更快，是一种<strong>高级通信</strong>方式。</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="3-管道通信"><a href="#3-管道通信" class="headerlink" title="3.管道通信"></a>3.管道通信</h4><p><strong>管导通信基础</strong></p>
+<p><a href="https://imgtu.com/i/Lw8KTP"><img src="https://s1.ax1x.com/2022/04/18/Lw8KTP.png" alt="Lw8KTP.png"></a></p>
+<p><strong>管道通信的原理</strong></p>
+<p><a href="https://imgtu.com/i/Lw8Jyj"><img src="https://s1.ax1x.com/2022/04/18/Lw8Jyj.png" alt="Lw8Jyj.png"></a></p>
+<h4 id="4-消息传递"><a href="#4-消息传递" class="headerlink" title="4.消息传递"></a>4.消息传递</h4><p>进程间的数据交换以<strong>格式化的消息</strong>为单位，进程通过操作系统的“发送消息/接收消息”两个<strong>原语</strong>进行数据交换。</p>
+<blockquote>
+<ul>
+<li><p><strong>直接通信方式</strong></p>
+<p>格式化的消息包括<strong>消息头</strong>和<strong>消息体</strong>，消息头包括：发送进程ID，接收进程ID，消息类型，消息长度等格式化的信息（类似于计算机网络中的“报文”）。进程1创建一个消息发送给进程2的消息缓冲队列，进程2再从消息缓冲队列中读取消息。</p>
+<p><a href="https://imgtu.com/i/Lw8y6J"><img src="https://s1.ax1x.com/2022/04/18/Lw8y6J.png" alt="Lw8y6J.png"></a></p>
+</li>
+<li><p><strong>间接通信方式</strong></p>
+<p>与直接通信原理基本相同，只不过消息要先发送到中间实体（信箱）中，因此也称“心想通信方式”。进程1通过<strong>发送原语</strong>将消息发送到信箱中，进程2通过<strong>接收原语</strong>接收属于自己的消息。</p>
+<p><a href="https://imgtu.com/i/Lw8o1e"><img src="https://s1.ax1x.com/2022/04/18/Lw8o1e.png" alt="Lw8o1e.png"></a></p>
+</li>
+</ul>
+</blockquote>
+<h5 id="5-知识回顾"><a href="#5-知识回顾" class="headerlink" title="5.知识回顾"></a>5.知识回顾</h5><p><a href="https://imgtu.com/i/Lw8bnA"><img src="https://s1.ax1x.com/2022/04/18/Lw8bnA.png" alt="Lw8bnA.png"></a></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
 </search>
