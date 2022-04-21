@@ -1097,4 +1097,104 @@
         <tag>操作系统</tag>
       </tags>
   </entry>
+  <entry>
+    <title>第六章、组合数据类型</title>
+    <url>/2022/04/21/%E7%AC%AC%E5%85%AD%E7%AB%A0%E3%80%81%E7%BB%84%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h4 id="1-综合数据类型概述"><a href="#1-综合数据类型概述" class="headerlink" title="1.综合数据类型概述"></a>1.综合数据类型概述</h4><p>组合数据类型能够将多个同类型或者不同类型的数据组织起来，通过单一的表示是数据操作更有序，更容易。Python中组合数据类型分为<strong>序列类型，集合类型，映射类型。</strong></p>
+<blockquote>
+<p><strong>序列类型：</strong>元素的响亮，元素之间存在先后顺序，通过序号访问。</p>
+<ul>
+<li>字符串（str）</li>
+<li>元组（tuple）</li>
+<li>列表（list）</li>
+</ul>
+<p><strong>集合类型：</strong>元素的集合，元素之间无序，相同元素在集合中唯一存在。</p>
+<ul>
+<li>集合（set）</li>
+</ul>
+<p><strong>映射类型：</strong>“键值”数据项的组合，每一个元素是一个（key，value）键值对。</p>
+<ul>
+<li>字典（map）</li>
+</ul>
+</blockquote>
+<p><strong>（1）序列类型</strong></p>
+<ul>
+<li><p>常用的数据类型有字符串，元组和列表。</p>
+<ul>
+<li><p><strong>字符串：</strong>单个字符的有序组合</p>
+</li>
+<li><p><strong>元组</strong>：元组生成后是固定的，其中任何数据项不能替换或者删除</p>
+</li>
+<li><p><strong>列表</strong>：是可以改变的序列类型</p>
+</li>
+</ul>
+</li>
+<li><p>所有序列类型都是可以通过变量名+序号的形式访问，序号可以采用<strong>正向序号</strong>和<strong>反向序号</strong>的方式。序列类型允许有重复元素存在，并通过序号来区分它们。</p>
+</li>
+<li><p>序列类型有12个通用操作符和函数。</p>
+</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2022/04/21/L6tMY4.png" alt="L6tMY4.png"></p>
+<p><strong>（2）元组类型</strong></p>
+<ul>
+<li>元组一旦被创建就不能修改，需要用逗号将元素分开（必须要有的），可以用圆括号把所有元素括起来（可以没有）。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一个元素可以作为另外一个元组的元素，并采用多级索引访问。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>creature=<span class="string">&quot;cat&quot;</span>,<span class="string">&quot;dog&quot;</span>,<span class="string">&quot;tiger&quot;</span>,<span class="string">&quot;human&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>creature</span><br><span class="line">(<span class="string">&#x27;cat&#x27;</span>,<span class="string">&#x27;dog&#x27;</span>,<span class="string">&#x27;tiger&#x27;</span>,<span class="string">&#x27;human&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color = (<span class="string">&quot;red&quot;</span>,<span class="string">&quot;0x001100&quot;</span>,<span class="string">&quot;blue&quot;</span>,creature)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color = (<span class="string">&quot;red&quot;</span>,<span class="string">&quot;0x001100&quot;</span>,<span class="string">&quot;blue&quot;</span>,(<span class="string">&#x27;cat&#x27;</span>,<span class="string">&#x27;dog&#x27;</span>,<span class="string">&#x27;tiger&#x27;</span>,<span class="string">&#x27;human&#x27;</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color[<span class="number">2</span>]</span><br><span class="line"><span class="string">&#x27;blue&#x27;</span></span><br><span class="line"><span class="comment"># 多级索引访问</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color[-<span class="number">1</span>][<span class="number">2</span>]</span><br><span class="line"><span class="string">&#x27;tiger&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（3）集合类型</strong></p>
+<ul>
+<li><p>集合中的元素不可重复，元素类型只能是固定的数据类型；</p>
+</li>
+<li><p>由于集合是无序组合，没有索引和位置的概念，不能分片，可以动态地增加和删除；</p>
+</li>
+<li><p>集合用大括号表示，可以用赋值语句生成一个集合；</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s=&#123;<span class="number">425</span>,<span class="string">&quot;BIT&quot;</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="number">424</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line">&#123;<span class="number">424</span>,<span class="number">425</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="string">&quot;BIT&quot;</span>&#125;</span><br><span class="line"><span class="comment"># 集合是无序的，元素不会被按原有输入排序，但元素不变。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>t=&#123;<span class="number">425</span>,<span class="string">&quot;BIT&quot;</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="number">424</span>,<span class="number">425</span><span class="string">&quot;BIT&quot;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>t</span><br><span class="line">&#123;<span class="number">424</span>,<span class="number">425</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="string">&quot;BIT&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>set（x）函数可以生成集合，输入的参数可以是任何组合的数据类型，返回的结果是一个无重复且排序任意的集合。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>w=<span class="built_in">set</span>(<span class="string">&quot;apple&quot;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>w</span><br><span class="line">(<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;p&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>集合类型的操作符有10个</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2022/04/21/L6t861.png" alt="L6t861.png"><br><img src="https://s1.ax1x.com/2022/04/21/L6N34g.png" alt="L6N34g.png"></p>
+<ul>
+<li>集合类型的操作函数或方法10个</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2022/04/21/L6N0ET.png" alt="L6N0ET.png"></p>
+<p><strong>（4）映射类型</strong></p>
+<ul>
+<li>映射类型是“键-值”数据项的组合，一个元素是一个<strong>键值对</strong>，元素之间是无序的。键表示一个属性，值表示属性的内容，描述对应的属性值。</li>
+<li>如：（学校名称，城市）为映射类型，则有如下映射实例</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">（北京大学，北京）</span><br><span class="line">（清华大学，北京）</span><br><span class="line">（浙江大学，杭州）</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-列表的类型和操作"><a href="#2-列表的类型和操作" class="headerlink" title="2.列表的类型和操作"></a>2.列表的类型和操作</h4><ul>
+<li>列表是包含0个或多个对象的有序序列但列表的长度和内容是可变的，可以自由的进行数据项的增加，删除或替换，列表没有长度限制，元素类型可以不同。</li>
+<li>列表也支持成员关系运算符in，长度计算函数len（），分片[]等序列类型的运算、方法和函数。</li>
+<li>列表用中括号[]表示，也可以通过list（）函数将元组或字符串转化成列表。<br><img src="https://s1.ax1x.com/2022/04/21/L6R5IH.png" alt="L6R5IH.png"></li>
+<li>列表类型特有的函数或方法：<br><img src="https://s1.ax1x.com/2022/04/21/L6RjeS.png" alt="L6RjeS.png"></li>
+<li>列表的操作实例：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist=<span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">len</span>(vlist[<span class="number">2</span>:])</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">2</span> <span class="keyword">in</span> vlist</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">3</span>]=<span class="string">&quot;python&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">1</span>:<span class="number">3</span>]=[<span class="string">&quot;bit&quot;</span>,<span class="string">&quot;computer&quot;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="string">&#x27;bit&#x27;</span>, <span class="string">&#x27;computer&#x27;</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当使用一个列表改变另外一个列表值时，python不要求两个列表长度一样，但遵循“多增少补”的原则</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">1</span>:<span class="number">3</span>]=[<span class="string">&quot;new_bit&quot;</span>,<span class="string">&quot;new_computer&quot;</span>,<span class="number">123</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="string">&#x27;new_bit&#x27;</span>, <span class="string">&#x27;new_computer&#x27;</span>, <span class="number">123</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">1</span>:<span class="number">3</span>]=[<span class="string">&quot;fewer&quot;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="string">&#x27;fewer&#x27;</span>, <span class="number">123</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>与元组一样，列表可以通过for - in语句对元组进行遍历。</li>
+</ul>
+<h4 id="3-基本统计值计算"><a href="#3-基本统计值计算" class="headerlink" title="3.基本统计值计算"></a>3.基本统计值计算</h4><h4 id="4-字典类型和操作"><a href="#4-字典类型和操作" class="headerlink" title="4.字典类型和操作"></a>4.字典类型和操作</h4><h4 id="5-Python-jieba库"><a href="#5-Python-jieba库" class="headerlink" title="5.Python jieba库"></a>5.Python jieba库</h4><h4 id="6-文本词频统计"><a href="#6-文本词频统计" class="headerlink" title="6.文本词频统计"></a>6.文本词频统计</h4><span id="more"></span>]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
 </search>
