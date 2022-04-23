@@ -1101,6 +1101,8 @@
     <title>第六章、组合数据类型</title>
     <url>/2022/04/21/%E7%AC%AC%E5%85%AD%E7%AB%A0%E3%80%81%E7%BB%84%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
     <content><![CDATA[<h4 id="1-综合数据类型概述"><a href="#1-综合数据类型概述" class="headerlink" title="1.综合数据类型概述"></a>1.综合数据类型概述</h4><p>组合数据类型能够将多个同类型或者不同类型的数据组织起来，通过单一的表示是数据操作更有序，更容易。Python中组合数据类型分为<strong>序列类型，集合类型，映射类型。</strong></p>
+<span id="more"></span>
+
 <blockquote>
 <p><strong>序列类型：</strong>元素的响亮，元素之间存在先后顺序，通过序号访问。</p>
 <ul>
@@ -1189,12 +1191,260 @@
 <ul>
 <li>与元组一样，列表可以通过for - in语句对元组进行遍历。</li>
 </ul>
-<h4 id="3-基本统计值计算"><a href="#3-基本统计值计算" class="headerlink" title="3.基本统计值计算"></a>3.基本统计值计算</h4><h4 id="4-字典类型和操作"><a href="#4-字典类型和操作" class="headerlink" title="4.字典类型和操作"></a>4.字典类型和操作</h4><h4 id="5-Python-jieba库"><a href="#5-Python-jieba库" class="headerlink" title="5.Python jieba库"></a>5.Python jieba库</h4><h4 id="6-文本词频统计"><a href="#6-文本词频统计" class="headerlink" title="6.文本词频统计"></a>6.文本词频统计</h4><span id="more"></span>]]></content>
+<h4 id="3-基本统计值计算"><a href="#3-基本统计值计算" class="headerlink" title="3.基本统计值计算"></a>3.基本统计值计算</h4><h4 id="4-字典类型和操作"><a href="#4-字典类型和操作" class="headerlink" title="4.字典类型和操作"></a>4.字典类型和操作</h4><h4 id="5-Python-jieba库"><a href="#5-Python-jieba库" class="headerlink" title="5.Python jieba库"></a>5.Python jieba库</h4><h4 id="6-文本词频统计"><a href="#6-文本词频统计" class="headerlink" title="6.文本词频统计"></a>6.文本词频统计</h4>]]></content>
       <categories>
         <category>Python</category>
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十五、调度算法</title>
+    <url>/2022/04/23/%E5%8D%81%E4%BA%94%E3%80%81%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h4 id="1-先来先服务（FCFS，First-Come-Firse-Serve）"><a href="#1-先来先服务（FCFS，First-Come-Firse-Serve）" class="headerlink" title="1.先来先服务（FCFS，First Come Firse Serve）"></a>1.先来先服务（FCFS，First Come Firse Serve）</h4><blockquote>
+<h5 id="FCFS"><a href="#FCFS" class="headerlink" title="FCFS"></a>FCFS</h5><ul>
+<li><p>算法思想：主要从“公平”的角度考虑（类似于生活中排队买东西）</p>
+</li>
+<li><p>算法规则：按照作业/进程到达的先后顺序进行服务</p>
+</li>
+<li><p>用于作业/进程调度：用于作业调度时，考虑的是哪个作业先到达后备队列；用于进程调度时，考虑的是那个进程先到达就绪队列</p>
+</li>
+<li><p>是否可抢占？  非抢占式的算法</p>
+</li>
+<li><p>优缺点：</p>
+<ul>
+<li>优点：公平、算法实现简单</li>
+<li>缺点：排在长作业（进程）后面的短作业需要等待很长时间，带权周转时间很大，对作业来说用户体验不好。即：FCFS算法<strong>对长作业有利，对短作业不利</strong>（EG:排队买奶茶）</li>
+</ul>
+</li>
+<li><p>是否会导致<strong>饥饿</strong>（某进程，作业长期得不到服务）：不会（只要进程或作业一直等着总会得到服务）</p>
+</li>
+</ul>
+</blockquote>
+<span id="more"></span>
+
+<p>例题：各进程到达就绪队列的时间、需要的时间如下表所示，使用<strong>先来先服务</strong>调度算法，计算各进程的等待时间、平均等待时间、周转时间、平均周转时间、平均带权周转时间。<br><img src="https://s1.ax1x.com/2022/04/23/LfQXGQ.png" alt="LfQXGQ.png"></p>
+<blockquote>
+<ul>
+<li><p><strong>周转时间 = 完成时间 - 到达时间</strong></p>
+<ol>
+<li>P1 = 7 - 0 = 7</li>
+<li>P2 = 11 - 2 = 9</li>
+<li>P3 = 12 - 4 = 8</li>
+<li>P4 = 16 - 5 = 11</li>
+</ol>
+</li>
+<li><p><strong>带权周转时间 = 周转时间 / 运行时间</strong></p>
+<ol>
+<li>P1 = 7 / 7 = 1</li>
+<li>P2 = 9 / 4 = 2.25</li>
+<li>P3 = 8 / 1 = 8</li>
+<li>P4 = 11 / 4 = 2.75</li>
+</ol>
+</li>
+<li><p><strong>等待时间 = 周转时间 - 运行时间</strong></p>
+<ol>
+<li>P1 = 7 - 7 = 0</li>
+<li>P2 = 9 - 7 = 2</li>
+<li>P3 = 8 - 1 = 8</li>
+<li>P4 = 11 - 4 = 7</li>
+</ol>
+</li>
+<li><p><strong>平均周转时间</strong></p>
+<ul>
+<li>（7 + 9 + 8 + 11）/  4 = 8.75</li>
+</ul>
+</li>
+<li><p> <strong>平均带权周转时间</strong></p>
+</li>
+<li><p>（1 + 2.25 + 8 + 2.75）/ 4 = 3.5</p>
+</li>
+<li><p><strong>平均等待时间</strong></p>
+<ul>
+<li>（0 + 5 + 7 + 7）/ 4 = 4.75</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>注：例题中的进程都是纯计算形的进程，一个进程到达后要么在等待，要么在运行。如果是有计算，又有I/O操作的进程，其等待时间就是<strong>周转时间 - 运行时间 - I/O操作的时间</strong>。对于P3进程来说，其带权周转时间的权值为8，是非常大的权值。带权周转时间表示的是这个进程的运行时间比其等待时间大多少倍的指标。带权周转时间这么大代表这个进程只需要很少的时间就可运行完成但其等待时间又很长，对于P3的用户来说体验是很糟糕的。</p>
+<h4 id="2-短作业优先（SJF，Shortest-Job-First）"><a href="#2-短作业优先（SJF，Shortest-Job-First）" class="headerlink" title="2.短作业优先（SJF，Shortest Job First）"></a>2.短作业优先（SJF，Shortest Job First）</h4><blockquote>
+<h5 id="SJF"><a href="#SJF" class="headerlink" title="SJF"></a>SJF</h5><ul>
+<li><p>算法思想：追求最少的平均等待时间，最少的平均周转时间，最少的平均平均带权周转时间</p>
+</li>
+<li><p>算法规则：最短作业/进程得到优先服务（所谓“最短”，是指要求服务时间最短）</p>
+</li>
+<li><p>用于短作业.进程调度：既可用于作业调度，也可用于进程调度。用于进程调度时成为“短进程优先（SPF，Shortest Process First）”</p>
+</li>
+<li><p>是否可抢占？：SJF和SPF是<strong>非抢占式</strong>算法，但是<strong>也有抢占式的版本——最短剩余时间优先</strong>算法（SRTF，Shortest Remaining Time Next）</p>
+</li>
+<li><p>优缺点：</p>
+<ul>
+<li>优点：“最短的”平均等待时间，平均周转时间</li>
+<li>缺点：不公平。<strong>对短作业有利，对长作业不利。</strong>可能产生<strong>饥饿现象</strong>。另外，作业/进程的运行时间是由用户提供的，不一定真实，不一定能做到真正的短作业优先。</li>
+</ul>
+</li>
+<li><p>是否会导致饥饿：会。如果有源源不断的短作业/进程进来，可能会使长作业/进程长时间得不到服务，产生<strong>“饥饿”</strong>现象。如果一直得不到服务，则成为**”饿死”**。</p>
+</li>
+</ul>
+</blockquote>
+<p>例题1：各进程到达就绪队列的时间、需要的时间如下表所示，使用<strong>非抢占式</strong>的<strong>短作业优先</strong>调度算法，计算各进程的等待时间、平均等待时间、周转时间、平均周转时间、平均带权周转时间。<br><img src="https://s1.ax1x.com/2022/04/23/LfUEWV.png" alt="LfUEWV.png"></p>
+<blockquote>
+<ul>
+<li><p><strong>周转时间 = 完成时间 - 到达时间</strong></p>
+<ol>
+<li>P1 = 7 - 0 = 7</li>
+<li>P3 = 8 - 4 = 4</li>
+<li>P2 = 12 - 2 = 10</li>
+<li>P4 = 16 - 5 = 11</li>
+</ol>
+</li>
+<li><p><strong>带权周转时间 = 周转时间 / 运行时间</strong></p>
+<ol>
+<li>P1 = 7 / 7 = 1</li>
+<li>P3 = 4 / 1 = 4</li>
+<li>P2 = 10 / 4 = 2.5</li>
+<li>P4 = 11 / 4 = 2.75</li>
+</ol>
+</li>
+<li><p><strong>等待时间 = 周转时间 - 运行时间</strong></p>
+<ol>
+<li>P1 = 7 - 7 = 0</li>
+<li>P3 = 4 - 1 = 3</li>
+<li>P2 = 10 - 4 = 6</li>
+<li>P4 = 11 - 5 = 6</li>
+</ol>
+</li>
+<li><p><strong>平均周转时间</strong></p>
+<ul>
+<li>（7 + 4 + 10 + 11）/  4 = 8</li>
+</ul>
+</li>
+<li><p> <strong>平均带权周转时间</strong></p>
+</li>
+<li><p>（1 + 4 + 2.5 + 2.75）/ 4 = 2.56</p>
+</li>
+<li><p><strong>平均等待时间</strong></p>
+<ul>
+<li>（0 + 3 + 6 + 7）/ 4 = 4</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>注：严格来说，题目中用于进程调度应该被成为<strong>“短进程优先调度算法（SPF）”</strong>。对比FCFS算法的平均等待/周转/带权周转时间都要更低。</p>
+<p>例题2：各进程到达就绪队列的时间、需要的时间如下表所示，使用<strong>抢占式</strong>的<strong>短作业优先</strong>调度算法，计算各进程的等待时间、平均等待时间、周转时间、平均周转时间、平均带权周转时间。<br><img src="https://s1.ax1x.com/2022/04/23/LfaacT.png" alt="LfaacT.png"></p>
+<blockquote>
+<ul>
+<li><p><strong>周转时间 = 完成时间 - 到达时间</strong></p>
+<ol>
+<li>P1 = 16 - 0 = 16</li>
+<li>P2 = 7 - 2 = 5</li>
+<li>P3 = 5 - 4 = 1</li>
+<li>P4 = 11 - 5 = 6</li>
+</ol>
+</li>
+<li><p><strong>带权周转时间 = 周转时间 / 运行时间</strong></p>
+<ol>
+<li>P1 = 16 / 7 = 2.28</li>
+<li>P2 = 5 / 4 = 1.25</li>
+<li>P3 = 1 / 1 = 1</li>
+<li>P4 = 6 / 4 = 1.5</li>
+</ol>
+</li>
+<li><p><strong>等待时间 = 周转时间 - 运行时间</strong></p>
+<ol>
+<li>P1 = 16 - 7 = 9</li>
+<li>P2 = 5 - 4 = 1</li>
+<li>P3 = 1 - 1 = 0</li>
+<li>P4 = 6 - 4 = 2</li>
+</ol>
+</li>
+<li><p><strong>平均周转时间</strong></p>
+<ul>
+<li>（16 + 5 + 1 + 6）/  4 = 7</li>
+</ul>
+</li>
+<li><p> <strong>平均带权周转时间</strong></p>
+</li>
+<li><p>（2.28 + 1.25 + 1 + 1.5）/ 4 = 1.50</p>
+</li>
+<li><p><strong>平均等待时间</strong></p>
+<ul>
+<li>（9 + 1 + 0 + 2）/ 4 = 3</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>注：对比非抢占式的短作业优先算法，显然抢占式的这几个指标又要更低。</p>
+<blockquote>
+<p><strong>注意</strong>几个小细节：</p>
+<ol>
+<li>如果题目中<strong>未特别说明</strong>，所提到的“短作业/短进程优先算法”<strong>默认</strong>是<strong>非抢占式的</strong></li>
+<li>很多书上都会说“SJF调度算法的平均等待时间、平均周转时间最少”</li>
+</ol>
+<p>严格来说这句话时错误的，不严谨的。之前的例子表明，最短剩余时间优先算法得到的平均等待时间、平均周转时间还要更少。应该加上一个条件“在<strong>所有进程同时可运行</strong>时，采用SJF算法的平均等待时间、平均周转时间最少。”；如果不加上上述前提条件，则应该说“<strong>抢占式的</strong>短作业/短进程优先调度算法（<strong>最短剩余时间优先</strong>，<strong>SRTF</strong>算法）的平均等待时间，平均周转时间最少”</p>
+<ol start="3">
+<li>穗盐染个来说SJF的平均等待时间，平均周转时间并不一定最少，但是相比于其他算法（如FCFS），SJF依然可以获得较少的平均等待时间、平均周转时间</li>
+<li>如果选择题中遇到“SJF算法的平均等待时间，平均周转时间最少”的选项，那最好判断其它选项是不是有很明显的错误，如果没有合适的选项，那应该选择该项。</li>
+</ol>
+</blockquote>
+<h4 id="3-高响应比优先算法（HRRN，Highest-Response-Ratio-Next）"><a href="#3-高响应比优先算法（HRRN，Highest-Response-Ratio-Next）" class="headerlink" title="3.高响应比优先算法（HRRN，Highest Response Ratio Next）"></a>3.高响应比优先算法（HRRN，Highest Response Ratio Next）</h4><blockquote>
+<h5 id="对FCFS和SJF两种算法的思考"><a href="#对FCFS和SJF两种算法的思考" class="headerlink" title="对FCFS和SJF两种算法的思考"></a>对FCFS和SJF两种算法的思考</h5><ul>
+<li><p>FCFS算法是在每次调度的时候选择一个等待时间最长的作业（进程）为其服务。但是没有考虑到作业的运行时间，因此导致了对短作业不友好的问题。</p>
+</li>
+<li><p>SJF算法是选择一个执行时间最短的作业为其服务。但是又完全不考虑各个作业的等待时间，因此导致了对长作业不友好的问题，甚至还会造成界问题</p>
+</li>
+<li><p>能不能设计一个算法，既考虑到各个作业的等待时间，也能兼顾运行时间呢？</p>
+<p><strong>高响应比优先算法</strong></p>
+<blockquote>
+<p><strong>（老折中了）</strong></p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<h5 id="HRRN"><a href="#HRRN" class="headerlink" title="HRRN"></a>HRRN</h5><ul>
+<li><p>算法思想：要综合考虑作业/进程的等待时间和要求服务时间</p>
+</li>
+<li><p>算法规则：在每次调度时先计算各个作业/进程的<strong>响应比</strong>，选择<strong>响应比最高的</strong>作业/进程为其服务。</p>
+</li>
+</ul>
+<p>$响应比=\frac{等待时间+要求服务时间}{要求服务时间}$，在这里响应比肯定是会&gt;=1 的</p>
+<ul>
+<li><p>用于作业/进程调度：既可用于作业调度，也可用于进程调度</p>
+</li>
+<li><p>是否可抢占？：<strong>非抢占式</strong>的算法，因此只有当前运行的作业/进程主动放弃处理及时，才需要调度，才需要计算响应比</p>
+</li>
+<li><p>优缺点：</p>
+</li>
+<li><p>优点：综合考虑了等待时间和运行时间（要求服务时间）。等待时间相同时，要求服务时间短的优先（SJF的优点）。要求服务时间相同时，等待时间长的优先（FCFS的优点）。对于长作业来说，随着等待时间越来越久，其相应比也会越来越大，从而避免了长作业饥饿的问题</p>
+</li>
+<li><p>是否会导致饥饿：不会</p>
+</li>
+</ul>
+</blockquote>
+<p>例题：各进程到达就绪队列的时间、需要的时间如下表所示，使用<strong>高响应比优先</strong>调度算法，计算各进程的等待时间、平均等待时间、周转时间、平均周转时间、平均带权周转时间。<br><img src="https://s1.ax1x.com/2022/04/23/Lf565q.png" alt="Lf565q.png"></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>上面那里有个错的，(3 + 1) / 1 = 4，不是等于3😅</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/23/LfIIl8.png" alt="LfIIl8.png"></p>
+<blockquote>
+<p>注：这几种算法主要关心对用户的公平性、平均周转时间、平均等待时间等评价系统整体性能指标，但是不关心“响应时间”。也不区分任务的紧急程度，因此对于用户来说，交互性很糟糕。因此这三种算法一般是用于<strong>早期的批处理系统</strong>。当然，FCFS也常结合其他的算法使用，在现在也扮演着很重要的角色。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
       </tags>
   </entry>
 </search>
