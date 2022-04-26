@@ -1562,17 +1562,79 @@
 </ul>
 </blockquote>
 <p>例题：各进程到达就绪队列的时间、需要的时间如下表所示，使用<strong>多级反馈队列</strong>调度算法，分析进程的运行情况。</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>传个视频在b站上，通过审核就补，原视频讲的很细</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<iframe src="//player.bilibili.com/player.html?bvid=BV1vS4y1a7Xi&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
+
 <h4 id="5-知识回顾"><a href="#5-知识回顾" class="headerlink" title="5.知识回顾"></a>5.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/25/LTQYGV.png" alt="LTQYGV.png"></p>
 <p>注：比起早期的批处理操作系统来说，由于计算机造价大幅度降低，因此之后出现的交互式操作系统（包括分时操作系统，实时操作系统等）更注重系统的响应时间、公平性、平衡性等指标。而这几种算法也恰好能较好地满足交互式系统的需求。因此这三种算法更适用于<strong>交互式操作系统</strong>。（比如UNIX使用的就是多级反馈队列调度算法）</p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十七、进程同步和进程互斥</title>
+    <url>/2022/04/26/%E5%8D%81%E4%B8%83%E3%80%81%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E5%92%8C%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5/</url>
+    <content><![CDATA[<h4 id="1-什么是进程同步"><a href="#1-什么是进程同步" class="headerlink" title="1.什么是进程同步"></a>1.什么是进程同步</h4><p>回顾：进程具有<strong>异步性</strong>的特征。异步性是指：各自并发执行的进程以各自独立的、不可预知的速度向前推进。</p>
+<p>例子：进程通信 —- 管道通信</p>
+<p>写进程往管道里写数据，读进程再从管道里读数据。读进程和写进程并发地运行，由于并发必然导致异步性，因此“写数据”和“读数据”两个操作执行的先后顺序是不确定的。而实际应用中，又必须按照<strong>“写数据→读数据”</strong>的顺序来执行，如何解决这种一部问题，就是<strong>进程同步</strong>所讨论的内容。</p>
+<span id="more"></span>
+
+<p><img src="https://s1.ax1x.com/2022/04/26/LHoKCF.png" alt="LHoKCF.png"></p>
+<p><strong>同步</strong>又称<strong>直接制约关系</strong>，它是指为完成某种任务而建立的两个或多个进程。这些进程因为需要在某些位置上<strong>协调</strong>他们的<strong>工作次序</strong>而产生的制约关系。进程间的直接制约关系就是源于它们之间的相互合作。操作系统需要提供一种<strong>“进程同步机制”</strong>来实现进程的同步执行需求。</p>
+<h4 id="2-什么是进程互斥"><a href="#2-什么是进程互斥" class="headerlink" title="2.什么是进程互斥"></a>2.什么是进程互斥</h4><p>进程的“并发”需要“共享”的支持。各个并发执行的进程不可避免的需要共享一些系统资源（如内存，打印机和摄像头等I/O设备）</p>
+<blockquote>
+<p>两种资源的共享方式</p>
+<ul>
+<li><strong>互斥共享方式</strong>：系统中的某些资源可以提供给多个进程使用，但<strong>一个时间段内只允许一个进程访问资源</strong>。</li>
+<li><strong>同时共享方式</strong>：系统中的某些资源，<strong>允许一个时间段内有多个进程“同时”对它们进行访问</strong>。</li>
+</ul>
+</blockquote>
+<p>我们把<strong>一个时间段内只允许一个进程使用</strong>的资源称为<strong>临界资源</strong>，许多物理设备（如打印机，摄像头）都属于临界资源。此外还有许多变量、数据、内存缓冲区等都属于临界资源。</p>
+<p>对临界资源的访问，必须<strong>互斥</strong>地进行。互斥，亦称<strong>间接制约关系。进程互斥</strong>指当一个进程访问某临界资源时，另一个想要访问该临界资源的进程必须等待。当访问临界资源的进程结束访问，释放该资源之后，另一个进程才能去访问临界资源。</p>
+<p>对临界资源的互斥访问，可以在逻辑上分为如下四个部分：<strong>进入区，临界区，退出区和剩余区</strong>。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 进入区，负责检查是否可进入临界区，若可以进入，则应设置   正在访问临界资源  的标志（可理     * 解为“上锁”），以阻止其他进程同时进入临界区。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    entry section; </span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">    * 临界区，访问临界资源的那段代码</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    circtical section;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 退出区，负责解除 正在访问临界资源 的标志（可理解为“解锁”）</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="built_in">exit</span> section;</span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 剩余区，作其他处理</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    remainder section;</span><br><span class="line">&#125;<span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 注意：临界区是进程中访问临界资源的那段代码。进入区和退出去是负责实现互斥的代码段。临界     * 区亦可成为“临界段”</span></span><br><span class="line"><span class="comment">    */</span></span><br></pre></td></tr></table></figure>
+
+<p>如果一个进程暂时不能进入临界区，那么该进程是否应该一直占着处理机？该进程有没有可能一直进不了临界区？</p>
+<p>为了实现对临界资源的互斥访问，同时保证系统整体性能，需要遵循以下原则：</p>
+<ul>
+<li>空闲让进：临界区空闲时，可以允许一个请求进入临界区的进程立即进入临界区；</li>
+<li>忙则等待：当已有进程进入临界区时，其他视图进入临界区的进程必须等待。</li>
+<li>有限等待：对请求访问的进程，应当保证在有限的时间内进入临界区（保证不会饥饿）</li>
+<li>让权等待：当进程不能进入临界区时，应立即释放处理机，防止进程忙等待（连续等待进入临界区占用大量处理机资源）。</li>
+</ul>
+<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/26/LHbARU.png" alt="LHbARU.png"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十八、进程互斥的软件实现方法</title>
+    <url>/2022/04/26/%E5%8D%81%E5%85%AB%E3%80%81%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h4 id="1-单标志法"><a href="#1-单标志法" class="headerlink" title="1.单标志法"></a>1.单标志法</h4><p>算法思想：两个进程在<strong>访问完临界区后</strong>会把使用临界区的权限转交给另一个进程。也就是说<strong>每个进程进入临界区的权限只能被另一个进程赋予。</strong></p>
+<span id="more"></span>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> turn = <span class="number">0</span>; <span class="comment">//turn表示当前允许进入临界区的进程号</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>P0进程</strong>：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(turn != <span class="number">0</span>);    ①<span class="comment">//进入区</span></span><br><span class="line">critical section;  ②<span class="comment">//临界区</span></span><br><span class="line">turn = <span class="number">1</span>;          ③<span class="comment">//退出区</span></span><br><span class="line">remainder section; ④<span class="comment">//剩余区</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>P1进程</strong>：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(turn != <span class="number">1</span>);    ⑤</span><br><span class="line">critical section;  ⑥</span><br><span class="line">turn = <span class="number">1</span>;          ⑦</span><br><span class="line">remainder section; ⑧</span><br></pre></td></tr></table></figure>
+
+<p>turn的初始值为0，即刚开始只允许0号进程进入临界区。若P1先上处理机运行，则会一直卡在⑤。直到P1的时间片用完，发生调度，切换P0上处理机运行。</p>
+<p>代码①不会卡住P0，P0可以正常访问临界区，在P0访问临界区期间即时切换回P1，由于turn的初始值未改变，P1依然会卡在⑤。只有P0在退出区将turn改为1后，P1才能进入临界区。</p>
+<p>因此，该算法<strong>可以实现“同一时刻最多只允许一个进程访问临界区”</strong>。</p>
+<p>turn表示当前允许进入临界区的进程号，而只有当前允许进入临界区的进程在访问了临界区之后，才会修改turn的值。也就是说，对于临界区的访问，一定是按照P0→P1→P0→P1→……这样轮流访问。这种必须“轮流访问”带来的问题是，如果此时允许进入临界区的进程是P0，而P0一直不访问临界区，那么虽然此时临界区空闲，但是并不允许P1访问。</p>
+<p>因此，<strong>单标志法</strong>存在的主要问题是：<strong>违背“空闲让进”原则。</strong></p>
+<h4 id="2-双标志先检查法"><a href="#2-双标志先检查法" class="headerlink" title="2.双标志先检查法"></a>2.双标志先检查法</h4><p>待更</p>
 ]]></content>
       <categories>
         <category>操作系统</category>
