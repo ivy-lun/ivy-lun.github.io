@@ -1634,8 +1634,95 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
 <p>因此，该算法<strong>可以实现“同一时刻最多只允许一个进程访问临界区”</strong>。</p>
 <p>turn表示当前允许进入临界区的进程号，而只有当前允许进入临界区的进程在访问了临界区之后，才会修改turn的值。也就是说，对于临界区的访问，一定是按照P0→P1→P0→P1→……这样轮流访问。这种必须“轮流访问”带来的问题是，如果此时允许进入临界区的进程是P0，而P0一直不访问临界区，那么虽然此时临界区空闲，但是并不允许P1访问。</p>
 <p>因此，<strong>单标志法</strong>存在的主要问题是：<strong>违背“空闲让进”原则。</strong></p>
-<h4 id="2-双标志先检查法"><a href="#2-双标志先检查法" class="headerlink" title="2.双标志先检查法"></a>2.双标志先检查法</h4><p>待更</p>
+<h4 id="2-双标志先检查法"><a href="#2-双标志先检查法" class="headerlink" title="2.双标志先检查法"></a>2.双标志先检查法</h4><p>算法思想：设置一个布尔型数组flag[]，数组中的各个元素用来<strong>标记各进程想进入临界区的意愿</strong>，比如“flag[0]=true”意味着0号进程P0现在想要进入临界区。每个进程在进入临界区之前检查当前有没有别的进程想进入临界区，如果没有，则把自身对应的标志flah[i]设置为ture，之后开始访问临界区。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">bool flag[<span class="number">2</span>]; <span class="comment">//表示进入临界区意愿的数组</span></span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;</span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>; <span class="comment">//刚开始设置为两个进程不想进入临界区</span></span><br></pre></td></tr></table></figure>
+
+<p>P0进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>]);      ①</span><br><span class="line">flag[<span class="number">0</span>] = ture;      ②</span><br><span class="line">critical section;    ③</span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;     ④</span><br><span class="line">remainder section;   </span><br></pre></td></tr></table></figure>
+
+<p>P1进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(flag[<span class="number">0</span>]);      ⑤  <span class="comment">//如果此时P0想进入临界区，P1就一直循环等待</span></span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">true</span>;      ⑥  <span class="comment">//标记为P1进程想要进入临界区</span></span><br><span class="line">critical section;    ⑦  <span class="comment">//访问临界区</span></span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>;     ⑧  <span class="comment">//访问完临界区，修改标记为P1不想使用临界区</span></span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
+
+<p>若按照1,5,2,6,3,7的顺序执行，P0和P1将会同时访问临界区。因此，双标志检查法的<strong>主要问题</strong>是：<strong>违反“忙则等待”原则。</strong>原因在于，<strong>进入区</strong>的“检查”和“上锁”<strong>两个处理不是一气呵成的</strong>，“检查”后，“上锁”前可能发生进程切换。</p>
+<h4 id="3-双标志后检查法"><a href="#3-双标志后检查法" class="headerlink" title="3.双标志后检查法"></a>3.双标志后检查法</h4><p>算法思想：双标志检查法的改版。前一个算法的问题是先“检查”后“上锁”，但是这两个操作又无法一气呵成，因此导致了两个进程同时进入临界区的问题。因此，人们又想到先“上锁”后“检查”的方法，来避免上述问题。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">bool flag[<span class="number">2</span>]; <span class="comment">//表示进入临界区意愿的始祖</span></span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;</span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>; <span class="comment">//刚开始设置为两个进程不想进入临界区</span></span><br></pre></td></tr></table></figure>
+
+<p>P0进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">0</span>] = ture;      ①</span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>]);      ②</span><br><span class="line">critical section;    ③</span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;     ④</span><br><span class="line">remainder section;   </span><br></pre></td></tr></table></figure>
+
+<p>P1进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">1</span>] = <span class="literal">true</span>;      ⑤  <span class="comment">//如果此时P0想进入临界区，P1就一直循环等待</span></span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">0</span>]);      ⑥  <span class="comment">//标记为P1进程想要进入临界区</span></span><br><span class="line">critical section;    ⑦  <span class="comment">//访问临界区</span></span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>;     ⑧  <span class="comment">//访问完临界区，修改标记为P1不想使用临界区</span></span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
+
+<p>若按照1,5,2,6….的顺序执行，P0和P1将都无法访问临界区。因此，双标志后检查法虽然<strong>解决了“忙则等待”的问题</strong>的问题，但是又<strong>违背了“空闲让进”和“有限等待”原则</strong>，会因各进程都长期无法访问临界区而<strong>产生“饥饿”</strong>现象。</p>
+<h4 id="4-皮特森（Peterson）算法"><a href="#4-皮特森（Peterson）算法" class="headerlink" title="4.皮特森（Peterson）算法"></a>4.皮特森（Peterson）算法</h4><p>算法思想：双标志后检查法中，两个进程都想争着进入临界区，但是谁也谁，最后谁都无法进入临界区。Gary L.Peterson想到了一种方法，如果双方都争着想要进入临界区，那可以让进程尝试“孔融让梨”，主动让对方使用临界区。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">bool flag[<span class="number">2</span>]; <span class="comment">//表示进入临界区意愿的数组，初始都是false</span></span><br><span class="line"><span class="type">int</span> <span class="variable">turn</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">//turn表示优先让那个进程进入临界区</span></span><br></pre></td></tr></table></figure>
+
+<p>P0进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">0</span>] = ture;               ①</span><br><span class="line">turn = <span class="number">1</span>;                     ②</span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>] &amp;&amp; turn == <span class="number">1</span>);  ③</span><br><span class="line">critical section;             ④</span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;              ⑤</span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
+
+<p>P2进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">1</span>] = ture;               ⑥ <span class="comment">//表示自己想进入临界区</span></span><br><span class="line">turn = <span class="number">0</span>;                     ⑦ <span class="comment">//可以优先让对方进入临界区</span></span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">0</span>] &amp;&amp; turn == <span class="number">0</span>);  ⑧ <span class="comment">//对方想进，且最后一次是自己“让梨”，拿自己就循环等待</span></span><br><span class="line">critical section;             ⑨ </span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>;              ⑩ <span class="comment">//访问完临界区，表示自己已经不想访问临界区了</span></span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
+
+<p>两种双标志检查法的问题都是由于进入区的几个操作不能一气呵成导致的。我们可以推理验证在Peterson算法中，两个进程进入区中的各个操作按不同顺序穿插执行会发生什么情况。</p>
+<blockquote>
+<p>进入区：</p>
+<ul>
+<li>①主动争取</li>
+<li>②主动谦让</li>
+<li>③检查对方是否也想使用，且最后一次是不是自己说了“客气话”</li>
+</ul>
+</blockquote>
+<p>皮特森算法是用软件方法解决了进程互斥的问题，<strong>遵循了空闲让进，忙则等待，有限等待三个原则</strong>，但是依然<strong>未遵循让权等待</strong>的原则。</p>
+<p><img src="https://s1.ax1x.com/2022/04/27/LqWWvR.png" alt="LqWWvR.png"></p>
 ]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二十、信号量机制</title>
+    <url>/2022/04/27/%E4%BA%8C%E5%8D%81%E3%80%81%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6/</url>
+    <content><![CDATA[<h4 id="1-信号量机制"><a href="#1-信号量机制" class="headerlink" title="1.信号量机制"></a>1.信号量机制</h4><p>进程互斥的四种软件实现方式和进程互斥的三种硬件实现方式都存在一些问题。</p>
+<p>1.在双标志检查法中，<strong>进入区的“检查”、‘上锁”操作无法一气呵成</strong>，从而导致了两个进程有可能同时进入临界区的问题。</p>
+<p>2.所有的解决方案都<strong>无法实现“让权等待”</strong>。</p>
+<p>1965年，荷兰学者迪杰斯特拉Dijkstra提出了一种卓有成效的实现进程互斥、同步的方法–<strong>信号量机制</strong></p>
+<span id="more"></span>
+
+<p>用户可以通过使用操作系统提供的<strong>一对原语</strong>来对<strong>信号量</strong>进行操作，从而很方便地实现了进程互斥、进程同步。<strong>信号量</strong>其实就是一个变量（可以是一个整数，也可以是更复杂的记录型信号量），可以用一个信号量来<strong>表示系统中的某种资源的数量</strong>。</p>
+<p><strong>原语</strong>是一种特殊的程序段，其<strong>执行只能一气呵成，不可被中断。</strong>原语是由<strong>关中断/开中断指令</strong>实现的，软件解决方案的主要问题是由“进入区的各种操作无法一气呵成”，因此如果能把进入区、退出区的操作都用原语实现，使这些操作能“一气呵成”就能避免问题。</p>
+<p><strong>一对原语</strong>：<strong>wait（s）</strong>原语和<strong>signal（s）</strong>原语，可以把原语理解为我们自己写的函数，函数名称分别为wait和signal，括号里的<strong>信号量s</strong>其实就是函数调用时传入的一个参数。wait、signal原语常<strong>简称为P，V操作</strong>（来自荷兰语proberen和verhogen，意思是“尝试”和“增加”）。因此，wait（s）和signal（s）可被简写为<strong>P（s）和V（s）。</strong></p>
+<h4 id="2-整形信号量"><a href="#2-整形信号量" class="headerlink" title="2.整形信号量"></a>2.整形信号量</h4><p>用一个<strong>整数型的变量</strong>作为信号量，来<strong>表示系统中的某种资源的数量。</strong></p>
+<p>如：某计算机系统中有一台打印机：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">S</span> <span class="operator">=</span> <span class="number">1</span>; <span class="comment">//初始化整形信号量S，表示当前系统中可用的打印机资源数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">wait</span><span class="params">(<span class="type">int</span> S)</span>&#123;  <span class="comment">//wait原语，相当于“进入区”</span></span><br><span class="line">    <span class="keyword">while</span>(s &lt;= <span class="number">0</span>); <span class="comment">//如果资源数不够，就一直循环等待</span></span><br><span class="line">    S = S - <span class="number">1</span>;     <span class="comment">//如果资源数够，就占用一个资源</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">signal</span><span class="params">(<span class="type">int</span> S)</span>&#123; <span class="comment">//signal原语，相当于&quot;退出区&quot;</span></span><br><span class="line">    S = S + <span class="number">1</span>;      <span class="comment">//使用完资源后，在退出区释放资源</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果一个进程P0想要访问打印机，则其操作的伪代码为：</span></span><br><span class="line">...</span><br><span class="line">wait(S); <span class="comment">//进入区，申请自愿</span></span><br><span class="line">使用的印记资源... <span class="comment">//临界区，访问资源</span></span><br><span class="line">signal(S);  <span class="comment">//退出区，释放资源</span></span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment">//如果进程P1在进程P0正在放问打印机时想要访问打印机资源，只能一直执行wait(S)，等待进程P0释放</span></span><br><span class="line"><span class="comment">//临界区资源。</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">访问打印机资源...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>信号量其与普通整数变量的区别：对信号量的操作只有三种，即 初始化、P操作、V操作。在wait原语中，“检查”和“上锁”一气呵成，避免了并发、异步导致的问题。但是如果信号量S为0，则其中的while语句会一直检查信号量S的占用情况，会一直占用处理机，不满足“让权等待”原则，会发生“忙等”。</p>
+<h4 id="3-记录型信号量（重要）"><a href="#3-记录型信号量（重要）" class="headerlink" title="3.记录型信号量（重要）"></a>3.记录型信号量（<font color=red>重要</font>）</h4><p>整形信号量的缺陷是存在“忙等”的问题，因此人们又提出了“记录型信号量”，即用记录型数据结构表示的信号量。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//信号量的数据结构</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> value;   <span class="comment">//剩余资源数</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">process</span> *<span class="title">L</span>;</span>  <span class="comment">//等待队列</span></span><br><span class="line">&#125; semphore;</span><br><span class="line"></span><br><span class="line"><span class="comment">//某进程需要使用资源时，通过wait原语申请</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">wait</span><span class="params">(semaphore S)</span>&#123;</span><br><span class="line">    S.value--;</span><br><span class="line">    <span class="keyword">if</span>(S.value &lt; <span class="number">0</span>)&#123;  <span class="comment">//如果剩余资源不够，使用block原语使进程从运行态进入阻塞态，并把它挂到</span></span><br><span class="line">        block(S.L);   <span class="comment">//信号量S的等待队列（即阻塞队列）中</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//进程使用完资源后，通过signal原语释放</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">signal</span><span class="params">(semaphore S)</span>&#123;</span><br><span class="line">    S.value++;</span><br><span class="line">    <span class="keyword">if</span>(S.value&lt;=<span class="number">0</span>)&#123;  <span class="comment">//释放资源后，如果还有别的进程在等待这种资源，则使用wakeup原语唤醒</span></span><br><span class="line">        wakeup(S.L); <span class="comment">//等待队列中的一个进程，使该进程从阻塞态变为就绪态。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例：某计算机系统中有两台打印机，则可在初始化信号量S时将S.value的值设为2，队列S.L设置为空</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> value;    <span class="comment">//剩余资源数为2</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">process</span> *<span class="title">L</span>;</span>  <span class="comment">//等待队列-→null</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//P0进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">//P1进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">//P2进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机..</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">//P3进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">解释：有点啰嗦，能看得懂就行。</span></span><br><span class="line"><span class="comment">cpu首先为p0服务，P0使用wait原语检查剩余资源，系统中剩余打印机资源为2，可以分配给P0，value值减1变为1，P0可以使用打印机。之后cpu又为p1服务，P1使用wait原语检查剩余资源，系统中剩余打印机资源为1，value值减1变为0，可以分配给P1，P1可以使用打印机。再次cpu为P2服务，P2使用wait原语检查剩余打印机资源，系统中剩余打印机资源为0，资源已经暂时全部被占用，value值减1变为-1小于0，P2进程主动执行block原语，P2被挂载到了打印机的等待队列中，P3同理，value值变为-2.</span></span><br><span class="line"><span class="comment">value值为0时资源刚好被分配完，为-1时有一个进程在等待，为-2时有两个进程在等待。</span></span><br><span class="line"><span class="comment">当P0使用完成后，会执行signal原语释放打印机，value值加一变为-1，但此时value的值为-1仍然小于0，就说明此时等待队列中不止一个进程在等待打印机资源，进程P0会主动执行wakeup原语唤醒队列中的队头进程P2，P2从阻塞队列中被切换到就绪队列。其余后续步骤同理。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>wait(S)和signal(S)也可记为P(S)，V(S)，这对原语用于<strong>实现系统资源的申请和释放</strong>。</p>
+<p><strong>S.value的初始值</strong>表示系统中<strong>某种资源的数目。</strong></p>
+<p>对信号量S的<strong>一次P操作</strong>意味着进程<strong>请求一个单位的该类资源</strong>，因此需要执行S.balue–，表示资源数减1，当S.value&lt;0时表示该类资源已分配完毕，因此进程应<strong>调用block原语进行自我阻塞</strong>（当前运行的进程从<strong>运行态切换为阻塞态</strong>），主动放弃处理机，并插入该类资源的等待队列S.L中。可见，该机制<strong>遵循了“让权等待的原则”</strong>，不会出现“忙等”的现象。</p>
+<p>对信号量S的<strong>一次V操作</strong>意味着进程<strong>释放一个单位的该类资源</strong>，因此需要执行S.value++，表示资源数+1，若加一后仍是S.value&lt;=0，表示依然有进程在等待该类资源，因此应<strong>调用wakeup原语唤醒等待队列中的第一个进程</strong>（被唤醒的进程从<strong>阻塞态切换为就绪态</strong>）。</p>
+<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/27/LLCHn1.png" alt="LLCHn1.png"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十九、进程互斥的硬件实现方法</title>
+    <url>/2022/04/27/%E5%8D%81%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>这里什么都没写，先占个坑以后再写。</p>
+<span id="more"></span>]]></content>
       <categories>
         <category>操作系统</category>
       </categories>
