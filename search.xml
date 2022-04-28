@@ -1191,7 +1191,47 @@
 <ul>
 <li>与元组一样，列表可以通过for - in语句对元组进行遍历。</li>
 </ul>
-<h4 id="3-基本统计值计算"><a href="#3-基本统计值计算" class="headerlink" title="3.基本统计值计算"></a>3.基本统计值计算</h4><h4 id="4-字典类型和操作"><a href="#4-字典类型和操作" class="headerlink" title="4.字典类型和操作"></a>4.字典类型和操作</h4><h4 id="5-Python-jieba库"><a href="#5-Python-jieba库" class="headerlink" title="5.Python jieba库"></a>5.Python jieba库</h4><h4 id="6-文本词频统计"><a href="#6-文本词频统计" class="headerlink" title="6.文本词频统计"></a>6.文本词频统计</h4>]]></content>
+<h4 id="3-基本统计值计算"><a href="#3-基本统计值计算" class="headerlink" title="3.基本统计值计算"></a>3.基本统计值计算</h4><p><img src="https://s1.ax1x.com/2022/04/28/LOHqzV.png" alt="LOHqzV.png"></p>
+<h4 id="补充：sorted函数"><a href="#补充：sorted函数" class="headerlink" title="补充：sorted函数"></a>补充：sorted函数</h4><p>sorted是一个排序函数，里面通常有三个参数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sorted</span>(iterable, key=<span class="literal">None</span>, reverse=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+<p>参数说名：</p>
+<p>iterable – 可迭代对象</p>
+<p>key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指可迭代对象中的一个元素来进行排序。</p>
+<p>reverse – 排序规则，= True降序，=False 升序（默认参数）</p>
+<p>使用sorted（）函数对序列进行排序，并不会在原序列的基础进行修改，而是会重新生成一个排好序的列表实现。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">5</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="built_in">sorted</span>(a)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">5</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b</span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-字典类型和操作"><a href="#4-字典类型和操作" class="headerlink" title="4.字典类型和操作"></a>4.字典类型和操作</h4><p><strong>概念</strong></p>
+<ul>
+<li><p>在有些比较灵活的信息查询，如查找学生的“C语言成绩”时，我们需要输入学号，而不是输入该成绩在列表中的索引号（下标），这种的查询需要“键值对”，通过特定的键（如学号）访问值（如C语言成绩）</p>
+</li>
+<li><p>通过任意键值查找一组数据中信息的过程称为映射，在Python中通过字典实现映射，通过大括号建立映射{}。建立模式如下：</p>
+<p>{&lt;键1&gt;：&lt;值1&gt;，&lt;键2&gt;：&lt;值2&gt;，…}</p>
+</li>
+<li><p>由于字典顺序也是一种集合类型，所以键值对之间没有顺序并且不能重复。</p>
+</li>
+<li><p>字典的创建：利用大括号创建字典，并指定初始值，通过中括号可以增加新的元素</p>
+</li>
+<li><p>直接使用大括号可以创建一个空字典，通过中括号增加新的元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dcountry=&#123;<span class="string">&#x27;中国&#x27;</span>:<span class="string">&quot;北京&quot;</span>, <span class="string">&quot;美国&quot;</span>:<span class="string">&quot;华盛顿&quot;</span>&#125;</span><br><span class="line">dcountry[<span class="string">&#x27;英国&#x27;</span>]=<span class="string">&#x27;伦敦&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>字典的函数和方法如下表：</strong></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LOv2kD.png" alt="LOv2kD.png"></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LOvOhQ.png" alt="LOvOhQ.png"></p>
+<h4 id="5-Python-jieba库"><a href="#5-Python-jieba库" class="headerlink" title="5.Python jieba库"></a>5.Python jieba库</h4><p><img src="https://s1.ax1x.com/2022/04/28/LXSRtU.png" alt="LXSRtU.png"></p>
+<p><strong>jieba常用分词函数：</strong></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXpiAf.png" alt="LXpiAf.png"></p>
+<p>举例：</p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXpT2Q.png" alt="LXpT2Q.png"></p>
+<p><strong>jieba库添加词汇：</strong></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXPs8U.png" alt="LXPs8U.png"></p>
+<h4 id="6-文本词频统计"><a href="#6-文本词频统计" class="headerlink" title="6.文本词频统计"></a>6.文本词频统计</h4><p><img src="https://s1.ax1x.com/2022/04/28/LXiAZn.png" alt="LXiAZn.png"></p>
+<p><strong>英文词频统计：</strong></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXF41O.png" alt="LXF41O.png"></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXkqr4.png" alt="LXkqr4.png"></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXERNn.png" alt="LXERNn.png"></p>
+]]></content>
       <categories>
         <category>Python</category>
       </categories>
