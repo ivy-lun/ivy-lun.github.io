@@ -1819,4 +1819,51 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
         <tag>操作系统</tag>
       </tags>
   </entry>
+  <entry>
+    <title>二十二、生产者消费者问题</title>
+    <url>/2022/05/01/%E4%BA%8C%E5%8D%81%E4%BA%8C%E3%80%81%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h4 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1.问题描述"></a>1.问题描述</h4><p>系统中有一组生产者进程和一组消费者进程，生产者进程每次生产一个产品放入缓冲区，消费者进程每次从缓冲区中去除一个产品并使用。（这里的“产品”理解为某种数据）</p>
+<span id="more"></span>
+
+<p>生产者、消费者<strong>共享一个初始为空、大小为n的缓冲区。</strong></p>
+<p>只有<strong>缓冲区没满</strong>时，生产者才能把产品放入缓冲区。</p>
+<p>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。</p>
+<p><img src="https://s1.ax1x.com/2022/05/01/OC1z3q.png"></p>
+<p>生产者进程每次生产一个产品，消费者进程每次取走一个产品。当缓冲区为满时，只能阻塞生产者进程，切换为消费者进程取走产品。只要缓冲区中又大于或等于1个可用的空间时就可以唤醒生产者进程继续生产。</p>
+<p><img src="https://s1.ax1x.com/2022/05/01/OC3t2t.png" alt="OC3t2t.png"></p>
+<p>当缓冲区为空，消费者进程就没有可以被取走的产品了，只能阻塞消费者进程，等待产品被放入缓冲区。</p>
+<p><img src="https://s1.ax1x.com/2022/05/01/OC8AL8.png" alt="OC8AL8.png"></p>
+<p>缓冲区属于临界资源，各个进程必须互斥地访问。如果不属于临界资源，则各生产者进程并发地执行时由于无法控制执行进度，有可能导致两个进程同时访问缓冲区的同一块区域导致数据冲突。</p>
+<p><strong>如何用信号量机制（P、V操作）实现生产者、消费者进程的这些功能？</strong></p>
+<p>信号量机制可以实现互斥、同步、对一类系统资源的申请和释放。</p>
+<p>互斥：设置初始值为1的互斥信号量。</p>
+<p>同步：设置初始值为0的同步信号量（实现“一前一后”）</p>
+<p>申请和释放资源：设置一个信号量，初始值为资源的数量（本质上也是属于“同步问题”，若无空闲资源，则申请自愿的进程需要等待别的进程释放资源后才能据需执行下去）</p>
+<blockquote>
+<p>分析：</p>
+<p>1.关系分析：找出题目中描述的各个进程，分析它们之间的同步关系。</p>
+<ul>
+<li>只有<strong>缓冲区没满</strong>时，生产者才能把产品放入缓冲区。这个属于同步关系。缓冲区没满时，生产者要等待消费者取走产品。</li>
+<li>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。这个也属于同步关系。缓冲区为空时（即没有产品时），消费者要等待生产者生产商品。</li>
+<li>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。这个属于互斥关系。</li>
+</ul>
+<p>2.整理思路，根据各进程的操作流程确定P、V操作的大致顺序。</p>
+<p>生产者每次要消耗（P）一个空闲缓冲区，并生产（V）一个产品。消费者者每次要消耗（P）一个产品，并释放一个空闲的缓冲区（V）。往缓冲区放入，取走产品需要互斥。</p>
+<p>3.设置信号量。设置需要的信号量，并根据题目题目条件确定信号量初值（互斥信号量初值一般为1，同步信号量的初始值要看对应资源的初始值是多少）</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">semaphore mutex = <span class="number">1</span>;  <span class="comment">//互斥信号量，实现进程互斥访问。</span></span><br><span class="line">semaphore empty = n;  <span class="comment">//同步信号量，表示空闲缓冲区的数量。</span></span><br><span class="line">semaphore full = <span class="number">0</span>;   <span class="comment">//同步信号量，表示产品的数量，也即非空缓冲区的数量。</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="2-如何实现"><a href="#2-如何实现" class="headerlink" title="2.如何实现"></a>2.如何实现</h4><p>根据上面设置的信号量，实现响应代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//生产者进程</span></span><br><span class="line">producer()&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        生产一个产品;</span><br><span class="line">        P(empty);   <span class="comment">//消耗一个空闲缓冲区</span></span><br><span class="line">        P(mutex);   <span class="comment">//实现进程互斥</span></span><br><span class="line">        把产品放入缓冲区;</span><br><span class="line">        V(mutex);   </span><br><span class="line">        V(full);    <span class="comment">//增加一个产品</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//消费者进程</span></span><br><span class="line">consumer()&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        P(full);   <span class="comment">//消耗一个产品（非空缓冲区）,此P操作用于实现进程同步</span></span><br><span class="line">        P(mutex);  <span class="comment">//此P操作用于实现进程互斥</span></span><br><span class="line">        从缓冲区取走一个产品;</span><br><span class="line">        V(mutex);</span><br><span class="line">        V(empty);   <span class="comment">//增加一个空闲缓冲区</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">P(mutex);</span></span><br><span class="line"><span class="comment">把产品放入缓冲区;</span></span><br><span class="line"><span class="comment">V(mutex);</span></span><br><span class="line"><span class="comment">上面的代码实现了进程互斥，实现互斥是在同一进程中进程一对PV操作</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">生产者进程的V(full)和消费者进程的P(full)用于实现两个进程的同步关系。即在其中一个一个进程中执行P，另一个进程中执行V</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-思考：能否改变相邻P，V操作的顺序？"><a href="#3-思考：能否改变相邻P，V操作的顺序？" class="headerlink" title="3.思考：能否改变相邻P，V操作的顺序？"></a>3.思考：能否改变相邻P，V操作的顺序？</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCUYTK.png" alt="OCUYTK.png"></p>
+<p>生产者生产产品和消费者消费产品从代码上看是放在PV操作之外。能不能放到PV操作之内呢？从逻辑上来看是没问题，可以让消费者从缓冲区中取出一个产品后就立即使用这个产品。但会导致临界区代码量变大，消费者进程在访问临界区的过程中就需要花费更多的时间，如果此时有别的进程也需要访问临界资源则消费者进程会被阻塞，会导致进程的并发度降低，尽量不要放入PV操作之中。</p>
+<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCaFhD.png" alt="OCaFhD.png"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
 </search>
