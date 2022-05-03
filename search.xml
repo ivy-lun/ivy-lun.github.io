@@ -151,39 +151,18 @@
       </tags>
   </entry>
   <entry>
-    <title>一、启发式搜索</title>
-    <url>/2022/04/18/%E4%B8%80%E3%80%81%E5%90%AF%E5%8F%91%E5%BC%8F%E6%90%9C%E7%B4%A2/</url>
-    <content><![CDATA[<h4 id="1-人工智能中的搜索"><a href="#1-人工智能中的搜索" class="headerlink" title="1.人工智能中的搜索"></a>1.人工智能中的搜索</h4><p>在<strong>海量信息源</strong>中利用<strong>问题求解器</strong>，加上一定的<strong>约束条件</strong>和<strong>额外信息</strong>即可找到<strong>问题所对应的答案</strong>。</p>
-<span id="more"></span>
+    <title>SQL结构化查询语言</title>
+    <url>/2022/05/04/SQL%E7%BB%93%E6%9E%84%E5%8C%96%E6%9F%A5%E8%AF%A2%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h3 id="破事终于干完了"><a href="#破事终于干完了" class="headerlink" title="破事终于干完了"></a>破事终于干完了</h3><h3 id="开个SQL新坑"><a href="#开个SQL新坑" class="headerlink" title="开个SQL新坑"></a>开个SQL新坑</h3><span id="more"></span>
 
-<p><strong>1.寻找最短路径为例</strong></p>
-<p><a href="https://imgtu.com/i/LdFksH"><img src="https://s1.ax1x.com/2022/04/18/LdFksH.png" alt="LdFksH.png"></a></p>
-<p>寻找出路径最短，时间最少，价钱最经济的路径</p>
-<blockquote>
-<p>搜索算法的形式化描述：<strong>状态，动作，状态转移，路径，测试目标</strong>。</p>
-<p>状态：从原问题转化出的问题描述。</p>
-<p>动作：从当前时刻所处的状态转移到下一时刻所处状态所进行的操作。一般而言这些操作都是离散的。</p>
-<p>状态转移：对面某一时刻对应状态进行某一种操作后，所能够到达的状态。</p>
-<p>路径：一个状态序列。该状态序列被一系列操作所连接。</p>
-<p>测试目标：评估当前状态是否为所求解的目标状态。</p>
-</blockquote>
-<p><strong>2.搜索算法：启发式搜索（有信息搜索）</strong></p>
-<p>在搜索的过程中利用与所求解问题相关的辅助信息，其代表算法为<strong>贪婪最佳优先搜索</strong>和<strong>A*搜索</strong>。</p>
-<p>有信息搜索要定义如下辅助信息：</p>
-<p><a href="https://imgtu.com/i/LdAHRf"><img src="https://s1.ax1x.com/2022/04/18/LdAHRf.png" alt="LdAHRf.png"></a></p>
-<p>贪婪最佳优先搜索：<strong>评价函数f（n）=启发函数h（n）</strong></p>
-<p><a href="https://imgtu.com/i/LdEUYt"><img src="https://s1.ax1x.com/2022/04/18/LdEUYt.png" alt="LdEUYt.png"></a></p>
-<p>根据上图所知，从当前Arad出发，选择相邻的后续节点并找出其最短路径。上图找出的最短直线距离是：Arad→Sibiu→Fagaras→Bucharest。此为贪婪最佳优先算法。</p>
-<p>不足之处：</p>
-<p><a href="https://imgtu.com/i/LdZwqg"><img src="https://s1.ax1x.com/2022/04/18/LdZwqg.png" alt="LdZwqg.png"></a></p>
-<p>为了解决上述问题，提出了<strong>A*算法。</strong></p>
-<p><strong>3.搜索算法：A*搜索</strong></p>
-]]></content>
+<p><img src="https://s1.ax1x.com/2022/04/10/LFgdfO.jpg" alt="头像"></p>
+<h4 id="头像镇帖！"><a href="#头像镇帖！" class="headerlink" title="头像镇帖！"></a>头像镇帖！</h4>]]></content>
       <categories>
-        <category>人工智能</category>
+        <category>数据库系统概论</category>
       </categories>
       <tags>
-        <tag>人工智能</tag>
+        <tag>SQLServer</tag>
+        <tag>DBS</tag>
       </tags>
   </entry>
   <entry>
@@ -215,42 +194,6 @@
         <tag>Hexo</tag>
         <tag>NexT主题</tag>
         <tag>主题美化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一、操作系统的基本特征</title>
-    <url>/2022/04/09/%E4%B8%80%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81/</url>
-    <content><![CDATA[<h2 id="●-操作系统的基本特征"><a href="#●-操作系统的基本特征" class="headerlink" title="● 操作系统的基本特征"></a>● 操作系统的基本特征</h2><p>操作系统的四个特性：<strong>并发性，共享性，虚拟性，异步性</strong></p>
-<span id="more"></span>
-
-<h4 id="1-并发性"><a href="#1-并发性" class="headerlink" title="1. 并发性"></a>1. 并发性</h4><p>并发是指两个或多个事件在同一时间间隔内发生，<strong>宏观上是同时发生的</strong>，但是<strong>微观上是交替发生的</strong>。</p>
-<p><strong>操作系统的并发性</strong>指计算机系统中同时存在多个运行的程序。</p>
-<h4 id="2-共享性"><a href="#2-共享性" class="headerlink" title="2. 共享性"></a>2. 共享性</h4><p>即资源共享，是指系统中的资源可供内存中多个并发执行的进程共同使用。</p>
-<p>（1）两种资源共享方式</p>
-<ul>
-<li>互斥共享方式（<strong>一个时间段内只允许一个进程访问资源</strong>）</li>
-<li>同时共享方式（<strong>允许一个时间段内由多个进程“同时”对他们进行访问</strong>）</li>
-</ul>
-<p><strong>同时</strong>是宏观上的概念，微观上资源往往是交替进行资源访问的（分时共享）。</p>
-<blockquote>
-<p>==并发性和共享性两者的关系：==</p>
-<p>假如使用QQ发送文件A，使用微信发送文件B.<br>1.两个进程正在并发执行（并发性）<br>2.需要共享地访问硬盘资源（共享性）</p>
-<p>如果失去并发行，系统中只有一个程序在执行，则共享性即失去意义。<br>如果失去共享性，QQ和微信不能同时访问硬盘资源，就无法实现同时发送文件，也就无法并发。</p>
-<p><strong>即并发性和共享性二者互为存在条件</strong></p>
-</blockquote>
-<h4 id="3-虚拟性"><a href="#3-虚拟性" class="headerlink" title="3. 虚拟性"></a>3. 虚拟性</h4><p>虚拟是指把一个物理上的实体变为逻辑上的对应物，物理实体是实际存在的，而逻辑上对应物是用户感受到的。</p>
-<ul>
-<li>空分复用技术（如虚拟存储器）</li>
-<li>时分复用技术（如虚拟处理器），微观上处理机在各个微小的时间段内交替着为各个进程服务。</li>
-</ul>
-<h4 id="4-异步性"><a href="#4-异步性" class="headerlink" title="4. 异步性"></a>4. 异步性</h4><p>异步是指，在多道程序环境下，允许多个程序并发执行，但由于资源有限，进程的执行不是一贯到底的，而是走走停停，以不可预知的速度向前推进，这就是进程的异步性。</p>
-<p>如果失去了并发性，则系统只能串行的执行所有的进程，每个程序的执行会一贯到底，<strong>只有系统拥有并发性，才有可能导致异步性。</strong></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
       </tags>
   </entry>
   <entry>
@@ -344,6 +287,78 @@
       </tags>
   </entry>
   <entry>
+    <title>一、启发式搜索</title>
+    <url>/2022/04/18/%E4%B8%80%E3%80%81%E5%90%AF%E5%8F%91%E5%BC%8F%E6%90%9C%E7%B4%A2/</url>
+    <content><![CDATA[<h4 id="1-人工智能中的搜索"><a href="#1-人工智能中的搜索" class="headerlink" title="1.人工智能中的搜索"></a>1.人工智能中的搜索</h4><p>在<strong>海量信息源</strong>中利用<strong>问题求解器</strong>，加上一定的<strong>约束条件</strong>和<strong>额外信息</strong>即可找到<strong>问题所对应的答案</strong>。</p>
+<span id="more"></span>
+
+<p><strong>1.寻找最短路径为例</strong></p>
+<p><a href="https://imgtu.com/i/LdFksH"><img src="https://s1.ax1x.com/2022/04/18/LdFksH.png" alt="LdFksH.png"></a></p>
+<p>寻找出路径最短，时间最少，价钱最经济的路径</p>
+<blockquote>
+<p>搜索算法的形式化描述：<strong>状态，动作，状态转移，路径，测试目标</strong>。</p>
+<p>状态：从原问题转化出的问题描述。</p>
+<p>动作：从当前时刻所处的状态转移到下一时刻所处状态所进行的操作。一般而言这些操作都是离散的。</p>
+<p>状态转移：对面某一时刻对应状态进行某一种操作后，所能够到达的状态。</p>
+<p>路径：一个状态序列。该状态序列被一系列操作所连接。</p>
+<p>测试目标：评估当前状态是否为所求解的目标状态。</p>
+</blockquote>
+<p><strong>2.搜索算法：启发式搜索（有信息搜索）</strong></p>
+<p>在搜索的过程中利用与所求解问题相关的辅助信息，其代表算法为<strong>贪婪最佳优先搜索</strong>和<strong>A*搜索</strong>。</p>
+<p>有信息搜索要定义如下辅助信息：</p>
+<p><a href="https://imgtu.com/i/LdAHRf"><img src="https://s1.ax1x.com/2022/04/18/LdAHRf.png" alt="LdAHRf.png"></a></p>
+<p>贪婪最佳优先搜索：<strong>评价函数f（n）=启发函数h（n）</strong></p>
+<p><a href="https://imgtu.com/i/LdEUYt"><img src="https://s1.ax1x.com/2022/04/18/LdEUYt.png" alt="LdEUYt.png"></a></p>
+<p>根据上图所知，从当前Arad出发，选择相邻的后续节点并找出其最短路径。上图找出的最短直线距离是：Arad→Sibiu→Fagaras→Bucharest。此为贪婪最佳优先算法。</p>
+<p>不足之处：</p>
+<p><a href="https://imgtu.com/i/LdZwqg"><img src="https://s1.ax1x.com/2022/04/18/LdZwqg.png" alt="LdZwqg.png"></a></p>
+<p>为了解决上述问题，提出了<strong>A*算法。</strong></p>
+<p><strong>3.搜索算法：A*搜索</strong></p>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>人工智能</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一、操作系统的基本特征</title>
+    <url>/2022/04/09/%E4%B8%80%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81/</url>
+    <content><![CDATA[<h2 id="●-操作系统的基本特征"><a href="#●-操作系统的基本特征" class="headerlink" title="● 操作系统的基本特征"></a>● 操作系统的基本特征</h2><p>操作系统的四个特性：<strong>并发性，共享性，虚拟性，异步性</strong></p>
+<span id="more"></span>
+
+<h4 id="1-并发性"><a href="#1-并发性" class="headerlink" title="1. 并发性"></a>1. 并发性</h4><p>并发是指两个或多个事件在同一时间间隔内发生，<strong>宏观上是同时发生的</strong>，但是<strong>微观上是交替发生的</strong>。</p>
+<p><strong>操作系统的并发性</strong>指计算机系统中同时存在多个运行的程序。</p>
+<h4 id="2-共享性"><a href="#2-共享性" class="headerlink" title="2. 共享性"></a>2. 共享性</h4><p>即资源共享，是指系统中的资源可供内存中多个并发执行的进程共同使用。</p>
+<p>（1）两种资源共享方式</p>
+<ul>
+<li>互斥共享方式（<strong>一个时间段内只允许一个进程访问资源</strong>）</li>
+<li>同时共享方式（<strong>允许一个时间段内由多个进程“同时”对他们进行访问</strong>）</li>
+</ul>
+<p><strong>同时</strong>是宏观上的概念，微观上资源往往是交替进行资源访问的（分时共享）。</p>
+<blockquote>
+<p>==并发性和共享性两者的关系：==</p>
+<p>假如使用QQ发送文件A，使用微信发送文件B.<br>1.两个进程正在并发执行（并发性）<br>2.需要共享地访问硬盘资源（共享性）</p>
+<p>如果失去并发行，系统中只有一个程序在执行，则共享性即失去意义。<br>如果失去共享性，QQ和微信不能同时访问硬盘资源，就无法实现同时发送文件，也就无法并发。</p>
+<p><strong>即并发性和共享性二者互为存在条件</strong></p>
+</blockquote>
+<h4 id="3-虚拟性"><a href="#3-虚拟性" class="headerlink" title="3. 虚拟性"></a>3. 虚拟性</h4><p>虚拟是指把一个物理上的实体变为逻辑上的对应物，物理实体是实际存在的，而逻辑上对应物是用户感受到的。</p>
+<ul>
+<li>空分复用技术（如虚拟存储器）</li>
+<li>时分复用技术（如虚拟处理器），微观上处理机在各个微小的时间段内交替着为各个进程服务。</li>
+</ul>
+<h4 id="4-异步性"><a href="#4-异步性" class="headerlink" title="4. 异步性"></a>4. 异步性</h4><p>异步是指，在多道程序环境下，允许多个程序并发执行，但由于资源有限，进程的执行不是一贯到底的，而是走走停停，以不可预知的速度向前推进，这就是进程的异步性。</p>
+<p>如果失去了并发性，则系统只能串行的执行所有的进程，每个程序的执行会一贯到底，<strong>只有系统拥有并发性，才有可能导致异步性。</strong></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一些关于Blog的想法</title>
     <url>/2022/04/16/%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8EBlog%E7%9A%84%E6%83%B3%E6%B3%95/</url>
     <content><![CDATA[<p>我估计这东西应该不会有人看见吧。</p>
@@ -365,59 +380,6 @@
       </categories>
       <tags>
         <tag>随想随记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>三、操作系统的发展和分类</title>
-    <url>/2022/04/09/%E4%B8%89%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8F%91%E5%B1%95%E5%92%8C%E5%88%86%E7%B1%BB/</url>
-    <content><![CDATA[<h4 id="1-手工操作阶段"><a href="#1-手工操作阶段" class="headerlink" title="1. 手工操作阶段"></a>1. 手工操作阶段</h4><p>缺点：用户独占全机，人机速度矛盾导致资源利用率极低。人的速度慢，输入输出速度也慢，但计算机处理速度极快，人机速度矛盾。</p>
-<span id="more"></span>
-
-
-<p><img src="https://s1.ax1x.com/2022/04/10/LA2eu4.png" alt="手工操作阶段"></p>
-<h4 id="2-批处理阶段"><a href="#2-批处理阶段" class="headerlink" title="2. 批处理阶段"></a>2. 批处理阶段</h4><p><strong>（1）单道批处理系统</strong></p>
-<p>引入<strong>脱机输入/输出技术</strong>（用磁带完成），并<strong>监督程序</strong>负责控制作业的输入、输出。</p>
-<p>主要优点：一定程度缓解了人机速度矛盾，资源利用率有所提升</p>
-<p>主要缺点：<strong>内存中仅能有一道程序运行</strong>，只有该程序运行结束之后才能进入到下一道程序，<strong>cpu有大量的时间都是在空闲等待I/O完成，</strong>资源利用率仍然很低。</p>
-<p><img src="https://s1.ax1x.com/2022/04/10/LA2nb9.png" alt="单道批处理系统"></p>
-<p><strong>（2）多道批处理系统</strong></p>
-<p> 在多道批处理系统中，<strong>操作系统</strong>开始出现。</p>
-<p>主要优点：多道程序<strong>并发</strong>执行，<strong>共享</strong>计算机资源，<strong>资源利用率大幅度提升</strong>。</p>
-<p>主要缺点：用户响应时间长，<strong>没有人机交互功能</strong>（用户不能对执行的程序进行任何操作）。</p>
-<blockquote>
-<p>在单道批处理系统中，输入，计算和输出都是串行进行，资源利用率低。</p>
-</blockquote>
-<p> <img src="https://s1.ax1x.com/2022/04/10/LA2gbj.png" alt="1"></p>
-<blockquote>
-<p>而在多道批处理系统中，当一个系统资源不再被使用时，可以提前进行下一个任务，系统<strong>并行执行任务</strong>，资源利用率大幅度提高。</p>
-</blockquote>
-<p><img src="https://s1.ax1x.com/2022/04/10/LA2Wan.png" alt="2"></p>
-<p><strong>（3）分时操作系统</strong></p>
-<p>计算机以<strong>时间片</strong>为单位<strong>轮流为各个用户/作业服务</strong>，各个用户可通过终端与计算机交互。</p>
-<p>主要优点：用户请求可以被即时响应，<strong>解决了人机交互的问题</strong>，允许多个用户同时使用一台计算机，并且用户对计算机的操作<strong>相互独立</strong>，感受不到别人的存在。</p>
-<p>主要却带你：<strong>不能优先处理一些紧急任务</strong>，操作系统的各个用户、作业都是完全公平的，循环为每个用户、作业服务一个时间片，不区分任务的紧急性。</p>
-<p><strong>（4）实时操作系统</strong></p>
-<p>主要优点：可以实时处理一些紧急任务，某些紧急任务不需要时间片排队。</p>
-<p>在实时操作系统的控制下，计算机接受到外部信号后及时进行处理，并且<strong>要在严格的时间限制内处理完成事件</strong>，实时操作系统的主要特点是<strong>及时性和可靠性</strong>。</p>
-<p>实时操作系统可分为：</p>
-<ul>
-<li><p>硬实时系统：必须在<strong>绝对严格</strong>的规定时间内完成处理。如导弹控制系统，自动驾驶系统。</p>
-</li>
-<li><p>软实时系统：能接受偶尔违反时间规定。如12306火车订票系统。</p>
-</li>
-</ul>
-<p><strong>（5）网络操作系统</strong></p>
-<p>伴随计算机网络的发展而诞生的，能把网络的各个计算机有机地结合起来，实现数据传送等功能，<strong>实现网络中各种资源的共享（如文件共享）和各个计算机之间的通信</strong>。</p>
-<p><strong>（6）分布式操作系统</strong></p>
-<p>主要特点是<strong>分布性和并行性</strong>，系统中的割台计算机地位相同，<strong>任何工作都可以分布在这些计算机上，由他们并行、协同完成这个任务。</strong></p>
-<p><strong>（7）个人计算机操作系统</strong></p>
-<p>略，如windows，macos等</p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
       </tags>
   </entry>
   <entry>
@@ -493,38 +455,86 @@
       </tags>
   </entry>
   <entry>
-    <title>九、进程控制</title>
-    <url>/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/</url>
-    <content><![CDATA[<h4 id="1-什么是进程控制"><a href="#1-什么是进程控制" class="headerlink" title="1.什么是进程控制"></a>1.什么是进程控制</h4><p>进程控制的主要功能是对系统中的所有进程实施有效的管理，它具有创建进程，撤销进程，实现进程间的状态转换等功能。简而言之，<strong>进程控制就是要时间进程状态的转换。</strong></p>
+    <title>三、操作系统的发展和分类</title>
+    <url>/2022/04/09/%E4%B8%89%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8F%91%E5%B1%95%E5%92%8C%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[<h4 id="1-手工操作阶段"><a href="#1-手工操作阶段" class="headerlink" title="1. 手工操作阶段"></a>1. 手工操作阶段</h4><p>缺点：用户独占全机，人机速度矛盾导致资源利用率极低。人的速度慢，输入输出速度也慢，但计算机处理速度极快，人机速度矛盾。</p>
 <span id="more"></span>
 
-<h4 id="2-如何实现进程控制"><a href="#2-如何实现进程控制" class="headerlink" title="2.如何实现进程控制"></a>2.如何实现进程控制</h4><p><a href="https://imgtu.com/i/LaGOvd"><img src="https://s1.ax1x.com/2022/04/18/LaGOvd.png" alt="LaGOvd.png"></a></p>
-<p>进程之间的状态切换中间都需要对PCB进行修改并且放入相应的队列中。假如说某一进程把PCB从某一队列放入另一个队列中，但PCB中状态标志并未被修改，这种情况会导致系统错误，因为PCB所处的队列与PCB中存储的状态标志位数据不一致。于是引入<strong>原语</strong>来实现进程控制。原语的特点是<strong>执行过程中不允许被中断。</strong>这种不可被中断的操作即<strong>原子操作</strong>。原语使用<strong>关中断指令</strong>和<strong>开中断指令</strong>实现。</p>
-<p>当原语开始执行时会先执行关中断指令，此时外部中断信号会被忽略。这样保证原语的操作不会被中断。当原语执行完毕后会执行开中断指令，这样外部中断信号又会被响应了，如下图：</p>
-<p><img src="https://s1.ax1x.com/2022/04/18/LaY3Y8.png" alt="LaY3Y8.png"></p>
-<p>由此可见，<strong>开/关中断指令的权限非常大，必须只允许在核心态下执行的 特权指令 。</strong></p>
-<h4 id="3-进程控制相关原语"><a href="#3-进程控制相关原语" class="headerlink" title="3.进程控制相关原语"></a>3.进程控制相关原语</h4><p>四种原语：</p>
-<ul>
-<li><strong>创建原语</strong></li>
-<li><strong>撤销原语</strong></li>
-<li><strong>阻塞原语</strong></li>
-<li><strong>唤醒原语</strong></li>
-<li><strong>切换原语</strong></li>
-</ul>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatY4K.png" alt="LatY4K.png"></p>
-<hr>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatN9O.png" alt="LatN9O.png"></p>
-<hr>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatdjH.png" alt="LatdjH.png"></p>
-<hr>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatDHI.png" alt="LatDHI.png"></p>
-<hr>
-<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/18/LatoEq.png" alt="LatoEq.png"></p>
-<hr>
-<center>分割线</center>
 
-<hr>
-<p>这章疑问有点多，应该看看书。</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/LA2eu4.png" alt="手工操作阶段"></p>
+<h4 id="2-批处理阶段"><a href="#2-批处理阶段" class="headerlink" title="2. 批处理阶段"></a>2. 批处理阶段</h4><p><strong>（1）单道批处理系统</strong></p>
+<p>引入<strong>脱机输入/输出技术</strong>（用磁带完成），并<strong>监督程序</strong>负责控制作业的输入、输出。</p>
+<p>主要优点：一定程度缓解了人机速度矛盾，资源利用率有所提升</p>
+<p>主要缺点：<strong>内存中仅能有一道程序运行</strong>，只有该程序运行结束之后才能进入到下一道程序，<strong>cpu有大量的时间都是在空闲等待I/O完成，</strong>资源利用率仍然很低。</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/LA2nb9.png" alt="单道批处理系统"></p>
+<p><strong>（2）多道批处理系统</strong></p>
+<p> 在多道批处理系统中，<strong>操作系统</strong>开始出现。</p>
+<p>主要优点：多道程序<strong>并发</strong>执行，<strong>共享</strong>计算机资源，<strong>资源利用率大幅度提升</strong>。</p>
+<p>主要缺点：用户响应时间长，<strong>没有人机交互功能</strong>（用户不能对执行的程序进行任何操作）。</p>
+<blockquote>
+<p>在单道批处理系统中，输入，计算和输出都是串行进行，资源利用率低。</p>
+</blockquote>
+<p> <img src="https://s1.ax1x.com/2022/04/10/LA2gbj.png" alt="1"></p>
+<blockquote>
+<p>而在多道批处理系统中，当一个系统资源不再被使用时，可以提前进行下一个任务，系统<strong>并行执行任务</strong>，资源利用率大幅度提高。</p>
+</blockquote>
+<p><img src="https://s1.ax1x.com/2022/04/10/LA2Wan.png" alt="2"></p>
+<p><strong>（3）分时操作系统</strong></p>
+<p>计算机以<strong>时间片</strong>为单位<strong>轮流为各个用户/作业服务</strong>，各个用户可通过终端与计算机交互。</p>
+<p>主要优点：用户请求可以被即时响应，<strong>解决了人机交互的问题</strong>，允许多个用户同时使用一台计算机，并且用户对计算机的操作<strong>相互独立</strong>，感受不到别人的存在。</p>
+<p>主要却带你：<strong>不能优先处理一些紧急任务</strong>，操作系统的各个用户、作业都是完全公平的，循环为每个用户、作业服务一个时间片，不区分任务的紧急性。</p>
+<p><strong>（4）实时操作系统</strong></p>
+<p>主要优点：可以实时处理一些紧急任务，某些紧急任务不需要时间片排队。</p>
+<p>在实时操作系统的控制下，计算机接受到外部信号后及时进行处理，并且<strong>要在严格的时间限制内处理完成事件</strong>，实时操作系统的主要特点是<strong>及时性和可靠性</strong>。</p>
+<p>实时操作系统可分为：</p>
+<ul>
+<li><p>硬实时系统：必须在<strong>绝对严格</strong>的规定时间内完成处理。如导弹控制系统，自动驾驶系统。</p>
+</li>
+<li><p>软实时系统：能接受偶尔违反时间规定。如12306火车订票系统。</p>
+</li>
+</ul>
+<p><strong>（5）网络操作系统</strong></p>
+<p>伴随计算机网络的发展而诞生的，能把网络的各个计算机有机地结合起来，实现数据传送等功能，<strong>实现网络中各种资源的共享（如文件共享）和各个计算机之间的通信</strong>。</p>
+<p><strong>（6）分布式操作系统</strong></p>
+<p>主要特点是<strong>分布性和并行性</strong>，系统中的割台计算机地位相同，<strong>任何工作都可以分布在这些计算机上，由他们并行、协同完成这个任务。</strong></p>
+<p><strong>（7）个人计算机操作系统</strong></p>
+<p>略，如windows，macos等</p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二十、信号量机制</title>
+    <url>/2022/04/27/%E4%BA%8C%E5%8D%81%E3%80%81%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6/</url>
+    <content><![CDATA[<h4 id="1-信号量机制"><a href="#1-信号量机制" class="headerlink" title="1.信号量机制"></a>1.信号量机制</h4><p>进程互斥的四种软件实现方式和进程互斥的三种硬件实现方式都存在一些问题。</p>
+<p>1.在双标志检查法中，<strong>进入区的“检查”、‘上锁”操作无法一气呵成</strong>，从而导致了两个进程有可能同时进入临界区的问题。</p>
+<p>2.所有的解决方案都<strong>无法实现“让权等待”</strong>。</p>
+<p>1965年，荷兰学者迪杰斯特拉Dijkstra提出了一种卓有成效的实现进程互斥、同步的方法–<strong>信号量机制</strong></p>
+<span id="more"></span>
+
+<p>用户可以通过使用操作系统提供的<strong>一对原语</strong>来对<strong>信号量</strong>进行操作，从而很方便地实现了进程互斥、进程同步。<strong>信号量</strong>其实就是一个变量（可以是一个整数，也可以是更复杂的记录型信号量），可以用一个信号量来<strong>表示系统中的某种资源的数量</strong>。</p>
+<p><strong>原语</strong>是一种特殊的程序段，其<strong>执行只能一气呵成，不可被中断。</strong>原语是由<strong>关中断/开中断指令</strong>实现的，软件解决方案的主要问题是由“进入区的各种操作无法一气呵成”，因此如果能把进入区、退出区的操作都用原语实现，使这些操作能“一气呵成”就能避免问题。</p>
+<p><strong>一对原语</strong>：<strong>wait（s）</strong>原语和<strong>signal（s）</strong>原语，可以把原语理解为我们自己写的函数，函数名称分别为wait和signal，括号里的<strong>信号量s</strong>其实就是函数调用时传入的一个参数。wait、signal原语常<strong>简称为P，V操作</strong>（来自荷兰语proberen和verhogen，意思是“尝试”和“增加”）。因此，wait（s）和signal（s）可被简写为<strong>P（s）和V（s）。</strong></p>
+<h4 id="2-整形信号量"><a href="#2-整形信号量" class="headerlink" title="2.整形信号量"></a>2.整形信号量</h4><p>用一个<strong>整数型的变量</strong>作为信号量，来<strong>表示系统中的某种资源的数量。</strong></p>
+<p>如：某计算机系统中有一台打印机：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">S</span> <span class="operator">=</span> <span class="number">1</span>; <span class="comment">//初始化整形信号量S，表示当前系统中可用的打印机资源数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">wait</span><span class="params">(<span class="type">int</span> S)</span>&#123;  <span class="comment">//wait原语，相当于“进入区”</span></span><br><span class="line">    <span class="keyword">while</span>(s &lt;= <span class="number">0</span>); <span class="comment">//如果资源数不够，就一直循环等待</span></span><br><span class="line">    S = S - <span class="number">1</span>;     <span class="comment">//如果资源数够，就占用一个资源</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">signal</span><span class="params">(<span class="type">int</span> S)</span>&#123; <span class="comment">//signal原语，相当于&quot;退出区&quot;</span></span><br><span class="line">    S = S + <span class="number">1</span>;      <span class="comment">//使用完资源后，在退出区释放资源</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果一个进程P0想要访问打印机，则其操作的伪代码为：</span></span><br><span class="line">...</span><br><span class="line">wait(S); <span class="comment">//进入区，申请自愿</span></span><br><span class="line">使用的印记资源... <span class="comment">//临界区，访问资源</span></span><br><span class="line">signal(S);  <span class="comment">//退出区，释放资源</span></span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment">//如果进程P1在进程P0正在放问打印机时想要访问打印机资源，只能一直执行wait(S)，等待进程P0释放</span></span><br><span class="line"><span class="comment">//临界区资源。</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">访问打印机资源...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>信号量其与普通整数变量的区别：对信号量的操作只有三种，即 初始化、P操作、V操作。在wait原语中，“检查”和“上锁”一气呵成，避免了并发、异步导致的问题。但是如果信号量S为0，则其中的while语句会一直检查信号量S的占用情况，会一直占用处理机，不满足“让权等待”原则，会发生“忙等”。</p>
+<h4 id="3-记录型信号量（重要）"><a href="#3-记录型信号量（重要）" class="headerlink" title="3.记录型信号量（重要）"></a>3.记录型信号量（<font color=red>重要</font>）</h4><p>整形信号量的缺陷是存在“忙等”的问题，因此人们又提出了“记录型信号量”，即用记录型数据结构表示的信号量。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//信号量的数据结构</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> value;   <span class="comment">//剩余资源数</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">process</span> *<span class="title">L</span>;</span>  <span class="comment">//等待队列</span></span><br><span class="line">&#125; semphore;</span><br><span class="line"></span><br><span class="line"><span class="comment">//某进程需要使用资源时，通过wait原语申请</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">wait</span><span class="params">(semaphore S)</span>&#123;</span><br><span class="line">    S.value--;</span><br><span class="line">    <span class="keyword">if</span>(S.value &lt; <span class="number">0</span>)&#123;  <span class="comment">//如果剩余资源不够，使用block原语使进程从运行态进入阻塞态，并把它挂到</span></span><br><span class="line">        block(S.L);   <span class="comment">//信号量S的等待队列（即阻塞队列）中</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//进程使用完资源后，通过signal原语释放</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">signal</span><span class="params">(semaphore S)</span>&#123;</span><br><span class="line">    S.value++;</span><br><span class="line">    <span class="keyword">if</span>(S.value&lt;=<span class="number">0</span>)&#123;  <span class="comment">//释放资源后，如果还有别的进程在等待这种资源，则使用wakeup原语唤醒</span></span><br><span class="line">        wakeup(S.L); <span class="comment">//等待队列中的一个进程，使该进程从阻塞态变为就绪态。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例：某计算机系统中有两台打印机，则可在初始化信号量S时将S.value的值设为2，队列S.L设置为空</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> value;    <span class="comment">//剩余资源数为2</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">process</span> *<span class="title">L</span>;</span>  <span class="comment">//等待队列-→null</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//P0进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">//P1进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">//P2进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机..</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">//P3进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">解释：有点啰嗦，能看得懂就行。</span></span><br><span class="line"><span class="comment">cpu首先为p0服务，P0使用wait原语检查剩余资源，系统中剩余打印机资源为2，可以分配给P0，value值减1变为1，P0可以使用打印机。之后cpu又为p1服务，P1使用wait原语检查剩余资源，系统中剩余打印机资源为1，value值减1变为0，可以分配给P1，P1可以使用打印机。再次cpu为P2服务，P2使用wait原语检查剩余打印机资源，系统中剩余打印机资源为0，资源已经暂时全部被占用，value值减1变为-1小于0，P2进程主动执行block原语，P2被挂载到了打印机的等待队列中，P3同理，value值变为-2.</span></span><br><span class="line"><span class="comment">value值为0时资源刚好被分配完，为-1时有一个进程在等待，为-2时有两个进程在等待。</span></span><br><span class="line"><span class="comment">当P0使用完成后，会执行signal原语释放打印机，value值加一变为-1，但此时value的值为-1仍然小于0，就说明此时等待队列中不止一个进程在等待打印机资源，进程P0会主动执行wakeup原语唤醒队列中的队头进程P2，P2从阻塞队列中被切换到就绪队列。待P2进程切换至运行态时，就可占用P0释放的打印机资源了。其余后续步骤同理。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>wait(S)和signal(S)也可记为P(S)，V(S)，这对原语用于<strong>实现系统资源的申请和释放</strong>。</p>
+<p><strong>S.value的初始值</strong>表示系统中<strong>某种资源的数目。</strong></p>
+<p>对信号量S的<strong>一次P操作</strong>意味着进程<strong>请求一个单位的该类资源</strong>，因此需要执行S.balue–，表示资源数减1，当S.value&lt;0时表示该类资源已分配完毕，因此进程应<strong>调用block原语进行自我阻塞</strong>（当前运行的进程从<strong>运行态切换为阻塞态</strong>），主动放弃处理机，并插入该类资源的等待队列S.L中。可见，该机制<strong>遵循了“让权等待的原则”</strong>，不会出现“忙等”的现象。</p>
+<p>对信号量S的<strong>一次V操作</strong>意味着进程<strong>释放一个单位的该类资源</strong>，因此需要执行S.value++，表示资源数+1，若加一后仍是S.value&lt;=0，表示依然有进程在等待该类资源，因此应<strong>调用wakeup原语唤醒等待队列中的第一个进程</strong>（被唤醒的进程从<strong>阻塞态切换为就绪态</strong>）。</p>
+<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/27/LLCHn1.png" alt="LLCHn1.png"></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -579,30 +589,134 @@
       </tags>
   </entry>
   <entry>
-    <title>八、进程的状态与转换</title>
-    <url>/2022/04/17/%E5%85%AB%E3%80%81%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E8%BD%AC%E6%8D%A2/</url>
-    <content><![CDATA[<h4 id="1-进程的基本状态"><a href="#1-进程的基本状态" class="headerlink" title="1.进程的基本状态"></a>1.进程的基本状态</h4><p><strong>三种基本状态：</strong></p>
-<ol>
-<li><strong>运行态</strong>：占有cpu，并在cpu上运行</li>
-<li><strong>就绪态</strong>：已具备运行条件，但没有空闲CPU而暂时不能运行</li>
-<li><strong>阻塞态（或称等待态）</strong>：因等待某一事件而暂时不能执行</li>
+    <title>九、进程控制</title>
+    <url>/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/</url>
+    <content><![CDATA[<h4 id="1-什么是进程控制"><a href="#1-什么是进程控制" class="headerlink" title="1.什么是进程控制"></a>1.什么是进程控制</h4><p>进程控制的主要功能是对系统中的所有进程实施有效的管理，它具有创建进程，撤销进程，实现进程间的状态转换等功能。简而言之，<strong>进程控制就是要时间进程状态的转换。</strong></p>
+<span id="more"></span>
+
+<h4 id="2-如何实现进程控制"><a href="#2-如何实现进程控制" class="headerlink" title="2.如何实现进程控制"></a>2.如何实现进程控制</h4><p><a href="https://imgtu.com/i/LaGOvd"><img src="https://s1.ax1x.com/2022/04/18/LaGOvd.png" alt="LaGOvd.png"></a></p>
+<p>进程之间的状态切换中间都需要对PCB进行修改并且放入相应的队列中。假如说某一进程把PCB从某一队列放入另一个队列中，但PCB中状态标志并未被修改，这种情况会导致系统错误，因为PCB所处的队列与PCB中存储的状态标志位数据不一致。于是引入<strong>原语</strong>来实现进程控制。原语的特点是<strong>执行过程中不允许被中断。</strong>这种不可被中断的操作即<strong>原子操作</strong>。原语使用<strong>关中断指令</strong>和<strong>开中断指令</strong>实现。</p>
+<p>当原语开始执行时会先执行关中断指令，此时外部中断信号会被忽略。这样保证原语的操作不会被中断。当原语执行完毕后会执行开中断指令，这样外部中断信号又会被响应了，如下图：</p>
+<p><img src="https://s1.ax1x.com/2022/04/18/LaY3Y8.png" alt="LaY3Y8.png"></p>
+<p>由此可见，<strong>开/关中断指令的权限非常大，必须只允许在核心态下执行的 特权指令 。</strong></p>
+<h4 id="3-进程控制相关原语"><a href="#3-进程控制相关原语" class="headerlink" title="3.进程控制相关原语"></a>3.进程控制相关原语</h4><p>四种原语：</p>
+<ul>
+<li><strong>创建原语</strong></li>
+<li><strong>撤销原语</strong></li>
+<li><strong>阻塞原语</strong></li>
+<li><strong>唤醒原语</strong></li>
+<li><strong>切换原语</strong></li>
+</ul>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatY4K.png" alt="LatY4K.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatN9O.png" alt="LatN9O.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatdjH.png" alt="LatdjH.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatDHI.png" alt="LatDHI.png"></p>
+<hr>
+<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/18/LatoEq.png" alt="LatoEq.png"></p>
+<hr>
+<center>分割线</center>
+
+<hr>
+<p>这章疑问有点多，应该看看书。</p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二十一、用信号量机制实现进程互斥、同步和前驱关系</title>
+    <url>/2022/04/27/%E4%BA%8C%E5%8D%81%E4%B8%80%E3%80%81%E7%94%A8%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E3%80%81%E5%90%8C%E6%AD%A5%E5%92%8C%E5%89%8D%E9%A9%B1%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[<h4 id="1-信号量机制实现进程互斥"><a href="#1-信号量机制实现进程互斥" class="headerlink" title="1.信号量机制实现进程互斥"></a>1.信号量机制实现进程互斥</h4><ol>
+<li>分析并发进程的关键活动，划定临界区（如：对临界资源打印机的访问就应放在临界区）</li>
+<li>设置<strong>互斥信号量mutex，初始值为1</strong></li>
+<li>在临界区之前执行P(mutex)</li>
+<li>在临界区之后执行V(mutex)</li>
 </ol>
 <span id="more"></span>
 
-<blockquote>
-<p>运行态：在单核处理及环境，每一时刻最多只能有一个进程处于运行态（双核环境下最多可以同时拥有两个进程处于运行态）</p>
-<p>就绪态：进程已经拥有了除处理及之外所有需要的资源，一旦获得处理机即可立即进入运行态开始运行。（万事俱备，只欠CPU）</p>
-<p>阻塞态：如：等待操作系统扽配打印机，等待读取磁盘操作的结果。为了提高CPU利用率，需要先将其他进程需要的资源分配到位，才能得到CPU的服务。</p>
-</blockquote>
-<p><strong>另外的两种状态：</strong></p>
-<p>进程运行结束（或者由于BUG导致进程无法继续下去，如数组越界）需要撤销进程，操作系统需要完成撤销进程的相关操作，完成将分配给进程的资源回收，撤销进程的PCB等操作。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//信号量机制实现互斥</span></span><br><span class="line">semaphore mutex=<span class="number">1</span>; <span class="comment">//初始化信号量</span></span><br><span class="line"></span><br><span class="line">P1()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(mutex); <span class="comment">//使用临界区资源前需要加锁</span></span><br><span class="line">    临界代码区段....</span><br><span class="line">    V(mutex); <span class="comment">//使用临界区资源后需要解锁</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">P2()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(mutex);</span><br><span class="line">    临界代码区段....</span><br><span class="line">    V(mutex);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//原理与上节类似</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：<strong>对不同的临界资源需要设置不同的互斥信号量。P，V操作必须成对出现。</strong>缺少P(mutex)就不能保证临界区资源的互斥访问。缺少V(mutex)会导致资源永不被释放，等待进程永不被唤醒。</p>
+<p><img src="https://s1.ax1x.com/2022/04/27/LLm4VH.png" alt="LLm4VH.png"></p>
+<h4 id="2-信号量机制实现进程同步"><a href="#2-信号量机制实现进程同步" class="headerlink" title="2.信号量机制实现进程同步"></a>2.信号量机制实现进程同步</h4><p>进程同步：要让各并发进程按要求有序地推进</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//比如，P1、P2并发的执行，由于存在异步性，因此二者交替推进的次序是不确定的。</span></span><br><span class="line"><span class="comment">//若P2的“代码4”要基于P1的“代码1”和“代码2”的运行结果才能执行，那么我们就必须保证“代码4”一定是</span></span><br><span class="line"><span class="comment">//在“代码2”之后才会执行。</span></span><br><span class="line">P1()&#123;</span><br><span class="line">    代码<span class="number">1</span>;</span><br><span class="line">    代码<span class="number">2</span>;</span><br><span class="line">    代码<span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">P2()&#123;</span><br><span class="line">    代码<span class="number">4</span>;</span><br><span class="line">    代码<span class="number">5</span>;</span><br><span class="line">    代码<span class="number">6</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用信号量实现进程同步：</p>
 <ol>
-<li><strong>创建态</strong>（新建态）：进程正在被创建，操作系统为其分配资源、创建PCB</li>
-<li><strong>终止态</strong>（结束态）：进程正在从系统中撤销，操作系统会回收分配给进程的资源，撤销其PCB</li>
+<li>分析什么地方需要实现“同步关系”，即必须保证“一前一后”执行的两个操作（或两句代码）</li>
+<li>设置<strong>同步信号量S，初始值为0</strong>。</li>
+<li><strong>在“前操作”之后执行V(S)；</strong></li>
+<li><strong>在“后操作”之前执行P(S)；</strong></li>
 </ol>
-<h4 id="2-进程的状态转换"><a href="#2-进程的状态转换" class="headerlink" title="2.进程的状态转换"></a>2.进程的状态转换</h4><p><a href="https://imgtu.com/i/La3vzd"><img src="https://s1.ax1x.com/2022/04/18/La3vzd.png" alt="La3vzd.png"></a></p>
-<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p>绿框知识重要</p>
-<p><a href="https://imgtu.com/i/La8kFS"><img src="https://s1.ax1x.com/2022/04/18/La8kFS.png" alt="La8kFS.png"></a></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//信号量机制实现同步</span></span><br><span class="line">semaphore S=<span class="number">0</span>; <span class="comment">//初始化同步信号量</span></span><br><span class="line"></span><br><span class="line">P1()&#123;</span><br><span class="line">    代码<span class="number">1</span>;</span><br><span class="line">    代码<span class="number">2</span>;</span><br><span class="line">    V(S);</span><br><span class="line">    代码<span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">P2()&#123;</span><br><span class="line">    P(S);</span><br><span class="line">    代码<span class="number">4</span>;</span><br><span class="line">    代码<span class="number">5</span>;</span><br><span class="line">    代码<span class="number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">若先执行到V(S)操作，则S++后S=1.之后当执行到P(S)操作时，由于S=1，表示有可用资源，会执行S--，S的值变回0，P2的进程不会执行block原语，而是继续往下执行代码4.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">若先执行到P(S)操作，由于S=0，S--后S=-1，表示此时没有可用资源，因此P操作中会执行block原语，主动请求阻塞。之后当执行完代码2，继而执行V(S)操作，S++，使S变回0由于此时有进程在该信号量对应的阻塞队列中，因此会在V操作中执行wakeup原语，唤醒P2进程。这样P2就可以继续执行代码4了。</span></span><br><span class="line"><span class="comment">这样就保证了代码4一定是在代码2之后执行。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">这里有一点不理解。前面说过了同步信号量S=0时表示没有可用资源，但是如果先执行了P(S)操作，同步信号量S的值会变为-1并阻塞自己，当V(S)被执行后同步信号量S的值变为0并执行wakeup操作唤醒进程P2，若按照前面的陈述那么P2也会认为此时并没有可用资源，因为同步信号量S的值为0，这样P2进程不就饿死了吗？</span></span><br><span class="line"><span class="comment">不知道是不是我听漏了什么。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-信号量机制实现前驱关系"><a href="#3-信号量机制实现前驱关系" class="headerlink" title="3.信号量机制实现前驱关系"></a>3.信号量机制实现前驱关系</h4><p>进程P1中有句代码S1，P2中有句代码S2一直到P6。这些代码要求按照如下前驱图所示的顺序来执行。</p>
+<p> <img src="https://s1.ax1x.com/2022/04/27/LL3Vcn.png" alt="LL3Vcn.png"></p>
+<p>每一对前驱关系都是一个进程同步问题（需要保证一前一后的操作）</p>
+<p>因此：</p>
+<ol>
+<li>要<strong>为每一对前驱关系各设置一个同步变量</strong>a，b，c，d，e，f，g</li>
+<li><strong>在“前操作”之后对相应的同步变量执行V操作</strong></li>
+<li><strong>在“后操作”之前对相应的同步变量执行P操作</strong></li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">P1()&#123;</span><br><span class="line">    ...</span><br><span class="line">    S1;</span><br><span class="line">    V(a);</span><br><span class="line">    V(B);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">P2()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(a);</span><br><span class="line">    S2;</span><br><span class="line">    V(c);</span><br><span class="line">    V(d);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">P3()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(b);</span><br><span class="line">    S3;</span><br><span class="line">    V(g);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">P4()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(c);</span><br><span class="line">    S4;</span><br><span class="line">    V(e);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">P5()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(d);</span><br><span class="line">    P(f);</span><br><span class="line">    S5;</span><br><span class="line">    V(f);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">P6()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(e);</span><br><span class="line">    P(f);</span><br><span class="line">    P(g);</span><br><span class="line">    S6;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>大概是这个样子：</p>
+<p><img src="https://s1.ax1x.com/2022/04/27/LL8rIU.png" alt="LL8rIU.png"></p>
+<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/27/LLGPzj.png" alt="LLGPzj.png"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二十二、生产者消费者问题</title>
+    <url>/2022/05/01/%E4%BA%8C%E5%8D%81%E4%BA%8C%E3%80%81%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h4 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1.问题描述"></a>1.问题描述</h4><p>系统中有一组生产者进程和一组消费者进程，生产者进程每次生产一个产品放入缓冲区，消费者进程每次从缓冲区中去除一个产品并使用。（这里的“产品”理解为某种数据）</p>
+<span id="more"></span>
+
+<p>生产者、消费者<strong>共享一个初始为空、大小为n的缓冲区。</strong></p>
+<p>只有<strong>缓冲区没满</strong>时，生产者才能把产品放入缓冲区。</p>
+<p>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。</p>
+<p><img src="https://s1.ax1x.com/2022/05/01/OC1z3q.png"></p>
+<p>生产者进程每次生产一个产品，消费者进程每次取走一个产品。当缓冲区为满时，只能阻塞生产者进程，切换为消费者进程取走产品。只要缓冲区中又大于或等于1个可用的空间时就可以唤醒生产者进程继续生产。</p>
+<p><img src="https://s1.ax1x.com/2022/05/01/OC3t2t.png" alt="OC3t2t.png"></p>
+<p>当缓冲区为空，消费者进程就没有可以被取走的产品了，只能阻塞消费者进程，等待产品被放入缓冲区。</p>
+<p><img src="https://s1.ax1x.com/2022/05/01/OC8AL8.png" alt="OC8AL8.png"></p>
+<p>缓冲区属于临界资源，各个进程必须互斥地访问。如果不属于临界资源，则各生产者进程并发地执行时由于无法控制执行进度，有可能导致两个进程同时访问缓冲区的同一块区域导致数据冲突。</p>
+<p><strong>如何用信号量机制（P、V操作）实现生产者、消费者进程的这些功能？</strong></p>
+<p>信号量机制可以实现互斥、同步、对一类系统资源的申请和释放。</p>
+<p>互斥：设置初始值为1的互斥信号量。</p>
+<p>同步：设置初始值为0的同步信号量（实现“一前一后”）</p>
+<p>申请和释放资源：设置一个信号量，初始值为资源的数量（本质上也是属于“同步问题”，若无空闲资源，则申请自愿的进程需要等待别的进程释放资源后才能据需执行下去）</p>
+<blockquote>
+<p>分析：</p>
+<p>1.关系分析：找出题目中描述的各个进程，分析它们之间的同步关系。</p>
+<ul>
+<li>只有<strong>缓冲区没满</strong>时，生产者才能把产品放入缓冲区。这个属于同步关系。缓冲区没满时，生产者要等待消费者取走产品。</li>
+<li>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。这个也属于同步关系。缓冲区为空时（即没有产品时），消费者要等待生产者生产商品。</li>
+<li>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。这个属于互斥关系。</li>
+</ul>
+<p>2.整理思路，根据各进程的操作流程确定P、V操作的大致顺序。</p>
+<p>生产者每次要消耗（P）一个空闲缓冲区，并生产（V）一个产品。消费者者每次要消耗（P）一个产品，并释放一个空闲的缓冲区（V）。往缓冲区放入，取走产品需要互斥。</p>
+<p>3.设置信号量。设置需要的信号量，并根据题目题目条件确定信号量初值（互斥信号量初值一般为1，同步信号量的初始值要看对应资源的初始值是多少）</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">semaphore mutex = <span class="number">1</span>;  <span class="comment">//互斥信号量，实现进程互斥访问。</span></span><br><span class="line">semaphore empty = n;  <span class="comment">//同步信号量，表示空闲缓冲区的数量。</span></span><br><span class="line">semaphore full = <span class="number">0</span>;   <span class="comment">//同步信号量，表示产品的数量，也即非空缓冲区的数量。</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="2-如何实现"><a href="#2-如何实现" class="headerlink" title="2.如何实现"></a>2.如何实现</h4><p>根据上面设置的信号量，实现响应代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//生产者进程</span></span><br><span class="line">producer()&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        生产一个产品;</span><br><span class="line">        P(empty);   <span class="comment">//消耗一个空闲缓冲区</span></span><br><span class="line">        P(mutex);   <span class="comment">//实现进程互斥</span></span><br><span class="line">        把产品放入缓冲区;</span><br><span class="line">        V(mutex);   </span><br><span class="line">        V(full);    <span class="comment">//增加一个产品</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//消费者进程</span></span><br><span class="line">consumer()&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        P(full);   <span class="comment">//消耗一个产品（非空缓冲区）,此P操作用于实现进程同步</span></span><br><span class="line">        P(mutex);  <span class="comment">//此P操作用于实现进程互斥</span></span><br><span class="line">        从缓冲区取走一个产品;</span><br><span class="line">        V(mutex);</span><br><span class="line">        V(empty);   <span class="comment">//增加一个空闲缓冲区</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">P(mutex);</span></span><br><span class="line"><span class="comment">把产品放入缓冲区;</span></span><br><span class="line"><span class="comment">V(mutex);</span></span><br><span class="line"><span class="comment">上面的代码实现了进程互斥，实现互斥是在同一进程中进程一对PV操作</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">生产者进程的V(full)和消费者进程的P(full)用于实现两个进程的同步关系。即在其中一个一个进程中执行P，另一个进程中执行V</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-思考：能否改变相邻P，V操作的顺序？"><a href="#3-思考：能否改变相邻P，V操作的顺序？" class="headerlink" title="3.思考：能否改变相邻P，V操作的顺序？"></a>3.思考：能否改变相邻P，V操作的顺序？</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCUYTK.png" alt="OCUYTK.png"></p>
+<p>生产者生产产品和消费者消费产品从代码上看是放在PV操作之外。能不能放到PV操作之内呢？从逻辑上来看是没问题，可以让消费者从缓冲区中取出一个产品后就立即使用这个产品。但会导致临界区代码量变大，消费者进程在访问临界区的过程中就需要花费更多的时间，如果此时有别的进程也需要访问临界资源则消费者进程会被阻塞，会导致进程的并发度降低，尽量不要放入PV操作之中。</p>
+<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCaFhD.png" alt="OCaFhD.png"></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -774,6 +888,39 @@
       </tags>
   </entry>
   <entry>
+    <title>八、进程的状态与转换</title>
+    <url>/2022/04/17/%E5%85%AB%E3%80%81%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<h4 id="1-进程的基本状态"><a href="#1-进程的基本状态" class="headerlink" title="1.进程的基本状态"></a>1.进程的基本状态</h4><p><strong>三种基本状态：</strong></p>
+<ol>
+<li><strong>运行态</strong>：占有cpu，并在cpu上运行</li>
+<li><strong>就绪态</strong>：已具备运行条件，但没有空闲CPU而暂时不能运行</li>
+<li><strong>阻塞态（或称等待态）</strong>：因等待某一事件而暂时不能执行</li>
+</ol>
+<span id="more"></span>
+
+<blockquote>
+<p>运行态：在单核处理及环境，每一时刻最多只能有一个进程处于运行态（双核环境下最多可以同时拥有两个进程处于运行态）</p>
+<p>就绪态：进程已经拥有了除处理及之外所有需要的资源，一旦获得处理机即可立即进入运行态开始运行。（万事俱备，只欠CPU）</p>
+<p>阻塞态：如：等待操作系统扽配打印机，等待读取磁盘操作的结果。为了提高CPU利用率，需要先将其他进程需要的资源分配到位，才能得到CPU的服务。</p>
+</blockquote>
+<p><strong>另外的两种状态：</strong></p>
+<p>进程运行结束（或者由于BUG导致进程无法继续下去，如数组越界）需要撤销进程，操作系统需要完成撤销进程的相关操作，完成将分配给进程的资源回收，撤销进程的PCB等操作。</p>
+<ol>
+<li><strong>创建态</strong>（新建态）：进程正在被创建，操作系统为其分配资源、创建PCB</li>
+<li><strong>终止态</strong>（结束态）：进程正在从系统中撤销，操作系统会回收分配给进程的资源，撤销其PCB</li>
+</ol>
+<h4 id="2-进程的状态转换"><a href="#2-进程的状态转换" class="headerlink" title="2.进程的状态转换"></a>2.进程的状态转换</h4><p><a href="https://imgtu.com/i/La3vzd"><img src="https://s1.ax1x.com/2022/04/18/La3vzd.png" alt="La3vzd.png"></a></p>
+<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p>绿框知识重要</p>
+<p><a href="https://imgtu.com/i/La8kFS"><img src="https://s1.ax1x.com/2022/04/18/La8kFS.png" alt="La8kFS.png"></a></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十一、线程概念和多线程模型</title>
     <url>/2022/04/19/%E5%8D%81%E4%B8%80%E3%80%81%E7%BA%BF%E7%A8%8B%E6%A6%82%E5%BF%B5%E5%92%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/</url>
     <content><![CDATA[<h4 id="1-什么是线程，为什么要引入线程"><a href="#1-什么是线程，为什么要引入线程" class="headerlink" title="1.什么是线程，为什么要引入线程"></a>1.什么是线程，为什么要引入线程</h4><p>还没引入进程之前，系统中的各个程序只能串行执行。在传统的定成定义中，进程是程序的一次执行。但想实现多个功能显然不可能是由一个程序顺序处理就能实现的。如QQ，可以同时进行视频，文字聊天，发送文件等操作。</p>
@@ -827,72 +974,10 @@
       </tags>
   </entry>
   <entry>
-    <title>四、操作系统的运行机制与体系系统</title>
-    <url>/2022/04/10/%E5%9B%9B%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h4 id="1-运行机制"><a href="#1-运行机制" class="headerlink" title="1.运行机制"></a>1.运行机制</h4><p>什么是指令， “指令”和“代码”有什么区别？</p>
-<p>比如：C语言指令代码源文件经过编译后变成机器语言指令，而一条高级语言的代码可能对应着多条指令。</p>
-<span id="more"></span>
-
-<p>简而言之，<strong>“指令”就是CPU能够处理和执行的最基本的命令</strong>，就是让CPU干一件具体的事情。</p>
-<p><strong>（1）两种指令：</strong></p>
-<ul>
-<li><strong>特权指令</strong>：如内存清零指令（不允许用户程序使用）</li>
-<li><strong>非特权指令</strong>：如普通的运算指令</li>
-</ul>
-<p>问：CPU怎样执行特权指令？</p>
-<p><strong>（2）两种处理器状态：</strong></p>
-<ul>
-<li><strong>用户态（目态）</strong>：在该状态下CPU只能执行非特权指令。</li>
-<li><strong>核心态（管态）</strong>：在该状态下特权指令和非特权指令都可以执行。</li>
-</ul>
-<p>在CPU中存在一个<strong>用户程序状态寄存器（PSW）</strong>，在其中的某一个标志位来标识当前处理器处于什么状态。如0为用户态，1为核心态。</p>
-<p><strong>（3）两种程序：</strong></p>
-<ul>
-<li><strong>内核程序</strong>：操作系统的内核程序是系统的管理者，既可以执行特权指令，也可以执行非特权指令，<strong>运行在核心态</strong>。</li>
-<li><strong>应用程序</strong>：为了保证系统能安全运行，普通应用程序只能执行非特权指令，<strong>运行在用户态</strong>。</li>
-</ul>
-<h4 id="2-操作系统内核"><a href="#2-操作系统内核" class="headerlink" title="2.操作系统内核"></a>2.操作系统内核</h4><p>[<img src="https://s1.ax1x.com/2022/04/10/LANsi9.md.png" alt="LANsi9.md.png"></p>
-<p><strong>内核</strong>是计算机配置上的底层<strong>软件</strong>，是操作系统最基本，最核心的部分。</p>
-<p>实现操作系统内核功能的哪些程序就是<strong>内核程序</strong>。</p>
-<blockquote>
-<p>操作系统内核包括：</p>
-<ol>
-<li><strong>时钟管理</strong>：实现计时功能。</li>
-<li><strong>中断处理</strong>：负责实现中断机制</li>
-<li><strong>原语</strong>：<ul>
-<li>是一种特殊的程序</li>
-<li>处于操作系统最底层、最接近硬件的部分</li>
-<li>这种运行的程序具有<strong>原子性</strong>，其运行过程不可中断</li>
-<li>运行时间较短，调用频繁</li>
-</ul>
-</li>
-<li><strong>对系统资源进行管理的功能</strong>：<ul>
-<li>进程管理</li>
-<li>存储管理</li>
-<li>设备管理</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<p>内核又可被分为：<strong>大内核</strong>和<strong>微内核。</strong>如果内核中包含存储管理，进程管理，设备管理等功能的就被叫做大内核，只包含最基本如时钟管理，中断处理，原语等的就被叫做微内核。</p>
-<h4 id="3-操作系统的体系结构"><a href="#3-操作系统的体系结构" class="headerlink" title="3.操作系统的体系结构"></a>3.操作系统的体系结构</h4><p>操作系统的体系结构：</p>
-<ol>
-<li><strong>大内核</strong><ul>
-<li>将操作系统的主要功能模块都作为系统内核，运行在核心态</li>
-<li>优点：高性能</li>
-<li>缺点：内核代码庞大，结构混乱，难以维护</li>
-</ul>
-</li>
-<li><strong>微内核</strong><ul>
-<li>只把最基本的功能保留在内核</li>
-<li>优点：内核功能少，结构清晰，方便维护</li>
-<li>缺点：需要频繁的在核心态和用户态之间切换，性能低</li>
-</ul>
-</li>
-</ol>
-<p>比如：</p>
-<p><img src="https://s1.ax1x.com/2022/04/10/LAU2fs.png" alt="比喻"></p>
-]]></content>
+    <title>十九、进程互斥的硬件实现方法</title>
+    <url>/2022/04/27/%E5%8D%81%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>这里什么都没写，先占个坑以后再写。</p>
+<span id="more"></span>]]></content>
       <categories>
         <category>操作系统</category>
       </categories>
@@ -901,69 +986,37 @@
       </tags>
   </entry>
   <entry>
-    <title>在GithubPages上搭建Hexo并配置NexT主题</title>
-    <url>/2022/04/10/%E5%9C%A8GithubPages%E4%B8%8A%E6%90%AD%E5%BB%BAHexo%E5%B9%B6%E9%85%8D%E7%BD%AENexT%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="在GithubPages上搭建Hexo并配置NexT主题"><a href="#在GithubPages上搭建Hexo并配置NexT主题" class="headerlink" title="在GithubPages上搭建Hexo并配置NexT主题"></a>在GithubPages上搭建Hexo并配置NexT主题</h2><h4 id="啰里啰唆"><a href="#啰里啰唆" class="headerlink" title="啰里啰唆"></a>啰里啰唆</h4><p>记录一下自己搭建blog的过程，之前在vps上配置过word press，但是一直也没更新，而且好的vps很贵维护成本也很高，索性干脆不用了，就尝试一下使用hexo在github上搭建blog，效果还不错，总共也就历时两天。网上类似的教程也很多，这里总结记录一下，方便以后开新坑</p>
-<span id="more"></span>
-<h4 id="首先安装Node-js和Git-for-Windows"><a href="#首先安装Node-js和Git-for-Windows" class="headerlink" title="首先安装Node.js和Git for Windows"></a>首先安装Node.js和Git for Windows</h4><p>[Node.js官网](<a href="https://nodejs.org/en/">Node.js (nodejs.org)</a>)，[Git for windows官网](<a href="https://git-scm.com/">Git (git-scm.com)</a>)，Node.js建议安装LTS长期支持版，支持周期更长且更稳定</p>
-<p>Node.js:点击第一个绿色的按钮下载Node.js,版本不需要和图示一致，直接下载最新版即可。</p>
-<p><img src="https://s1.ax1x.com/2022/04/10/LkbK0K.png" alt="LkbK0K.png"></p>
-<p>Git:点击网页左侧小电脑当中的Download for windows，直接下载最新版即可无需与图示中版本一致。</p>
-<p><img src="https://s1.ax1x.com/2022/04/10/LkbmOx.png" alt="LkbmOx.png"></p>
-<p>下载完成后按照默认安装设置安装即可。</p>
-<h4 id="在GitHub上创建一个仓库"><a href="#在GitHub上创建一个仓库" class="headerlink" title="在GitHub上创建一个仓库"></a>在GitHub上创建一个仓库</h4><p>首先，需要一个GitHub账号。打开GitHub官网点击左上角的sign in就能注册了，不复述了很简单。进行这个过程可能需要<strong>科学</strong>上网，具体自行百度。</p>
-<p><strong>创建一个Github仓库</strong></p>
-<p>点击左上角头像，在弹出的下拉菜单中选择 <strong>Your repositories</strong>，待页面加载完毕后点击左上角绿色的<strong>new</strong>创建一个仓库。</p>
-<p><img src="https://s1.ax1x.com/2022/04/10/Lkbum6.png" alt="Lkbum6.png"></p>
-<p><strong>注意</strong>：仓库名务必是**==你的用户名.github.io==**,比如上面我的用户名是ivy-lun,那么仓库名就是ivy-lun.github.io,其他的保持默认即可，点击绿色按钮Create repositories即可创建一个仓库。</p>
-<h1 id="太累了，过两天再更吧"><a href="#太累了，过两天再更吧" class="headerlink" title="太累了，过两天再更吧"></a>太累了，过两天再更吧</h1>]]></content>
-      <categories>
-        <category>Hexo配置&amp;美化</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>GithubPages</tag>
-        <tag>Blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软件工程导论PartOne</title>
-    <url>/2022/04/19/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%AF%BC%E8%AE%BAPartOne/</url>
-    <content><![CDATA[<h4 id="一、软件危机"><a href="#一、软件危机" class="headerlink" title="一、软件危机"></a>一、软件危机</h4><h6 id="1-软件危机的介绍"><a href="#1-软件危机的介绍" class="headerlink" title="1.软件危机的介绍"></a>1.软件危机的介绍</h6><p>（1）概念</p>
-<p>软件危机是指在计算机软件的开发和维护过程中所遇到的一系列严重问题。这些问题绝不仅仅是不能运行软件才具有的，实际上，几乎所有的软件都不同程度的存在这些问题。软件危机包含两方面的问题：</p>
-<p>①如何开发软件，以满足对软件日益增长的需求。②如何维护数量不断膨胀的已有软件。</p>
+    <title>十七、进程同步和进程互斥</title>
+    <url>/2022/04/26/%E5%8D%81%E4%B8%83%E3%80%81%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E5%92%8C%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5/</url>
+    <content><![CDATA[<h4 id="1-什么是进程同步"><a href="#1-什么是进程同步" class="headerlink" title="1.什么是进程同步"></a>1.什么是进程同步</h4><p>回顾：进程具有<strong>异步性</strong>的特征。异步性是指：各自并发执行的进程以各自独立的、不可预知的速度向前推进。</p>
+<p>例子：进程通信 —- 管道通信</p>
+<p>写进程往管道里写数据，读进程再从管道里读数据。读进程和写进程并发地运行，由于并发必然导致异步性，因此“写数据”和“读数据”两个操作执行的先后顺序是不确定的。而实际应用中，又必须按照<strong>“写数据→读数据”</strong>的顺序来执行，如何解决这种一部问题，就是<strong>进程同步</strong>所讨论的内容。</p>
 <span id="more"></span>
 
-<p>（2）典型表现</p>
-<p>①对软件开发成本和进度的估计不准确。②用户对“已完成的”软件系统不满意的现象经常发生。③软件产品的质量往往靠不住。④软件常常是不可维护的。⑤软件常常没有适当的文档资料。⑥软件成本在计算机系统总成本中所占的比例逐年上升。⑦软件开发跟不上计算机应用迅速普及深入的趋势。</p>
-<h6 id="2-产生软件危机的原因"><a href="#2-产生软件危机的原因" class="headerlink" title="2.产生软件危机的原因"></a>2.产生软件危机的原因</h6><p>（1）客观原因</p>
-<p>①软件是计算机系统中的逻辑部件而不是物理部件。②软件规模庞大，而且软件程序复杂性将随着程序规模的增加而呈指数上升。</p>
-<p>（2）主要原因</p>
-]]></content>
-      <categories>
-        <category>软件工程</category>
-      </categories>
-      <tags>
-        <tag>软件工程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十二、处理机调度的概念，层次</title>
-    <url>/2022/04/20/%E5%8D%81%E4%BA%8C%E3%80%81%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%8C%E5%B1%82%E6%AC%A1/</url>
-    <content><![CDATA[<h4 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h4><p>当有一堆任务要处理，但由于资源有限，这些事情没办法同时处理，这就需要确定<strong>某种规则来决定处理这些任务的顺序</strong>，这就是“调度”研究的问题。在多道程序系统中，进程的数量往往是多于处理机个数的，这样不可能同时并行的处理各个进程。<strong>处理机调度</strong>，就是从就绪队列中<strong>按照一定的算法选择一个进程并将处理机分配给他</strong>运行，以实现进程的并发执行。</p>
-<span id="more"></span>
+<p><img src="https://s1.ax1x.com/2022/04/26/LHoKCF.png" alt="LHoKCF.png"></p>
+<p><strong>同步</strong>又称<strong>直接制约关系</strong>，它是指为完成某种任务而建立的两个或多个进程。这些进程因为需要在某些位置上<strong>协调</strong>他们的<strong>工作次序</strong>而产生的制约关系。进程间的直接制约关系就是源于它们之间的相互合作。操作系统需要提供一种<strong>“进程同步机制”</strong>来实现进程的同步执行需求。</p>
+<h4 id="2-什么是进程互斥"><a href="#2-什么是进程互斥" class="headerlink" title="2.什么是进程互斥"></a>2.什么是进程互斥</h4><p>进程的“并发”需要“共享”的支持。各个并发执行的进程不可避免的需要共享一些系统资源（如内存，打印机和摄像头等I/O设备）</p>
+<blockquote>
+<p>两种资源的共享方式</p>
+<ul>
+<li><strong>互斥共享方式</strong>：系统中的某些资源可以提供给多个进程使用，但<strong>一个时间段内只允许一个进程访问资源</strong>。</li>
+<li><strong>同时共享方式</strong>：系统中的某些资源，<strong>允许一个时间段内有多个进程“同时”对它们进行访问</strong>。</li>
+</ul>
+</blockquote>
+<p>我们把<strong>一个时间段内只允许一个进程使用</strong>的资源称为<strong>临界资源</strong>，许多物理设备（如打印机，摄像头）都属于临界资源。此外还有许多变量、数据、内存缓冲区等都属于临界资源。</p>
+<p>对临界资源的访问，必须<strong>互斥</strong>地进行。互斥，亦称<strong>间接制约关系。进程互斥</strong>指当一个进程访问某临界资源时，另一个想要访问该临界资源的进程必须等待。当访问临界资源的进程结束访问，释放该资源之后，另一个进程才能去访问临界资源。</p>
+<p>对临界资源的互斥访问，可以在逻辑上分为如下四个部分：<strong>进入区，临界区，退出区和剩余区</strong>。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 进入区，负责检查是否可进入临界区，若可以进入，则应设置   正在访问临界资源  的标志（可理     * 解为“上锁”），以阻止其他进程同时进入临界区。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    entry section; </span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">    * 临界区，访问临界资源的那段代码</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    circtical section;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 退出区，负责解除 正在访问临界资源 的标志（可理解为“解锁”）</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="built_in">exit</span> section;</span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 剩余区，作其他处理</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    remainder section;</span><br><span class="line">&#125;<span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 注意：临界区是进程中访问临界资源的那段代码。进入区和退出去是负责实现互斥的代码段。临界     * 区亦可成为“临界段”</span></span><br><span class="line"><span class="comment">    */</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="2-调度的三个层次——高级调度"><a href="#2-调度的三个层次——高级调度" class="headerlink" title="2.调度的三个层次——高级调度"></a>2.调度的三个层次——高级调度</h4><p>由于内存空间有限，有时无法将用户提交的作业全部放入内存，因此就需要某种规则来决定将作业调入内存的顺序。</p>
-<p><strong>高级调度（作业调度）</strong>，按一定的原则从外存上处于后备队列的作业中挑选一个（或多个）作业，给他们分配内存等重要资源，并<strong>建立相应的进程（建立PCB）</strong>，以使它（们）<strong>获得竞争处理机的权利</strong>。高级调度是辅存（外存）与内存之间的额调度，每个作业只调入一次，调出一次。<strong>作业调入时会建立相应的PCB，作业调出时才撤销PCB。</strong>高级调度主要是指调入的问题，因为只有调入的时机需要操作系统来确定，但调出的时机必然是作业运行结束才调出。</p>
-<h4 id="3-调度的三个层次——中级调度"><a href="#3-调度的三个层次——中级调度" class="headerlink" title="3.调度的三个层次——中级调度"></a>3.调度的三个层次——中级调度</h4><p>引入虚拟存储技术之后，可将暂时不能运行的程序调至外存等待。等他重新具备了运行条件且内存又稍有空间时，再重新调入内存。这么做的目的是<strong>提高内存利用率和系统吞吐量。</strong>暂时调到外存等待的进程状态为<strong>挂起状态</strong>。值得注意的是，<strong>PCB</strong>并不会一起调到外存，而是<strong>会常驻内存</strong>，PCB中会记录进程数据在外存的存放位置，进程状态等信息，操作系统通过内存中的PCB来保持对各个进程的监控、管理。被挂起的进程PCB会被放到的<strong>挂起队列</strong>中。<strong>中级调度（内存调度）</strong>，就是要决定将那个处于挂起状态的进程重新调入内存中。一个进程可能被多次调入、调出内存，因此<strong>中级调度发生的频率要比高级调度更高</strong>。</p>
-<p>（有点像就绪队列和阻塞队列）</p>
-<h4 id="4-补充知识：进程的挂起状态与七状态模型"><a href="#4-补充知识：进程的挂起状态与七状态模型" class="headerlink" title="4.补充知识：进程的挂起状态与七状态模型"></a>4.补充知识：进程的挂起状态与七状态模型</h4><p>暂时调到外存等待的进程状态为<strong>挂起状态（挂起态）</strong></p>
-<p>挂起态又可以进一步分为<strong>就绪挂起，阻塞挂起</strong>两种状态</p>
-<p>五状态模型→七状态模型</p>
-<p><img src="https://s1.ax1x.com/2022/04/20/Lruve1.png" alt="Lruve1.png"></p>
-<h4 id="5-调度的三个层次——低级调度"><a href="#5-调度的三个层次——低级调度" class="headerlink" title="5.调度的三个层次——低级调度"></a>5.调度的三个层次——低级调度</h4><p><strong>低级调度（进程调度）</strong>其主要任务时按照某种方法和策略从就绪队列中选取一个进程，将处理机分配给他。进程调度是操作系统中<strong>最基本的一种调度</strong>，在一般的操作系统中都必须配置进程调度。进程调度的<strong>频率很高</strong>，一般几十毫秒一次。</p>
-<h4 id="6-三层调度的联系和对比"><a href="#6-三层调度的联系和对比" class="headerlink" title="6.三层调度的联系和对比"></a>6.三层调度的联系和对比</h4><p><img src="https://s1.ax1x.com/2022/04/20/LrKonA.png"></p>
-<h4 id="7-知识回顾"><a href="#7-知识回顾" class="headerlink" title="7.知识回顾"></a>7.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/20/LrKLh8.png"></p>
+<p>如果一个进程暂时不能进入临界区，那么该进程是否应该一直占着处理机？该进程有没有可能一直进不了临界区？</p>
+<p>为了实现对临界资源的互斥访问，同时保证系统整体性能，需要遵循以下原则：</p>
+<ul>
+<li>空闲让进：临界区空闲时，可以允许一个请求进入临界区的进程立即进入临界区；</li>
+<li>忙则等待：当已有进程进入临界区时，其他视图进入临界区的进程必须等待。</li>
+<li>有限等待：对请求访问的进程，应当保证在有限的时间内进入临界区（保证不会饥饿）</li>
+<li>让权等待：当进程不能进入临界区时，应立即释放处理机，防止进程忙等待（连续等待进入临界区占用大量处理机资源）。</li>
+</ul>
+<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/26/LHbARU.png" alt="LHbARU.png"></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -1040,203 +1093,6 @@
       </categories>
       <tags>
         <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十四、调度算法的评价指标</title>
-    <url>/2022/04/20/%E5%8D%81%E5%9B%9B%E3%80%81%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/</url>
-    <content><![CDATA[<h4 id="1-CPU利用率"><a href="#1-CPU利用率" class="headerlink" title="1.CPU利用率"></a>1.CPU利用率</h4><p>由于早期的CPU造价极其昂贵，因此人们<strong>希望让CPU尽可能多地工作</strong></p>
-<p><strong>CPU利用率：</strong>指CPU“忙碌”的时间占总时间的比例</p>
-<p>$利用率=\frac{忙碌的时间}{总时间}$</p>
-<span id="more"></span>
-
-<p>有的题目还会要求计算某种设备的利用率：</p>
-<p>如：某计算机只支持单道程序，某个作业刚开始需要在CPU上运行5秒，再用打印机打印输出5秒，之后再执行5秒，才能结束。在此过程中，COPU利用率、打印机利用率分别是多少？</p>
-<p>$CPU利用率=\frac{5+5}{5+5+5}=66.665$<br>$打印机利用率=\frac{5}{15}=33.335$</p>
-<h4 id="2-系统吞吐量"><a href="#2-系统吞吐量" class="headerlink" title="2.系统吞吐量"></a>2.系统吞吐量</h4><p>对于计算机来说，希望使用尽可能少的时间完成尽可能多的多页</p>
-<p><strong>系统吞吐量：</strong>单位时间内完成的作业数量</p>
-<p>$系统吞吐量=\frac{总共完成了多少道作业}{总共花了多少时间}$</p>
-<p>如：某计算机处理完成10道作业，共花费100秒，则系统吞吐量为：</p>
-<p>$\frac{10}{100}=0.1（道/秒）$</p>
-<p>即平均每秒可以完成0.1道作业。</p>
-<h4 id="3-周转时间"><a href="#3-周转时间" class="headerlink" title="3.周转时间"></a>3.周转时间</h4><p>对于计算机用户来说，他很关心自己的作业从提交道完成花费了多少时间。</p>
-<p><strong>周转时间</strong>：是指<strong>作业被提交给系统开始，到作业完成为止</strong>的这段时间间隔。</p>
-<p>它包括四个部分：作业在外存后备队列上等待作业调度（高级调度）的时间、进程在就绪队列上等待进程调度（低级调度）的时间、进程在CPU上执行的时间、进程等待I/O操作完成的时间。后三项在一个作业的整个处理过程中，可能发生多次。</p>
-<ul>
-<li>对于用户来说，更关心自己的单个作业的周转时间：</li>
-</ul>
-<p>（作业）周转时间 = 作业完成时间 - 作业提交时间</p>
-<ul>
-<li>对于操作系统来说，更关心系统的整体表现，因此更关心所有作业周转时间的平均值。</li>
-</ul>
-<p>$平均周转时间=\frac{各作业周转时间之和}{作业数}$</p>
-<ul>
-<li>有的作业运行时间长，有的作业运行时间短，因此在周转时间相同的情况下，运行时间不同的作业，给用户的感受肯定是不一样的。</li>
-</ul>
-<p>$戴荃周转时间=\frac{作业周转时间}{作业实际运行的时间}=\frac{作业完成时间-作业提交时间}{作业实际运行的时间}$</p>
-<p>$平均带权周转时间=\frac{各作业带权周转时间之和}{作业数}$</p>
-<p><strong>带权周转时间必然&gt;=1</strong><br><strong>带权周转时间与周转时间都是越小越好</strong></p>
-<p>对于周转时间相同的两个作业，实际运行时间长的作业在相同的时间内被服务的时间更过，带权周转时间更小，用户满意度更高。</p>
-<p>对与实际运行时间相同的两个作业，周转时间短的带权周转时间更小，用户满意度更高。</p>
-<h4 id="4-等待时间"><a href="#4-等待时间" class="headerlink" title="4.等待时间"></a>4.等待时间</h4><p>计算机的用户希望自己的作业尽可能少的等待处理剂</p>
-<p><strong>等待时间：</strong>指进程/作业<strong>处于等待处理机状态时间之和</strong>，等待时间越长用户满意度越低。</p>
-<blockquote>
-<p>当一个作业被建立之后，作业会被放在外存的“作业后备队列”等待被服务（调度）。当作业被服务之后作业会被调入内存。作业被调入内存后，建立对应的进程，这个进程会被CPU服务，会被I/O设备服务，当然也会有等待被服务的时候。</p>
-</blockquote>
-<p>对于<strong>进程</strong>来说，等待时间就是指进程建立后<strong>等待被服务的时间之和</strong>，在等待I/O完成的期间其实进程也是在被服务的，所以不计入等待时间。<br>对于<strong>作业</strong>来说，不仅要考虑<strong>建立进城后的等待时间，还要加上作业在外存后备队列中等待的时间。</strong></p>
-<p>一个作业总共需要被CPU服务多久，被I.O设备服务多久一般是确定不变的，因此调度算法其实只会影响作业/进程的等待时间。当然，与前面指标类似，也有<strong>“平均等待时间”</strong>来评价整体性能。</p>
-<p>$平均等待时间=\frac{所有进程/作业的等待时间之和}{作业数量}$</p>
-<h4 id="5-响应时间"><a href="#5-响应时间" class="headerlink" title="5.响应时间"></a>5.响应时间</h4><p>对于计算机用户来说，会希望自己的提交的请求（比如通过键盘输入了一个调试命令）尽早地开始被系统服务、回应。</p>
-<p><strong>响应时间:<strong>是指用户</strong>提交请求</strong>到<strong>首次产生响应</strong>所用时间。</p>
-<h4 id="6-知识回顾"><a href="#6-知识回顾" class="headerlink" title="6.知识回顾"></a>6.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/20/Lso3yq.png" alt="Lso3yq.png"></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第六章、组合数据类型</title>
-    <url>/2022/04/21/%E7%AC%AC%E5%85%AD%E7%AB%A0%E3%80%81%E7%BB%84%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<h4 id="1-综合数据类型概述"><a href="#1-综合数据类型概述" class="headerlink" title="1.综合数据类型概述"></a>1.综合数据类型概述</h4><p>组合数据类型能够将多个同类型或者不同类型的数据组织起来，通过单一的表示是数据操作更有序，更容易。Python中组合数据类型分为<strong>序列类型，集合类型，映射类型。</strong></p>
-<span id="more"></span>
-
-<blockquote>
-<p><strong>序列类型：</strong>元素的响亮，元素之间存在先后顺序，通过序号访问。</p>
-<ul>
-<li>字符串（str）</li>
-<li>元组（tuple）</li>
-<li>列表（list）</li>
-</ul>
-<p><strong>集合类型：</strong>元素的集合，元素之间无序，相同元素在集合中唯一存在。</p>
-<ul>
-<li>集合（set）</li>
-</ul>
-<p><strong>映射类型：</strong>“键值”数据项的组合，每一个元素是一个（key，value）键值对。</p>
-<ul>
-<li>字典（map）</li>
-</ul>
-</blockquote>
-<p><strong>（1）序列类型</strong></p>
-<ul>
-<li><p>常用的数据类型有字符串，元组和列表。</p>
-<ul>
-<li><p><strong>字符串：</strong>单个字符的有序组合</p>
-</li>
-<li><p><strong>元组</strong>：元组生成后是固定的，其中任何数据项不能替换或者删除</p>
-</li>
-<li><p><strong>列表</strong>：是可以改变的序列类型</p>
-</li>
-</ul>
-</li>
-<li><p>所有序列类型都是可以通过变量名+序号的形式访问，序号可以采用<strong>正向序号</strong>和<strong>反向序号</strong>的方式。序列类型允许有重复元素存在，并通过序号来区分它们。</p>
-</li>
-<li><p>序列类型有12个通用操作符和函数。</p>
-</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2022/04/21/L6tMY4.png" alt="L6tMY4.png"></p>
-<p><strong>（2）元组类型</strong></p>
-<ul>
-<li>元组一旦被创建就不能修改，需要用逗号将元素分开（必须要有的），可以用圆括号把所有元素括起来（可以没有）。</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一个元素可以作为另外一个元组的元素，并采用多级索引访问。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>creature=<span class="string">&quot;cat&quot;</span>,<span class="string">&quot;dog&quot;</span>,<span class="string">&quot;tiger&quot;</span>,<span class="string">&quot;human&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>creature</span><br><span class="line">(<span class="string">&#x27;cat&#x27;</span>,<span class="string">&#x27;dog&#x27;</span>,<span class="string">&#x27;tiger&#x27;</span>,<span class="string">&#x27;human&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color = (<span class="string">&quot;red&quot;</span>,<span class="string">&quot;0x001100&quot;</span>,<span class="string">&quot;blue&quot;</span>,creature)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color = (<span class="string">&quot;red&quot;</span>,<span class="string">&quot;0x001100&quot;</span>,<span class="string">&quot;blue&quot;</span>,(<span class="string">&#x27;cat&#x27;</span>,<span class="string">&#x27;dog&#x27;</span>,<span class="string">&#x27;tiger&#x27;</span>,<span class="string">&#x27;human&#x27;</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color[<span class="number">2</span>]</span><br><span class="line"><span class="string">&#x27;blue&#x27;</span></span><br><span class="line"><span class="comment"># 多级索引访问</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color[-<span class="number">1</span>][<span class="number">2</span>]</span><br><span class="line"><span class="string">&#x27;tiger&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>（3）集合类型</strong></p>
-<ul>
-<li><p>集合中的元素不可重复，元素类型只能是固定的数据类型；</p>
-</li>
-<li><p>由于集合是无序组合，没有索引和位置的概念，不能分片，可以动态地增加和删除；</p>
-</li>
-<li><p>集合用大括号表示，可以用赋值语句生成一个集合；</p>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s=&#123;<span class="number">425</span>,<span class="string">&quot;BIT&quot;</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="number">424</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line">&#123;<span class="number">424</span>,<span class="number">425</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="string">&quot;BIT&quot;</span>&#125;</span><br><span class="line"><span class="comment"># 集合是无序的，元素不会被按原有输入排序，但元素不变。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>t=&#123;<span class="number">425</span>,<span class="string">&quot;BIT&quot;</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="number">424</span>,<span class="number">425</span><span class="string">&quot;BIT&quot;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>t</span><br><span class="line">&#123;<span class="number">424</span>,<span class="number">425</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="string">&quot;BIT&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>set（x）函数可以生成集合，输入的参数可以是任何组合的数据类型，返回的结果是一个无重复且排序任意的集合。</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>w=<span class="built_in">set</span>(<span class="string">&quot;apple&quot;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>w</span><br><span class="line">(<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;p&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>集合类型的操作符有10个</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2022/04/21/L6t861.png" alt="L6t861.png"><br><img src="https://s1.ax1x.com/2022/04/21/L6N34g.png" alt="L6N34g.png"></p>
-<ul>
-<li>集合类型的操作函数或方法10个</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2022/04/21/L6N0ET.png" alt="L6N0ET.png"></p>
-<p><strong>（4）映射类型</strong></p>
-<ul>
-<li>映射类型是“键-值”数据项的组合，一个元素是一个<strong>键值对</strong>，元素之间是无序的。键表示一个属性，值表示属性的内容，描述对应的属性值。</li>
-<li>如：（学校名称，城市）为映射类型，则有如下映射实例</li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">（北京大学，北京）</span><br><span class="line">（清华大学，北京）</span><br><span class="line">（浙江大学，杭州）</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-列表的类型和操作"><a href="#2-列表的类型和操作" class="headerlink" title="2.列表的类型和操作"></a>2.列表的类型和操作</h4><ul>
-<li>列表是包含0个或多个对象的有序序列但列表的长度和内容是可变的，可以自由的进行数据项的增加，删除或替换，列表没有长度限制，元素类型可以不同。</li>
-<li>列表也支持成员关系运算符in，长度计算函数len（），分片[]等序列类型的运算、方法和函数。</li>
-<li>列表用中括号[]表示，也可以通过list（）函数将元组或字符串转化成列表。<br><img src="https://s1.ax1x.com/2022/04/21/L6R5IH.png" alt="L6R5IH.png"></li>
-<li>列表类型特有的函数或方法：<br><img src="https://s1.ax1x.com/2022/04/21/L6RjeS.png" alt="L6RjeS.png"></li>
-<li>列表的操作实例：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist=<span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">len</span>(vlist[<span class="number">2</span>:])</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">2</span> <span class="keyword">in</span> vlist</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">3</span>]=<span class="string">&quot;python&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">1</span>:<span class="number">3</span>]=[<span class="string">&quot;bit&quot;</span>,<span class="string">&quot;computer&quot;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="string">&#x27;bit&#x27;</span>, <span class="string">&#x27;computer&#x27;</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>当使用一个列表改变另外一个列表值时，python不要求两个列表长度一样，但遵循“多增少补”的原则</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">1</span>:<span class="number">3</span>]=[<span class="string">&quot;new_bit&quot;</span>,<span class="string">&quot;new_computer&quot;</span>,<span class="number">123</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="string">&#x27;new_bit&#x27;</span>, <span class="string">&#x27;new_computer&#x27;</span>, <span class="number">123</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">1</span>:<span class="number">3</span>]=[<span class="string">&quot;fewer&quot;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="string">&#x27;fewer&#x27;</span>, <span class="number">123</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>与元组一样，列表可以通过for - in语句对元组进行遍历。</li>
-</ul>
-<h4 id="3-基本统计值计算"><a href="#3-基本统计值计算" class="headerlink" title="3.基本统计值计算"></a>3.基本统计值计算</h4><p><img src="https://s1.ax1x.com/2022/04/28/LOHqzV.png" alt="LOHqzV.png"></p>
-<h4 id="补充：sorted函数"><a href="#补充：sorted函数" class="headerlink" title="补充：sorted函数"></a>补充：sorted函数</h4><p>sorted是一个排序函数，里面通常有三个参数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sorted</span>(iterable, key=<span class="literal">None</span>, reverse=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
-
-<p>参数说名：</p>
-<p>iterable – 可迭代对象</p>
-<p>key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指可迭代对象中的一个元素来进行排序。</p>
-<p>reverse – 排序规则，= True降序，=False 升序（默认参数）</p>
-<p>使用sorted（）函数对序列进行排序，并不会在原序列的基础进行修改，而是会重新生成一个排好序的列表实现。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">5</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="built_in">sorted</span>(a)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">5</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b</span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-字典类型和操作"><a href="#4-字典类型和操作" class="headerlink" title="4.字典类型和操作"></a>4.字典类型和操作</h4><p><strong>概念</strong></p>
-<ul>
-<li><p>在有些比较灵活的信息查询，如查找学生的“C语言成绩”时，我们需要输入学号，而不是输入该成绩在列表中的索引号（下标），这种的查询需要“键值对”，通过特定的键（如学号）访问值（如C语言成绩）</p>
-</li>
-<li><p>通过任意键值查找一组数据中信息的过程称为映射，在Python中通过字典实现映射，通过大括号建立映射{}。建立模式如下：</p>
-<p>{&lt;键1&gt;：&lt;值1&gt;，&lt;键2&gt;：&lt;值2&gt;，…}</p>
-</li>
-<li><p>由于字典顺序也是一种集合类型，所以键值对之间没有顺序并且不能重复。</p>
-</li>
-<li><p>字典的创建：利用大括号创建字典，并指定初始值，通过中括号可以增加新的元素</p>
-</li>
-<li><p>直接使用大括号可以创建一个空字典，通过中括号增加新的元素</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dcountry=&#123;<span class="string">&#x27;中国&#x27;</span>:<span class="string">&quot;北京&quot;</span>, <span class="string">&quot;美国&quot;</span>:<span class="string">&quot;华盛顿&quot;</span>&#125;</span><br><span class="line">dcountry[<span class="string">&#x27;英国&#x27;</span>]=<span class="string">&#x27;伦敦&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ul>
-<p><strong>字典的函数和方法如下表：</strong></p>
-<p><img src="https://s1.ax1x.com/2022/04/28/LOv2kD.png" alt="LOv2kD.png"></p>
-<p><img src="https://s1.ax1x.com/2022/04/28/LOvOhQ.png" alt="LOvOhQ.png"></p>
-<h4 id="5-Python-jieba库"><a href="#5-Python-jieba库" class="headerlink" title="5.Python jieba库"></a>5.Python jieba库</h4><p><img src="https://s1.ax1x.com/2022/04/28/LXSRtU.png" alt="LXSRtU.png"></p>
-<p><strong>jieba常用分词函数：</strong></p>
-<p><img src="https://s1.ax1x.com/2022/04/28/LXpiAf.png" alt="LXpiAf.png"></p>
-<p>举例：</p>
-<p><img src="https://s1.ax1x.com/2022/04/28/LXpT2Q.png" alt="LXpT2Q.png"></p>
-<p><strong>jieba库添加词汇：</strong></p>
-<p><img src="https://s1.ax1x.com/2022/04/28/LXPs8U.png" alt="LXPs8U.png"></p>
-<h4 id="6-文本词频统计"><a href="#6-文本词频统计" class="headerlink" title="6.文本词频统计"></a>6.文本词频统计</h4><p><img src="https://s1.ax1x.com/2022/04/28/LXiAZn.png" alt="LXiAZn.png"></p>
-<p><strong>英文词频统计：</strong></p>
-<p><img src="https://s1.ax1x.com/2022/04/28/LXF41O.png" alt="LXF41O.png"></p>
-<p><img src="https://s1.ax1x.com/2022/04/28/LXkqr4.png" alt="LXkqr4.png"></p>
-<p><img src="https://s1.ax1x.com/2022/04/28/LXERNn.png" alt="LXERNn.png"></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -1488,24 +1344,28 @@
       </tags>
   </entry>
   <entry>
-    <title>软件工程笔记</title>
-    <url>/2022/04/24/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<blockquote>
-<p>软件工程别人整理的考研笔记</p>
-<p>整理的挺全面的</p>
-</blockquote>
+    <title>十二、处理机调度的概念，层次</title>
+    <url>/2022/04/20/%E5%8D%81%E4%BA%8C%E3%80%81%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%8C%E5%B1%82%E6%AC%A1/</url>
+    <content><![CDATA[<h4 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h4><p>当有一堆任务要处理，但由于资源有限，这些事情没办法同时处理，这就需要确定<strong>某种规则来决定处理这些任务的顺序</strong>，这就是“调度”研究的问题。在多道程序系统中，进程的数量往往是多于处理机个数的，这样不可能同时并行的处理各个进程。<strong>处理机调度</strong>，就是从就绪队列中<strong>按照一定的算法选择一个进程并将处理机分配给他</strong>运行，以实现进程的并发执行。</p>
 <span id="more"></span>
 
-<blockquote>
-<p><a href="https://cloud.189.cn/t/JfA3mmiUjaUf">https://cloud.189.cn/t/JfA3mmiUjaUf</a> (访问码:e6l2)</p>
-</blockquote>
+<h4 id="2-调度的三个层次——高级调度"><a href="#2-调度的三个层次——高级调度" class="headerlink" title="2.调度的三个层次——高级调度"></a>2.调度的三个层次——高级调度</h4><p>由于内存空间有限，有时无法将用户提交的作业全部放入内存，因此就需要某种规则来决定将作业调入内存的顺序。</p>
+<p><strong>高级调度（作业调度）</strong>，按一定的原则从外存上处于后备队列的作业中挑选一个（或多个）作业，给他们分配内存等重要资源，并<strong>建立相应的进程（建立PCB）</strong>，以使它（们）<strong>获得竞争处理机的权利</strong>。高级调度是辅存（外存）与内存之间的额调度，每个作业只调入一次，调出一次。<strong>作业调入时会建立相应的PCB，作业调出时才撤销PCB。</strong>高级调度主要是指调入的问题，因为只有调入的时机需要操作系统来确定，但调出的时机必然是作业运行结束才调出。</p>
+<h4 id="3-调度的三个层次——中级调度"><a href="#3-调度的三个层次——中级调度" class="headerlink" title="3.调度的三个层次——中级调度"></a>3.调度的三个层次——中级调度</h4><p>引入虚拟存储技术之后，可将暂时不能运行的程序调至外存等待。等他重新具备了运行条件且内存又稍有空间时，再重新调入内存。这么做的目的是<strong>提高内存利用率和系统吞吐量。</strong>暂时调到外存等待的进程状态为<strong>挂起状态</strong>。值得注意的是，<strong>PCB</strong>并不会一起调到外存，而是<strong>会常驻内存</strong>，PCB中会记录进程数据在外存的存放位置，进程状态等信息，操作系统通过内存中的PCB来保持对各个进程的监控、管理。被挂起的进程PCB会被放到的<strong>挂起队列</strong>中。<strong>中级调度（内存调度）</strong>，就是要决定将那个处于挂起状态的进程重新调入内存中。一个进程可能被多次调入、调出内存，因此<strong>中级调度发生的频率要比高级调度更高</strong>。</p>
+<p>（有点像就绪队列和阻塞队列）</p>
+<h4 id="4-补充知识：进程的挂起状态与七状态模型"><a href="#4-补充知识：进程的挂起状态与七状态模型" class="headerlink" title="4.补充知识：进程的挂起状态与七状态模型"></a>4.补充知识：进程的挂起状态与七状态模型</h4><p>暂时调到外存等待的进程状态为<strong>挂起状态（挂起态）</strong></p>
+<p>挂起态又可以进一步分为<strong>就绪挂起，阻塞挂起</strong>两种状态</p>
+<p>五状态模型→七状态模型</p>
+<p><img src="https://s1.ax1x.com/2022/04/20/Lruve1.png" alt="Lruve1.png"></p>
+<h4 id="5-调度的三个层次——低级调度"><a href="#5-调度的三个层次——低级调度" class="headerlink" title="5.调度的三个层次——低级调度"></a>5.调度的三个层次——低级调度</h4><p><strong>低级调度（进程调度）</strong>其主要任务时按照某种方法和策略从就绪队列中选取一个进程，将处理机分配给他。进程调度是操作系统中<strong>最基本的一种调度</strong>，在一般的操作系统中都必须配置进程调度。进程调度的<strong>频率很高</strong>，一般几十毫秒一次。</p>
+<h4 id="6-三层调度的联系和对比"><a href="#6-三层调度的联系和对比" class="headerlink" title="6.三层调度的联系和对比"></a>6.三层调度的联系和对比</h4><p><img src="https://s1.ax1x.com/2022/04/20/LrKonA.png"></p>
+<h4 id="7-知识回顾"><a href="#7-知识回顾" class="headerlink" title="7.知识回顾"></a>7.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/20/LrKLh8.png"></p>
 ]]></content>
       <categories>
-        <category>笔记分享</category>
+        <category>操作系统</category>
       </categories>
       <tags>
-        <tag>软件工程</tag>
-        <tag>笔记</tag>
+        <tag>操作系统</tag>
       </tags>
   </entry>
   <entry>
@@ -1616,46 +1476,6 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
       </tags>
   </entry>
   <entry>
-    <title>十七、进程同步和进程互斥</title>
-    <url>/2022/04/26/%E5%8D%81%E4%B8%83%E3%80%81%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E5%92%8C%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5/</url>
-    <content><![CDATA[<h4 id="1-什么是进程同步"><a href="#1-什么是进程同步" class="headerlink" title="1.什么是进程同步"></a>1.什么是进程同步</h4><p>回顾：进程具有<strong>异步性</strong>的特征。异步性是指：各自并发执行的进程以各自独立的、不可预知的速度向前推进。</p>
-<p>例子：进程通信 —- 管道通信</p>
-<p>写进程往管道里写数据，读进程再从管道里读数据。读进程和写进程并发地运行，由于并发必然导致异步性，因此“写数据”和“读数据”两个操作执行的先后顺序是不确定的。而实际应用中，又必须按照<strong>“写数据→读数据”</strong>的顺序来执行，如何解决这种一部问题，就是<strong>进程同步</strong>所讨论的内容。</p>
-<span id="more"></span>
-
-<p><img src="https://s1.ax1x.com/2022/04/26/LHoKCF.png" alt="LHoKCF.png"></p>
-<p><strong>同步</strong>又称<strong>直接制约关系</strong>，它是指为完成某种任务而建立的两个或多个进程。这些进程因为需要在某些位置上<strong>协调</strong>他们的<strong>工作次序</strong>而产生的制约关系。进程间的直接制约关系就是源于它们之间的相互合作。操作系统需要提供一种<strong>“进程同步机制”</strong>来实现进程的同步执行需求。</p>
-<h4 id="2-什么是进程互斥"><a href="#2-什么是进程互斥" class="headerlink" title="2.什么是进程互斥"></a>2.什么是进程互斥</h4><p>进程的“并发”需要“共享”的支持。各个并发执行的进程不可避免的需要共享一些系统资源（如内存，打印机和摄像头等I/O设备）</p>
-<blockquote>
-<p>两种资源的共享方式</p>
-<ul>
-<li><strong>互斥共享方式</strong>：系统中的某些资源可以提供给多个进程使用，但<strong>一个时间段内只允许一个进程访问资源</strong>。</li>
-<li><strong>同时共享方式</strong>：系统中的某些资源，<strong>允许一个时间段内有多个进程“同时”对它们进行访问</strong>。</li>
-</ul>
-</blockquote>
-<p>我们把<strong>一个时间段内只允许一个进程使用</strong>的资源称为<strong>临界资源</strong>，许多物理设备（如打印机，摄像头）都属于临界资源。此外还有许多变量、数据、内存缓冲区等都属于临界资源。</p>
-<p>对临界资源的访问，必须<strong>互斥</strong>地进行。互斥，亦称<strong>间接制约关系。进程互斥</strong>指当一个进程访问某临界资源时，另一个想要访问该临界资源的进程必须等待。当访问临界资源的进程结束访问，释放该资源之后，另一个进程才能去访问临界资源。</p>
-<p>对临界资源的互斥访问，可以在逻辑上分为如下四个部分：<strong>进入区，临界区，退出区和剩余区</strong>。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 进入区，负责检查是否可进入临界区，若可以进入，则应设置   正在访问临界资源  的标志（可理     * 解为“上锁”），以阻止其他进程同时进入临界区。</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    entry section; </span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">    * 临界区，访问临界资源的那段代码</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    circtical section;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 退出区，负责解除 正在访问临界资源 的标志（可理解为“解锁”）</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="built_in">exit</span> section;</span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 剩余区，作其他处理</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    remainder section;</span><br><span class="line">&#125;<span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 注意：临界区是进程中访问临界资源的那段代码。进入区和退出去是负责实现互斥的代码段。临界     * 区亦可成为“临界段”</span></span><br><span class="line"><span class="comment">    */</span></span><br></pre></td></tr></table></figure>
-
-<p>如果一个进程暂时不能进入临界区，那么该进程是否应该一直占着处理机？该进程有没有可能一直进不了临界区？</p>
-<p>为了实现对临界资源的互斥访问，同时保证系统整体性能，需要遵循以下原则：</p>
-<ul>
-<li>空闲让进：临界区空闲时，可以允许一个请求进入临界区的进程立即进入临界区；</li>
-<li>忙则等待：当已有进程进入临界区时，其他视图进入临界区的进程必须等待。</li>
-<li>有限等待：对请求访问的进程，应当保证在有限的时间内进入临界区（保证不会饥饿）</li>
-<li>让权等待：当进程不能进入临界区时，应立即释放处理机，防止进程忙等待（连续等待进入临界区占用大量处理机资源）。</li>
-</ul>
-<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/26/LHbARU.png" alt="LHbARU.png"></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>十八、进程互斥的软件实现方法</title>
     <url>/2022/04/26/%E5%8D%81%E5%85%AB%E3%80%81%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h4 id="1-单标志法"><a href="#1-单标志法" class="headerlink" title="1.单标志法"></a>1.单标志法</h4><p>算法思想：两个进程在<strong>访问完临界区后</strong>会把使用临界区的权限转交给另一个进程。也就是说<strong>每个进程进入临界区的权限只能被另一个进程赋予。</strong></p>
@@ -1723,147 +1543,342 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
       </tags>
   </entry>
   <entry>
-    <title>二十、信号量机制</title>
-    <url>/2022/04/27/%E4%BA%8C%E5%8D%81%E3%80%81%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6/</url>
-    <content><![CDATA[<h4 id="1-信号量机制"><a href="#1-信号量机制" class="headerlink" title="1.信号量机制"></a>1.信号量机制</h4><p>进程互斥的四种软件实现方式和进程互斥的三种硬件实现方式都存在一些问题。</p>
-<p>1.在双标志检查法中，<strong>进入区的“检查”、‘上锁”操作无法一气呵成</strong>，从而导致了两个进程有可能同时进入临界区的问题。</p>
-<p>2.所有的解决方案都<strong>无法实现“让权等待”</strong>。</p>
-<p>1965年，荷兰学者迪杰斯特拉Dijkstra提出了一种卓有成效的实现进程互斥、同步的方法–<strong>信号量机制</strong></p>
+    <title>十四、调度算法的评价指标</title>
+    <url>/2022/04/20/%E5%8D%81%E5%9B%9B%E3%80%81%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/</url>
+    <content><![CDATA[<h4 id="1-CPU利用率"><a href="#1-CPU利用率" class="headerlink" title="1.CPU利用率"></a>1.CPU利用率</h4><p>由于早期的CPU造价极其昂贵，因此人们<strong>希望让CPU尽可能多地工作</strong></p>
+<p><strong>CPU利用率：</strong>指CPU“忙碌”的时间占总时间的比例</p>
+<p>$利用率=\frac{忙碌的时间}{总时间}$</p>
 <span id="more"></span>
 
-<p>用户可以通过使用操作系统提供的<strong>一对原语</strong>来对<strong>信号量</strong>进行操作，从而很方便地实现了进程互斥、进程同步。<strong>信号量</strong>其实就是一个变量（可以是一个整数，也可以是更复杂的记录型信号量），可以用一个信号量来<strong>表示系统中的某种资源的数量</strong>。</p>
-<p><strong>原语</strong>是一种特殊的程序段，其<strong>执行只能一气呵成，不可被中断。</strong>原语是由<strong>关中断/开中断指令</strong>实现的，软件解决方案的主要问题是由“进入区的各种操作无法一气呵成”，因此如果能把进入区、退出区的操作都用原语实现，使这些操作能“一气呵成”就能避免问题。</p>
-<p><strong>一对原语</strong>：<strong>wait（s）</strong>原语和<strong>signal（s）</strong>原语，可以把原语理解为我们自己写的函数，函数名称分别为wait和signal，括号里的<strong>信号量s</strong>其实就是函数调用时传入的一个参数。wait、signal原语常<strong>简称为P，V操作</strong>（来自荷兰语proberen和verhogen，意思是“尝试”和“增加”）。因此，wait（s）和signal（s）可被简写为<strong>P（s）和V（s）。</strong></p>
-<h4 id="2-整形信号量"><a href="#2-整形信号量" class="headerlink" title="2.整形信号量"></a>2.整形信号量</h4><p>用一个<strong>整数型的变量</strong>作为信号量，来<strong>表示系统中的某种资源的数量。</strong></p>
-<p>如：某计算机系统中有一台打印机：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">S</span> <span class="operator">=</span> <span class="number">1</span>; <span class="comment">//初始化整形信号量S，表示当前系统中可用的打印机资源数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">wait</span><span class="params">(<span class="type">int</span> S)</span>&#123;  <span class="comment">//wait原语，相当于“进入区”</span></span><br><span class="line">    <span class="keyword">while</span>(s &lt;= <span class="number">0</span>); <span class="comment">//如果资源数不够，就一直循环等待</span></span><br><span class="line">    S = S - <span class="number">1</span>;     <span class="comment">//如果资源数够，就占用一个资源</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">signal</span><span class="params">(<span class="type">int</span> S)</span>&#123; <span class="comment">//signal原语，相当于&quot;退出区&quot;</span></span><br><span class="line">    S = S + <span class="number">1</span>;      <span class="comment">//使用完资源后，在退出区释放资源</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果一个进程P0想要访问打印机，则其操作的伪代码为：</span></span><br><span class="line">...</span><br><span class="line">wait(S); <span class="comment">//进入区，申请自愿</span></span><br><span class="line">使用的印记资源... <span class="comment">//临界区，访问资源</span></span><br><span class="line">signal(S);  <span class="comment">//退出区，释放资源</span></span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="comment">//如果进程P1在进程P0正在放问打印机时想要访问打印机资源，只能一直执行wait(S)，等待进程P0释放</span></span><br><span class="line"><span class="comment">//临界区资源。</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">访问打印机资源...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-<p>信号量其与普通整数变量的区别：对信号量的操作只有三种，即 初始化、P操作、V操作。在wait原语中，“检查”和“上锁”一气呵成，避免了并发、异步导致的问题。但是如果信号量S为0，则其中的while语句会一直检查信号量S的占用情况，会一直占用处理机，不满足“让权等待”原则，会发生“忙等”。</p>
-<h4 id="3-记录型信号量（重要）"><a href="#3-记录型信号量（重要）" class="headerlink" title="3.记录型信号量（重要）"></a>3.记录型信号量（<font color=red>重要</font>）</h4><p>整形信号量的缺陷是存在“忙等”的问题，因此人们又提出了“记录型信号量”，即用记录型数据结构表示的信号量。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//信号量的数据结构</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> value;   <span class="comment">//剩余资源数</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">process</span> *<span class="title">L</span>;</span>  <span class="comment">//等待队列</span></span><br><span class="line">&#125; semphore;</span><br><span class="line"></span><br><span class="line"><span class="comment">//某进程需要使用资源时，通过wait原语申请</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">wait</span><span class="params">(semaphore S)</span>&#123;</span><br><span class="line">    S.value--;</span><br><span class="line">    <span class="keyword">if</span>(S.value &lt; <span class="number">0</span>)&#123;  <span class="comment">//如果剩余资源不够，使用block原语使进程从运行态进入阻塞态，并把它挂到</span></span><br><span class="line">        block(S.L);   <span class="comment">//信号量S的等待队列（即阻塞队列）中</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//进程使用完资源后，通过signal原语释放</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">signal</span><span class="params">(semaphore S)</span>&#123;</span><br><span class="line">    S.value++;</span><br><span class="line">    <span class="keyword">if</span>(S.value&lt;=<span class="number">0</span>)&#123;  <span class="comment">//释放资源后，如果还有别的进程在等待这种资源，则使用wakeup原语唤醒</span></span><br><span class="line">        wakeup(S.L); <span class="comment">//等待队列中的一个进程，使该进程从阻塞态变为就绪态。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>例：某计算机系统中有两台打印机，则可在初始化信号量S时将S.value的值设为2，队列S.L设置为空</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> value;    <span class="comment">//剩余资源数为2</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">process</span> *<span class="title">L</span>;</span>  <span class="comment">//等待队列-→null</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//P0进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">//P1进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">//P2进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机..</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">//P3进程</span></span><br><span class="line">...</span><br><span class="line">wait(S);</span><br><span class="line">使用打印机...</span><br><span class="line">signal(S);</span><br><span class="line">...</span><br><span class="line">    </span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">解释：有点啰嗦，能看得懂就行。</span></span><br><span class="line"><span class="comment">cpu首先为p0服务，P0使用wait原语检查剩余资源，系统中剩余打印机资源为2，可以分配给P0，value值减1变为1，P0可以使用打印机。之后cpu又为p1服务，P1使用wait原语检查剩余资源，系统中剩余打印机资源为1，value值减1变为0，可以分配给P1，P1可以使用打印机。再次cpu为P2服务，P2使用wait原语检查剩余打印机资源，系统中剩余打印机资源为0，资源已经暂时全部被占用，value值减1变为-1小于0，P2进程主动执行block原语，P2被挂载到了打印机的等待队列中，P3同理，value值变为-2.</span></span><br><span class="line"><span class="comment">value值为0时资源刚好被分配完，为-1时有一个进程在等待，为-2时有两个进程在等待。</span></span><br><span class="line"><span class="comment">当P0使用完成后，会执行signal原语释放打印机，value值加一变为-1，但此时value的值为-1仍然小于0，就说明此时等待队列中不止一个进程在等待打印机资源，进程P0会主动执行wakeup原语唤醒队列中的队头进程P2，P2从阻塞队列中被切换到就绪队列。待P2进程切换至运行态时，就可占用P0释放的打印机资源了。其余后续步骤同理。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<p>wait(S)和signal(S)也可记为P(S)，V(S)，这对原语用于<strong>实现系统资源的申请和释放</strong>。</p>
-<p><strong>S.value的初始值</strong>表示系统中<strong>某种资源的数目。</strong></p>
-<p>对信号量S的<strong>一次P操作</strong>意味着进程<strong>请求一个单位的该类资源</strong>，因此需要执行S.balue–，表示资源数减1，当S.value&lt;0时表示该类资源已分配完毕，因此进程应<strong>调用block原语进行自我阻塞</strong>（当前运行的进程从<strong>运行态切换为阻塞态</strong>），主动放弃处理机，并插入该类资源的等待队列S.L中。可见，该机制<strong>遵循了“让权等待的原则”</strong>，不会出现“忙等”的现象。</p>
-<p>对信号量S的<strong>一次V操作</strong>意味着进程<strong>释放一个单位的该类资源</strong>，因此需要执行S.value++，表示资源数+1，若加一后仍是S.value&lt;=0，表示依然有进程在等待该类资源，因此应<strong>调用wakeup原语唤醒等待队列中的第一个进程</strong>（被唤醒的进程从<strong>阻塞态切换为就绪态</strong>）。</p>
-<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/27/LLCHn1.png" alt="LLCHn1.png"></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十九、进程互斥的硬件实现方法</title>
-    <url>/2022/04/27/%E5%8D%81%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>这里什么都没写，先占个坑以后再写。</p>
-<span id="more"></span>]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>二十一、用信号量机制实现进程互斥、同步和前驱关系</title>
-    <url>/2022/04/27/%E4%BA%8C%E5%8D%81%E4%B8%80%E3%80%81%E7%94%A8%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E3%80%81%E5%90%8C%E6%AD%A5%E5%92%8C%E5%89%8D%E9%A9%B1%E5%85%B3%E7%B3%BB/</url>
-    <content><![CDATA[<h4 id="1-信号量机制实现进程互斥"><a href="#1-信号量机制实现进程互斥" class="headerlink" title="1.信号量机制实现进程互斥"></a>1.信号量机制实现进程互斥</h4><ol>
-<li>分析并发进程的关键活动，划定临界区（如：对临界资源打印机的访问就应放在临界区）</li>
-<li>设置<strong>互斥信号量mutex，初始值为1</strong></li>
-<li>在临界区之前执行P(mutex)</li>
-<li>在临界区之后执行V(mutex)</li>
-</ol>
-<span id="more"></span>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//信号量机制实现互斥</span></span><br><span class="line">semaphore mutex=<span class="number">1</span>; <span class="comment">//初始化信号量</span></span><br><span class="line"></span><br><span class="line">P1()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(mutex); <span class="comment">//使用临界区资源前需要加锁</span></span><br><span class="line">    临界代码区段....</span><br><span class="line">    V(mutex); <span class="comment">//使用临界区资源后需要解锁</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">P2()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(mutex);</span><br><span class="line">    临界代码区段....</span><br><span class="line">    V(mutex);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//原理与上节类似</span></span><br></pre></td></tr></table></figure>
-
-<p>注意：<strong>对不同的临界资源需要设置不同的互斥信号量。P，V操作必须成对出现。</strong>缺少P(mutex)就不能保证临界区资源的互斥访问。缺少V(mutex)会导致资源永不被释放，等待进程永不被唤醒。</p>
-<p><img src="https://s1.ax1x.com/2022/04/27/LLm4VH.png" alt="LLm4VH.png"></p>
-<h4 id="2-信号量机制实现进程同步"><a href="#2-信号量机制实现进程同步" class="headerlink" title="2.信号量机制实现进程同步"></a>2.信号量机制实现进程同步</h4><p>进程同步：要让各并发进程按要求有序地推进</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//比如，P1、P2并发的执行，由于存在异步性，因此二者交替推进的次序是不确定的。</span></span><br><span class="line"><span class="comment">//若P2的“代码4”要基于P1的“代码1”和“代码2”的运行结果才能执行，那么我们就必须保证“代码4”一定是</span></span><br><span class="line"><span class="comment">//在“代码2”之后才会执行。</span></span><br><span class="line">P1()&#123;</span><br><span class="line">    代码<span class="number">1</span>;</span><br><span class="line">    代码<span class="number">2</span>;</span><br><span class="line">    代码<span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">P2()&#123;</span><br><span class="line">    代码<span class="number">4</span>;</span><br><span class="line">    代码<span class="number">5</span>;</span><br><span class="line">    代码<span class="number">6</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>用信号量实现进程同步：</p>
-<ol>
-<li>分析什么地方需要实现“同步关系”，即必须保证“一前一后”执行的两个操作（或两句代码）</li>
-<li>设置<strong>同步信号量S，初始值为0</strong>。</li>
-<li><strong>在“前操作”之后执行V(S)；</strong></li>
-<li><strong>在“后操作”之前执行P(S)；</strong></li>
-</ol>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//信号量机制实现同步</span></span><br><span class="line">semaphore S=<span class="number">0</span>; <span class="comment">//初始化同步信号量</span></span><br><span class="line"></span><br><span class="line">P1()&#123;</span><br><span class="line">    代码<span class="number">1</span>;</span><br><span class="line">    代码<span class="number">2</span>;</span><br><span class="line">    V(S);</span><br><span class="line">    代码<span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">P2()&#123;</span><br><span class="line">    P(S);</span><br><span class="line">    代码<span class="number">4</span>;</span><br><span class="line">    代码<span class="number">5</span>;</span><br><span class="line">    代码<span class="number">6</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">若先执行到V(S)操作，则S++后S=1.之后当执行到P(S)操作时，由于S=1，表示有可用资源，会执行S--，S的值变回0，P2的进程不会执行block原语，而是继续往下执行代码4.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">若先执行到P(S)操作，由于S=0，S--后S=-1，表示此时没有可用资源，因此P操作中会执行block原语，主动请求阻塞。之后当执行完代码2，继而执行V(S)操作，S++，使S变回0由于此时有进程在该信号量对应的阻塞队列中，因此会在V操作中执行wakeup原语，唤醒P2进程。这样P2就可以继续执行代码4了。</span></span><br><span class="line"><span class="comment">这样就保证了代码4一定是在代码2之后执行。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">这里有一点不理解。前面说过了同步信号量S=0时表示没有可用资源，但是如果先执行了P(S)操作，同步信号量S的值会变为-1并阻塞自己，当V(S)被执行后同步信号量S的值变为0并执行wakeup操作唤醒进程P2，若按照前面的陈述那么P2也会认为此时并没有可用资源，因为同步信号量S的值为0，这样P2进程不就饿死了吗？</span></span><br><span class="line"><span class="comment">不知道是不是我听漏了什么。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-信号量机制实现前驱关系"><a href="#3-信号量机制实现前驱关系" class="headerlink" title="3.信号量机制实现前驱关系"></a>3.信号量机制实现前驱关系</h4><p>进程P1中有句代码S1，P2中有句代码S2一直到P6。这些代码要求按照如下前驱图所示的顺序来执行。</p>
-<p> <img src="https://s1.ax1x.com/2022/04/27/LL3Vcn.png" alt="LL3Vcn.png"></p>
-<p>每一对前驱关系都是一个进程同步问题（需要保证一前一后的操作）</p>
-<p>因此：</p>
-<ol>
-<li>要<strong>为每一对前驱关系各设置一个同步变量</strong>a，b，c，d，e，f，g</li>
-<li><strong>在“前操作”之后对相应的同步变量执行V操作</strong></li>
-<li><strong>在“后操作”之前对相应的同步变量执行P操作</strong></li>
-</ol>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">P1()&#123;</span><br><span class="line">    ...</span><br><span class="line">    S1;</span><br><span class="line">    V(a);</span><br><span class="line">    V(B);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">P2()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(a);</span><br><span class="line">    S2;</span><br><span class="line">    V(c);</span><br><span class="line">    V(d);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">P3()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(b);</span><br><span class="line">    S3;</span><br><span class="line">    V(g);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">P4()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(c);</span><br><span class="line">    S4;</span><br><span class="line">    V(e);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">P5()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(d);</span><br><span class="line">    P(f);</span><br><span class="line">    S5;</span><br><span class="line">    V(f);</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">P6()&#123;</span><br><span class="line">    ...</span><br><span class="line">    P(e);</span><br><span class="line">    P(f);</span><br><span class="line">    P(g);</span><br><span class="line">    S6;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>大概是这个样子：</p>
-<p><img src="https://s1.ax1x.com/2022/04/27/LL8rIU.png" alt="LL8rIU.png"></p>
-<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/27/LLGPzj.png" alt="LLGPzj.png"></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>二十二、生产者消费者问题</title>
-    <url>/2022/05/01/%E4%BA%8C%E5%8D%81%E4%BA%8C%E3%80%81%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h4 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1.问题描述"></a>1.问题描述</h4><p>系统中有一组生产者进程和一组消费者进程，生产者进程每次生产一个产品放入缓冲区，消费者进程每次从缓冲区中去除一个产品并使用。（这里的“产品”理解为某种数据）</p>
-<span id="more"></span>
-
-<p>生产者、消费者<strong>共享一个初始为空、大小为n的缓冲区。</strong></p>
-<p>只有<strong>缓冲区没满</strong>时，生产者才能把产品放入缓冲区。</p>
-<p>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。</p>
-<p><img src="https://s1.ax1x.com/2022/05/01/OC1z3q.png"></p>
-<p>生产者进程每次生产一个产品，消费者进程每次取走一个产品。当缓冲区为满时，只能阻塞生产者进程，切换为消费者进程取走产品。只要缓冲区中又大于或等于1个可用的空间时就可以唤醒生产者进程继续生产。</p>
-<p><img src="https://s1.ax1x.com/2022/05/01/OC3t2t.png" alt="OC3t2t.png"></p>
-<p>当缓冲区为空，消费者进程就没有可以被取走的产品了，只能阻塞消费者进程，等待产品被放入缓冲区。</p>
-<p><img src="https://s1.ax1x.com/2022/05/01/OC8AL8.png" alt="OC8AL8.png"></p>
-<p>缓冲区属于临界资源，各个进程必须互斥地访问。如果不属于临界资源，则各生产者进程并发地执行时由于无法控制执行进度，有可能导致两个进程同时访问缓冲区的同一块区域导致数据冲突。</p>
-<p><strong>如何用信号量机制（P、V操作）实现生产者、消费者进程的这些功能？</strong></p>
-<p>信号量机制可以实现互斥、同步、对一类系统资源的申请和释放。</p>
-<p>互斥：设置初始值为1的互斥信号量。</p>
-<p>同步：设置初始值为0的同步信号量（实现“一前一后”）</p>
-<p>申请和释放资源：设置一个信号量，初始值为资源的数量（本质上也是属于“同步问题”，若无空闲资源，则申请自愿的进程需要等待别的进程释放资源后才能据需执行下去）</p>
-<blockquote>
-<p>分析：</p>
-<p>1.关系分析：找出题目中描述的各个进程，分析它们之间的同步关系。</p>
+<p>有的题目还会要求计算某种设备的利用率：</p>
+<p>如：某计算机只支持单道程序，某个作业刚开始需要在CPU上运行5秒，再用打印机打印输出5秒，之后再执行5秒，才能结束。在此过程中，COPU利用率、打印机利用率分别是多少？</p>
+<p>$CPU利用率=\frac{5+5}{5+5+5}=66.665$<br>$打印机利用率=\frac{5}{15}=33.335$</p>
+<h4 id="2-系统吞吐量"><a href="#2-系统吞吐量" class="headerlink" title="2.系统吞吐量"></a>2.系统吞吐量</h4><p>对于计算机来说，希望使用尽可能少的时间完成尽可能多的多页</p>
+<p><strong>系统吞吐量：</strong>单位时间内完成的作业数量</p>
+<p>$系统吞吐量=\frac{总共完成了多少道作业}{总共花了多少时间}$</p>
+<p>如：某计算机处理完成10道作业，共花费100秒，则系统吞吐量为：</p>
+<p>$\frac{10}{100}=0.1（道/秒）$</p>
+<p>即平均每秒可以完成0.1道作业。</p>
+<h4 id="3-周转时间"><a href="#3-周转时间" class="headerlink" title="3.周转时间"></a>3.周转时间</h4><p>对于计算机用户来说，他很关心自己的作业从提交道完成花费了多少时间。</p>
+<p><strong>周转时间</strong>：是指<strong>作业被提交给系统开始，到作业完成为止</strong>的这段时间间隔。</p>
+<p>它包括四个部分：作业在外存后备队列上等待作业调度（高级调度）的时间、进程在就绪队列上等待进程调度（低级调度）的时间、进程在CPU上执行的时间、进程等待I/O操作完成的时间。后三项在一个作业的整个处理过程中，可能发生多次。</p>
 <ul>
-<li>只有<strong>缓冲区没满</strong>时，生产者才能把产品放入缓冲区。这个属于同步关系。缓冲区没满时，生产者要等待消费者取走产品。</li>
-<li>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。这个也属于同步关系。缓冲区为空时（即没有产品时），消费者要等待生产者生产商品。</li>
-<li>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。这个属于互斥关系。</li>
+<li>对于用户来说，更关心自己的单个作业的周转时间：</li>
 </ul>
-<p>2.整理思路，根据各进程的操作流程确定P、V操作的大致顺序。</p>
-<p>生产者每次要消耗（P）一个空闲缓冲区，并生产（V）一个产品。消费者者每次要消耗（P）一个产品，并释放一个空闲的缓冲区（V）。往缓冲区放入，取走产品需要互斥。</p>
-<p>3.设置信号量。设置需要的信号量，并根据题目题目条件确定信号量初值（互斥信号量初值一般为1，同步信号量的初始值要看对应资源的初始值是多少）</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">semaphore mutex = <span class="number">1</span>;  <span class="comment">//互斥信号量，实现进程互斥访问。</span></span><br><span class="line">semaphore empty = n;  <span class="comment">//同步信号量，表示空闲缓冲区的数量。</span></span><br><span class="line">semaphore full = <span class="number">0</span>;   <span class="comment">//同步信号量，表示产品的数量，也即非空缓冲区的数量。</span></span><br></pre></td></tr></table></figure>
+<p>（作业）周转时间 = 作业完成时间 - 作业提交时间</p>
+<ul>
+<li>对于操作系统来说，更关心系统的整体表现，因此更关心所有作业周转时间的平均值。</li>
+</ul>
+<p>$平均周转时间=\frac{各作业周转时间之和}{作业数}$</p>
+<ul>
+<li>有的作业运行时间长，有的作业运行时间短，因此在周转时间相同的情况下，运行时间不同的作业，给用户的感受肯定是不一样的。</li>
+</ul>
+<p>$戴荃周转时间=\frac{作业周转时间}{作业实际运行的时间}=\frac{作业完成时间-作业提交时间}{作业实际运行的时间}$</p>
+<p>$平均带权周转时间=\frac{各作业带权周转时间之和}{作业数}$</p>
+<p><strong>带权周转时间必然&gt;=1</strong><br><strong>带权周转时间与周转时间都是越小越好</strong></p>
+<p>对于周转时间相同的两个作业，实际运行时间长的作业在相同的时间内被服务的时间更过，带权周转时间更小，用户满意度更高。</p>
+<p>对与实际运行时间相同的两个作业，周转时间短的带权周转时间更小，用户满意度更高。</p>
+<h4 id="4-等待时间"><a href="#4-等待时间" class="headerlink" title="4.等待时间"></a>4.等待时间</h4><p>计算机的用户希望自己的作业尽可能少的等待处理剂</p>
+<p><strong>等待时间：</strong>指进程/作业<strong>处于等待处理机状态时间之和</strong>，等待时间越长用户满意度越低。</p>
+<blockquote>
+<p>当一个作业被建立之后，作业会被放在外存的“作业后备队列”等待被服务（调度）。当作业被服务之后作业会被调入内存。作业被调入内存后，建立对应的进程，这个进程会被CPU服务，会被I/O设备服务，当然也会有等待被服务的时候。</p>
 </blockquote>
-<h4 id="2-如何实现"><a href="#2-如何实现" class="headerlink" title="2.如何实现"></a>2.如何实现</h4><p>根据上面设置的信号量，实现响应代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//生产者进程</span></span><br><span class="line">producer()&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        生产一个产品;</span><br><span class="line">        P(empty);   <span class="comment">//消耗一个空闲缓冲区</span></span><br><span class="line">        P(mutex);   <span class="comment">//实现进程互斥</span></span><br><span class="line">        把产品放入缓冲区;</span><br><span class="line">        V(mutex);   </span><br><span class="line">        V(full);    <span class="comment">//增加一个产品</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//消费者进程</span></span><br><span class="line">consumer()&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        P(full);   <span class="comment">//消耗一个产品（非空缓冲区）,此P操作用于实现进程同步</span></span><br><span class="line">        P(mutex);  <span class="comment">//此P操作用于实现进程互斥</span></span><br><span class="line">        从缓冲区取走一个产品;</span><br><span class="line">        V(mutex);</span><br><span class="line">        V(empty);   <span class="comment">//增加一个空闲缓冲区</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">P(mutex);</span></span><br><span class="line"><span class="comment">把产品放入缓冲区;</span></span><br><span class="line"><span class="comment">V(mutex);</span></span><br><span class="line"><span class="comment">上面的代码实现了进程互斥，实现互斥是在同一进程中进程一对PV操作</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">生产者进程的V(full)和消费者进程的P(full)用于实现两个进程的同步关系。即在其中一个一个进程中执行P，另一个进程中执行V</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-思考：能否改变相邻P，V操作的顺序？"><a href="#3-思考：能否改变相邻P，V操作的顺序？" class="headerlink" title="3.思考：能否改变相邻P，V操作的顺序？"></a>3.思考：能否改变相邻P，V操作的顺序？</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCUYTK.png" alt="OCUYTK.png"></p>
-<p>生产者生产产品和消费者消费产品从代码上看是放在PV操作之外。能不能放到PV操作之内呢？从逻辑上来看是没问题，可以让消费者从缓冲区中取出一个产品后就立即使用这个产品。但会导致临界区代码量变大，消费者进程在访问临界区的过程中就需要花费更多的时间，如果此时有别的进程也需要访问临界资源则消费者进程会被阻塞，会导致进程的并发度降低，尽量不要放入PV操作之中。</p>
-<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCaFhD.png" alt="OCaFhD.png"></p>
+<p>对于<strong>进程</strong>来说，等待时间就是指进程建立后<strong>等待被服务的时间之和</strong>，在等待I/O完成的期间其实进程也是在被服务的，所以不计入等待时间。<br>对于<strong>作业</strong>来说，不仅要考虑<strong>建立进城后的等待时间，还要加上作业在外存后备队列中等待的时间。</strong></p>
+<p>一个作业总共需要被CPU服务多久，被I.O设备服务多久一般是确定不变的，因此调度算法其实只会影响作业/进程的等待时间。当然，与前面指标类似，也有<strong>“平均等待时间”</strong>来评价整体性能。</p>
+<p>$平均等待时间=\frac{所有进程/作业的等待时间之和}{作业数量}$</p>
+<h4 id="5-响应时间"><a href="#5-响应时间" class="headerlink" title="5.响应时间"></a>5.响应时间</h4><p>对于计算机用户来说，会希望自己的提交的请求（比如通过键盘输入了一个调试命令）尽早地开始被系统服务、回应。</p>
+<p><strong>响应时间:<strong>是指用户</strong>提交请求</strong>到<strong>首次产生响应</strong>所用时间。</p>
+<h4 id="6-知识回顾"><a href="#6-知识回顾" class="headerlink" title="6.知识回顾"></a>6.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/20/Lso3yq.png" alt="Lso3yq.png"></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
       </categories>
       <tags>
         <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>四、操作系统的运行机制与体系系统</title>
+    <url>/2022/04/10/%E5%9B%9B%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h4 id="1-运行机制"><a href="#1-运行机制" class="headerlink" title="1.运行机制"></a>1.运行机制</h4><p>什么是指令， “指令”和“代码”有什么区别？</p>
+<p>比如：C语言指令代码源文件经过编译后变成机器语言指令，而一条高级语言的代码可能对应着多条指令。</p>
+<span id="more"></span>
+
+<p>简而言之，<strong>“指令”就是CPU能够处理和执行的最基本的命令</strong>，就是让CPU干一件具体的事情。</p>
+<p><strong>（1）两种指令：</strong></p>
+<ul>
+<li><strong>特权指令</strong>：如内存清零指令（不允许用户程序使用）</li>
+<li><strong>非特权指令</strong>：如普通的运算指令</li>
+</ul>
+<p>问：CPU怎样执行特权指令？</p>
+<p><strong>（2）两种处理器状态：</strong></p>
+<ul>
+<li><strong>用户态（目态）</strong>：在该状态下CPU只能执行非特权指令。</li>
+<li><strong>核心态（管态）</strong>：在该状态下特权指令和非特权指令都可以执行。</li>
+</ul>
+<p>在CPU中存在一个<strong>用户程序状态寄存器（PSW）</strong>，在其中的某一个标志位来标识当前处理器处于什么状态。如0为用户态，1为核心态。</p>
+<p><strong>（3）两种程序：</strong></p>
+<ul>
+<li><strong>内核程序</strong>：操作系统的内核程序是系统的管理者，既可以执行特权指令，也可以执行非特权指令，<strong>运行在核心态</strong>。</li>
+<li><strong>应用程序</strong>：为了保证系统能安全运行，普通应用程序只能执行非特权指令，<strong>运行在用户态</strong>。</li>
+</ul>
+<h4 id="2-操作系统内核"><a href="#2-操作系统内核" class="headerlink" title="2.操作系统内核"></a>2.操作系统内核</h4><p>[<img src="https://s1.ax1x.com/2022/04/10/LANsi9.md.png" alt="LANsi9.md.png"></p>
+<p><strong>内核</strong>是计算机配置上的底层<strong>软件</strong>，是操作系统最基本，最核心的部分。</p>
+<p>实现操作系统内核功能的哪些程序就是<strong>内核程序</strong>。</p>
+<blockquote>
+<p>操作系统内核包括：</p>
+<ol>
+<li><strong>时钟管理</strong>：实现计时功能。</li>
+<li><strong>中断处理</strong>：负责实现中断机制</li>
+<li><strong>原语</strong>：<ul>
+<li>是一种特殊的程序</li>
+<li>处于操作系统最底层、最接近硬件的部分</li>
+<li>这种运行的程序具有<strong>原子性</strong>，其运行过程不可中断</li>
+<li>运行时间较短，调用频繁</li>
+</ul>
+</li>
+<li><strong>对系统资源进行管理的功能</strong>：<ul>
+<li>进程管理</li>
+<li>存储管理</li>
+<li>设备管理</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p>内核又可被分为：<strong>大内核</strong>和<strong>微内核。</strong>如果内核中包含存储管理，进程管理，设备管理等功能的就被叫做大内核，只包含最基本如时钟管理，中断处理，原语等的就被叫做微内核。</p>
+<h4 id="3-操作系统的体系结构"><a href="#3-操作系统的体系结构" class="headerlink" title="3.操作系统的体系结构"></a>3.操作系统的体系结构</h4><p>操作系统的体系结构：</p>
+<ol>
+<li><strong>大内核</strong><ul>
+<li>将操作系统的主要功能模块都作为系统内核，运行在核心态</li>
+<li>优点：高性能</li>
+<li>缺点：内核代码庞大，结构混乱，难以维护</li>
+</ul>
+</li>
+<li><strong>微内核</strong><ul>
+<li>只把最基本的功能保留在内核</li>
+<li>优点：内核功能少，结构清晰，方便维护</li>
+<li>缺点：需要频繁的在核心态和用户态之间切换，性能低</li>
+</ul>
+</li>
+</ol>
+<p>比如：</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/LAU2fs.png" alt="比喻"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在GithubPages上搭建Hexo并配置NexT主题</title>
+    <url>/2022/04/10/%E5%9C%A8GithubPages%E4%B8%8A%E6%90%AD%E5%BB%BAHexo%E5%B9%B6%E9%85%8D%E7%BD%AENexT%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="在GithubPages上搭建Hexo并配置NexT主题"><a href="#在GithubPages上搭建Hexo并配置NexT主题" class="headerlink" title="在GithubPages上搭建Hexo并配置NexT主题"></a>在GithubPages上搭建Hexo并配置NexT主题</h2><h4 id="啰里啰唆"><a href="#啰里啰唆" class="headerlink" title="啰里啰唆"></a>啰里啰唆</h4><p>记录一下自己搭建blog的过程，之前在vps上配置过word press，但是一直也没更新，而且好的vps很贵维护成本也很高，索性干脆不用了，就尝试一下使用hexo在github上搭建blog，效果还不错，总共也就历时两天。网上类似的教程也很多，这里总结记录一下，方便以后开新坑</p>
+<span id="more"></span>
+<h4 id="首先安装Node-js和Git-for-Windows"><a href="#首先安装Node-js和Git-for-Windows" class="headerlink" title="首先安装Node.js和Git for Windows"></a>首先安装Node.js和Git for Windows</h4><p>[Node.js官网](<a href="https://nodejs.org/en/">Node.js (nodejs.org)</a>)，[Git for windows官网](<a href="https://git-scm.com/">Git (git-scm.com)</a>)，Node.js建议安装LTS长期支持版，支持周期更长且更稳定</p>
+<p>Node.js:点击第一个绿色的按钮下载Node.js,版本不需要和图示一致，直接下载最新版即可。</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/LkbK0K.png" alt="LkbK0K.png"></p>
+<p>Git:点击网页左侧小电脑当中的Download for windows，直接下载最新版即可无需与图示中版本一致。</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/LkbmOx.png" alt="LkbmOx.png"></p>
+<p>下载完成后按照默认安装设置安装即可。</p>
+<h4 id="在GitHub上创建一个仓库"><a href="#在GitHub上创建一个仓库" class="headerlink" title="在GitHub上创建一个仓库"></a>在GitHub上创建一个仓库</h4><p>首先，需要一个GitHub账号。打开GitHub官网点击左上角的sign in就能注册了，不复述了很简单。进行这个过程可能需要<strong>科学</strong>上网，具体自行百度。</p>
+<p><strong>创建一个Github仓库</strong></p>
+<p>点击左上角头像，在弹出的下拉菜单中选择 <strong>Your repositories</strong>，待页面加载完毕后点击左上角绿色的<strong>new</strong>创建一个仓库。</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/Lkbum6.png" alt="Lkbum6.png"></p>
+<p><strong>注意</strong>：仓库名务必是**==你的用户名.github.io==**,比如上面我的用户名是ivy-lun,那么仓库名就是ivy-lun.github.io,其他的保持默认即可，点击绿色按钮Create repositories即可创建一个仓库。</p>
+<h1 id="太累了，过两天再更吧"><a href="#太累了，过两天再更吧" class="headerlink" title="太累了，过两天再更吧"></a>太累了，过两天再更吧</h1>]]></content>
+      <categories>
+        <category>Hexo配置&amp;美化</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>GithubPages</tag>
+        <tag>Blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第六章、组合数据类型</title>
+    <url>/2022/04/21/%E7%AC%AC%E5%85%AD%E7%AB%A0%E3%80%81%E7%BB%84%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h4 id="1-综合数据类型概述"><a href="#1-综合数据类型概述" class="headerlink" title="1.综合数据类型概述"></a>1.综合数据类型概述</h4><p>组合数据类型能够将多个同类型或者不同类型的数据组织起来，通过单一的表示是数据操作更有序，更容易。Python中组合数据类型分为<strong>序列类型，集合类型，映射类型。</strong></p>
+<span id="more"></span>
+
+<blockquote>
+<p><strong>序列类型：</strong>元素的响亮，元素之间存在先后顺序，通过序号访问。</p>
+<ul>
+<li>字符串（str）</li>
+<li>元组（tuple）</li>
+<li>列表（list）</li>
+</ul>
+<p><strong>集合类型：</strong>元素的集合，元素之间无序，相同元素在集合中唯一存在。</p>
+<ul>
+<li>集合（set）</li>
+</ul>
+<p><strong>映射类型：</strong>“键值”数据项的组合，每一个元素是一个（key，value）键值对。</p>
+<ul>
+<li>字典（map）</li>
+</ul>
+</blockquote>
+<p><strong>（1）序列类型</strong></p>
+<ul>
+<li><p>常用的数据类型有字符串，元组和列表。</p>
+<ul>
+<li><p><strong>字符串：</strong>单个字符的有序组合</p>
+</li>
+<li><p><strong>元组</strong>：元组生成后是固定的，其中任何数据项不能替换或者删除</p>
+</li>
+<li><p><strong>列表</strong>：是可以改变的序列类型</p>
+</li>
+</ul>
+</li>
+<li><p>所有序列类型都是可以通过变量名+序号的形式访问，序号可以采用<strong>正向序号</strong>和<strong>反向序号</strong>的方式。序列类型允许有重复元素存在，并通过序号来区分它们。</p>
+</li>
+<li><p>序列类型有12个通用操作符和函数。</p>
+</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2022/04/21/L6tMY4.png" alt="L6tMY4.png"></p>
+<p><strong>（2）元组类型</strong></p>
+<ul>
+<li>元组一旦被创建就不能修改，需要用逗号将元素分开（必须要有的），可以用圆括号把所有元素括起来（可以没有）。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一个元素可以作为另外一个元组的元素，并采用多级索引访问。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>creature=<span class="string">&quot;cat&quot;</span>,<span class="string">&quot;dog&quot;</span>,<span class="string">&quot;tiger&quot;</span>,<span class="string">&quot;human&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>creature</span><br><span class="line">(<span class="string">&#x27;cat&#x27;</span>,<span class="string">&#x27;dog&#x27;</span>,<span class="string">&#x27;tiger&#x27;</span>,<span class="string">&#x27;human&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color = (<span class="string">&quot;red&quot;</span>,<span class="string">&quot;0x001100&quot;</span>,<span class="string">&quot;blue&quot;</span>,creature)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color = (<span class="string">&quot;red&quot;</span>,<span class="string">&quot;0x001100&quot;</span>,<span class="string">&quot;blue&quot;</span>,(<span class="string">&#x27;cat&#x27;</span>,<span class="string">&#x27;dog&#x27;</span>,<span class="string">&#x27;tiger&#x27;</span>,<span class="string">&#x27;human&#x27;</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color[<span class="number">2</span>]</span><br><span class="line"><span class="string">&#x27;blue&#x27;</span></span><br><span class="line"><span class="comment"># 多级索引访问</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>color[-<span class="number">1</span>][<span class="number">2</span>]</span><br><span class="line"><span class="string">&#x27;tiger&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（3）集合类型</strong></p>
+<ul>
+<li><p>集合中的元素不可重复，元素类型只能是固定的数据类型；</p>
+</li>
+<li><p>由于集合是无序组合，没有索引和位置的概念，不能分片，可以动态地增加和删除；</p>
+</li>
+<li><p>集合用大括号表示，可以用赋值语句生成一个集合；</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s=&#123;<span class="number">425</span>,<span class="string">&quot;BIT&quot;</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="number">424</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line">&#123;<span class="number">424</span>,<span class="number">425</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="string">&quot;BIT&quot;</span>&#125;</span><br><span class="line"><span class="comment"># 集合是无序的，元素不会被按原有输入排序，但元素不变。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>t=&#123;<span class="number">425</span>,<span class="string">&quot;BIT&quot;</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="number">424</span>,<span class="number">425</span><span class="string">&quot;BIT&quot;</span>&#125;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>t</span><br><span class="line">&#123;<span class="number">424</span>,<span class="number">425</span>,(<span class="number">10</span>,<span class="string">&quot;CS&quot;</span>),<span class="string">&quot;BIT&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>set（x）函数可以生成集合，输入的参数可以是任何组合的数据类型，返回的结果是一个无重复且排序任意的集合。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>w=<span class="built_in">set</span>(<span class="string">&quot;apple&quot;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>w</span><br><span class="line">(<span class="string">&#x27;l&#x27;</span>,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;e&#x27;</span>,<span class="string">&#x27;p&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>集合类型的操作符有10个</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2022/04/21/L6t861.png" alt="L6t861.png"><br><img src="https://s1.ax1x.com/2022/04/21/L6N34g.png" alt="L6N34g.png"></p>
+<ul>
+<li>集合类型的操作函数或方法10个</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2022/04/21/L6N0ET.png" alt="L6N0ET.png"></p>
+<p><strong>（4）映射类型</strong></p>
+<ul>
+<li>映射类型是“键-值”数据项的组合，一个元素是一个<strong>键值对</strong>，元素之间是无序的。键表示一个属性，值表示属性的内容，描述对应的属性值。</li>
+<li>如：（学校名称，城市）为映射类型，则有如下映射实例</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">（北京大学，北京）</span><br><span class="line">（清华大学，北京）</span><br><span class="line">（浙江大学，杭州）</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-列表的类型和操作"><a href="#2-列表的类型和操作" class="headerlink" title="2.列表的类型和操作"></a>2.列表的类型和操作</h4><ul>
+<li>列表是包含0个或多个对象的有序序列但列表的长度和内容是可变的，可以自由的进行数据项的增加，删除或替换，列表没有长度限制，元素类型可以不同。</li>
+<li>列表也支持成员关系运算符in，长度计算函数len（），分片[]等序列类型的运算、方法和函数。</li>
+<li>列表用中括号[]表示，也可以通过list（）函数将元组或字符串转化成列表。<br><img src="https://s1.ax1x.com/2022/04/21/L6R5IH.png" alt="L6R5IH.png"></li>
+<li>列表类型特有的函数或方法：<br><img src="https://s1.ax1x.com/2022/04/21/L6RjeS.png" alt="L6RjeS.png"></li>
+<li>列表的操作实例：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist=<span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">len</span>(vlist[<span class="number">2</span>:])</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">2</span> <span class="keyword">in</span> vlist</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">3</span>]=<span class="string">&quot;python&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">1</span>:<span class="number">3</span>]=[<span class="string">&quot;bit&quot;</span>,<span class="string">&quot;computer&quot;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="string">&#x27;bit&#x27;</span>, <span class="string">&#x27;computer&#x27;</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当使用一个列表改变另外一个列表值时，python不要求两个列表长度一样，但遵循“多增少补”的原则</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">1</span>:<span class="number">3</span>]=[<span class="string">&quot;new_bit&quot;</span>,<span class="string">&quot;new_computer&quot;</span>,<span class="number">123</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="string">&#x27;new_bit&#x27;</span>, <span class="string">&#x27;new_computer&#x27;</span>, <span class="number">123</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist[<span class="number">1</span>:<span class="number">3</span>]=[<span class="string">&quot;fewer&quot;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>vlist</span><br><span class="line">[<span class="number">0</span>, <span class="string">&#x27;fewer&#x27;</span>, <span class="number">123</span>, <span class="string">&#x27;python&#x27;</span>, <span class="number">4</span>]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>与元组一样，列表可以通过for - in语句对元组进行遍历。</li>
+</ul>
+<h4 id="3-基本统计值计算"><a href="#3-基本统计值计算" class="headerlink" title="3.基本统计值计算"></a>3.基本统计值计算</h4><p><img src="https://s1.ax1x.com/2022/04/28/LOHqzV.png" alt="LOHqzV.png"></p>
+<h4 id="补充：sorted函数"><a href="#补充：sorted函数" class="headerlink" title="补充：sorted函数"></a>补充：sorted函数</h4><p>sorted是一个排序函数，里面通常有三个参数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sorted</span>(iterable, key=<span class="literal">None</span>, reverse=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+<p>参数说名：</p>
+<p>iterable – 可迭代对象</p>
+<p>key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指可迭代对象中的一个元素来进行排序。</p>
+<p>reverse – 排序规则，= True降序，=False 升序（默认参数）</p>
+<p>使用sorted（）函数对序列进行排序，并不会在原序列的基础进行修改，而是会重新生成一个排好序的列表实现。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">5</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = <span class="built_in">sorted</span>(a)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>a</span><br><span class="line">[<span class="number">5</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b</span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-字典类型和操作"><a href="#4-字典类型和操作" class="headerlink" title="4.字典类型和操作"></a>4.字典类型和操作</h4><p><strong>概念</strong></p>
+<ul>
+<li><p>在有些比较灵活的信息查询，如查找学生的“C语言成绩”时，我们需要输入学号，而不是输入该成绩在列表中的索引号（下标），这种的查询需要“键值对”，通过特定的键（如学号）访问值（如C语言成绩）</p>
+</li>
+<li><p>通过任意键值查找一组数据中信息的过程称为映射，在Python中通过字典实现映射，通过大括号建立映射{}。建立模式如下：</p>
+<p>{&lt;键1&gt;：&lt;值1&gt;，&lt;键2&gt;：&lt;值2&gt;，…}</p>
+</li>
+<li><p>由于字典顺序也是一种集合类型，所以键值对之间没有顺序并且不能重复。</p>
+</li>
+<li><p>字典的创建：利用大括号创建字典，并指定初始值，通过中括号可以增加新的元素</p>
+</li>
+<li><p>直接使用大括号可以创建一个空字典，通过中括号增加新的元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">dcountry=&#123;<span class="string">&#x27;中国&#x27;</span>:<span class="string">&quot;北京&quot;</span>, <span class="string">&quot;美国&quot;</span>:<span class="string">&quot;华盛顿&quot;</span>&#125;</span><br><span class="line">dcountry[<span class="string">&#x27;英国&#x27;</span>]=<span class="string">&#x27;伦敦&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>字典的函数和方法如下表：</strong></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LOv2kD.png" alt="LOv2kD.png"></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LOvOhQ.png" alt="LOvOhQ.png"></p>
+<h4 id="5-Python-jieba库"><a href="#5-Python-jieba库" class="headerlink" title="5.Python jieba库"></a>5.Python jieba库</h4><p><img src="https://s1.ax1x.com/2022/04/28/LXSRtU.png" alt="LXSRtU.png"></p>
+<p><strong>jieba常用分词函数：</strong></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXpiAf.png" alt="LXpiAf.png"></p>
+<p>举例：</p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXpT2Q.png" alt="LXpT2Q.png"></p>
+<p><strong>jieba库添加词汇：</strong></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXPs8U.png" alt="LXPs8U.png"></p>
+<h4 id="6-文本词频统计"><a href="#6-文本词频统计" class="headerlink" title="6.文本词频统计"></a>6.文本词频统计</h4><p><img src="https://s1.ax1x.com/2022/04/28/LXiAZn.png" alt="LXiAZn.png"></p>
+<p><strong>英文词频统计：</strong></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXF41O.png" alt="LXF41O.png"></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXkqr4.png" alt="LXkqr4.png"></p>
+<p><img src="https://s1.ax1x.com/2022/04/28/LXERNn.png" alt="LXERNn.png"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件工程导论PartOne</title>
+    <url>/2022/04/19/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%AF%BC%E8%AE%BAPartOne/</url>
+    <content><![CDATA[<h4 id="一、软件危机"><a href="#一、软件危机" class="headerlink" title="一、软件危机"></a>一、软件危机</h4><h6 id="1-软件危机的介绍"><a href="#1-软件危机的介绍" class="headerlink" title="1.软件危机的介绍"></a>1.软件危机的介绍</h6><p>（1）概念</p>
+<p>软件危机是指在计算机软件的开发和维护过程中所遇到的一系列严重问题。这些问题绝不仅仅是不能运行软件才具有的，实际上，几乎所有的软件都不同程度的存在这些问题。软件危机包含两方面的问题：</p>
+<p>①如何开发软件，以满足对软件日益增长的需求。②如何维护数量不断膨胀的已有软件。</p>
+<span id="more"></span>
+
+<p>（2）典型表现</p>
+<p>①对软件开发成本和进度的估计不准确。②用户对“已完成的”软件系统不满意的现象经常发生。③软件产品的质量往往靠不住。④软件常常是不可维护的。⑤软件常常没有适当的文档资料。⑥软件成本在计算机系统总成本中所占的比例逐年上升。⑦软件开发跟不上计算机应用迅速普及深入的趋势。</p>
+<h6 id="2-产生软件危机的原因"><a href="#2-产生软件危机的原因" class="headerlink" title="2.产生软件危机的原因"></a>2.产生软件危机的原因</h6><p>（1）客观原因</p>
+<p>①软件是计算机系统中的逻辑部件而不是物理部件。②软件规模庞大，而且软件程序复杂性将随着程序规模的增加而呈指数上升。</p>
+<p>（2）主要原因</p>
+]]></content>
+      <categories>
+        <category>软件工程</category>
+      </categories>
+      <tags>
+        <tag>软件工程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件工程笔记</title>
+    <url>/2022/04/24/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<blockquote>
+<p>软件工程别人整理的考研笔记</p>
+<p>整理的挺全面的</p>
+</blockquote>
+<span id="more"></span>
+
+<blockquote>
+<p><a href="https://cloud.189.cn/t/JfA3mmiUjaUf">https://cloud.189.cn/t/JfA3mmiUjaUf</a> (访问码:e6l2)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>笔记分享</category>
+      </categories>
+      <tags>
+        <tag>软件工程</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
 </search>
