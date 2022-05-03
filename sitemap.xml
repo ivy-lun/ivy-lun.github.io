@@ -370,14 +370,14 @@
   </url>
   
   <url>
-    <loc>https://ariescheng.xyz/tags/%E9%9A%8F%E6%83%B3%E9%9A%8F%E8%AE%B0/</loc>
+    <loc>https://ariescheng.xyz/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
     <lastmod>2022-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ariescheng.xyz/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <loc>https://ariescheng.xyz/tags/%E9%9A%8F%E6%83%B3%E9%9A%8F%E8%AE%B0/</loc>
     <lastmod>2022-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -442,13 +442,6 @@
   </url>
   
   <url>
-    <loc>https://ariescheng.xyz/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2022-05-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ariescheng.xyz/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
     <lastmod>2022-05-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -456,7 +449,7 @@
   </url>
   
   <url>
-    <loc>https://ariescheng.xyz/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://ariescheng.xyz/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB%E7%9A%84%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -464,6 +457,13 @@
   
   <url>
     <loc>https://ariescheng.xyz/categories/%E6%83%B3%E6%B3%95/</loc>
+    <lastmod>2022-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ariescheng.xyz/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2022-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
