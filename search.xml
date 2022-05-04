@@ -140,6 +140,10 @@
 
 <p>具体修改内容看注释。</p>
 <p>所有对页面样式的修改都应该在styles.styl中重写，避免直接修改到主题本体。</p>
+<p>尽量不要在hexo中添加过多花里胡哨的样式或是js，尽可能保证hexo的性能。网站太慢有违背与hexo的初衷。</p>
+<p>文章写于2022年4月15日，如内容过期可以clion一份最新版本。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git clion https://github.com/ivy-lun/ivy-lun.github.io</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>Hexo配置&amp;美化</category>
