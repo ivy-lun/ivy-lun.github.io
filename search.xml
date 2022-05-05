@@ -186,42 +186,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一、启发式搜索</title>
-    <url>/2022/04/18/%E4%B8%80%E3%80%81%E5%90%AF%E5%8F%91%E5%BC%8F%E6%90%9C%E7%B4%A2/</url>
-    <content><![CDATA[<h4 id="1-人工智能中的搜索"><a href="#1-人工智能中的搜索" class="headerlink" title="1.人工智能中的搜索"></a>1.人工智能中的搜索</h4><p>在<strong>海量信息源</strong>中利用<strong>问题求解器</strong>，加上一定的<strong>约束条件</strong>和<strong>额外信息</strong>即可找到<strong>问题所对应的答案</strong>。</p>
-<span id="more"></span>
-
-<p><strong>1.寻找最短路径为例</strong></p>
-<p><a href="https://imgtu.com/i/LdFksH"><img src="https://s1.ax1x.com/2022/04/18/LdFksH.png" alt="LdFksH.png"></a></p>
-<p>寻找出路径最短，时间最少，价钱最经济的路径</p>
-<blockquote>
-<p>搜索算法的形式化描述：<strong>状态，动作，状态转移，路径，测试目标</strong>。</p>
-<p>状态：从原问题转化出的问题描述。</p>
-<p>动作：从当前时刻所处的状态转移到下一时刻所处状态所进行的操作。一般而言这些操作都是离散的。</p>
-<p>状态转移：对面某一时刻对应状态进行某一种操作后，所能够到达的状态。</p>
-<p>路径：一个状态序列。该状态序列被一系列操作所连接。</p>
-<p>测试目标：评估当前状态是否为所求解的目标状态。</p>
-</blockquote>
-<p><strong>2.搜索算法：启发式搜索（有信息搜索）</strong></p>
-<p>在搜索的过程中利用与所求解问题相关的辅助信息，其代表算法为<strong>贪婪最佳优先搜索</strong>和<strong>A*搜索</strong>。</p>
-<p>有信息搜索要定义如下辅助信息：</p>
-<p><a href="https://imgtu.com/i/LdAHRf"><img src="https://s1.ax1x.com/2022/04/18/LdAHRf.png" alt="LdAHRf.png"></a></p>
-<p>贪婪最佳优先搜索：<strong>评价函数f（n）=启发函数h（n）</strong></p>
-<p><a href="https://imgtu.com/i/LdEUYt"><img src="https://s1.ax1x.com/2022/04/18/LdEUYt.png" alt="LdEUYt.png"></a></p>
-<p>根据上图所知，从当前Arad出发，选择相邻的后续节点并找出其最短路径。上图找出的最短直线距离是：Arad→Sibiu→Fagaras→Bucharest。此为贪婪最佳优先算法。</p>
-<p>不足之处：</p>
-<p><a href="https://imgtu.com/i/LdZwqg"><img src="https://s1.ax1x.com/2022/04/18/LdZwqg.png" alt="LdZwqg.png"></a></p>
-<p>为了解决上述问题，提出了<strong>A*算法。</strong></p>
-<p><strong>3.搜索算法：A*搜索</strong></p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>人工智能</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>markdown笔记</title>
     <url>/2022/04/09/%C2%B7%20markdown%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h3 id="·-markdown笔记"><a href="#·-markdown笔记" class="headerlink" title="· markdown笔记"></a>· markdown笔记</h3><h5 id="1-代码块"><a href="#1-代码块" class="headerlink" title="1.代码块"></a>1.代码块</h5><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```java 语言代码</span></span><br></pre></td></tr></table></figure>
@@ -312,27 +276,39 @@
       </tags>
   </entry>
   <entry>
-    <title>一些关于Blog的想法</title>
-    <url>/2022/04/16/%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8EBlog%E7%9A%84%E6%83%B3%E6%B3%95/</url>
-    <content><![CDATA[<p>我估计这东西应该不会有人看见吧。</p>
+    <title>一、启发式搜索</title>
+    <url>/2022/04/18/%E4%B8%80%E3%80%81%E5%90%AF%E5%8F%91%E5%BC%8F%E6%90%9C%E7%B4%A2/</url>
+    <content><![CDATA[<h4 id="1-人工智能中的搜索"><a href="#1-人工智能中的搜索" class="headerlink" title="1.人工智能中的搜索"></a>1.人工智能中的搜索</h4><p>在<strong>海量信息源</strong>中利用<strong>问题求解器</strong>，加上一定的<strong>约束条件</strong>和<strong>额外信息</strong>即可找到<strong>问题所对应的答案</strong>。</p>
 <span id="more"></span>
 
-<p>搭博客前后共经历了大概两个周的时间，一直期望Blog能够达到自己想要的体验效果。<br>但是由于自己的水平不足，在这期间曾经换过好几个主题，但也都时曾经的热门主题，大部分都停更了。也有第三方修改过的，但是第三方的主题文档不足导致修改起来异常困难，因为next主题最多使用的版本是next5，而next又有三个分支，最新版本8比版本5少了很多的star，于是导致网络上的大部分教程都是用于next5的，改起来很麻烦，可谓是一波三折。</p>
-<p><strong>但是Blog最重要的还是其内容</strong>，于是又重新推到再来，大约花了三天重建时间，就有了现在的这个Blog的样子。</p>
-<p>对于cms系统，大部分人大概都会去选择更简单易用的动态博客如word press，typecho等，静态博客用的人比较少，而且还很折腾。静态博客主要是可以免费搭建在各大开源平台上，付出的仅仅只是时间，也没什么金钱成本。</p>
+<p><strong>1.寻找最短路径为例</strong></p>
+<p><a href="https://imgtu.com/i/LdFksH"><img src="https://s1.ax1x.com/2022/04/18/LdFksH.png" alt="LdFksH.png"></a></p>
+<p>寻找出路径最短，时间最少，价钱最经济的路径</p>
 <blockquote>
-<p><del>好吧，其实只是因为穷😓</del></p>
+<p>搜索算法的形式化描述：<strong>状态，动作，状态转移，路径，测试目标</strong>。</p>
+<p>状态：从原问题转化出的问题描述。</p>
+<p>动作：从当前时刻所处的状态转移到下一时刻所处状态所进行的操作。一般而言这些操作都是离散的。</p>
+<p>状态转移：对面某一时刻对应状态进行某一种操作后，所能够到达的状态。</p>
+<p>路径：一个状态序列。该状态序列被一系列操作所连接。</p>
+<p>测试目标：评估当前状态是否为所求解的目标状态。</p>
 </blockquote>
-<p>这些天天天熬夜改样式，修代码，天天三四点睡，每天都弄的自己很累 ………..    fuck</p>
-<p>也就一破博客今换个主题名改个样式的，有什么用呢</p>
-<p>也就算是另一个QQ空间吧</p>
-<p>不改了，再也不改了</p>
+<p><strong>2.搜索算法：启发式搜索（有信息搜索）</strong></p>
+<p>在搜索的过程中利用与所求解问题相关的辅助信息，其代表算法为<strong>贪婪最佳优先搜索</strong>和<strong>A*搜索</strong>。</p>
+<p>有信息搜索要定义如下辅助信息：</p>
+<p><a href="https://imgtu.com/i/LdAHRf"><img src="https://s1.ax1x.com/2022/04/18/LdAHRf.png" alt="LdAHRf.png"></a></p>
+<p>贪婪最佳优先搜索：<strong>评价函数f（n）=启发函数h（n）</strong></p>
+<p><a href="https://imgtu.com/i/LdEUYt"><img src="https://s1.ax1x.com/2022/04/18/LdEUYt.png" alt="LdEUYt.png"></a></p>
+<p>根据上图所知，从当前Arad出发，选择相邻的后续节点并找出其最短路径。上图找出的最短直线距离是：Arad→Sibiu→Fagaras→Bucharest。此为贪婪最佳优先算法。</p>
+<p>不足之处：</p>
+<p><a href="https://imgtu.com/i/LdZwqg"><img src="https://s1.ax1x.com/2022/04/18/LdZwqg.png" alt="LdZwqg.png"></a></p>
+<p>为了解决上述问题，提出了<strong>A*算法。</strong></p>
+<p><strong>3.搜索算法：A*搜索</strong></p>
 ]]></content>
       <categories>
-        <category>想法</category>
+        <category>人工智能</category>
       </categories>
       <tags>
-        <tag>随想随记</tag>
+        <tag>人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -369,6 +345,30 @@
       </categories>
       <tags>
         <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些关于Blog的想法</title>
+    <url>/2022/04/16/%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8EBlog%E7%9A%84%E6%83%B3%E6%B3%95/</url>
+    <content><![CDATA[<p>我估计这东西应该不会有人看见吧。</p>
+<span id="more"></span>
+
+<p>搭博客前后共经历了大概两个周的时间，一直期望Blog能够达到自己想要的体验效果。<br>但是由于自己的水平不足，在这期间曾经换过好几个主题，但也都时曾经的热门主题，大部分都停更了。也有第三方修改过的，但是第三方的主题文档不足导致修改起来异常困难，因为next主题最多使用的版本是next5，而next又有三个分支，最新版本8比版本5少了很多的star，于是导致网络上的大部分教程都是用于next5的，改起来很麻烦，可谓是一波三折。</p>
+<p><strong>但是Blog最重要的还是其内容</strong>，于是又重新推到再来，大约花了三天重建时间，就有了现在的这个Blog的样子。</p>
+<p>对于cms系统，大部分人大概都会去选择更简单易用的动态博客如word press，typecho等，静态博客用的人比较少，而且还很折腾。静态博客主要是可以免费搭建在各大开源平台上，付出的仅仅只是时间，也没什么金钱成本。</p>
+<blockquote>
+<p><del>好吧，其实只是因为穷😓</del></p>
+</blockquote>
+<p>这些天天天熬夜改样式，修代码，天天三四点睡，每天都弄的自己很累 ………..    fuck</p>
+<p>也就一破博客今换个主题名改个样式的，有什么用呢</p>
+<p>也就算是另一个QQ空间吧</p>
+<p>不改了，再也不改了</p>
+]]></content>
+      <categories>
+        <category>想法</category>
+      </categories>
+      <tags>
+        <tag>随想随记</tag>
       </tags>
   </entry>
   <entry>
@@ -497,6 +497,47 @@
       </tags>
   </entry>
   <entry>
+    <title>九、进程控制</title>
+    <url>/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/</url>
+    <content><![CDATA[<h4 id="1-什么是进程控制"><a href="#1-什么是进程控制" class="headerlink" title="1.什么是进程控制"></a>1.什么是进程控制</h4><p>进程控制的主要功能是对系统中的所有进程实施有效的管理，它具有创建进程，撤销进程，实现进程间的状态转换等功能。简而言之，<strong>进程控制就是要时间进程状态的转换。</strong></p>
+<span id="more"></span>
+
+<h4 id="2-如何实现进程控制"><a href="#2-如何实现进程控制" class="headerlink" title="2.如何实现进程控制"></a>2.如何实现进程控制</h4><p><a href="https://imgtu.com/i/LaGOvd"><img src="https://s1.ax1x.com/2022/04/18/LaGOvd.png" alt="LaGOvd.png"></a></p>
+<p>进程之间的状态切换中间都需要对PCB进行修改并且放入相应的队列中。假如说某一进程把PCB从某一队列放入另一个队列中，但PCB中状态标志并未被修改，这种情况会导致系统错误，因为PCB所处的队列与PCB中存储的状态标志位数据不一致。于是引入<strong>原语</strong>来实现进程控制。原语的特点是<strong>执行过程中不允许被中断。</strong>这种不可被中断的操作即<strong>原子操作</strong>。原语使用<strong>关中断指令</strong>和<strong>开中断指令</strong>实现。</p>
+<p>当原语开始执行时会先执行关中断指令，此时外部中断信号会被忽略。这样保证原语的操作不会被中断。当原语执行完毕后会执行开中断指令，这样外部中断信号又会被响应了，如下图：</p>
+<p><img src="https://s1.ax1x.com/2022/04/18/LaY3Y8.png" alt="LaY3Y8.png"></p>
+<p>由此可见，<strong>开/关中断指令的权限非常大，必须只允许在核心态下执行的 特权指令 。</strong></p>
+<h4 id="3-进程控制相关原语"><a href="#3-进程控制相关原语" class="headerlink" title="3.进程控制相关原语"></a>3.进程控制相关原语</h4><p>四种原语：</p>
+<ul>
+<li><strong>创建原语</strong></li>
+<li><strong>撤销原语</strong></li>
+<li><strong>阻塞原语</strong></li>
+<li><strong>唤醒原语</strong></li>
+<li><strong>切换原语</strong></li>
+</ul>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatY4K.png" alt="LatY4K.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatN9O.png" alt="LatN9O.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatdjH.png" alt="LatdjH.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatDHI.png" alt="LatDHI.png"></p>
+<hr>
+<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/18/LatoEq.png" alt="LatoEq.png"></p>
+<hr>
+<center>分割线</center>
+
+<hr>
+<p>这章疑问有点多，应该看看书。</p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>二、操作系统的概念、功能和目标</title>
     <url>/2022/04/09/%E4%BA%8C%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A6%82%E5%BF%B5%E3%80%81%E5%8A%9F%E8%83%BD%E5%92%8C%E7%9B%AE%E6%A0%87/</url>
     <content><![CDATA[<h4 id="1-操作系统的概念"><a href="#1-操作系统的概念" class="headerlink" title="1.操作系统的概念"></a>1.操作系统的概念</h4><p>（1）操作系统是计算机中最基本的系统软件。</p>
@@ -533,47 +574,6 @@
 </ol>
 <p><strong>（3）作为最接近硬件的层次</strong></p>
 <p>扩充机器</p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>九、进程控制</title>
-    <url>/2022/04/18/%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6/</url>
-    <content><![CDATA[<h4 id="1-什么是进程控制"><a href="#1-什么是进程控制" class="headerlink" title="1.什么是进程控制"></a>1.什么是进程控制</h4><p>进程控制的主要功能是对系统中的所有进程实施有效的管理，它具有创建进程，撤销进程，实现进程间的状态转换等功能。简而言之，<strong>进程控制就是要时间进程状态的转换。</strong></p>
-<span id="more"></span>
-
-<h4 id="2-如何实现进程控制"><a href="#2-如何实现进程控制" class="headerlink" title="2.如何实现进程控制"></a>2.如何实现进程控制</h4><p><a href="https://imgtu.com/i/LaGOvd"><img src="https://s1.ax1x.com/2022/04/18/LaGOvd.png" alt="LaGOvd.png"></a></p>
-<p>进程之间的状态切换中间都需要对PCB进行修改并且放入相应的队列中。假如说某一进程把PCB从某一队列放入另一个队列中，但PCB中状态标志并未被修改，这种情况会导致系统错误，因为PCB所处的队列与PCB中存储的状态标志位数据不一致。于是引入<strong>原语</strong>来实现进程控制。原语的特点是<strong>执行过程中不允许被中断。</strong>这种不可被中断的操作即<strong>原子操作</strong>。原语使用<strong>关中断指令</strong>和<strong>开中断指令</strong>实现。</p>
-<p>当原语开始执行时会先执行关中断指令，此时外部中断信号会被忽略。这样保证原语的操作不会被中断。当原语执行完毕后会执行开中断指令，这样外部中断信号又会被响应了，如下图：</p>
-<p><img src="https://s1.ax1x.com/2022/04/18/LaY3Y8.png" alt="LaY3Y8.png"></p>
-<p>由此可见，<strong>开/关中断指令的权限非常大，必须只允许在核心态下执行的 特权指令 。</strong></p>
-<h4 id="3-进程控制相关原语"><a href="#3-进程控制相关原语" class="headerlink" title="3.进程控制相关原语"></a>3.进程控制相关原语</h4><p>四种原语：</p>
-<ul>
-<li><strong>创建原语</strong></li>
-<li><strong>撤销原语</strong></li>
-<li><strong>阻塞原语</strong></li>
-<li><strong>唤醒原语</strong></li>
-<li><strong>切换原语</strong></li>
-</ul>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatY4K.png" alt="LatY4K.png"></p>
-<hr>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatN9O.png" alt="LatN9O.png"></p>
-<hr>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatdjH.png" alt="LatdjH.png"></p>
-<hr>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatDHI.png" alt="LatDHI.png"></p>
-<hr>
-<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/18/LatoEq.png" alt="LatoEq.png"></p>
-<hr>
-<center>分割线</center>
-
-<hr>
-<p>这章疑问有点多，应该看看书。</p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -659,6 +659,53 @@
 <p>大概是这个样子：</p>
 <p><img src="https://s1.ax1x.com/2022/04/27/LL8rIU.png" alt="LL8rIU.png"></p>
 <h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/27/LLGPzj.png" alt="LLGPzj.png"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二十二、生产者消费者问题</title>
+    <url>/2022/05/01/%E4%BA%8C%E5%8D%81%E4%BA%8C%E3%80%81%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h4 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1.问题描述"></a>1.问题描述</h4><p>系统中有一组生产者进程和一组消费者进程，生产者进程每次生产一个产品放入缓冲区，消费者进程每次从缓冲区中去除一个产品并使用。（这里的“产品”理解为某种数据）</p>
+<span id="more"></span>
+
+<p>生产者、消费者<strong>共享一个初始为空、大小为n的缓冲区。</strong></p>
+<p>只有<strong>缓冲区没满</strong>时，生产者才能把产品放入缓冲区。</p>
+<p>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。</p>
+<p><img src="https://s1.ax1x.com/2022/05/01/OC1z3q.png"></p>
+<p>生产者进程每次生产一个产品，消费者进程每次取走一个产品。当缓冲区为满时，只能阻塞生产者进程，切换为消费者进程取走产品。只要缓冲区中又大于或等于1个可用的空间时就可以唤醒生产者进程继续生产。</p>
+<p><img src="https://s1.ax1x.com/2022/05/01/OC3t2t.png" alt="OC3t2t.png"></p>
+<p>当缓冲区为空，消费者进程就没有可以被取走的产品了，只能阻塞消费者进程，等待产品被放入缓冲区。</p>
+<p><img src="https://s1.ax1x.com/2022/05/01/OC8AL8.png" alt="OC8AL8.png"></p>
+<p>缓冲区属于临界资源，各个进程必须互斥地访问。如果不属于临界资源，则各生产者进程并发地执行时由于无法控制执行进度，有可能导致两个进程同时访问缓冲区的同一块区域导致数据冲突。</p>
+<p><strong>如何用信号量机制（P、V操作）实现生产者、消费者进程的这些功能？</strong></p>
+<p>信号量机制可以实现互斥、同步、对一类系统资源的申请和释放。</p>
+<p>互斥：设置初始值为1的互斥信号量。</p>
+<p>同步：设置初始值为0的同步信号量（实现“一前一后”）</p>
+<p>申请和释放资源：设置一个信号量，初始值为资源的数量（本质上也是属于“同步问题”，若无空闲资源，则申请自愿的进程需要等待别的进程释放资源后才能据需执行下去）</p>
+<blockquote>
+<p>分析：</p>
+<p>1.关系分析：找出题目中描述的各个进程，分析它们之间的同步关系。</p>
+<ul>
+<li>只有<strong>缓冲区没满</strong>时，生产者才能把产品放入缓冲区。这个属于同步关系。缓冲区没满时，生产者要等待消费者取走产品。</li>
+<li>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。这个也属于同步关系。缓冲区为空时（即没有产品时），消费者要等待生产者生产商品。</li>
+<li>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。这个属于互斥关系。</li>
+</ul>
+<p>2.整理思路，根据各进程的操作流程确定P、V操作的大致顺序。</p>
+<p>生产者每次要消耗（P）一个空闲缓冲区，并生产（V）一个产品。消费者者每次要消耗（P）一个产品，并释放一个空闲的缓冲区（V）。往缓冲区放入，取走产品需要互斥。</p>
+<p>3.设置信号量。设置需要的信号量，并根据题目题目条件确定信号量初值（互斥信号量初值一般为1，同步信号量的初始值要看对应资源的初始值是多少）</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">semaphore mutex = <span class="number">1</span>;  <span class="comment">//互斥信号量，实现进程互斥访问。</span></span><br><span class="line">semaphore empty = n;  <span class="comment">//同步信号量，表示空闲缓冲区的数量。</span></span><br><span class="line">semaphore full = <span class="number">0</span>;   <span class="comment">//同步信号量，表示产品的数量，也即非空缓冲区的数量。</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="2-如何实现"><a href="#2-如何实现" class="headerlink" title="2.如何实现"></a>2.如何实现</h4><p>根据上面设置的信号量，实现响应代码：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//生产者进程</span></span><br><span class="line">producer()&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        生产一个产品;</span><br><span class="line">        P(empty);   <span class="comment">//消耗一个空闲缓冲区</span></span><br><span class="line">        P(mutex);   <span class="comment">//实现进程互斥</span></span><br><span class="line">        把产品放入缓冲区;</span><br><span class="line">        V(mutex);   </span><br><span class="line">        V(full);    <span class="comment">//增加一个产品</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//消费者进程</span></span><br><span class="line">consumer()&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        P(full);   <span class="comment">//消耗一个产品（非空缓冲区）,此P操作用于实现进程同步</span></span><br><span class="line">        P(mutex);  <span class="comment">//此P操作用于实现进程互斥</span></span><br><span class="line">        从缓冲区取走一个产品;</span><br><span class="line">        V(mutex);</span><br><span class="line">        V(empty);   <span class="comment">//增加一个空闲缓冲区</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">P(mutex);</span></span><br><span class="line"><span class="comment">把产品放入缓冲区;</span></span><br><span class="line"><span class="comment">V(mutex);</span></span><br><span class="line"><span class="comment">上面的代码实现了进程互斥，实现互斥是在同一进程中进程一对PV操作</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">生产者进程的V(full)和消费者进程的P(full)用于实现两个进程的同步关系。即在其中一个一个进程中执行P，另一个进程中执行V</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-思考：能否改变相邻P，V操作的顺序？"><a href="#3-思考：能否改变相邻P，V操作的顺序？" class="headerlink" title="3.思考：能否改变相邻P，V操作的顺序？"></a>3.思考：能否改变相邻P，V操作的顺序？</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCUYTK.png" alt="OCUYTK.png"></p>
+<p>生产者生产产品和消费者消费产品从代码上看是放在PV操作之外。能不能放到PV操作之内呢？从逻辑上来看是没问题，可以让消费者从缓冲区中取出一个产品后就立即使用这个产品。但会导致临界区代码量变大，消费者进程在访问临界区的过程中就需要花费更多的时间，如果此时有别的进程也需要访问临界资源则消费者进程会被阻塞，会导致进程的并发度降低，尽量不要放入PV操作之中。</p>
+<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCaFhD.png" alt="OCaFhD.png"></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -755,101 +802,6 @@
       </tags>
   </entry>
   <entry>
-    <title>二十二、生产者消费者问题</title>
-    <url>/2022/05/01/%E4%BA%8C%E5%8D%81%E4%BA%8C%E3%80%81%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h4 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1.问题描述"></a>1.问题描述</h4><p>系统中有一组生产者进程和一组消费者进程，生产者进程每次生产一个产品放入缓冲区，消费者进程每次从缓冲区中去除一个产品并使用。（这里的“产品”理解为某种数据）</p>
-<span id="more"></span>
-
-<p>生产者、消费者<strong>共享一个初始为空、大小为n的缓冲区。</strong></p>
-<p>只有<strong>缓冲区没满</strong>时，生产者才能把产品放入缓冲区。</p>
-<p>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。</p>
-<p><img src="https://s1.ax1x.com/2022/05/01/OC1z3q.png"></p>
-<p>生产者进程每次生产一个产品，消费者进程每次取走一个产品。当缓冲区为满时，只能阻塞生产者进程，切换为消费者进程取走产品。只要缓冲区中又大于或等于1个可用的空间时就可以唤醒生产者进程继续生产。</p>
-<p><img src="https://s1.ax1x.com/2022/05/01/OC3t2t.png" alt="OC3t2t.png"></p>
-<p>当缓冲区为空，消费者进程就没有可以被取走的产品了，只能阻塞消费者进程，等待产品被放入缓冲区。</p>
-<p><img src="https://s1.ax1x.com/2022/05/01/OC8AL8.png" alt="OC8AL8.png"></p>
-<p>缓冲区属于临界资源，各个进程必须互斥地访问。如果不属于临界资源，则各生产者进程并发地执行时由于无法控制执行进度，有可能导致两个进程同时访问缓冲区的同一块区域导致数据冲突。</p>
-<p><strong>如何用信号量机制（P、V操作）实现生产者、消费者进程的这些功能？</strong></p>
-<p>信号量机制可以实现互斥、同步、对一类系统资源的申请和释放。</p>
-<p>互斥：设置初始值为1的互斥信号量。</p>
-<p>同步：设置初始值为0的同步信号量（实现“一前一后”）</p>
-<p>申请和释放资源：设置一个信号量，初始值为资源的数量（本质上也是属于“同步问题”，若无空闲资源，则申请自愿的进程需要等待别的进程释放资源后才能据需执行下去）</p>
-<blockquote>
-<p>分析：</p>
-<p>1.关系分析：找出题目中描述的各个进程，分析它们之间的同步关系。</p>
-<ul>
-<li>只有<strong>缓冲区没满</strong>时，生产者才能把产品放入缓冲区。这个属于同步关系。缓冲区没满时，生产者要等待消费者取走产品。</li>
-<li>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。这个也属于同步关系。缓冲区为空时（即没有产品时），消费者要等待生产者生产商品。</li>
-<li>只有<strong>缓冲区不空</strong>时，消费者才能从中取走产品，否则必须等待。这个属于互斥关系。</li>
-</ul>
-<p>2.整理思路，根据各进程的操作流程确定P、V操作的大致顺序。</p>
-<p>生产者每次要消耗（P）一个空闲缓冲区，并生产（V）一个产品。消费者者每次要消耗（P）一个产品，并释放一个空闲的缓冲区（V）。往缓冲区放入，取走产品需要互斥。</p>
-<p>3.设置信号量。设置需要的信号量，并根据题目题目条件确定信号量初值（互斥信号量初值一般为1，同步信号量的初始值要看对应资源的初始值是多少）</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">semaphore mutex = <span class="number">1</span>;  <span class="comment">//互斥信号量，实现进程互斥访问。</span></span><br><span class="line">semaphore empty = n;  <span class="comment">//同步信号量，表示空闲缓冲区的数量。</span></span><br><span class="line">semaphore full = <span class="number">0</span>;   <span class="comment">//同步信号量，表示产品的数量，也即非空缓冲区的数量。</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-<h4 id="2-如何实现"><a href="#2-如何实现" class="headerlink" title="2.如何实现"></a>2.如何实现</h4><p>根据上面设置的信号量，实现响应代码：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//生产者进程</span></span><br><span class="line">producer()&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        生产一个产品;</span><br><span class="line">        P(empty);   <span class="comment">//消耗一个空闲缓冲区</span></span><br><span class="line">        P(mutex);   <span class="comment">//实现进程互斥</span></span><br><span class="line">        把产品放入缓冲区;</span><br><span class="line">        V(mutex);   </span><br><span class="line">        V(full);    <span class="comment">//增加一个产品</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//消费者进程</span></span><br><span class="line">consumer()&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        P(full);   <span class="comment">//消耗一个产品（非空缓冲区）,此P操作用于实现进程同步</span></span><br><span class="line">        P(mutex);  <span class="comment">//此P操作用于实现进程互斥</span></span><br><span class="line">        从缓冲区取走一个产品;</span><br><span class="line">        V(mutex);</span><br><span class="line">        V(empty);   <span class="comment">//增加一个空闲缓冲区</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">P(mutex);</span></span><br><span class="line"><span class="comment">把产品放入缓冲区;</span></span><br><span class="line"><span class="comment">V(mutex);</span></span><br><span class="line"><span class="comment">上面的代码实现了进程互斥，实现互斥是在同一进程中进程一对PV操作</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">生产者进程的V(full)和消费者进程的P(full)用于实现两个进程的同步关系。即在其中一个一个进程中执行P，另一个进程中执行V</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3-思考：能否改变相邻P，V操作的顺序？"><a href="#3-思考：能否改变相邻P，V操作的顺序？" class="headerlink" title="3.思考：能否改变相邻P，V操作的顺序？"></a>3.思考：能否改变相邻P，V操作的顺序？</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCUYTK.png" alt="OCUYTK.png"></p>
-<p>生产者生产产品和消费者消费产品从代码上看是放在PV操作之外。能不能放到PV操作之内呢？从逻辑上来看是没问题，可以让消费者从缓冲区中取出一个产品后就立即使用这个产品。但会导致临界区代码量变大，消费者进程在访问临界区的过程中就需要花费更多的时间，如果此时有别的进程也需要访问临界资源则消费者进程会被阻塞，会导致进程的并发度降低，尽量不要放入PV操作之中。</p>
-<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCaFhD.png" alt="OCaFhD.png"></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十、进程通信</title>
-    <url>/2022/04/18/%E5%8D%81%E3%80%81%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/</url>
-    <content><![CDATA[<h4 id="1-什么是进程通信"><a href="#1-什么是进程通信" class="headerlink" title="1.什么是进程通信"></a>1.什么是进程通信</h4><p>进程通信是进程之间的信息交换。</p>
-<p>进程是分配系统资源的单位（包括内存地址空间），因此<strong>各进程拥有的内存地址空间相互独立</strong>。</p>
-<span id="more"></span>
-
-<p>为了保证安全，<strong>一个进程不允许直接访问另一个进程的地址空间。</strong>但是进程之间的信息交换又是必须实现的，为了保证进程间的安全通信，操作系统提供了一些方法。</p>
-<blockquote>
-<p>进程通信包括：<strong>共享存储，消息传递和管道通信</strong>。</p>
-</blockquote>
-<h4 id="2-共享存储"><a href="#2-共享存储" class="headerlink" title="2.共享存储"></a>2.共享存储</h4><p>操作系统为进程通信开辟了了共享的地址空间，两个进程对共享空间的<strong>访问</strong>必须是<strong>互斥</strong>的（互斥访问通过操作系统提供的工具实现，如P，V操作）。</p>
-<blockquote>
-<ul>
-<li><p><strong>基于数据结构的共享</strong></p>
-<p>比如空间里只能放一个长度为10的数组，这种共享方式速度慢、限制多，是一种<strong>低级通信</strong>方式。</p>
-</li>
-<li><p><strong>基于存储区的共享</strong></p>
-<p>在内存中画出一块共享存储区，数据的形式、存放位都由进程控制，而不是操作系统。相比之下，这种共享方式速度更快，是一种<strong>高级通信</strong>方式。</p>
-</li>
-</ul>
-</blockquote>
-<h4 id="3-管道通信"><a href="#3-管道通信" class="headerlink" title="3.管道通信"></a>3.管道通信</h4><p><strong>管导通信基础</strong></p>
-<p><a href="https://imgtu.com/i/Lw8KTP"><img src="https://s1.ax1x.com/2022/04/18/Lw8KTP.png" alt="Lw8KTP.png"></a></p>
-<p><strong>管道通信的原理</strong></p>
-<p><a href="https://imgtu.com/i/Lw8Jyj"><img src="https://s1.ax1x.com/2022/04/18/Lw8Jyj.png" alt="Lw8Jyj.png"></a></p>
-<h4 id="4-消息传递"><a href="#4-消息传递" class="headerlink" title="4.消息传递"></a>4.消息传递</h4><p>进程间的数据交换以<strong>格式化的消息</strong>为单位，进程通过操作系统的“发送消息/接收消息”两个<strong>原语</strong>进行数据交换。</p>
-<blockquote>
-<ul>
-<li><p><strong>直接通信方式</strong></p>
-<p>格式化的消息包括<strong>消息头</strong>和<strong>消息体</strong>，消息头包括：发送进程ID，接收进程ID，消息类型，消息长度等格式化的信息（类似于计算机网络中的“报文”）。进程1创建一个消息发送给进程2的消息缓冲队列，进程2再从消息缓冲队列中读取消息。</p>
-<p><a href="https://imgtu.com/i/Lw8y6J"><img src="https://s1.ax1x.com/2022/04/18/Lw8y6J.png" alt="Lw8y6J.png"></a></p>
-</li>
-<li><p><strong>间接通信方式</strong></p>
-<p>与直接通信原理基本相同，只不过消息要先发送到中间实体（信箱）中，因此也称“心想通信方式”。进程1通过<strong>发送原语</strong>将消息发送到信箱中，进程2通过<strong>接收原语</strong>接收属于自己的消息。</p>
-<p><a href="https://imgtu.com/i/Lw8o1e"><img src="https://s1.ax1x.com/2022/04/18/Lw8o1e.png" alt="Lw8o1e.png"></a></p>
-</li>
-</ul>
-</blockquote>
-<h5 id="5-知识回顾"><a href="#5-知识回顾" class="headerlink" title="5.知识回顾"></a>5.知识回顾</h5><p><a href="https://imgtu.com/i/Lw8bnA"><img src="https://s1.ax1x.com/2022/04/18/Lw8bnA.png" alt="Lw8bnA.png"></a></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>六、系统调用</title>
     <url>/2022/04/13/%E5%85%AD%E3%80%81%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8/</url>
     <content><![CDATA[<h4 id="1-什么是系统调用"><a href="#1-什么是系统调用" class="headerlink" title="1.什么是系统调用"></a>1.什么是系统调用</h4><p>操作系统是用户和计算机硬件之间的接口需要向上层提供一些简单易用的服务。主要包括<strong>命令接口</strong>和<strong>程序接口</strong>。其中，程序接口由一组==<strong>系统调用</strong>==组成。</p>
@@ -901,6 +853,54 @@
 </blockquote>
 </blockquote>
 <h4 id="5-知识回顾"><a href="#5-知识回顾" class="headerlink" title="5.知识回顾"></a>5.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/13/LMxCiF.png" alt="回顾"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十、进程通信</title>
+    <url>/2022/04/18/%E5%8D%81%E3%80%81%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1/</url>
+    <content><![CDATA[<h4 id="1-什么是进程通信"><a href="#1-什么是进程通信" class="headerlink" title="1.什么是进程通信"></a>1.什么是进程通信</h4><p>进程通信是进程之间的信息交换。</p>
+<p>进程是分配系统资源的单位（包括内存地址空间），因此<strong>各进程拥有的内存地址空间相互独立</strong>。</p>
+<span id="more"></span>
+
+<p>为了保证安全，<strong>一个进程不允许直接访问另一个进程的地址空间。</strong>但是进程之间的信息交换又是必须实现的，为了保证进程间的安全通信，操作系统提供了一些方法。</p>
+<blockquote>
+<p>进程通信包括：<strong>共享存储，消息传递和管道通信</strong>。</p>
+</blockquote>
+<h4 id="2-共享存储"><a href="#2-共享存储" class="headerlink" title="2.共享存储"></a>2.共享存储</h4><p>操作系统为进程通信开辟了了共享的地址空间，两个进程对共享空间的<strong>访问</strong>必须是<strong>互斥</strong>的（互斥访问通过操作系统提供的工具实现，如P，V操作）。</p>
+<blockquote>
+<ul>
+<li><p><strong>基于数据结构的共享</strong></p>
+<p>比如空间里只能放一个长度为10的数组，这种共享方式速度慢、限制多，是一种<strong>低级通信</strong>方式。</p>
+</li>
+<li><p><strong>基于存储区的共享</strong></p>
+<p>在内存中画出一块共享存储区，数据的形式、存放位都由进程控制，而不是操作系统。相比之下，这种共享方式速度更快，是一种<strong>高级通信</strong>方式。</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="3-管道通信"><a href="#3-管道通信" class="headerlink" title="3.管道通信"></a>3.管道通信</h4><p><strong>管导通信基础</strong></p>
+<p><a href="https://imgtu.com/i/Lw8KTP"><img src="https://s1.ax1x.com/2022/04/18/Lw8KTP.png" alt="Lw8KTP.png"></a></p>
+<p><strong>管道通信的原理</strong></p>
+<p><a href="https://imgtu.com/i/Lw8Jyj"><img src="https://s1.ax1x.com/2022/04/18/Lw8Jyj.png" alt="Lw8Jyj.png"></a></p>
+<h4 id="4-消息传递"><a href="#4-消息传递" class="headerlink" title="4.消息传递"></a>4.消息传递</h4><p>进程间的数据交换以<strong>格式化的消息</strong>为单位，进程通过操作系统的“发送消息/接收消息”两个<strong>原语</strong>进行数据交换。</p>
+<blockquote>
+<ul>
+<li><p><strong>直接通信方式</strong></p>
+<p>格式化的消息包括<strong>消息头</strong>和<strong>消息体</strong>，消息头包括：发送进程ID，接收进程ID，消息类型，消息长度等格式化的信息（类似于计算机网络中的“报文”）。进程1创建一个消息发送给进程2的消息缓冲队列，进程2再从消息缓冲队列中读取消息。</p>
+<p><a href="https://imgtu.com/i/Lw8y6J"><img src="https://s1.ax1x.com/2022/04/18/Lw8y6J.png" alt="Lw8y6J.png"></a></p>
+</li>
+<li><p><strong>间接通信方式</strong></p>
+<p>与直接通信原理基本相同，只不过消息要先发送到中间实体（信箱）中，因此也称“心想通信方式”。进程1通过<strong>发送原语</strong>将消息发送到信箱中，进程2通过<strong>接收原语</strong>接收属于自己的消息。</p>
+<p><a href="https://imgtu.com/i/Lw8o1e"><img src="https://s1.ax1x.com/2022/04/18/Lw8o1e.png" alt="Lw8o1e.png"></a></p>
+</li>
+</ul>
+</blockquote>
+<h5 id="5-知识回顾"><a href="#5-知识回顾" class="headerlink" title="5.知识回顾"></a>5.知识回顾</h5><p><a href="https://imgtu.com/i/Lw8bnA"><img src="https://s1.ax1x.com/2022/04/18/Lw8bnA.png" alt="Lw8bnA.png"></a></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -1077,31 +1077,6 @@
     <url>/2022/04/27/%E5%8D%81%E4%B9%9D%E3%80%81%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E7%9A%84%E7%A1%AC%E4%BB%B6%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p>这里什么都没写，先占个坑以后再写。</p>
 <span id="more"></span>]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十二、处理机调度的概念，层次</title>
-    <url>/2022/04/20/%E5%8D%81%E4%BA%8C%E3%80%81%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%8C%E5%B1%82%E6%AC%A1/</url>
-    <content><![CDATA[<h4 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h4><p>当有一堆任务要处理，但由于资源有限，这些事情没办法同时处理，这就需要确定<strong>某种规则来决定处理这些任务的顺序</strong>，这就是“调度”研究的问题。在多道程序系统中，进程的数量往往是多于处理机个数的，这样不可能同时并行的处理各个进程。<strong>处理机调度</strong>，就是从就绪队列中<strong>按照一定的算法选择一个进程并将处理机分配给他</strong>运行，以实现进程的并发执行。</p>
-<span id="more"></span>
-
-<h4 id="2-调度的三个层次——高级调度"><a href="#2-调度的三个层次——高级调度" class="headerlink" title="2.调度的三个层次——高级调度"></a>2.调度的三个层次——高级调度</h4><p>由于内存空间有限，有时无法将用户提交的作业全部放入内存，因此就需要某种规则来决定将作业调入内存的顺序。</p>
-<p><strong>高级调度（作业调度）</strong>，按一定的原则从外存上处于后备队列的作业中挑选一个（或多个）作业，给他们分配内存等重要资源，并<strong>建立相应的进程（建立PCB）</strong>，以使它（们）<strong>获得竞争处理机的权利</strong>。高级调度是辅存（外存）与内存之间的额调度，每个作业只调入一次，调出一次。<strong>作业调入时会建立相应的PCB，作业调出时才撤销PCB。</strong>高级调度主要是指调入的问题，因为只有调入的时机需要操作系统来确定，但调出的时机必然是作业运行结束才调出。</p>
-<h4 id="3-调度的三个层次——中级调度"><a href="#3-调度的三个层次——中级调度" class="headerlink" title="3.调度的三个层次——中级调度"></a>3.调度的三个层次——中级调度</h4><p>引入虚拟存储技术之后，可将暂时不能运行的程序调至外存等待。等他重新具备了运行条件且内存又稍有空间时，再重新调入内存。这么做的目的是<strong>提高内存利用率和系统吞吐量。</strong>暂时调到外存等待的进程状态为<strong>挂起状态</strong>。值得注意的是，<strong>PCB</strong>并不会一起调到外存，而是<strong>会常驻内存</strong>，PCB中会记录进程数据在外存的存放位置，进程状态等信息，操作系统通过内存中的PCB来保持对各个进程的监控、管理。被挂起的进程PCB会被放到的<strong>挂起队列</strong>中。<strong>中级调度（内存调度）</strong>，就是要决定将那个处于挂起状态的进程重新调入内存中。一个进程可能被多次调入、调出内存，因此<strong>中级调度发生的频率要比高级调度更高</strong>。</p>
-<p>（有点像就绪队列和阻塞队列）</p>
-<h4 id="4-补充知识：进程的挂起状态与七状态模型"><a href="#4-补充知识：进程的挂起状态与七状态模型" class="headerlink" title="4.补充知识：进程的挂起状态与七状态模型"></a>4.补充知识：进程的挂起状态与七状态模型</h4><p>暂时调到外存等待的进程状态为<strong>挂起状态（挂起态）</strong></p>
-<p>挂起态又可以进一步分为<strong>就绪挂起，阻塞挂起</strong>两种状态</p>
-<p>五状态模型→七状态模型</p>
-<p><img src="https://s1.ax1x.com/2022/04/20/Lruve1.png" alt="Lruve1.png"></p>
-<h4 id="5-调度的三个层次——低级调度"><a href="#5-调度的三个层次——低级调度" class="headerlink" title="5.调度的三个层次——低级调度"></a>5.调度的三个层次——低级调度</h4><p><strong>低级调度（进程调度）</strong>其主要任务时按照某种方法和策略从就绪队列中选取一个进程，将处理机分配给他。进程调度是操作系统中<strong>最基本的一种调度</strong>，在一般的操作系统中都必须配置进程调度。进程调度的<strong>频率很高</strong>，一般几十毫秒一次。</p>
-<h4 id="6-三层调度的联系和对比"><a href="#6-三层调度的联系和对比" class="headerlink" title="6.三层调度的联系和对比"></a>6.三层调度的联系和对比</h4><p><img src="https://s1.ax1x.com/2022/04/20/LrKonA.png"></p>
-<h4 id="7-知识回顾"><a href="#7-知识回顾" class="headerlink" title="7.知识回顾"></a>7.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/20/LrKLh8.png"></p>
-]]></content>
       <categories>
         <category>操作系统</category>
       </categories>
@@ -1358,61 +1333,6 @@
       </tags>
   </entry>
   <entry>
-    <title>十四、调度算法的评价指标</title>
-    <url>/2022/04/20/%E5%8D%81%E5%9B%9B%E3%80%81%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/</url>
-    <content><![CDATA[<h4 id="1-CPU利用率"><a href="#1-CPU利用率" class="headerlink" title="1.CPU利用率"></a>1.CPU利用率</h4><p>由于早期的CPU造价极其昂贵，因此人们<strong>希望让CPU尽可能多地工作</strong></p>
-<p><strong>CPU利用率：</strong>指CPU“忙碌”的时间占总时间的比例</p>
-<p>$利用率=\frac{忙碌的时间}{总时间}$</p>
-<span id="more"></span>
-
-<p>有的题目还会要求计算某种设备的利用率：</p>
-<p>如：某计算机只支持单道程序，某个作业刚开始需要在CPU上运行5秒，再用打印机打印输出5秒，之后再执行5秒，才能结束。在此过程中，COPU利用率、打印机利用率分别是多少？</p>
-<p>$CPU利用率=\frac{5+5}{5+5+5}=66.665$<br>$打印机利用率=\frac{5}{15}=33.335$</p>
-<h4 id="2-系统吞吐量"><a href="#2-系统吞吐量" class="headerlink" title="2.系统吞吐量"></a>2.系统吞吐量</h4><p>对于计算机来说，希望使用尽可能少的时间完成尽可能多的多页</p>
-<p><strong>系统吞吐量：</strong>单位时间内完成的作业数量</p>
-<p>$系统吞吐量=\frac{总共完成了多少道作业}{总共花了多少时间}$</p>
-<p>如：某计算机处理完成10道作业，共花费100秒，则系统吞吐量为：</p>
-<p>$\frac{10}{100}=0.1（道/秒）$</p>
-<p>即平均每秒可以完成0.1道作业。</p>
-<h4 id="3-周转时间"><a href="#3-周转时间" class="headerlink" title="3.周转时间"></a>3.周转时间</h4><p>对于计算机用户来说，他很关心自己的作业从提交道完成花费了多少时间。</p>
-<p><strong>周转时间</strong>：是指<strong>作业被提交给系统开始，到作业完成为止</strong>的这段时间间隔。</p>
-<p>它包括四个部分：作业在外存后备队列上等待作业调度（高级调度）的时间、进程在就绪队列上等待进程调度（低级调度）的时间、进程在CPU上执行的时间、进程等待I/O操作完成的时间。后三项在一个作业的整个处理过程中，可能发生多次。</p>
-<ul>
-<li>对于用户来说，更关心自己的单个作业的周转时间：</li>
-</ul>
-<p>（作业）周转时间 = 作业完成时间 - 作业提交时间</p>
-<ul>
-<li>对于操作系统来说，更关心系统的整体表现，因此更关心所有作业周转时间的平均值。</li>
-</ul>
-<p>$平均周转时间=\frac{各作业周转时间之和}{作业数}$</p>
-<ul>
-<li>有的作业运行时间长，有的作业运行时间短，因此在周转时间相同的情况下，运行时间不同的作业，给用户的感受肯定是不一样的。</li>
-</ul>
-<p>$戴荃周转时间=\frac{作业周转时间}{作业实际运行的时间}=\frac{作业完成时间-作业提交时间}{作业实际运行的时间}$</p>
-<p>$平均带权周转时间=\frac{各作业带权周转时间之和}{作业数}$</p>
-<p><strong>带权周转时间必然&gt;=1</strong><br><strong>带权周转时间与周转时间都是越小越好</strong></p>
-<p>对于周转时间相同的两个作业，实际运行时间长的作业在相同的时间内被服务的时间更过，带权周转时间更小，用户满意度更高。</p>
-<p>对与实际运行时间相同的两个作业，周转时间短的带权周转时间更小，用户满意度更高。</p>
-<h4 id="4-等待时间"><a href="#4-等待时间" class="headerlink" title="4.等待时间"></a>4.等待时间</h4><p>计算机的用户希望自己的作业尽可能少的等待处理剂</p>
-<p><strong>等待时间：</strong>指进程/作业<strong>处于等待处理机状态时间之和</strong>，等待时间越长用户满意度越低。</p>
-<blockquote>
-<p>当一个作业被建立之后，作业会被放在外存的“作业后备队列”等待被服务（调度）。当作业被服务之后作业会被调入内存。作业被调入内存后，建立对应的进程，这个进程会被CPU服务，会被I/O设备服务，当然也会有等待被服务的时候。</p>
-</blockquote>
-<p>对于<strong>进程</strong>来说，等待时间就是指进程建立后<strong>等待被服务的时间之和</strong>，在等待I/O完成的期间其实进程也是在被服务的，所以不计入等待时间。<br>对于<strong>作业</strong>来说，不仅要考虑<strong>建立进城后的等待时间，还要加上作业在外存后备队列中等待的时间。</strong></p>
-<p>一个作业总共需要被CPU服务多久，被I.O设备服务多久一般是确定不变的，因此调度算法其实只会影响作业/进程的等待时间。当然，与前面指标类似，也有<strong>“平均等待时间”</strong>来评价整体性能。</p>
-<p>$平均等待时间=\frac{所有进程/作业的等待时间之和}{作业数量}$</p>
-<h4 id="5-响应时间"><a href="#5-响应时间" class="headerlink" title="5.响应时间"></a>5.响应时间</h4><p>对于计算机用户来说，会希望自己的提交的请求（比如通过键盘输入了一个调试命令）尽早地开始被系统服务、回应。</p>
-<p><strong>响应时间:<strong>是指用户</strong>提交请求</strong>到<strong>首次产生响应</strong>所用时间。</p>
-<h4 id="6-知识回顾"><a href="#6-知识回顾" class="headerlink" title="6.知识回顾"></a>6.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/20/Lso3yq.png" alt="Lso3yq.png"></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>十八、进程互斥的软件实现方法</title>
     <url>/2022/04/26/%E5%8D%81%E5%85%AB%E3%80%81%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h4 id="1-单标志法"><a href="#1-单标志法" class="headerlink" title="1.单标志法"></a>1.单标志法</h4><p>算法思想：两个进程在<strong>访问完临界区后</strong>会把使用临界区的权限转交给另一个进程。也就是说<strong>每个进程进入临界区的权限只能被另一个进程赋予。</strong></p>
@@ -1480,71 +1400,22 @@
       </tags>
   </entry>
   <entry>
-    <title>四、操作系统的运行机制与体系系统</title>
-    <url>/2022/04/10/%E5%9B%9B%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h4 id="1-运行机制"><a href="#1-运行机制" class="headerlink" title="1.运行机制"></a>1.运行机制</h4><p>什么是指令， “指令”和“代码”有什么区别？</p>
-<p>比如：C语言指令代码源文件经过编译后变成机器语言指令，而一条高级语言的代码可能对应着多条指令。</p>
+    <title>十二、处理机调度的概念，层次</title>
+    <url>/2022/04/20/%E5%8D%81%E4%BA%8C%E3%80%81%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%8C%E5%B1%82%E6%AC%A1/</url>
+    <content><![CDATA[<h4 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h4><p>当有一堆任务要处理，但由于资源有限，这些事情没办法同时处理，这就需要确定<strong>某种规则来决定处理这些任务的顺序</strong>，这就是“调度”研究的问题。在多道程序系统中，进程的数量往往是多于处理机个数的，这样不可能同时并行的处理各个进程。<strong>处理机调度</strong>，就是从就绪队列中<strong>按照一定的算法选择一个进程并将处理机分配给他</strong>运行，以实现进程的并发执行。</p>
 <span id="more"></span>
 
-<p>简而言之，<strong>“指令”就是CPU能够处理和执行的最基本的命令</strong>，就是让CPU干一件具体的事情。</p>
-<p><strong>（1）两种指令：</strong></p>
-<ul>
-<li><strong>特权指令</strong>：如内存清零指令（不允许用户程序使用）</li>
-<li><strong>非特权指令</strong>：如普通的运算指令</li>
-</ul>
-<p>问：CPU怎样执行特权指令？</p>
-<p><strong>（2）两种处理器状态：</strong></p>
-<ul>
-<li><strong>用户态（目态）</strong>：在该状态下CPU只能执行非特权指令。</li>
-<li><strong>核心态（管态）</strong>：在该状态下特权指令和非特权指令都可以执行。</li>
-</ul>
-<p>在CPU中存在一个<strong>用户程序状态寄存器（PSW）</strong>，在其中的某一个标志位来标识当前处理器处于什么状态。如0为用户态，1为核心态。</p>
-<p><strong>（3）两种程序：</strong></p>
-<ul>
-<li><strong>内核程序</strong>：操作系统的内核程序是系统的管理者，既可以执行特权指令，也可以执行非特权指令，<strong>运行在核心态</strong>。</li>
-<li><strong>应用程序</strong>：为了保证系统能安全运行，普通应用程序只能执行非特权指令，<strong>运行在用户态</strong>。</li>
-</ul>
-<h4 id="2-操作系统内核"><a href="#2-操作系统内核" class="headerlink" title="2.操作系统内核"></a>2.操作系统内核</h4><p>[<img src="https://s1.ax1x.com/2022/04/10/LANsi9.md.png" alt="LANsi9.md.png"></p>
-<p><strong>内核</strong>是计算机配置上的底层<strong>软件</strong>，是操作系统最基本，最核心的部分。</p>
-<p>实现操作系统内核功能的哪些程序就是<strong>内核程序</strong>。</p>
-<blockquote>
-<p>操作系统内核包括：</p>
-<ol>
-<li><strong>时钟管理</strong>：实现计时功能。</li>
-<li><strong>中断处理</strong>：负责实现中断机制</li>
-<li><strong>原语</strong>：<ul>
-<li>是一种特殊的程序</li>
-<li>处于操作系统最底层、最接近硬件的部分</li>
-<li>这种运行的程序具有<strong>原子性</strong>，其运行过程不可中断</li>
-<li>运行时间较短，调用频繁</li>
-</ul>
-</li>
-<li><strong>对系统资源进行管理的功能</strong>：<ul>
-<li>进程管理</li>
-<li>存储管理</li>
-<li>设备管理</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-<p>内核又可被分为：<strong>大内核</strong>和<strong>微内核。</strong>如果内核中包含存储管理，进程管理，设备管理等功能的就被叫做大内核，只包含最基本如时钟管理，中断处理，原语等的就被叫做微内核。</p>
-<h4 id="3-操作系统的体系结构"><a href="#3-操作系统的体系结构" class="headerlink" title="3.操作系统的体系结构"></a>3.操作系统的体系结构</h4><p>操作系统的体系结构：</p>
-<ol>
-<li><strong>大内核</strong><ul>
-<li>将操作系统的主要功能模块都作为系统内核，运行在核心态</li>
-<li>优点：高性能</li>
-<li>缺点：内核代码庞大，结构混乱，难以维护</li>
-</ul>
-</li>
-<li><strong>微内核</strong><ul>
-<li>只把最基本的功能保留在内核</li>
-<li>优点：内核功能少，结构清晰，方便维护</li>
-<li>缺点：需要频繁的在核心态和用户态之间切换，性能低</li>
-</ul>
-</li>
-</ol>
-<p>比如：</p>
-<p><img src="https://s1.ax1x.com/2022/04/10/LAU2fs.png" alt="比喻"></p>
+<h4 id="2-调度的三个层次——高级调度"><a href="#2-调度的三个层次——高级调度" class="headerlink" title="2.调度的三个层次——高级调度"></a>2.调度的三个层次——高级调度</h4><p>由于内存空间有限，有时无法将用户提交的作业全部放入内存，因此就需要某种规则来决定将作业调入内存的顺序。</p>
+<p><strong>高级调度（作业调度）</strong>，按一定的原则从外存上处于后备队列的作业中挑选一个（或多个）作业，给他们分配内存等重要资源，并<strong>建立相应的进程（建立PCB）</strong>，以使它（们）<strong>获得竞争处理机的权利</strong>。高级调度是辅存（外存）与内存之间的额调度，每个作业只调入一次，调出一次。<strong>作业调入时会建立相应的PCB，作业调出时才撤销PCB。</strong>高级调度主要是指调入的问题，因为只有调入的时机需要操作系统来确定，但调出的时机必然是作业运行结束才调出。</p>
+<h4 id="3-调度的三个层次——中级调度"><a href="#3-调度的三个层次——中级调度" class="headerlink" title="3.调度的三个层次——中级调度"></a>3.调度的三个层次——中级调度</h4><p>引入虚拟存储技术之后，可将暂时不能运行的程序调至外存等待。等他重新具备了运行条件且内存又稍有空间时，再重新调入内存。这么做的目的是<strong>提高内存利用率和系统吞吐量。</strong>暂时调到外存等待的进程状态为<strong>挂起状态</strong>。值得注意的是，<strong>PCB</strong>并不会一起调到外存，而是<strong>会常驻内存</strong>，PCB中会记录进程数据在外存的存放位置，进程状态等信息，操作系统通过内存中的PCB来保持对各个进程的监控、管理。被挂起的进程PCB会被放到的<strong>挂起队列</strong>中。<strong>中级调度（内存调度）</strong>，就是要决定将那个处于挂起状态的进程重新调入内存中。一个进程可能被多次调入、调出内存，因此<strong>中级调度发生的频率要比高级调度更高</strong>。</p>
+<p>（有点像就绪队列和阻塞队列）</p>
+<h4 id="4-补充知识：进程的挂起状态与七状态模型"><a href="#4-补充知识：进程的挂起状态与七状态模型" class="headerlink" title="4.补充知识：进程的挂起状态与七状态模型"></a>4.补充知识：进程的挂起状态与七状态模型</h4><p>暂时调到外存等待的进程状态为<strong>挂起状态（挂起态）</strong></p>
+<p>挂起态又可以进一步分为<strong>就绪挂起，阻塞挂起</strong>两种状态</p>
+<p>五状态模型→七状态模型</p>
+<p><img src="https://s1.ax1x.com/2022/04/20/Lruve1.png" alt="Lruve1.png"></p>
+<h4 id="5-调度的三个层次——低级调度"><a href="#5-调度的三个层次——低级调度" class="headerlink" title="5.调度的三个层次——低级调度"></a>5.调度的三个层次——低级调度</h4><p><strong>低级调度（进程调度）</strong>其主要任务时按照某种方法和策略从就绪队列中选取一个进程，将处理机分配给他。进程调度是操作系统中<strong>最基本的一种调度</strong>，在一般的操作系统中都必须配置进程调度。进程调度的<strong>频率很高</strong>，一般几十毫秒一次。</p>
+<h4 id="6-三层调度的联系和对比"><a href="#6-三层调度的联系和对比" class="headerlink" title="6.三层调度的联系和对比"></a>6.三层调度的联系和对比</h4><p><img src="https://s1.ax1x.com/2022/04/20/LrKonA.png"></p>
+<h4 id="7-知识回顾"><a href="#7-知识回顾" class="headerlink" title="7.知识回顾"></a>7.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/20/LrKLh8.png"></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -1661,29 +1532,209 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
       </tags>
   </entry>
   <entry>
-    <title>在GithubPages上搭建Hexo并配置NexT主题</title>
-    <url>/2022/04/10/%E5%9C%A8GithubPages%E4%B8%8A%E6%90%AD%E5%BB%BAHexo%E5%B9%B6%E9%85%8D%E7%BD%AENexT%E4%B8%BB%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="在GithubPages上搭建Hexo并配置NexT主题"><a href="#在GithubPages上搭建Hexo并配置NexT主题" class="headerlink" title="在GithubPages上搭建Hexo并配置NexT主题"></a>在GithubPages上搭建Hexo并配置NexT主题</h2><h4 id="啰里啰唆"><a href="#啰里啰唆" class="headerlink" title="啰里啰唆"></a>啰里啰唆</h4><p>记录一下自己搭建blog的过程，之前在vps上配置过word press，但是一直也没更新，而且好的vps很贵维护成本也很高，索性干脆不用了，就尝试一下使用hexo在github上搭建blog，效果还不错，总共也就历时两天。网上类似的教程也很多，这里总结记录一下，方便以后开新坑</p>
+    <title>十四、调度算法的评价指标</title>
+    <url>/2022/04/20/%E5%8D%81%E5%9B%9B%E3%80%81%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/</url>
+    <content><![CDATA[<h4 id="1-CPU利用率"><a href="#1-CPU利用率" class="headerlink" title="1.CPU利用率"></a>1.CPU利用率</h4><p>由于早期的CPU造价极其昂贵，因此人们<strong>希望让CPU尽可能多地工作</strong></p>
+<p><strong>CPU利用率：</strong>指CPU“忙碌”的时间占总时间的比例</p>
+<p>$利用率=\frac{忙碌的时间}{总时间}$</p>
 <span id="more"></span>
-<h4 id="首先安装Node-js和Git-for-Windows"><a href="#首先安装Node-js和Git-for-Windows" class="headerlink" title="首先安装Node.js和Git for Windows"></a>首先安装Node.js和Git for Windows</h4><p>[Node.js官网](<a href="https://nodejs.org/en/">Node.js (nodejs.org)</a>)，[Git for windows官网](<a href="https://git-scm.com/">Git (git-scm.com)</a>)，Node.js建议安装LTS长期支持版，支持周期更长且更稳定</p>
-<p>Node.js:点击第一个绿色的按钮下载Node.js,版本不需要和图示一致，直接下载最新版即可。</p>
-<p><img src="https://s1.ax1x.com/2022/04/10/LkbK0K.png" alt="LkbK0K.png"></p>
-<p>Git:点击网页左侧小电脑当中的Download for windows，直接下载最新版即可无需与图示中版本一致。</p>
-<p><img src="https://s1.ax1x.com/2022/04/10/LkbmOx.png" alt="LkbmOx.png"></p>
-<p>下载完成后按照默认安装设置安装即可。</p>
-<h4 id="在GitHub上创建一个仓库"><a href="#在GitHub上创建一个仓库" class="headerlink" title="在GitHub上创建一个仓库"></a>在GitHub上创建一个仓库</h4><p>首先，需要一个GitHub账号。打开GitHub官网点击左上角的sign in就能注册了，不复述了很简单。进行这个过程可能需要<strong>科学</strong>上网，具体自行百度。</p>
-<p><strong>创建一个Github仓库</strong></p>
-<p>点击左上角头像，在弹出的下拉菜单中选择 <strong>Your repositories</strong>，待页面加载完毕后点击左上角绿色的<strong>new</strong>创建一个仓库。</p>
-<p><img src="https://s1.ax1x.com/2022/04/10/Lkbum6.png" alt="Lkbum6.png"></p>
-<p><strong>注意</strong>：仓库名务必是**==你的用户名.github.io==**,比如上面我的用户名是ivy-lun,那么仓库名就是ivy-lun.github.io,其他的保持默认即可，点击绿色按钮Create repositories即可创建一个仓库。</p>
-<h1 id="太累了，过两天再更吧"><a href="#太累了，过两天再更吧" class="headerlink" title="太累了，过两天再更吧"></a>太累了，过两天再更吧</h1>]]></content>
+
+<p>有的题目还会要求计算某种设备的利用率：</p>
+<p>如：某计算机只支持单道程序，某个作业刚开始需要在CPU上运行5秒，再用打印机打印输出5秒，之后再执行5秒，才能结束。在此过程中，COPU利用率、打印机利用率分别是多少？</p>
+<p>$CPU利用率=\frac{5+5}{5+5+5}=66.665$<br>$打印机利用率=\frac{5}{15}=33.335$</p>
+<h4 id="2-系统吞吐量"><a href="#2-系统吞吐量" class="headerlink" title="2.系统吞吐量"></a>2.系统吞吐量</h4><p>对于计算机来说，希望使用尽可能少的时间完成尽可能多的多页</p>
+<p><strong>系统吞吐量：</strong>单位时间内完成的作业数量</p>
+<p>$系统吞吐量=\frac{总共完成了多少道作业}{总共花了多少时间}$</p>
+<p>如：某计算机处理完成10道作业，共花费100秒，则系统吞吐量为：</p>
+<p>$\frac{10}{100}=0.1（道/秒）$</p>
+<p>即平均每秒可以完成0.1道作业。</p>
+<h4 id="3-周转时间"><a href="#3-周转时间" class="headerlink" title="3.周转时间"></a>3.周转时间</h4><p>对于计算机用户来说，他很关心自己的作业从提交道完成花费了多少时间。</p>
+<p><strong>周转时间</strong>：是指<strong>作业被提交给系统开始，到作业完成为止</strong>的这段时间间隔。</p>
+<p>它包括四个部分：作业在外存后备队列上等待作业调度（高级调度）的时间、进程在就绪队列上等待进程调度（低级调度）的时间、进程在CPU上执行的时间、进程等待I/O操作完成的时间。后三项在一个作业的整个处理过程中，可能发生多次。</p>
+<ul>
+<li>对于用户来说，更关心自己的单个作业的周转时间：</li>
+</ul>
+<p>（作业）周转时间 = 作业完成时间 - 作业提交时间</p>
+<ul>
+<li>对于操作系统来说，更关心系统的整体表现，因此更关心所有作业周转时间的平均值。</li>
+</ul>
+<p>$平均周转时间=\frac{各作业周转时间之和}{作业数}$</p>
+<ul>
+<li>有的作业运行时间长，有的作业运行时间短，因此在周转时间相同的情况下，运行时间不同的作业，给用户的感受肯定是不一样的。</li>
+</ul>
+<p>$戴荃周转时间=\frac{作业周转时间}{作业实际运行的时间}=\frac{作业完成时间-作业提交时间}{作业实际运行的时间}$</p>
+<p>$平均带权周转时间=\frac{各作业带权周转时间之和}{作业数}$</p>
+<p><strong>带权周转时间必然&gt;=1</strong><br><strong>带权周转时间与周转时间都是越小越好</strong></p>
+<p>对于周转时间相同的两个作业，实际运行时间长的作业在相同的时间内被服务的时间更过，带权周转时间更小，用户满意度更高。</p>
+<p>对与实际运行时间相同的两个作业，周转时间短的带权周转时间更小，用户满意度更高。</p>
+<h4 id="4-等待时间"><a href="#4-等待时间" class="headerlink" title="4.等待时间"></a>4.等待时间</h4><p>计算机的用户希望自己的作业尽可能少的等待处理剂</p>
+<p><strong>等待时间：</strong>指进程/作业<strong>处于等待处理机状态时间之和</strong>，等待时间越长用户满意度越低。</p>
+<blockquote>
+<p>当一个作业被建立之后，作业会被放在外存的“作业后备队列”等待被服务（调度）。当作业被服务之后作业会被调入内存。作业被调入内存后，建立对应的进程，这个进程会被CPU服务，会被I/O设备服务，当然也会有等待被服务的时候。</p>
+</blockquote>
+<p>对于<strong>进程</strong>来说，等待时间就是指进程建立后<strong>等待被服务的时间之和</strong>，在等待I/O完成的期间其实进程也是在被服务的，所以不计入等待时间。<br>对于<strong>作业</strong>来说，不仅要考虑<strong>建立进城后的等待时间，还要加上作业在外存后备队列中等待的时间。</strong></p>
+<p>一个作业总共需要被CPU服务多久，被I.O设备服务多久一般是确定不变的，因此调度算法其实只会影响作业/进程的等待时间。当然，与前面指标类似，也有<strong>“平均等待时间”</strong>来评价整体性能。</p>
+<p>$平均等待时间=\frac{所有进程/作业的等待时间之和}{作业数量}$</p>
+<h4 id="5-响应时间"><a href="#5-响应时间" class="headerlink" title="5.响应时间"></a>5.响应时间</h4><p>对于计算机用户来说，会希望自己的提交的请求（比如通过键盘输入了一个调试命令）尽早地开始被系统服务、回应。</p>
+<p><strong>响应时间:<strong>是指用户</strong>提交请求</strong>到<strong>首次产生响应</strong>所用时间。</p>
+<h4 id="6-知识回顾"><a href="#6-知识回顾" class="headerlink" title="6.知识回顾"></a>6.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/20/Lso3yq.png" alt="Lso3yq.png"></p>
+]]></content>
       <categories>
-        <category>Hexo配置&amp;美化</category>
+        <category>操作系统</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>GithubPages</tag>
-        <tag>Blog</tag>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>四、操作系统的运行机制与体系系统</title>
+    <url>/2022/04/10/%E5%9B%9B%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h4 id="1-运行机制"><a href="#1-运行机制" class="headerlink" title="1.运行机制"></a>1.运行机制</h4><p>什么是指令， “指令”和“代码”有什么区别？</p>
+<p>比如：C语言指令代码源文件经过编译后变成机器语言指令，而一条高级语言的代码可能对应着多条指令。</p>
+<span id="more"></span>
+
+<p>简而言之，<strong>“指令”就是CPU能够处理和执行的最基本的命令</strong>，就是让CPU干一件具体的事情。</p>
+<p><strong>（1）两种指令：</strong></p>
+<ul>
+<li><strong>特权指令</strong>：如内存清零指令（不允许用户程序使用）</li>
+<li><strong>非特权指令</strong>：如普通的运算指令</li>
+</ul>
+<p>问：CPU怎样执行特权指令？</p>
+<p><strong>（2）两种处理器状态：</strong></p>
+<ul>
+<li><strong>用户态（目态）</strong>：在该状态下CPU只能执行非特权指令。</li>
+<li><strong>核心态（管态）</strong>：在该状态下特权指令和非特权指令都可以执行。</li>
+</ul>
+<p>在CPU中存在一个<strong>用户程序状态寄存器（PSW）</strong>，在其中的某一个标志位来标识当前处理器处于什么状态。如0为用户态，1为核心态。</p>
+<p><strong>（3）两种程序：</strong></p>
+<ul>
+<li><strong>内核程序</strong>：操作系统的内核程序是系统的管理者，既可以执行特权指令，也可以执行非特权指令，<strong>运行在核心态</strong>。</li>
+<li><strong>应用程序</strong>：为了保证系统能安全运行，普通应用程序只能执行非特权指令，<strong>运行在用户态</strong>。</li>
+</ul>
+<h4 id="2-操作系统内核"><a href="#2-操作系统内核" class="headerlink" title="2.操作系统内核"></a>2.操作系统内核</h4><p>[<img src="https://s1.ax1x.com/2022/04/10/LANsi9.md.png" alt="LANsi9.md.png"></p>
+<p><strong>内核</strong>是计算机配置上的底层<strong>软件</strong>，是操作系统最基本，最核心的部分。</p>
+<p>实现操作系统内核功能的哪些程序就是<strong>内核程序</strong>。</p>
+<blockquote>
+<p>操作系统内核包括：</p>
+<ol>
+<li><strong>时钟管理</strong>：实现计时功能。</li>
+<li><strong>中断处理</strong>：负责实现中断机制</li>
+<li><strong>原语</strong>：<ul>
+<li>是一种特殊的程序</li>
+<li>处于操作系统最底层、最接近硬件的部分</li>
+<li>这种运行的程序具有<strong>原子性</strong>，其运行过程不可中断</li>
+<li>运行时间较短，调用频繁</li>
+</ul>
+</li>
+<li><strong>对系统资源进行管理的功能</strong>：<ul>
+<li>进程管理</li>
+<li>存储管理</li>
+<li>设备管理</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p>内核又可被分为：<strong>大内核</strong>和<strong>微内核。</strong>如果内核中包含存储管理，进程管理，设备管理等功能的就被叫做大内核，只包含最基本如时钟管理，中断处理，原语等的就被叫做微内核。</p>
+<h4 id="3-操作系统的体系结构"><a href="#3-操作系统的体系结构" class="headerlink" title="3.操作系统的体系结构"></a>3.操作系统的体系结构</h4><p>操作系统的体系结构：</p>
+<ol>
+<li><strong>大内核</strong><ul>
+<li>将操作系统的主要功能模块都作为系统内核，运行在核心态</li>
+<li>优点：高性能</li>
+<li>缺点：内核代码庞大，结构混乱，难以维护</li>
+</ul>
+</li>
+<li><strong>微内核</strong><ul>
+<li>只把最基本的功能保留在内核</li>
+<li>优点：内核功能少，结构清晰，方便维护</li>
+<li>缺点：需要频繁的在核心态和用户态之间切换，性能低</li>
+</ul>
+</li>
+</ol>
+<p>比如：</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/LAU2fs.png" alt="比喻"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一章、绪论</title>
+    <url>/2022/05/04/%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%81%E7%BB%AA%E8%AE%BA/</url>
+    <content><![CDATA[<h4 id="数据库的四个基本概念"><a href="#数据库的四个基本概念" class="headerlink" title="数据库的四个基本概念"></a>数据库的四个基本概念</h4><p>①数据：描述事物的符号记录。</p>
+<p>②数据库：通俗的讲，数据库具有<strong>永久存储，有组织和可共享</strong>的三个基本特点</p>
+<p>严格地讲，<strong>数据是长期存储在计算机内、有组织的、可共享的大量数据的集合，数据库中的数据按一定的数据模型组织、描述和存储，具有较小的冗余度，较高的数据独立性和易扩展性，并可为各种用户共享。</strong></p>
+<span id="more"></span>
+
+<p>③数据库管理系统：是位于用户和操作系统之间的一层数据管理软件，和操作系统一样是<strong>计算机的基础软件</strong>。</p>
+<p>主要功能：1.数据定义功能；2.数据组织，存储和管理；3.数据操纵功能；4.数据库的事务管理和运行管理；5.数据库的建立和维护功能；6.其他功能（通信功能，数据转换功能，互访和互操作功能等）</p>
+<p>④数据库系统：由数据库、数据库管理系统（及应用开发工具）、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVeJmT.png" alt="OVeJmT.png"></p>
+<h4 id="数据库的发展阶段"><a href="#数据库的发展阶段" class="headerlink" title="数据库的发展阶段"></a>数据库的发展阶段</h4><p>①人工阶段：数据不保存、不共享，不具有独立性</p>
+<p>②文件系统阶段：可保存，但共享性差，冗余度大，独立性差</p>
+<p>③数据库管理系统：数据库系统的出现使得信息系统以<strong>加工数据的程序为中心</strong>转向围绕<strong>共享的数据库</strong>为中心的新阶段，实现整体数据的结构化。</p>
+<p><strong>数据的共享性高，冗余度低且易扩充，数据共享可以大大减少数据冗余，节约存储空间。</strong></p>
+<blockquote>
+<p>数据的独立性高：</p>
+<ul>
+<li>物理独立性：是指用户的应用程序与数据库中数据的<strong>物理存储</strong>是相互独立的。</li>
+<li>逻辑独立性：是指用户的应用程序与数据库的<strong>逻辑结构</strong>是相互独立的。</li>
+</ul>
+</blockquote>
+<p>数据库由<strong>数据库管理员（DBA）</strong>统一管理和控制。</p>
+<h4 id="数据模型（这个应该蛮重要的）"><a href="#数据模型（这个应该蛮重要的）" class="headerlink" title="数据模型（这个应该蛮重要的）"></a>数据模型<font color=red>（这个应该蛮重要的）</font></h4><h5 id="（1）两类数据模型："><a href="#（1）两类数据模型：" class="headerlink" title="（1）两类数据模型："></a>（1）两类数据模型：</h5><p><strong>概念模型+逻辑模型和物理模型</strong>（人们首先将现实世界抽象为信息世界，然后将信息世界转换为机器世界）</p>
+<p>1.概念模型：也称信息模型，它是按用户观点来对数据和信息建模，主要用于数据库设计。</p>
+<blockquote>
+<p>基本概念：</p>
+<ul>
+<li><strong>实体</strong>：客观存在可相互区别的事物，人</li>
+<li><strong>属性</strong>：实体所具有的某一特性。如人的鼻子，嘴巴。</li>
+<li><strong>码</strong>：唯一标识实体的属性。如学号</li>
+<li><strong>实体型</strong>：用实体名及其属性集合来抽象和刻画同类实体。如含有鼻子和嘴巴的人。</li>
+<li><strong>实体集</strong>：同一类型实体的集合。如学校。</li>
+<li><strong>联系</strong>：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。</li>
+</ul>
+</blockquote>
+<p>概念模型的一种表示方法：<strong>实体——联系</strong>方法，用<strong>E-R图</strong>来描述现实世界的概念模型。<strong>E-R图方法也称为E-R模型。</strong></p>
+<p>2.逻辑模型：它是按计算机系统的观点对数据建模，主要用于数据库管理系统的实现。</p>
+<p>包括：**①层次模型      ②网状模型       ③关系模型  **</p>
+<p>物理模型：是对数据最底层的抽象，它描述数据在系统内部的表示方法和存取方法，或在磁盘或磁带上的存储方式和存取方法，是面向计算机系统的。</p>
+<p>联系：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。实体内部的联系通常是指<strong>实体各属性之间的联系</strong>。</p>
+<blockquote>
+<p><strong><font color=red>E-R图</font></strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVKrPe.png" alt="OVKrPe.png"></p>
+<p>E-R图分为<strong>实体，属性和关系</strong>三个基本部分。<strong>实体用长方形，属性用椭圆形，关系用菱形。</strong></p>
+</blockquote>
+<h5 id="（2）常用的数据模型"><a href="#（2）常用的数据模型" class="headerlink" title="（2）常用的数据模型"></a>（2）常用的数据模型</h5><p>常用的数据模型：<strong>层次模型，网状模型，关系模型</strong>，面向对象数据模型，对象关系数据模型，半结构化数据模型</p>
+<blockquote>
+<p><strong>层次模型</strong>:</p>
+<p>1.有且只有一个节点没有双亲节点，这个节点被称为<strong>根节点</strong>。</p>
+<p>2.根以外的其他节点有且只有一个双亲结点。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVQIjs.png" alt="OVQIjs.png"></p>
+<p><strong>网状模型</strong>：</p>
+<p>1.允许一个以上的节点无双亲。</p>
+<p>2.一个节点可以有多于一个双亲。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVlKbt.png" alt="OVlKbt.png"></p>
+<p><strong>关系模型</strong>：</p>
+<p>关系：一个关系对应通常说的一张表。</p>
+<p>元组：表中的一行。</p>
+<p>属性：表中的一列。</p>
+<p>码：也称为码键，表中的某个属性组。（主键）</p>
+<p>域：是一组具有相同数据类型的值的集合。</p>
+<p>分量：元祖中的一个属性。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVlRq1.png" alt="OVlRq1.png"></p>
+</blockquote>
+<h5 id="（3）数据库系统的结构"><a href="#（3）数据库系统的结构" class="headerlink" title="（3）数据库系统的结构"></a>（3）数据库系统的结构</h5><p>1.模式数据库中全体数据的逻辑结构和特征的描述，它仅仅涉及型的描述，不涉及具体的值。其中一个具体值称为模式的一个实例。<strong>模式是相对稳定的，实例是相对变动的。</strong></p>
+<p>三级模式结构：<strong>外模式+模式+内模式</strong>。</p>
+<p>外模式：也称子模式或用户模式，它是数据库用户（包括应用程序猿和最终用户）能够看见和使用的局部数据的逻辑结构和特征的描述，是数据库用户的数据视图，是与某一应用</p>
+]]></content>
+      <categories>
+        <category>数据库系统概论</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -1829,24 +1880,29 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
       </tags>
   </entry>
   <entry>
-    <title>软件工程导论PartOne</title>
-    <url>/2022/04/19/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%AF%BC%E8%AE%BAPartOne/</url>
-    <content><![CDATA[<h4 id="一、软件危机"><a href="#一、软件危机" class="headerlink" title="一、软件危机"></a>一、软件危机</h4><h6 id="1-软件危机的介绍"><a href="#1-软件危机的介绍" class="headerlink" title="1.软件危机的介绍"></a>1.软件危机的介绍</h6><p>（1）概念</p>
-<p>软件危机是指在计算机软件的开发和维护过程中所遇到的一系列严重问题。这些问题绝不仅仅是不能运行软件才具有的，实际上，几乎所有的软件都不同程度的存在这些问题。软件危机包含两方面的问题：</p>
-<p>①如何开发软件，以满足对软件日益增长的需求。②如何维护数量不断膨胀的已有软件。</p>
+    <title>在GithubPages上搭建Hexo并配置NexT主题</title>
+    <url>/2022/04/10/%E5%9C%A8GithubPages%E4%B8%8A%E6%90%AD%E5%BB%BAHexo%E5%B9%B6%E9%85%8D%E7%BD%AENexT%E4%B8%BB%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="在GithubPages上搭建Hexo并配置NexT主题"><a href="#在GithubPages上搭建Hexo并配置NexT主题" class="headerlink" title="在GithubPages上搭建Hexo并配置NexT主题"></a>在GithubPages上搭建Hexo并配置NexT主题</h2><h4 id="啰里啰唆"><a href="#啰里啰唆" class="headerlink" title="啰里啰唆"></a>啰里啰唆</h4><p>记录一下自己搭建blog的过程，之前在vps上配置过word press，但是一直也没更新，而且好的vps很贵维护成本也很高，索性干脆不用了，就尝试一下使用hexo在github上搭建blog，效果还不错，总共也就历时两天。网上类似的教程也很多，这里总结记录一下，方便以后开新坑</p>
 <span id="more"></span>
-
-<p>（2）典型表现</p>
-<p>①对软件开发成本和进度的估计不准确。②用户对“已完成的”软件系统不满意的现象经常发生。③软件产品的质量往往靠不住。④软件常常是不可维护的。⑤软件常常没有适当的文档资料。⑥软件成本在计算机系统总成本中所占的比例逐年上升。⑦软件开发跟不上计算机应用迅速普及深入的趋势。</p>
-<h6 id="2-产生软件危机的原因"><a href="#2-产生软件危机的原因" class="headerlink" title="2.产生软件危机的原因"></a>2.产生软件危机的原因</h6><p>（1）客观原因</p>
-<p>①软件是计算机系统中的逻辑部件而不是物理部件。②软件规模庞大，而且软件程序复杂性将随着程序规模的增加而呈指数上升。</p>
-<p>（2）主要原因</p>
-]]></content>
+<h4 id="首先安装Node-js和Git-for-Windows"><a href="#首先安装Node-js和Git-for-Windows" class="headerlink" title="首先安装Node.js和Git for Windows"></a>首先安装Node.js和Git for Windows</h4><p>[Node.js官网](<a href="https://nodejs.org/en/">Node.js (nodejs.org)</a>)，[Git for windows官网](<a href="https://git-scm.com/">Git (git-scm.com)</a>)，Node.js建议安装LTS长期支持版，支持周期更长且更稳定</p>
+<p>Node.js:点击第一个绿色的按钮下载Node.js,版本不需要和图示一致，直接下载最新版即可。</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/LkbK0K.png" alt="LkbK0K.png"></p>
+<p>Git:点击网页左侧小电脑当中的Download for windows，直接下载最新版即可无需与图示中版本一致。</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/LkbmOx.png" alt="LkbmOx.png"></p>
+<p>下载完成后按照默认安装设置安装即可。</p>
+<h4 id="在GitHub上创建一个仓库"><a href="#在GitHub上创建一个仓库" class="headerlink" title="在GitHub上创建一个仓库"></a>在GitHub上创建一个仓库</h4><p>首先，需要一个GitHub账号。打开GitHub官网点击左上角的sign in就能注册了，不复述了很简单。进行这个过程可能需要<strong>科学</strong>上网，具体自行百度。</p>
+<p><strong>创建一个Github仓库</strong></p>
+<p>点击左上角头像，在弹出的下拉菜单中选择 <strong>Your repositories</strong>，待页面加载完毕后点击左上角绿色的<strong>new</strong>创建一个仓库。</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/Lkbum6.png" alt="Lkbum6.png"></p>
+<p><strong>注意</strong>：仓库名务必是**==你的用户名.github.io==**,比如上面我的用户名是ivy-lun,那么仓库名就是ivy-lun.github.io,其他的保持默认即可，点击绿色按钮Create repositories即可创建一个仓库。</p>
+<h1 id="太累了，过两天再更吧"><a href="#太累了，过两天再更吧" class="headerlink" title="太累了，过两天再更吧"></a>太累了，过两天再更吧</h1>]]></content>
       <categories>
-        <category>软件工程</category>
+        <category>Hexo配置&amp;美化</category>
       </categories>
       <tags>
-        <tag>软件工程</tag>
+        <tag>Hexo</tag>
+        <tag>GithubPages</tag>
+        <tag>Blog</tag>
       </tags>
   </entry>
   <entry>
@@ -1871,80 +1927,24 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
       </tags>
   </entry>
   <entry>
-    <title>第一章、绪论</title>
-    <url>/2022/05/04/%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%81%E7%BB%AA%E8%AE%BA/</url>
-    <content><![CDATA[<h4 id="数据库的四个基本概念"><a href="#数据库的四个基本概念" class="headerlink" title="数据库的四个基本概念"></a>数据库的四个基本概念</h4><p>①数据：描述事物的符号记录。</p>
-<p>②数据库：通俗的讲，数据库具有<strong>永久存储，有组织和可共享</strong>的三个基本特点</p>
-<p>严格地讲，<strong>数据是长期存储在计算机内、有组织的、可共享的大量数据的集合，数据库中的数据按一定的数据模型组织、描述和存储，具有较小的冗余度，较高的数据独立性和易扩展性，并可为各种用户共享。</strong></p>
+    <title>软件工程导论PartOne</title>
+    <url>/2022/04/19/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%AF%BC%E8%AE%BAPartOne/</url>
+    <content><![CDATA[<h4 id="一、软件危机"><a href="#一、软件危机" class="headerlink" title="一、软件危机"></a>一、软件危机</h4><h6 id="1-软件危机的介绍"><a href="#1-软件危机的介绍" class="headerlink" title="1.软件危机的介绍"></a>1.软件危机的介绍</h6><p>（1）概念</p>
+<p>软件危机是指在计算机软件的开发和维护过程中所遇到的一系列严重问题。这些问题绝不仅仅是不能运行软件才具有的，实际上，几乎所有的软件都不同程度的存在这些问题。软件危机包含两方面的问题：</p>
+<p>①如何开发软件，以满足对软件日益增长的需求。②如何维护数量不断膨胀的已有软件。</p>
 <span id="more"></span>
 
-<p>③数据库管理系统：是位于用户和操作系统之间的一层数据管理软件，和操作系统一样是<strong>计算机的基础软件</strong>。</p>
-<p>主要功能：1.数据定义功能；2.数据组织，存储和管理；3.数据操纵功能；4.数据库的事务管理和运行管理；5.数据库的建立和维护功能；6.其他功能（通信功能，数据转换功能，互访和互操作功能等）</p>
-<p>④数据库系统：由数据库、数据库管理系统（及应用开发工具）、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVeJmT.png" alt="OVeJmT.png"></p>
-<h4 id="数据库的发展阶段"><a href="#数据库的发展阶段" class="headerlink" title="数据库的发展阶段"></a>数据库的发展阶段</h4><p>①人工阶段：数据不保存、不共享，不具有独立性</p>
-<p>②文件系统阶段：可保存，但共享性差，冗余度大，独立性差</p>
-<p>③数据库管理系统：数据库系统的出现使得信息系统以<strong>加工数据的程序为中心</strong>转向围绕<strong>共享的数据库</strong>为中心的新阶段，实现整体数据的结构化。</p>
-<p><strong>数据的共享性高，冗余度低且易扩充，数据共享可以大大减少数据冗余，节约存储空间。</strong></p>
-<blockquote>
-<p>数据的独立性高：</p>
-<ul>
-<li>物理独立性：是指用户的应用程序与数据库中数据的<strong>物理存储</strong>是相互独立的。</li>
-<li>逻辑独立性：是指用户的应用程序与数据库的<strong>逻辑结构</strong>是相互独立的。</li>
-</ul>
-</blockquote>
-<p>数据库由<strong>数据库管理员（DBA）</strong>统一管理和控制。</p>
-<h4 id="数据模型（这个应该蛮重要的）"><a href="#数据模型（这个应该蛮重要的）" class="headerlink" title="数据模型（这个应该蛮重要的）"></a>数据模型<font color=red>（这个应该蛮重要的）</font></h4><h5 id="（1）两类数据模型："><a href="#（1）两类数据模型：" class="headerlink" title="（1）两类数据模型："></a>（1）两类数据模型：</h5><p><strong>概念模型+逻辑模型和物理模型</strong>（人们首先将现实世界抽象为信息世界，然后将信息世界转换为机器世界）</p>
-<p>1.概念模型：也称信息模型，它是按用户观点来对数据和信息建模，主要用于数据库设计。</p>
-<blockquote>
-<p>基本概念：</p>
-<ul>
-<li><strong>实体</strong>：客观存在可相互区别的事物，人</li>
-<li><strong>属性</strong>：实体所具有的某一特性。如人的鼻子，嘴巴。</li>
-<li><strong>码</strong>：唯一标识实体的属性。如学号</li>
-<li><strong>实体型</strong>：用实体名及其属性集合来抽象和刻画同类实体。如含有鼻子和嘴巴的人。</li>
-<li><strong>实体集</strong>：同一类型实体的集合。如学校。</li>
-<li><strong>联系</strong>：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。</li>
-</ul>
-</blockquote>
-<p>概念模型的一种表示方法：<strong>实体——联系</strong>方法，用<strong>E-R图</strong>来描述现实世界的概念模型。<strong>E-R图方法也称为E-R模型。</strong></p>
-<p>2.逻辑模型：它是按计算机系统的观点对数据建模，主要用于数据库管理系统的实现。</p>
-<p>包括：**①层次模型      ②网状模型       ③关系模型  **</p>
-<p>物理模型：是对数据最底层的抽象，它描述数据在系统内部的表示方法和存取方法，或在磁盘或磁带上的存储方式和存取方法，是面向计算机系统的。</p>
-<p>联系：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。实体内部的联系通常是指<strong>实体各属性之间的联系</strong>。</p>
-<blockquote>
-<p><strong><font color=red>E-R图</font></strong></p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVKrPe.png" alt="OVKrPe.png"></p>
-<p>E-R图分为<strong>实体，属性和关系</strong>三个基本部分。<strong>实体用长方形，属性用椭圆形，关系用菱形。</strong></p>
-</blockquote>
-<h5 id="（2）常用的数据模型"><a href="#（2）常用的数据模型" class="headerlink" title="（2）常用的数据模型"></a>（2）常用的数据模型</h5><p>常用的数据模型：<strong>层次模型，网状模型，关系模型</strong>，面向对象数据模型，对象关系数据模型，半结构化数据模型</p>
-<blockquote>
-<p><strong>层次模型</strong>:</p>
-<p>1.有且只有一个节点没有双亲节点，这个节点被称为<strong>根节点</strong>。</p>
-<p>2.根以外的其他节点有且只有一个双亲结点。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVQIjs.png" alt="OVQIjs.png"></p>
-<p><strong>网状模型</strong>：</p>
-<p>1.允许一个以上的节点无双亲。</p>
-<p>2.一个节点可以有多于一个双亲。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVlKbt.png" alt="OVlKbt.png"></p>
-<p><strong>关系模型</strong>：</p>
-<p>关系：一个关系对应通常说的一张表。</p>
-<p>元组：表中的一行。</p>
-<p>属性：表中的一列。</p>
-<p>码：也称为码键，表中的某个属性组。（主键）</p>
-<p>域：是一组具有相同数据类型的值的集合。</p>
-<p>分量：元祖中的一个属性。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVlRq1.png" alt="OVlRq1.png"></p>
-</blockquote>
-<h5 id="（3）数据库系统的结构"><a href="#（3）数据库系统的结构" class="headerlink" title="（3）数据库系统的结构"></a>（3）数据库系统的结构</h5><p>1.模式数据库中全体数据的逻辑结构和特征的描述，它仅仅涉及型的描述，不涉及具体的值。其中一个具体值称为模式的一个实例。<strong>模式是相对稳定的，实例是相对变动的。</strong></p>
-<p>三级模式结构：<strong>外模式+模式+内模式</strong>。</p>
-<p>外模式：也称子模式或用户模式，它是数据库用户（包括应用程序猿和最终用户）能够看见和使用的局部数据的逻辑结构和特征的描述，是数据库用户的数据视图，是与某一应用</p>
+<p>（2）典型表现</p>
+<p>①对软件开发成本和进度的估计不准确。②用户对“已完成的”软件系统不满意的现象经常发生。③软件产品的质量往往靠不住。④软件常常是不可维护的。⑤软件常常没有适当的文档资料。⑥软件成本在计算机系统总成本中所占的比例逐年上升。⑦软件开发跟不上计算机应用迅速普及深入的趋势。</p>
+<h6 id="2-产生软件危机的原因"><a href="#2-产生软件危机的原因" class="headerlink" title="2.产生软件危机的原因"></a>2.产生软件危机的原因</h6><p>（1）客观原因</p>
+<p>①软件是计算机系统中的逻辑部件而不是物理部件。②软件规模庞大，而且软件程序复杂性将随着程序规模的增加而呈指数上升。</p>
+<p>（2）主要原因</p>
 ]]></content>
       <categories>
-        <category>数据库系统概论</category>
+        <category>软件工程</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
+        <tag>软件工程</tag>
       </tags>
   </entry>
 </search>
