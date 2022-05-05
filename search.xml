@@ -155,6 +155,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo Next主题代码块美化</title>
+    <url>/2022/04/11/Hexo-Next%E4%B8%BB%E9%A2%98%E4%BB%A3%E7%A0%81%E5%9D%97%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<h4 id="1-正文"><a href="#1-正文" class="headerlink" title="1.正文"></a>1.正文</h4><p>在NexT主题下的scripts目录中创建events.js</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">var</span> exec = require(&#x27;child_process&#x27;)<span class="selector-class">.exec</span>;</span><br><span class="line"></span><br><span class="line">hexo<span class="selector-class">.on</span>(&#x27;new&#x27;, function(data)&#123;</span><br><span class="line">    exec(&#x27;open -<span class="selector-tag">a</span> MacDown &#x27; + data<span class="selector-class">.path</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>在NexT主题下的scripts目录中创建codeblock.js</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">var</span> attributes = <span class="selector-attr">[  <span class="string">&#x27;autocomplete=&quot;off&quot;&#x27;</span>,  <span class="string">&#x27;autocorrect=&quot;off&quot;&#x27;</span>,  <span class="string">&#x27;autocapitalize=&quot;off&quot;&#x27;</span>,  <span class="string">&#x27;spellcheck=&quot;false&quot;&#x27;</span>,  <span class="string">&#x27;contenteditable=&quot;true&quot;&#x27;</span>]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">var</span> attributesStr = attributes<span class="selector-class">.join</span>(&#x27; &#x27;)</span><br><span class="line"></span><br><span class="line">hexo<span class="selector-class">.extend</span><span class="selector-class">.filter</span><span class="selector-class">.register</span>(&#x27;after_post_render&#x27;, function (data) &#123;</span><br><span class="line">  while (/&lt;<span class="selector-tag">figure</span> class=&quot;highlight (<span class="selector-attr">[a-zA-Z]</span>+)&quot;&gt;.*?&lt;\/<span class="selector-tag">figure</span>&gt;/<span class="selector-class">.test</span>(data<span class="selector-class">.content</span>)) &#123;</span><br><span class="line">    data<span class="selector-class">.content</span> = data<span class="selector-class">.content</span><span class="selector-class">.replace</span>(/&lt;<span class="selector-tag">figure</span> class=&quot;highlight (<span class="selector-attr">[a-zA-Z]</span>+)&quot;&gt;.*?&lt;\/<span class="selector-tag">figure</span>&gt;/, function () &#123;</span><br><span class="line">      <span class="selector-tag">var</span> language = RegExp.$<span class="number">1</span> || &#x27;plain&#x27;</span><br><span class="line">      <span class="selector-tag">var</span> lastMatch = RegExp<span class="selector-class">.lastMatch</span></span><br><span class="line">      lastMatch = lastMatch<span class="selector-class">.replace</span>(/&lt;<span class="selector-tag">figure</span> class=&quot;highlight /, &#x27;&lt;<span class="selector-tag">figure</span> class=&quot;iseeu highlight /&#x27;)</span><br><span class="line">      return &#x27;&lt;<span class="selector-tag">div</span> class=&quot;highlight-wrap&quot;&#x27; + attributesStr + &#x27;data-rel=&quot;&#x27; + language<span class="selector-class">.toUpperCase</span>() + &#x27;&quot;&gt;&#x27; + lastMatch + &#x27;&lt;/<span class="selector-tag">div</span>&gt;&#x27;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  return data</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>在 themes/next/source/css/_common/components/highlight/highlight.styl 的基础上调整了下样式，包裹上一层类 mac Panel 的效果。</p>
+<p><strong>==注： 这里不用删除原来highlight.styl里边的内容，只需要在末尾添加下面代码即可==</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.highlight-wrap</span><span class="selector-attr">[data-rel]</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">10px</span> <span class="number">30px</span> <span class="number">0px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.4</span>);</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">35px</span> <span class="number">0</span>;</span><br><span class="line">  ::-webkit-scrollbar &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ::-webkit-scrollbar-track &#123;</span><br><span class="line">      -webkit-<span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>);</span><br><span class="line">      <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ::-webkit-scrollbar-thumb &#123;</span><br><span class="line">      <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">      -webkit-<span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.5</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  &amp;<span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">attr</span>(data-rel);</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">38px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">38px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#21252b</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;Source Sans Pro&#x27;</span>, sans-serif;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span> <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">  &#125;</span><br><span class="line">  &amp;<span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    -webkit-<span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fc625d</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">13px</span>;</span><br><span class="line">    -webkit-<span class="attribute">box-shadow</span>: <span class="number">20px</span> <span class="number">0px</span> <span class="number">#fdbc40</span>, <span class="number">40px</span> <span class="number">0px</span> <span class="number">#35cd4b</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">20px</span> <span class="number">0px</span> <span class="number">#fdbc40</span>, <span class="number">40px</span> <span class="number">0px</span> <span class="number">#35cd4b</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">3</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在highlight.styl中找到如下部分代码，修改margin为36px 0 0 0：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">$<span class="selector-tag">code</span>-block &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: auto;</span><br><span class="line">-  <span class="attribute">margin</span>: <span class="number">20px</span> <span class="number">0</span>;  //这一行改为</span><br><span class="line">+  <span class="attribute">margin</span>: <span class="number">36px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;  //这个</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">font-size</span> $<span class="selector-tag">code</span>-<span class="attribute">font-size</span>;</span><br><span class="line">  <span class="attribute">color</span>: $highlight-foreground;</span><br><span class="line">  <span class="attribute">background</span>: $highlight-background;</span><br><span class="line">  <span class="attribute">line-height</span>: $line-height-code-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在主题中将高亮代码变为：night eighties</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">highlight_theme: night eighties</span><br></pre></td></tr></table></figure>
+
+<p>最后来要在网站根目录下打开Git Bash，然后执行以下命令重新生成静态页面：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">hexo clean &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Hexo配置&amp;美化</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT主题</tag>
+        <tag>主题美化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown笔记</title>
     <url>/2022/04/09/%C2%B7%20markdown%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h3 id="·-markdown笔记"><a href="#·-markdown笔记" class="headerlink" title="· markdown笔记"></a>· markdown笔记</h3><h5 id="1-代码块"><a href="#1-代码块" class="headerlink" title="1.代码块"></a>1.代码块</h5><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```java 语言代码</span></span><br></pre></td></tr></table></figure>
@@ -242,37 +273,6 @@
       </categories>
       <tags>
         <tag>随想随记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo Next主题代码块美化</title>
-    <url>/2022/04/11/Hexo-Next%E4%B8%BB%E9%A2%98%E4%BB%A3%E7%A0%81%E5%9D%97%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<h4 id="1-正文"><a href="#1-正文" class="headerlink" title="1.正文"></a>1.正文</h4><p>在NexT主题下的scripts目录中创建events.js</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">var</span> exec = require(&#x27;child_process&#x27;)<span class="selector-class">.exec</span>;</span><br><span class="line"></span><br><span class="line">hexo<span class="selector-class">.on</span>(&#x27;new&#x27;, function(data)&#123;</span><br><span class="line">    exec(&#x27;open -<span class="selector-tag">a</span> MacDown &#x27; + data<span class="selector-class">.path</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<p>在NexT主题下的scripts目录中创建codeblock.js</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">var</span> attributes = <span class="selector-attr">[  <span class="string">&#x27;autocomplete=&quot;off&quot;&#x27;</span>,  <span class="string">&#x27;autocorrect=&quot;off&quot;&#x27;</span>,  <span class="string">&#x27;autocapitalize=&quot;off&quot;&#x27;</span>,  <span class="string">&#x27;spellcheck=&quot;false&quot;&#x27;</span>,  <span class="string">&#x27;contenteditable=&quot;true&quot;&#x27;</span>]</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">var</span> attributesStr = attributes<span class="selector-class">.join</span>(&#x27; &#x27;)</span><br><span class="line"></span><br><span class="line">hexo<span class="selector-class">.extend</span><span class="selector-class">.filter</span><span class="selector-class">.register</span>(&#x27;after_post_render&#x27;, function (data) &#123;</span><br><span class="line">  while (/&lt;<span class="selector-tag">figure</span> class=&quot;highlight (<span class="selector-attr">[a-zA-Z]</span>+)&quot;&gt;.*?&lt;\/<span class="selector-tag">figure</span>&gt;/<span class="selector-class">.test</span>(data<span class="selector-class">.content</span>)) &#123;</span><br><span class="line">    data<span class="selector-class">.content</span> = data<span class="selector-class">.content</span><span class="selector-class">.replace</span>(/&lt;<span class="selector-tag">figure</span> class=&quot;highlight (<span class="selector-attr">[a-zA-Z]</span>+)&quot;&gt;.*?&lt;\/<span class="selector-tag">figure</span>&gt;/, function () &#123;</span><br><span class="line">      <span class="selector-tag">var</span> language = RegExp.$<span class="number">1</span> || &#x27;plain&#x27;</span><br><span class="line">      <span class="selector-tag">var</span> lastMatch = RegExp<span class="selector-class">.lastMatch</span></span><br><span class="line">      lastMatch = lastMatch<span class="selector-class">.replace</span>(/&lt;<span class="selector-tag">figure</span> class=&quot;highlight /, &#x27;&lt;<span class="selector-tag">figure</span> class=&quot;iseeu highlight /&#x27;)</span><br><span class="line">      return &#x27;&lt;<span class="selector-tag">div</span> class=&quot;highlight-wrap&quot;&#x27; + attributesStr + &#x27;data-rel=&quot;&#x27; + language<span class="selector-class">.toUpperCase</span>() + &#x27;&quot;&gt;&#x27; + lastMatch + &#x27;&lt;/<span class="selector-tag">div</span>&gt;&#x27;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  return data</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>在 themes/next/source/css/_common/components/highlight/highlight.styl 的基础上调整了下样式，包裹上一层类 mac Panel 的效果。</p>
-<p><strong>==注： 这里不用删除原来highlight.styl里边的内容，只需要在末尾添加下面代码即可==</strong></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.highlight-wrap</span><span class="selector-attr">[data-rel]</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">10px</span> <span class="number">30px</span> <span class="number">0px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.4</span>);</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">35px</span> <span class="number">0</span>;</span><br><span class="line">  ::-webkit-scrollbar &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ::-webkit-scrollbar-track &#123;</span><br><span class="line">      -webkit-<span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>);</span><br><span class="line">      <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ::-webkit-scrollbar-thumb &#123;</span><br><span class="line">      <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">      -webkit-<span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.5</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  &amp;<span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">attr</span>(data-rel);</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">38px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">38px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#21252b</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;Source Sans Pro&#x27;</span>, sans-serif;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span> <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">  &#125;</span><br><span class="line">  &amp;<span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    -webkit-<span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fc625d</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">13px</span>;</span><br><span class="line">    -webkit-<span class="attribute">box-shadow</span>: <span class="number">20px</span> <span class="number">0px</span> <span class="number">#fdbc40</span>, <span class="number">40px</span> <span class="number">0px</span> <span class="number">#35cd4b</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">20px</span> <span class="number">0px</span> <span class="number">#fdbc40</span>, <span class="number">40px</span> <span class="number">0px</span> <span class="number">#35cd4b</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">3</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在highlight.styl中找到如下部分代码，修改margin为36px 0 0 0：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">$<span class="selector-tag">code</span>-block &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: auto;</span><br><span class="line">-  <span class="attribute">margin</span>: <span class="number">20px</span> <span class="number">0</span>;  //这一行改为</span><br><span class="line">+  <span class="attribute">margin</span>: <span class="number">36px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;  //这个</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">font-size</span> $<span class="selector-tag">code</span>-<span class="attribute">font-size</span>;</span><br><span class="line">  <span class="attribute">color</span>: $highlight-foreground;</span><br><span class="line">  <span class="attribute">background</span>: $highlight-background;</span><br><span class="line">  <span class="attribute">line-height</span>: $line-height-code-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在主题中将高亮代码变为：night eighties</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">highlight_theme: night eighties</span><br></pre></td></tr></table></figure>
-
-<p>最后来要在网站根目录下打开Git Bash，然后执行以下命令重新生成静态页面：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">hexo clean &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Hexo配置&amp;美化</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>NexT主题</tag>
-        <tag>主题美化</tag>
       </tags>
   </entry>
   <entry>
@@ -372,6 +372,78 @@
       </tags>
   </entry>
   <entry>
+    <title>七、进程的定义、组成、自制方式、特征</title>
+    <url>/2022/04/16/%E4%B8%83%E3%80%81%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%AE%9A%E4%B9%89%E3%80%81%E7%BB%84%E6%88%90%E3%80%81%E8%87%AA%E5%88%B6%E6%96%B9%E5%BC%8F%E3%80%81%E7%89%B9%E5%BE%81/</url>
+    <content><![CDATA[<h4 id="1-进程的定义"><a href="#1-进程的定义" class="headerlink" title="1.进程的定义"></a>1.进程的定义</h4><p>程序什么么？程序就是一个指令序列。</p>
+<p>早期的计算机支支持单道程序。引入多道程序后，多道程序可以并发执行。为了方便操作系统管理、完成程序并发执行，引入了<strong>进程，进程实体</strong>的概念。</p>
+<p><strong>PCB（进程控制块），程序段和数据段三部分构成了进程实体</strong>。进程实体被简称为进程。所谓创建进程实际上是创建进程实体中的PCB；撤销进程实质上就是撤销进程实体中的PCB。</p>
+<blockquote>
+<p><strong>PCB是进程存在的唯一标志。</strong></p>
+</blockquote>
+<span id="more"></span>
+
+<p>从不同角度，进程可以有不同的定义，比较传统典型的定义有：</p>
+<ul>
+<li>进程是程序的一次<strong>执行过程</strong>。</li>
+<li>进程是一个程序及其数据在处理机上顺序执行时<strong>所发生的活动</strong>。</li>
+<li>进程是具有独立功能的程序存在数据集合上<strong>运行的过程（强调动态性）</strong>，他是系统进行资源分配和调度的一个独立单位。</li>
+</ul>
+<p>引入进程实体的概念后，进程可被定义为：</p>
+<ul>
+<li><strong>进程</strong>是实体的<strong>运行过程</strong>，是系统进行<strong>资源分配和调度</strong>的一个独立单位。</li>
+</ul>
+<blockquote>
+<p>注：严格来说进程和实体进程并不一样，进程实体是<strong>静态的</strong>，进程则是<strong>动态的</strong>。除非题目专门考察二者区别，否则可以认为进程实体就是进程。因此也可以说“进程由程序段，数据段和PCB三部分组成”</p>
+</blockquote>
+<h4 id="2-进程的组成"><a href="#2-进程的组成" class="headerlink" title="2.进程的组成"></a>2.进程的组成</h4><p><strong>PCB的组成</strong></p>
+<p><img src="https://s1.ax1x.com/2022/04/17/LUmoCt.png" alt="PCB"></p>
+<p><strong>进程的组成</strong></p>
+<p><img src="https://s1.ax1x.com/2022/04/17/LUnCvT.png" alt="进程"></p>
+<p><strong>只要是和操作系统有关于管理进程的项目一定是被存储在PCB中。</strong></p>
+<h4 id="3-进程的组织"><a href="#3-进程的组织" class="headerlink" title="3. 进程的组织"></a>3. 进程的组织</h4><p>在一个系统中通常有数百乃至数千个PCB，为了对他们加以有效的管理，应当采用适当的方式把这些PCB组织起来。</p>
+<blockquote>
+<p>注：进程的<strong>组成</strong>讨论的是一个<strong>进程内部</strong>有哪些部分构成的问题，而进程的<strong>组织</strong>讨论的<strong>多个进程之间</strong>的组织方式的问题。</p>
+</blockquote>
+<p>进程的组织方式包括：</p>
+<ol>
+<li>链接方式<ul>
+<li>按照进程的状态将PCB分为多个队列</li>
+<li>操作系统持有指向各个队列的指针</li>
+</ul>
+</li>
+<li>索引方式<ul>
+<li>根据进程状态的不同，建立几张索引表</li>
+<li>操作系统持有指向各个索引表的指针</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>链接方式：</p>
+<p><img src="https://s1.ax1x.com/2022/04/17/LUKsCn.png" alt="链接"></p>
+<p>索引方式：</p>
+<p><img src="https://s1.ax1x.com/2022/04/17/LUKjVe.png" alt="索引"></p>
+</blockquote>
+<h4 id="4-进程的特征"><a href="#4-进程的特征" class="headerlink" title="4.进程的特征"></a>4.进程的特征</h4><p>进程和程序是两种概念，相比较于程序，进程有以下特征：</p>
+<p><strong>（1）动态性：</strong>进程是程序的一次执行过程，是动态地产生、变化和消亡的。</p>
+<p><strong>（2）并发性</strong>：内存中有多个进程实体，个进程可以并发执行</p>
+<p><strong>（3）独立性</strong>：进程是能独立运行，独立获得资源、独立接受调度的基本单位。</p>
+<p><strong>（4）异步性</strong>：个进程按各自独立的，不可预知的速度向前推进，操作系统要提供<strong>进程同步机制</strong>来解决异步问题。</p>
+<p><strong>（5）结构性</strong>：每个进程都会配置一个PCB凑够结构上看，该进程由程序段，数据段，PCB组成</p>
+<blockquote>
+<p><strong>动态性是进程最基本的特征。</strong></p>
+<p><strong>进程是资源分配，接收调度的基本单位。</strong></p>
+<p><strong>异步性会导致并发程序的执行结果的不确定性。</strong></p>
+</blockquote>
+<h4 id="5-小结"><a href="#5-小结" class="headerlink" title="5.小结"></a>5.小结</h4><p><img src="https://s1.ax1x.com/2022/04/17/LUMkqS.png" alt="小结"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>三、操作系统的发展和分类</title>
     <url>/2022/04/09/%E4%B8%89%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8F%91%E5%B1%95%E5%92%8C%E5%88%86%E7%B1%BB/</url>
     <content><![CDATA[<h4 id="1-手工操作阶段"><a href="#1-手工操作阶段" class="headerlink" title="1. 手工操作阶段"></a>1. 手工操作阶段</h4><p>缺点：用户独占全机，人机速度矛盾导致资源利用率极低。人的速度慢，输入输出速度也慢，但计算机处理速度极快，人机速度矛盾。</p>
@@ -457,78 +529,6 @@
 
 <hr>
 <p>这章疑问有点多，应该看看书。</p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>七、进程的定义、组成、自制方式、特征</title>
-    <url>/2022/04/16/%E4%B8%83%E3%80%81%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%AE%9A%E4%B9%89%E3%80%81%E7%BB%84%E6%88%90%E3%80%81%E8%87%AA%E5%88%B6%E6%96%B9%E5%BC%8F%E3%80%81%E7%89%B9%E5%BE%81/</url>
-    <content><![CDATA[<h4 id="1-进程的定义"><a href="#1-进程的定义" class="headerlink" title="1.进程的定义"></a>1.进程的定义</h4><p>程序什么么？程序就是一个指令序列。</p>
-<p>早期的计算机支支持单道程序。引入多道程序后，多道程序可以并发执行。为了方便操作系统管理、完成程序并发执行，引入了<strong>进程，进程实体</strong>的概念。</p>
-<p><strong>PCB（进程控制块），程序段和数据段三部分构成了进程实体</strong>。进程实体被简称为进程。所谓创建进程实际上是创建进程实体中的PCB；撤销进程实质上就是撤销进程实体中的PCB。</p>
-<blockquote>
-<p><strong>PCB是进程存在的唯一标志。</strong></p>
-</blockquote>
-<span id="more"></span>
-
-<p>从不同角度，进程可以有不同的定义，比较传统典型的定义有：</p>
-<ul>
-<li>进程是程序的一次<strong>执行过程</strong>。</li>
-<li>进程是一个程序及其数据在处理机上顺序执行时<strong>所发生的活动</strong>。</li>
-<li>进程是具有独立功能的程序存在数据集合上<strong>运行的过程（强调动态性）</strong>，他是系统进行资源分配和调度的一个独立单位。</li>
-</ul>
-<p>引入进程实体的概念后，进程可被定义为：</p>
-<ul>
-<li><strong>进程</strong>是实体的<strong>运行过程</strong>，是系统进行<strong>资源分配和调度</strong>的一个独立单位。</li>
-</ul>
-<blockquote>
-<p>注：严格来说进程和实体进程并不一样，进程实体是<strong>静态的</strong>，进程则是<strong>动态的</strong>。除非题目专门考察二者区别，否则可以认为进程实体就是进程。因此也可以说“进程由程序段，数据段和PCB三部分组成”</p>
-</blockquote>
-<h4 id="2-进程的组成"><a href="#2-进程的组成" class="headerlink" title="2.进程的组成"></a>2.进程的组成</h4><p><strong>PCB的组成</strong></p>
-<p><img src="https://s1.ax1x.com/2022/04/17/LUmoCt.png" alt="PCB"></p>
-<p><strong>进程的组成</strong></p>
-<p><img src="https://s1.ax1x.com/2022/04/17/LUnCvT.png" alt="进程"></p>
-<p><strong>只要是和操作系统有关于管理进程的项目一定是被存储在PCB中。</strong></p>
-<h4 id="3-进程的组织"><a href="#3-进程的组织" class="headerlink" title="3. 进程的组织"></a>3. 进程的组织</h4><p>在一个系统中通常有数百乃至数千个PCB，为了对他们加以有效的管理，应当采用适当的方式把这些PCB组织起来。</p>
-<blockquote>
-<p>注：进程的<strong>组成</strong>讨论的是一个<strong>进程内部</strong>有哪些部分构成的问题，而进程的<strong>组织</strong>讨论的<strong>多个进程之间</strong>的组织方式的问题。</p>
-</blockquote>
-<p>进程的组织方式包括：</p>
-<ol>
-<li>链接方式<ul>
-<li>按照进程的状态将PCB分为多个队列</li>
-<li>操作系统持有指向各个队列的指针</li>
-</ul>
-</li>
-<li>索引方式<ul>
-<li>根据进程状态的不同，建立几张索引表</li>
-<li>操作系统持有指向各个索引表的指针</li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<p>链接方式：</p>
-<p><img src="https://s1.ax1x.com/2022/04/17/LUKsCn.png" alt="链接"></p>
-<p>索引方式：</p>
-<p><img src="https://s1.ax1x.com/2022/04/17/LUKjVe.png" alt="索引"></p>
-</blockquote>
-<h4 id="4-进程的特征"><a href="#4-进程的特征" class="headerlink" title="4.进程的特征"></a>4.进程的特征</h4><p>进程和程序是两种概念，相比较于程序，进程有以下特征：</p>
-<p><strong>（1）动态性：</strong>进程是程序的一次执行过程，是动态地产生、变化和消亡的。</p>
-<p><strong>（2）并发性</strong>：内存中有多个进程实体，个进程可以并发执行</p>
-<p><strong>（3）独立性</strong>：进程是能独立运行，独立获得资源、独立接受调度的基本单位。</p>
-<p><strong>（4）异步性</strong>：个进程按各自独立的，不可预知的速度向前推进，操作系统要提供<strong>进程同步机制</strong>来解决异步问题。</p>
-<p><strong>（5）结构性</strong>：每个进程都会配置一个PCB凑够结构上看，该进程由程序段，数据段，PCB组成</p>
-<blockquote>
-<p><strong>动态性是进程最基本的特征。</strong></p>
-<p><strong>进程是资源分配，接收调度的基本单位。</strong></p>
-<p><strong>异步性会导致并发程序的执行结果的不确定性。</strong></p>
-</blockquote>
-<h4 id="5-小结"><a href="#5-小结" class="headerlink" title="5.小结"></a>5.小结</h4><p><img src="https://s1.ax1x.com/2022/04/17/LUMkqS.png" alt="小结"></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -769,39 +769,6 @@
       </tags>
   </entry>
   <entry>
-    <title>八、进程的状态与转换</title>
-    <url>/2022/04/17/%E5%85%AB%E3%80%81%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E8%BD%AC%E6%8D%A2/</url>
-    <content><![CDATA[<h4 id="1-进程的基本状态"><a href="#1-进程的基本状态" class="headerlink" title="1.进程的基本状态"></a>1.进程的基本状态</h4><p><strong>三种基本状态：</strong></p>
-<ol>
-<li><strong>运行态</strong>：占有cpu，并在cpu上运行</li>
-<li><strong>就绪态</strong>：已具备运行条件，但没有空闲CPU而暂时不能运行</li>
-<li><strong>阻塞态（或称等待态）</strong>：因等待某一事件而暂时不能执行</li>
-</ol>
-<span id="more"></span>
-
-<blockquote>
-<p>运行态：在单核处理及环境，每一时刻最多只能有一个进程处于运行态（双核环境下最多可以同时拥有两个进程处于运行态）</p>
-<p>就绪态：进程已经拥有了除处理及之外所有需要的资源，一旦获得处理机即可立即进入运行态开始运行。（万事俱备，只欠CPU）</p>
-<p>阻塞态：如：等待操作系统扽配打印机，等待读取磁盘操作的结果。为了提高CPU利用率，需要先将其他进程需要的资源分配到位，才能得到CPU的服务。</p>
-</blockquote>
-<p><strong>另外的两种状态：</strong></p>
-<p>进程运行结束（或者由于BUG导致进程无法继续下去，如数组越界）需要撤销进程，操作系统需要完成撤销进程的相关操作，完成将分配给进程的资源回收，撤销进程的PCB等操作。</p>
-<ol>
-<li><strong>创建态</strong>（新建态）：进程正在被创建，操作系统为其分配资源、创建PCB</li>
-<li><strong>终止态</strong>（结束态）：进程正在从系统中撤销，操作系统会回收分配给进程的资源，撤销其PCB</li>
-</ol>
-<h4 id="2-进程的状态转换"><a href="#2-进程的状态转换" class="headerlink" title="2.进程的状态转换"></a>2.进程的状态转换</h4><p><a href="https://imgtu.com/i/La3vzd"><img src="https://s1.ax1x.com/2022/04/18/La3vzd.png" alt="La3vzd.png"></a></p>
-<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p>绿框知识重要</p>
-<p><a href="https://imgtu.com/i/La8kFS"><img src="https://s1.ax1x.com/2022/04/18/La8kFS.png" alt="La8kFS.png"></a></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>六、系统调用</title>
     <url>/2022/04/13/%E5%85%AD%E3%80%81%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8/</url>
     <content><![CDATA[<h4 id="1-什么是系统调用"><a href="#1-什么是系统调用" class="headerlink" title="1.什么是系统调用"></a>1.什么是系统调用</h4><p>操作系统是用户和计算机硬件之间的接口需要向上层提供一些简单易用的服务。主要包括<strong>命令接口</strong>和<strong>程序接口</strong>。其中，程序接口由一组==<strong>系统调用</strong>==组成。</p>
@@ -901,6 +868,59 @@
 </ul>
 </blockquote>
 <h5 id="5-知识回顾"><a href="#5-知识回顾" class="headerlink" title="5.知识回顾"></a>5.知识回顾</h5><p><a href="https://imgtu.com/i/Lw8bnA"><img src="https://s1.ax1x.com/2022/04/18/Lw8bnA.png" alt="Lw8bnA.png"></a></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十一、线程概念和多线程模型</title>
+    <url>/2022/04/19/%E5%8D%81%E4%B8%80%E3%80%81%E7%BA%BF%E7%A8%8B%E6%A6%82%E5%BF%B5%E5%92%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<h4 id="1-什么是线程，为什么要引入线程"><a href="#1-什么是线程，为什么要引入线程" class="headerlink" title="1.什么是线程，为什么要引入线程"></a>1.什么是线程，为什么要引入线程</h4><p>还没引入进程之前，系统中的各个程序只能串行执行。在传统的定成定义中，进程是程序的一次执行。但想实现多个功能显然不可能是由一个程序顺序处理就能实现的。如QQ，可以同时进行视频，文字聊天，发送文件等操作。</p>
+<span id="more"></span>
+
+<p>有的进程可能需要“同时”处理很多事情，而传统的进程只能串行的执行一系列程序。为此，引入了“线程”来增加进程的并发度。传统的进程是程序执行流的最小单位。引入线程后，线程成为了程序执行流的最小单位。可以把线程理解为“轻量级进程”。<strong>线程是一个基本的CPU执行单元，也是程序执行流的最小单位。</strong></p>
+<p>引入线程后，不仅是进程之间可以并发，进程内的<strong>各线程之间</strong>也可以并发，<strong>从而进一步提升了系统的并发度，</strong>使得一个进程内也可以并发的处理各种任务（如QQ视频，文字聊天，传文件）。</p>
+<p>引入线程后，<strong>进程</strong>只作为<strong>除CPU之外的系统资源的分配单元</strong>（如打印机，内存地址空间等都是分配给进程的）。</p>
+<h4 id="2-引入线程机制后的变化"><a href="#2-引入线程机制后的变化" class="headerlink" title="2.引入线程机制后的变化"></a>2.引入线程机制后的变化</h4><p><a href="https://imgtu.com/i/LBjVvd"><img src="https://s1.ax1x.com/2022/04/19/LBjVvd.png" alt="LBjVvd.png"></a></p>
+<h4 id="3-线程的属性"><a href="#3-线程的属性" class="headerlink" title="3.线程的属性"></a>3.线程的属性</h4><p><a href="https://imgtu.com/i/LBjnbt"><img src="https://s1.ax1x.com/2022/04/19/LBjnbt.png" alt="LBjnbt.png"></a></p>
+<h4 id="4-线程的实现方式"><a href="#4-线程的实现方式" class="headerlink" title="4.线程的实现方式"></a>4.线程的实现方式</h4><p><strong>（1）用户级线程</strong></p>
+<p>用户级线程由应用程序通过线程库来实现。所有的<strong>线程管理工作都由应用程序负责</strong>（包括线程切换）。用户级线程中，<strong>线程切换可以在用户态下即可完成</strong>，无需操作系统干预。用户看来是有多个线程，但在操作系统看来，并意识不到线程的存在（用户线程对用户不透明，对操作系统透明）。可以理解为<strong>用户级线程就是“从用户视角能看到的线程。”</strong></p>
+<p><img src="https://s1.ax1x.com/2022/04/19/LBj1PS.png" alt="LBj1PS.png"></p>
+<p><strong>（2）内核级线程（又可称为“内核支持的线程”）</strong></p>
+<p>内核级<strong>线程的管理工作</strong>由<strong>操作系统内核</strong>完成。线程调度‘切换等工作都有内核负责，因此，<strong>内核级现成的切换必然需要在核心态下才能完成</strong>。可以这样理解，<strong>内核级线程就是“从操作系统内核视看能看到的线程”</strong>。</p>
+<p><img src="https://s1.ax1x.com/2022/04/19/LBv0eI.png" alt="LBv0eI.png"></p>
+<p>在同时支持用户级线程和内核级线程的系统中，可采用二者组合的方式：将n个用户线程映射到m个内核级线程上（n &gt;= m）:</p>
+<p><img src="https://s1.ax1x.com/2022/04/19/LBxIud.png" alt="LBxIud.png"></p>
+<blockquote>
+<p><strong>操作系统同只“看得见”内核级线程，因此只有内核级线程才是处理机分配的单位。</strong></p>
+<p>例如：上面这个模型中，该进程由两个内核级线程，三个用户级线程。在用户看来，这个进程中有三个线程。但即使这个进程在一个拥有四核心的计算机上运行，也最多只能被分配到两个核心，最多只能有两个用户级线程并行执行。</p>
+</blockquote>
+<h4 id="5-多线程模型"><a href="#5-多线程模型" class="headerlink" title="5.多线程模型"></a>5.多线程模型</h4><p>在同时支持多个用户级线程和内核级线程的系统中，有几个用户级线程映射到几个内核级线程的问题引出了“多线程模型”问题。</p>
+<p><strong>（1）多对一模型</strong></p>
+<p>多个用户及线程映射到一个内核级线程。每个用户进程只对应一个内核级进程。</p>
+<p><img src="https://s1.ax1x.com/2022/04/19/LDSdOJ.png" alt="LDSdOJ.png"></p>
+<blockquote>
+<p>优点：用户级线程的切换在用户空间内即可完成，不需要切换到核心态，线程管理系统的开销小，效率高。</p>
+<p>缺点：当一个用户级线程被阻塞后，整个进程都会被阻塞，并发度不高。多个线程不可以在多核处理机上并行运行。</p>
+</blockquote>
+<p><strong>（2）一对一模型</strong></p>
+<p>一个用户级线程映射到一个内核级线程。每个用户进程有与用户线程同数量的内核级线程。</p>
+<p><img src="https://s1.ax1x.com/2022/04/19/LDpgNq.png" alt="LDpgNq.png"></p>
+<blockquote>
+<p>优点：当一个线程被阻塞后，别的线程还可以继续执行，并发能力强，多线程可以在多核处理机上并行执行。</p>
+<p>缺点：一个用户进程会占用多个内核级线程，线程切换由操作系统内核完成，需要切换到核心态，因此线程管理的成本高，开销大。</p>
+</blockquote>
+<p><strong>（3）多对多模型</strong></p>
+<p>在同时支持用户级线程和内核级线程的系统中，可采用二者组合的方式：将n个用户线程映射到m个内核级线程上（n &gt;= m）:</p>
+<p><img src="https://s1.ax1x.com/2022/04/19/LBxIud.png" alt="LBxIud.png"></p>
+<blockquote>
+<p>克服了多对一模型并发度不高的缺点，又克服了一对一模型中一个用户进程占用太多内核级线程，开销太大的缺点。算是一种折中的解决方案。</p>
+</blockquote>
+<h4 id="5-知识回顾"><a href="#5-知识回顾" class="headerlink" title="5.知识回顾"></a>5.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/19/LDCyYq.png">]</p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -1534,6 +1554,39 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
       </tags>
   </entry>
   <entry>
+    <title>八、进程的状态与转换</title>
+    <url>/2022/04/17/%E5%85%AB%E3%80%81%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<h4 id="1-进程的基本状态"><a href="#1-进程的基本状态" class="headerlink" title="1.进程的基本状态"></a>1.进程的基本状态</h4><p><strong>三种基本状态：</strong></p>
+<ol>
+<li><strong>运行态</strong>：占有cpu，并在cpu上运行</li>
+<li><strong>就绪态</strong>：已具备运行条件，但没有空闲CPU而暂时不能运行</li>
+<li><strong>阻塞态（或称等待态）</strong>：因等待某一事件而暂时不能执行</li>
+</ol>
+<span id="more"></span>
+
+<blockquote>
+<p>运行态：在单核处理及环境，每一时刻最多只能有一个进程处于运行态（双核环境下最多可以同时拥有两个进程处于运行态）</p>
+<p>就绪态：进程已经拥有了除处理及之外所有需要的资源，一旦获得处理机即可立即进入运行态开始运行。（万事俱备，只欠CPU）</p>
+<p>阻塞态：如：等待操作系统扽配打印机，等待读取磁盘操作的结果。为了提高CPU利用率，需要先将其他进程需要的资源分配到位，才能得到CPU的服务。</p>
+</blockquote>
+<p><strong>另外的两种状态：</strong></p>
+<p>进程运行结束（或者由于BUG导致进程无法继续下去，如数组越界）需要撤销进程，操作系统需要完成撤销进程的相关操作，完成将分配给进程的资源回收，撤销进程的PCB等操作。</p>
+<ol>
+<li><strong>创建态</strong>（新建态）：进程正在被创建，操作系统为其分配资源、创建PCB</li>
+<li><strong>终止态</strong>（结束态）：进程正在从系统中撤销，操作系统会回收分配给进程的资源，撤销其PCB</li>
+</ol>
+<h4 id="2-进程的状态转换"><a href="#2-进程的状态转换" class="headerlink" title="2.进程的状态转换"></a>2.进程的状态转换</h4><p><a href="https://imgtu.com/i/La3vzd"><img src="https://s1.ax1x.com/2022/04/18/La3vzd.png" alt="La3vzd.png"></a></p>
+<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p>绿框知识重要</p>
+<p><a href="https://imgtu.com/i/La8kFS"><img src="https://s1.ax1x.com/2022/04/18/La8kFS.png" alt="La8kFS.png"></a></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>四、操作系统的运行机制与体系系统</title>
     <url>/2022/04/10/%E5%9B%9B%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h4 id="1-运行机制"><a href="#1-运行机制" class="headerlink" title="1.运行机制"></a>1.运行机制</h4><p>什么是指令， “指令”和“代码”有什么区别？</p>
@@ -1631,59 +1684,6 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
         <tag>Hexo</tag>
         <tag>GithubPages</tag>
         <tag>Blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十一、线程概念和多线程模型</title>
-    <url>/2022/04/19/%E5%8D%81%E4%B8%80%E3%80%81%E7%BA%BF%E7%A8%8B%E6%A6%82%E5%BF%B5%E5%92%8C%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<h4 id="1-什么是线程，为什么要引入线程"><a href="#1-什么是线程，为什么要引入线程" class="headerlink" title="1.什么是线程，为什么要引入线程"></a>1.什么是线程，为什么要引入线程</h4><p>还没引入进程之前，系统中的各个程序只能串行执行。在传统的定成定义中，进程是程序的一次执行。但想实现多个功能显然不可能是由一个程序顺序处理就能实现的。如QQ，可以同时进行视频，文字聊天，发送文件等操作。</p>
-<span id="more"></span>
-
-<p>有的进程可能需要“同时”处理很多事情，而传统的进程只能串行的执行一系列程序。为此，引入了“线程”来增加进程的并发度。传统的进程是程序执行流的最小单位。引入线程后，线程成为了程序执行流的最小单位。可以把线程理解为“轻量级进程”。<strong>线程是一个基本的CPU执行单元，也是程序执行流的最小单位。</strong></p>
-<p>引入线程后，不仅是进程之间可以并发，进程内的<strong>各线程之间</strong>也可以并发，<strong>从而进一步提升了系统的并发度，</strong>使得一个进程内也可以并发的处理各种任务（如QQ视频，文字聊天，传文件）。</p>
-<p>引入线程后，<strong>进程</strong>只作为<strong>除CPU之外的系统资源的分配单元</strong>（如打印机，内存地址空间等都是分配给进程的）。</p>
-<h4 id="2-引入线程机制后的变化"><a href="#2-引入线程机制后的变化" class="headerlink" title="2.引入线程机制后的变化"></a>2.引入线程机制后的变化</h4><p><a href="https://imgtu.com/i/LBjVvd"><img src="https://s1.ax1x.com/2022/04/19/LBjVvd.png" alt="LBjVvd.png"></a></p>
-<h4 id="3-线程的属性"><a href="#3-线程的属性" class="headerlink" title="3.线程的属性"></a>3.线程的属性</h4><p><a href="https://imgtu.com/i/LBjnbt"><img src="https://s1.ax1x.com/2022/04/19/LBjnbt.png" alt="LBjnbt.png"></a></p>
-<h4 id="4-线程的实现方式"><a href="#4-线程的实现方式" class="headerlink" title="4.线程的实现方式"></a>4.线程的实现方式</h4><p><strong>（1）用户级线程</strong></p>
-<p>用户级线程由应用程序通过线程库来实现。所有的<strong>线程管理工作都由应用程序负责</strong>（包括线程切换）。用户级线程中，<strong>线程切换可以在用户态下即可完成</strong>，无需操作系统干预。用户看来是有多个线程，但在操作系统看来，并意识不到线程的存在（用户线程对用户不透明，对操作系统透明）。可以理解为<strong>用户级线程就是“从用户视角能看到的线程。”</strong></p>
-<p><img src="https://s1.ax1x.com/2022/04/19/LBj1PS.png" alt="LBj1PS.png"></p>
-<p><strong>（2）内核级线程（又可称为“内核支持的线程”）</strong></p>
-<p>内核级<strong>线程的管理工作</strong>由<strong>操作系统内核</strong>完成。线程调度‘切换等工作都有内核负责，因此，<strong>内核级现成的切换必然需要在核心态下才能完成</strong>。可以这样理解，<strong>内核级线程就是“从操作系统内核视看能看到的线程”</strong>。</p>
-<p><img src="https://s1.ax1x.com/2022/04/19/LBv0eI.png" alt="LBv0eI.png"></p>
-<p>在同时支持用户级线程和内核级线程的系统中，可采用二者组合的方式：将n个用户线程映射到m个内核级线程上（n &gt;= m）:</p>
-<p><img src="https://s1.ax1x.com/2022/04/19/LBxIud.png" alt="LBxIud.png"></p>
-<blockquote>
-<p><strong>操作系统同只“看得见”内核级线程，因此只有内核级线程才是处理机分配的单位。</strong></p>
-<p>例如：上面这个模型中，该进程由两个内核级线程，三个用户级线程。在用户看来，这个进程中有三个线程。但即使这个进程在一个拥有四核心的计算机上运行，也最多只能被分配到两个核心，最多只能有两个用户级线程并行执行。</p>
-</blockquote>
-<h4 id="5-多线程模型"><a href="#5-多线程模型" class="headerlink" title="5.多线程模型"></a>5.多线程模型</h4><p>在同时支持多个用户级线程和内核级线程的系统中，有几个用户级线程映射到几个内核级线程的问题引出了“多线程模型”问题。</p>
-<p><strong>（1）多对一模型</strong></p>
-<p>多个用户及线程映射到一个内核级线程。每个用户进程只对应一个内核级进程。</p>
-<p><img src="https://s1.ax1x.com/2022/04/19/LDSdOJ.png" alt="LDSdOJ.png"></p>
-<blockquote>
-<p>优点：用户级线程的切换在用户空间内即可完成，不需要切换到核心态，线程管理系统的开销小，效率高。</p>
-<p>缺点：当一个用户级线程被阻塞后，整个进程都会被阻塞，并发度不高。多个线程不可以在多核处理机上并行运行。</p>
-</blockquote>
-<p><strong>（2）一对一模型</strong></p>
-<p>一个用户级线程映射到一个内核级线程。每个用户进程有与用户线程同数量的内核级线程。</p>
-<p><img src="https://s1.ax1x.com/2022/04/19/LDpgNq.png" alt="LDpgNq.png"></p>
-<blockquote>
-<p>优点：当一个线程被阻塞后，别的线程还可以继续执行，并发能力强，多线程可以在多核处理机上并行执行。</p>
-<p>缺点：一个用户进程会占用多个内核级线程，线程切换由操作系统内核完成，需要切换到核心态，因此线程管理的成本高，开销大。</p>
-</blockquote>
-<p><strong>（3）多对多模型</strong></p>
-<p>在同时支持用户级线程和内核级线程的系统中，可采用二者组合的方式：将n个用户线程映射到m个内核级线程上（n &gt;= m）:</p>
-<p><img src="https://s1.ax1x.com/2022/04/19/LBxIud.png" alt="LBxIud.png"></p>
-<blockquote>
-<p>克服了多对一模型并发度不高的缺点，又克服了一对一模型中一个用户进程占用太多内核级线程，开销太大的缺点。算是一种折中的解决方案。</p>
-</blockquote>
-<h4 id="5-知识回顾"><a href="#5-知识回顾" class="headerlink" title="5.知识回顾"></a>5.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/19/LDCyYq.png">]</p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
       </tags>
   </entry>
   <entry>
