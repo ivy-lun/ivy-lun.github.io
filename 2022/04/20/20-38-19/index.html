@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/xiaoyugan.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/xiaoyugan.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/xiaoyugan.png">
+  <link rel="mask-icon" href="/images/xiaoyugan.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ariescheng.xyz","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="1.CPU利用率由于早期的CPU造价极其昂贵，因此人们希望让CPU尽可能多地工作 CPU利用率：指CPU“忙碌”的时间占总时间的比例 $利用率&#x3D;\frac{忙碌的时间}{总时间}$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="十四、调度算法的评价指标">
+<meta property="og:url" content="https://ariescheng.xyz/2022/04/20/20-38-19/index.html">
+<meta property="og:site_name" content="小魚の干物">
+<meta property="og:description" content="1.CPU利用率由于早期的CPU造价极其昂贵，因此人们希望让CPU尽可能多地工作 CPU利用率：指CPU“忙碌”的时间占总时间的比例 $利用率&#x3D;\frac{忙碌的时间}{总时间}$">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/04/20/Lso3yq.png">
+<meta property="article:published_time" content="2022-04-20T12:38:19.000Z">
+<meta property="article:modified_time" content="2022-04-20T13:36:17.637Z">
+<meta property="article:author" content="樱花换小鱼干">
+<meta property="article:tag" content="操作系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/04/20/Lso3yq.png">
+
+
+<link rel="canonical" href="https://ariescheng.xyz/2022/04/20/20-38-19/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ariescheng.xyz/2022/04/20/20-38-19/","path":"2022/04/20/20-38-19/","title":"十四、调度算法的评价指标"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>十四、调度算法的评价指标 | 小魚の干物</title>
+  
+
+
+
+
+<link rel="dns-prefetch" href="https://waline-qmkdgwexn-ivy-lun.vercel.app/">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小魚の干物</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-CPU%E5%88%A9%E7%94%A8%E7%8E%87"><span class="nav-text">1.CPU利用率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%B3%BB%E7%BB%9F%E5%90%9E%E5%90%90%E9%87%8F"><span class="nav-text">2.系统吞吐量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%91%A8%E8%BD%AC%E6%97%B6%E9%97%B4"><span class="nav-text">3.周转时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%AD%89%E5%BE%85%E6%97%B6%E9%97%B4"><span class="nav-text">4.等待时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4"><span class="nav-text">5.响应时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE"><span class="nav-text">6.知识回顾</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="樱花换小鱼干"
+      src="/images/xiaoyugan.png">
+  <p class="site-author-name" itemprop="name">樱花换小鱼干</p>
+  <div class="site-description" itemprop="description">算是半个有趣的人。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ivy-lun" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ivy-lun" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:orange_lun@outlook.com" title="E-Mail → mailto:orange_lun@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/cyan_lemon_cml/" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;cyan_lemon_cml&#x2F;" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ariescheng.xyz/2022/04/20/20-38-19/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/xiaoyugan.png">
+      <meta itemprop="name" content="樱花换小鱼干">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小魚の干物">
+      <meta itemprop="description" content="算是半个有趣的人。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="十四、调度算法的评价指标 | 小魚の干物">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <div class="poem-wrap">
+      <div class="poem-border poem-left"></div>
+      <div class="poem-border poem-right"></div>
+      <h1>只言片语</h1>
+      <p id="hitokoto"><a href="#" id="hitokoto_text">:D 获取中...</a></p>
+      <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+      <br>
+    </div>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          十四、调度算法的评价指标
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-20 20:38:19 / 修改时间：21:36:17" itemprop="dateCreated datePublished" datetime="2022-04-20T20:38:19+08:00">2022-04-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2022/04/20/20-38-19/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2022/04/20/20-38-19/" data-xid="/2022/04/20/20-38-19/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h4 id="1-CPU利用率"><a href="#1-CPU利用率" class="headerlink" title="1.CPU利用率"></a>1.CPU利用率</h4><p>由于早期的CPU造价极其昂贵，因此人们<strong>希望让CPU尽可能多地工作</strong></p>
+<p><strong>CPU利用率：</strong>指CPU“忙碌”的时间占总时间的比例</p>
+<p>$利用率=\frac{忙碌的时间}{总时间}$</p>
+<span id="more"></span>
+
+<p>有的题目还会要求计算某种设备的利用率：</p>
+<p>如：某计算机只支持单道程序，某个作业刚开始需要在CPU上运行5秒，再用打印机打印输出5秒，之后再执行5秒，才能结束。在此过程中，COPU利用率、打印机利用率分别是多少？</p>
+<p>$CPU利用率=\frac{5+5}{5+5+5}=66.665$<br>$打印机利用率=\frac{5}{15}=33.335$</p>
+<h4 id="2-系统吞吐量"><a href="#2-系统吞吐量" class="headerlink" title="2.系统吞吐量"></a>2.系统吞吐量</h4><p>对于计算机来说，希望使用尽可能少的时间完成尽可能多的多页</p>
+<p><strong>系统吞吐量：</strong>单位时间内完成的作业数量</p>
+<p>$系统吞吐量=\frac{总共完成了多少道作业}{总共花了多少时间}$</p>
+<p>如：某计算机处理完成10道作业，共花费100秒，则系统吞吐量为：</p>
+<p>$\frac{10}{100}=0.1（道/秒）$</p>
+<p>即平均每秒可以完成0.1道作业。</p>
+<h4 id="3-周转时间"><a href="#3-周转时间" class="headerlink" title="3.周转时间"></a>3.周转时间</h4><p>对于计算机用户来说，他很关心自己的作业从提交道完成花费了多少时间。</p>
+<p><strong>周转时间</strong>：是指<strong>作业被提交给系统开始，到作业完成为止</strong>的这段时间间隔。</p>
+<p>它包括四个部分：作业在外存后备队列上等待作业调度（高级调度）的时间、进程在就绪队列上等待进程调度（低级调度）的时间、进程在CPU上执行的时间、进程等待I/O操作完成的时间。后三项在一个作业的整个处理过程中，可能发生多次。</p>
+<ul>
+<li>对于用户来说，更关心自己的单个作业的周转时间：</li>
+</ul>
+<p>（作业）周转时间 = 作业完成时间 - 作业提交时间</p>
+<ul>
+<li>对于操作系统来说，更关心系统的整体表现，因此更关心所有作业周转时间的平均值。</li>
+</ul>
+<p>$平均周转时间=\frac{各作业周转时间之和}{作业数}$</p>
+<ul>
+<li>有的作业运行时间长，有的作业运行时间短，因此在周转时间相同的情况下，运行时间不同的作业，给用户的感受肯定是不一样的。</li>
+</ul>
+<p>$戴荃周转时间=\frac{作业周转时间}{作业实际运行的时间}=\frac{作业完成时间-作业提交时间}{作业实际运行的时间}$</p>
+<p>$平均带权周转时间=\frac{各作业带权周转时间之和}{作业数}$</p>
+<p><strong>带权周转时间必然&gt;=1</strong><br><strong>带权周转时间与周转时间都是越小越好</strong></p>
+<p>对于周转时间相同的两个作业，实际运行时间长的作业在相同的时间内被服务的时间更过，带权周转时间更小，用户满意度更高。</p>
+<p>对与实际运行时间相同的两个作业，周转时间短的带权周转时间更小，用户满意度更高。</p>
+<h4 id="4-等待时间"><a href="#4-等待时间" class="headerlink" title="4.等待时间"></a>4.等待时间</h4><p>计算机的用户希望自己的作业尽可能少的等待处理剂</p>
+<p><strong>等待时间：</strong>指进程/作业<strong>处于等待处理机状态时间之和</strong>，等待时间越长用户满意度越低。</p>
+<blockquote>
+<p>当一个作业被建立之后，作业会被放在外存的“作业后备队列”等待被服务（调度）。当作业被服务之后作业会被调入内存。作业被调入内存后，建立对应的进程，这个进程会被CPU服务，会被I/O设备服务，当然也会有等待被服务的时候。</p>
+</blockquote>
+<p>对于<strong>进程</strong>来说，等待时间就是指进程建立后<strong>等待被服务的时间之和</strong>，在等待I/O完成的期间其实进程也是在被服务的，所以不计入等待时间。<br>对于<strong>作业</strong>来说，不仅要考虑<strong>建立进城后的等待时间，还要加上作业在外存后备队列中等待的时间。</strong></p>
+<p>一个作业总共需要被CPU服务多久，被I.O设备服务多久一般是确定不变的，因此调度算法其实只会影响作业/进程的等待时间。当然，与前面指标类似，也有<strong>“平均等待时间”</strong>来评价整体性能。</p>
+<p>$平均等待时间=\frac{所有进程/作业的等待时间之和}{作业数量}$</p>
+<h4 id="5-响应时间"><a href="#5-响应时间" class="headerlink" title="5.响应时间"></a>5.响应时间</h4><p>对于计算机用户来说，会希望自己的提交的请求（比如通过键盘输入了一个调试命令）尽早地开始被系统服务、回应。</p>
+<p><strong>响应时间:<strong>是指用户</strong>提交请求</strong>到<strong>首次产生响应</strong>所用时间。</p>
+<h4 id="6-知识回顾"><a href="#6-知识回顾" class="headerlink" title="6.知识回顾"></a>6.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/20/Lso3yq.png" alt="Lso3yq.png"></p>
+
+    </div>
+
+    
+    
+    
+      
+
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag"><i class="fa fa-tag"></i> 操作系统</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/20/11-29-52/" rel="prev" title="十三、进程调度的时机，切换与过程调度方式">
+                  <i class="fa fa-chevron-left"></i> 十三、进程调度的时机，切换与过程调度方式
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/04/21/14-09-21/" rel="next" title="第六章、组合数据类型">
+                  第六章、组合数据类型 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline-comments"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">樱花换小鱼干</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">77k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:10</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.1.2/js/cursor.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://waline-qmkdgwexn-ivy-lun.vercel.app/","placeholder":"你是我一生只会遇见一次的惊喜.....","avatar":"robohash","pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"avatarCDN":"https://sdn.geekzu.org/avatar/","meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","el":"#waline-comments","path":"/2022/04/20/20-38-19/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1.3,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"width":200,"height":350,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+</html>
