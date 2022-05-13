@@ -188,7 +188,8 @@
   <entry>
     <title>Python期末复习</title>
     <url>/2022/05/12/14-38-52/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>Python期末的一些东西，课件上的，后期应该会发课件。</p>
+<span id="more"></span>
 
 <h4 id="第一章（没啥东西）"><a href="#第一章（没啥东西）" class="headerlink" title="第一章（没啥东西）"></a>第一章（没啥东西）</h4><p>没写完</p>
 <h4 id="第二章-Python程序实例解析"><a href="#第二章-Python程序实例解析" class="headerlink" title="第二章 Python程序实例解析"></a>第二章 Python程序实例解析</h4><p>第一个实例：温度转换</p>
@@ -237,42 +238,6 @@
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一、启发式搜索</title>
-    <url>/2022/04/18/13-00-06/</url>
-    <content><![CDATA[<h4 id="1-人工智能中的搜索"><a href="#1-人工智能中的搜索" class="headerlink" title="1.人工智能中的搜索"></a>1.人工智能中的搜索</h4><p>在<strong>海量信息源</strong>中利用<strong>问题求解器</strong>，加上一定的<strong>约束条件</strong>和<strong>额外信息</strong>即可找到<strong>问题所对应的答案</strong>。</p>
-<span id="more"></span>
-
-<p><strong>1.寻找最短路径为例</strong></p>
-<p><a href="https://imgtu.com/i/LdFksH"><img src="https://s1.ax1x.com/2022/04/18/LdFksH.png" alt="LdFksH.png"></a></p>
-<p>寻找出路径最短，时间最少，价钱最经济的路径</p>
-<blockquote>
-<p>搜索算法的形式化描述：<strong>状态，动作，状态转移，路径，测试目标</strong>。</p>
-<p>状态：从原问题转化出的问题描述。</p>
-<p>动作：从当前时刻所处的状态转移到下一时刻所处状态所进行的操作。一般而言这些操作都是离散的。</p>
-<p>状态转移：对面某一时刻对应状态进行某一种操作后，所能够到达的状态。</p>
-<p>路径：一个状态序列。该状态序列被一系列操作所连接。</p>
-<p>测试目标：评估当前状态是否为所求解的目标状态。</p>
-</blockquote>
-<p><strong>2.搜索算法：启发式搜索（有信息搜索）</strong></p>
-<p>在搜索的过程中利用与所求解问题相关的辅助信息，其代表算法为<strong>贪婪最佳优先搜索</strong>和<strong>A*搜索</strong>。</p>
-<p>有信息搜索要定义如下辅助信息：</p>
-<p><a href="https://imgtu.com/i/LdAHRf"><img src="https://s1.ax1x.com/2022/04/18/LdAHRf.png" alt="LdAHRf.png"></a></p>
-<p>贪婪最佳优先搜索：<strong>评价函数f（n）=启发函数h（n）</strong></p>
-<p><a href="https://imgtu.com/i/LdEUYt"><img src="https://s1.ax1x.com/2022/04/18/LdEUYt.png" alt="LdEUYt.png"></a></p>
-<p>根据上图所知，从当前Arad出发，选择相邻的后续节点并找出其最短路径。上图找出的最短直线距离是：Arad→Sibiu→Fagaras→Bucharest。此为贪婪最佳优先算法。</p>
-<p>不足之处：</p>
-<p><a href="https://imgtu.com/i/LdZwqg"><img src="https://s1.ax1x.com/2022/04/18/LdZwqg.png" alt="LdZwqg.png"></a></p>
-<p>为了解决上述问题，提出了<strong>A*算法。</strong></p>
-<p><strong>3.搜索算法：A*搜索</strong></p>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -366,39 +331,39 @@
       </tags>
   </entry>
   <entry>
-    <title>一、操作系统的基本特征</title>
-    <url>/2022/04/09/11-44-01/</url>
-    <content><![CDATA[<h2 id="●-操作系统的基本特征"><a href="#●-操作系统的基本特征" class="headerlink" title="● 操作系统的基本特征"></a>● 操作系统的基本特征</h2><p>操作系统的四个特性：<strong>并发性，共享性，虚拟性，异步性</strong></p>
+    <title>一、启发式搜索</title>
+    <url>/2022/04/18/13-00-06/</url>
+    <content><![CDATA[<h4 id="1-人工智能中的搜索"><a href="#1-人工智能中的搜索" class="headerlink" title="1.人工智能中的搜索"></a>1.人工智能中的搜索</h4><p>在<strong>海量信息源</strong>中利用<strong>问题求解器</strong>，加上一定的<strong>约束条件</strong>和<strong>额外信息</strong>即可找到<strong>问题所对应的答案</strong>。</p>
 <span id="more"></span>
 
-<h4 id="1-并发性"><a href="#1-并发性" class="headerlink" title="1. 并发性"></a>1. 并发性</h4><p>并发是指两个或多个事件在同一时间间隔内发生，<strong>宏观上是同时发生的</strong>，但是<strong>微观上是交替发生的</strong>。</p>
-<p><strong>操作系统的并发性</strong>指计算机系统中同时存在多个运行的程序。</p>
-<h4 id="2-共享性"><a href="#2-共享性" class="headerlink" title="2. 共享性"></a>2. 共享性</h4><p>即资源共享，是指系统中的资源可供内存中多个并发执行的进程共同使用。</p>
-<p>（1）两种资源共享方式</p>
-<ul>
-<li>互斥共享方式（<strong>一个时间段内只允许一个进程访问资源</strong>）</li>
-<li>同时共享方式（<strong>允许一个时间段内由多个进程“同时”对他们进行访问</strong>）</li>
-</ul>
-<p><strong>同时</strong>是宏观上的概念，微观上资源往往是交替进行资源访问的（分时共享）。</p>
+<p><strong>1.寻找最短路径为例</strong></p>
+<p><a href="https://imgtu.com/i/LdFksH"><img src="https://s1.ax1x.com/2022/04/18/LdFksH.png" alt="LdFksH.png"></a></p>
+<p>寻找出路径最短，时间最少，价钱最经济的路径</p>
 <blockquote>
-<p>==并发性和共享性两者的关系：==</p>
-<p>假如使用QQ发送文件A，使用微信发送文件B.<br>1.两个进程正在并发执行（并发性）<br>2.需要共享地访问硬盘资源（共享性）</p>
-<p>如果失去并发行，系统中只有一个程序在执行，则共享性即失去意义。<br>如果失去共享性，QQ和微信不能同时访问硬盘资源，就无法实现同时发送文件，也就无法并发。</p>
-<p><strong>即并发性和共享性二者互为存在条件</strong></p>
+<p>搜索算法的形式化描述：<strong>状态，动作，状态转移，路径，测试目标</strong>。</p>
+<p>状态：从原问题转化出的问题描述。</p>
+<p>动作：从当前时刻所处的状态转移到下一时刻所处状态所进行的操作。一般而言这些操作都是离散的。</p>
+<p>状态转移：对面某一时刻对应状态进行某一种操作后，所能够到达的状态。</p>
+<p>路径：一个状态序列。该状态序列被一系列操作所连接。</p>
+<p>测试目标：评估当前状态是否为所求解的目标状态。</p>
 </blockquote>
-<h4 id="3-虚拟性"><a href="#3-虚拟性" class="headerlink" title="3. 虚拟性"></a>3. 虚拟性</h4><p>虚拟是指把一个物理上的实体变为逻辑上的对应物，物理实体是实际存在的，而逻辑上对应物是用户感受到的。</p>
-<ul>
-<li>空分复用技术（如虚拟存储器）</li>
-<li>时分复用技术（如虚拟处理器），微观上处理机在各个微小的时间段内交替着为各个进程服务。</li>
-</ul>
-<h4 id="4-异步性"><a href="#4-异步性" class="headerlink" title="4. 异步性"></a>4. 异步性</h4><p>异步是指，在多道程序环境下，允许多个程序并发执行，但由于资源有限，进程的执行不是一贯到底的，而是走走停停，以不可预知的速度向前推进，这就是进程的异步性。</p>
-<p>如果失去了并发性，则系统只能串行的执行所有的进程，每个程序的执行会一贯到底，<strong>只有系统拥有并发性，才有可能导致异步性。</strong></p>
+<p><strong>2.搜索算法：启发式搜索（有信息搜索）</strong></p>
+<p>在搜索的过程中利用与所求解问题相关的辅助信息，其代表算法为<strong>贪婪最佳优先搜索</strong>和<strong>A*搜索</strong>。</p>
+<p>有信息搜索要定义如下辅助信息：</p>
+<p><a href="https://imgtu.com/i/LdAHRf"><img src="https://s1.ax1x.com/2022/04/18/LdAHRf.png" alt="LdAHRf.png"></a></p>
+<p>贪婪最佳优先搜索：<strong>评价函数f（n）=启发函数h（n）</strong></p>
+<p><a href="https://imgtu.com/i/LdEUYt"><img src="https://s1.ax1x.com/2022/04/18/LdEUYt.png" alt="LdEUYt.png"></a></p>
+<p>根据上图所知，从当前Arad出发，选择相邻的后续节点并找出其最短路径。上图找出的最短直线距离是：Arad→Sibiu→Fagaras→Bucharest。此为贪婪最佳优先算法。</p>
+<p>不足之处：</p>
+<p><a href="https://imgtu.com/i/LdZwqg"><img src="https://s1.ax1x.com/2022/04/18/LdZwqg.png" alt="LdZwqg.png"></a></p>
+<p>为了解决上述问题，提出了<strong>A*算法。</strong></p>
+<p><strong>3.搜索算法：A*搜索</strong></p>
 ]]></content>
       <categories>
-        <category>操作系统</category>
+        <category>人工智能</category>
       </categories>
       <tags>
-        <tag>操作系统</tag>
+        <tag>人工智能</tag>
       </tags>
   </entry>
   <entry>
@@ -426,50 +391,33 @@
       </tags>
   </entry>
   <entry>
-    <title>三、操作系统的发展和分类</title>
-    <url>/2022/04/09/11-46-01/</url>
-    <content><![CDATA[<h4 id="1-手工操作阶段"><a href="#1-手工操作阶段" class="headerlink" title="1. 手工操作阶段"></a>1. 手工操作阶段</h4><p>缺点：用户独占全机，人机速度矛盾导致资源利用率极低。人的速度慢，输入输出速度也慢，但计算机处理速度极快，人机速度矛盾。</p>
+    <title>一、操作系统的基本特征</title>
+    <url>/2022/04/09/11-44-01/</url>
+    <content><![CDATA[<h2 id="●-操作系统的基本特征"><a href="#●-操作系统的基本特征" class="headerlink" title="● 操作系统的基本特征"></a>● 操作系统的基本特征</h2><p>操作系统的四个特性：<strong>并发性，共享性，虚拟性，异步性</strong></p>
 <span id="more"></span>
 
-
-<p><img src="https://s1.ax1x.com/2022/04/10/LA2eu4.png" alt="手工操作阶段"></p>
-<h4 id="2-批处理阶段"><a href="#2-批处理阶段" class="headerlink" title="2. 批处理阶段"></a>2. 批处理阶段</h4><p><strong>（1）单道批处理系统</strong></p>
-<p>引入<strong>脱机输入/输出技术</strong>（用磁带完成），并<strong>监督程序</strong>负责控制作业的输入、输出。</p>
-<p>主要优点：一定程度缓解了人机速度矛盾，资源利用率有所提升</p>
-<p>主要缺点：<strong>内存中仅能有一道程序运行</strong>，只有该程序运行结束之后才能进入到下一道程序，<strong>cpu有大量的时间都是在空闲等待I/O完成，</strong>资源利用率仍然很低。</p>
-<p><img src="https://s1.ax1x.com/2022/04/10/LA2nb9.png" alt="单道批处理系统"></p>
-<p><strong>（2）多道批处理系统</strong></p>
-<p> 在多道批处理系统中，<strong>操作系统</strong>开始出现。</p>
-<p>主要优点：多道程序<strong>并发</strong>执行，<strong>共享</strong>计算机资源，<strong>资源利用率大幅度提升</strong>。</p>
-<p>主要缺点：用户响应时间长，<strong>没有人机交互功能</strong>（用户不能对执行的程序进行任何操作）。</p>
-<blockquote>
-<p>在单道批处理系统中，输入，计算和输出都是串行进行，资源利用率低。</p>
-</blockquote>
-<p> <img src="https://s1.ax1x.com/2022/04/10/LA2gbj.png" alt="1"></p>
-<blockquote>
-<p>而在多道批处理系统中，当一个系统资源不再被使用时，可以提前进行下一个任务，系统<strong>并行执行任务</strong>，资源利用率大幅度提高。</p>
-</blockquote>
-<p><img src="https://s1.ax1x.com/2022/04/10/LA2Wan.png" alt="2"></p>
-<p><strong>（3）分时操作系统</strong></p>
-<p>计算机以<strong>时间片</strong>为单位<strong>轮流为各个用户/作业服务</strong>，各个用户可通过终端与计算机交互。</p>
-<p>主要优点：用户请求可以被即时响应，<strong>解决了人机交互的问题</strong>，允许多个用户同时使用一台计算机，并且用户对计算机的操作<strong>相互独立</strong>，感受不到别人的存在。</p>
-<p>主要却带你：<strong>不能优先处理一些紧急任务</strong>，操作系统的各个用户、作业都是完全公平的，循环为每个用户、作业服务一个时间片，不区分任务的紧急性。</p>
-<p><strong>（4）实时操作系统</strong></p>
-<p>主要优点：可以实时处理一些紧急任务，某些紧急任务不需要时间片排队。</p>
-<p>在实时操作系统的控制下，计算机接受到外部信号后及时进行处理，并且<strong>要在严格的时间限制内处理完成事件</strong>，实时操作系统的主要特点是<strong>及时性和可靠性</strong>。</p>
-<p>实时操作系统可分为：</p>
+<h4 id="1-并发性"><a href="#1-并发性" class="headerlink" title="1. 并发性"></a>1. 并发性</h4><p>并发是指两个或多个事件在同一时间间隔内发生，<strong>宏观上是同时发生的</strong>，但是<strong>微观上是交替发生的</strong>。</p>
+<p><strong>操作系统的并发性</strong>指计算机系统中同时存在多个运行的程序。</p>
+<h4 id="2-共享性"><a href="#2-共享性" class="headerlink" title="2. 共享性"></a>2. 共享性</h4><p>即资源共享，是指系统中的资源可供内存中多个并发执行的进程共同使用。</p>
+<p>（1）两种资源共享方式</p>
 <ul>
-<li><p>硬实时系统：必须在<strong>绝对严格</strong>的规定时间内完成处理。如导弹控制系统，自动驾驶系统。</p>
-</li>
-<li><p>软实时系统：能接受偶尔违反时间规定。如12306火车订票系统。</p>
-</li>
+<li>互斥共享方式（<strong>一个时间段内只允许一个进程访问资源</strong>）</li>
+<li>同时共享方式（<strong>允许一个时间段内由多个进程“同时”对他们进行访问</strong>）</li>
 </ul>
-<p><strong>（5）网络操作系统</strong></p>
-<p>伴随计算机网络的发展而诞生的，能把网络的各个计算机有机地结合起来，实现数据传送等功能，<strong>实现网络中各种资源的共享（如文件共享）和各个计算机之间的通信</strong>。</p>
-<p><strong>（6）分布式操作系统</strong></p>
-<p>主要特点是<strong>分布性和并行性</strong>，系统中的割台计算机地位相同，<strong>任何工作都可以分布在这些计算机上，由他们并行、协同完成这个任务。</strong></p>
-<p><strong>（7）个人计算机操作系统</strong></p>
-<p>略，如windows，macos等</p>
+<p><strong>同时</strong>是宏观上的概念，微观上资源往往是交替进行资源访问的（分时共享）。</p>
+<blockquote>
+<p>==并发性和共享性两者的关系：==</p>
+<p>假如使用QQ发送文件A，使用微信发送文件B.<br>1.两个进程正在并发执行（并发性）<br>2.需要共享地访问硬盘资源（共享性）</p>
+<p>如果失去并发行，系统中只有一个程序在执行，则共享性即失去意义。<br>如果失去共享性，QQ和微信不能同时访问硬盘资源，就无法实现同时发送文件，也就无法并发。</p>
+<p><strong>即并发性和共享性二者互为存在条件</strong></p>
+</blockquote>
+<h4 id="3-虚拟性"><a href="#3-虚拟性" class="headerlink" title="3. 虚拟性"></a>3. 虚拟性</h4><p>虚拟是指把一个物理上的实体变为逻辑上的对应物，物理实体是实际存在的，而逻辑上对应物是用户感受到的。</p>
+<ul>
+<li>空分复用技术（如虚拟存储器）</li>
+<li>时分复用技术（如虚拟处理器），微观上处理机在各个微小的时间段内交替着为各个进程服务。</li>
+</ul>
+<h4 id="4-异步性"><a href="#4-异步性" class="headerlink" title="4. 异步性"></a>4. 异步性</h4><p>异步是指，在多道程序环境下，允许多个程序并发执行，但由于资源有限，进程的执行不是一贯到底的，而是走走停停，以不可预知的速度向前推进，这就是进程的异步性。</p>
+<p>如果失去了并发性，则系统只能串行的执行所有的进程，每个程序的执行会一贯到底，<strong>只有系统拥有并发性，才有可能导致异步性。</strong></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -542,6 +490,59 @@
 <p><strong>异步性会导致并发程序的执行结果的不确定性。</strong></p>
 </blockquote>
 <h4 id="5-小结"><a href="#5-小结" class="headerlink" title="5.小结"></a>5.小结</h4><p><img src="https://s1.ax1x.com/2022/04/17/LUMkqS.png" alt="小结"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>三、操作系统的发展和分类</title>
+    <url>/2022/04/09/11-46-01/</url>
+    <content><![CDATA[<h4 id="1-手工操作阶段"><a href="#1-手工操作阶段" class="headerlink" title="1. 手工操作阶段"></a>1. 手工操作阶段</h4><p>缺点：用户独占全机，人机速度矛盾导致资源利用率极低。人的速度慢，输入输出速度也慢，但计算机处理速度极快，人机速度矛盾。</p>
+<span id="more"></span>
+
+
+<p><img src="https://s1.ax1x.com/2022/04/10/LA2eu4.png" alt="手工操作阶段"></p>
+<h4 id="2-批处理阶段"><a href="#2-批处理阶段" class="headerlink" title="2. 批处理阶段"></a>2. 批处理阶段</h4><p><strong>（1）单道批处理系统</strong></p>
+<p>引入<strong>脱机输入/输出技术</strong>（用磁带完成），并<strong>监督程序</strong>负责控制作业的输入、输出。</p>
+<p>主要优点：一定程度缓解了人机速度矛盾，资源利用率有所提升</p>
+<p>主要缺点：<strong>内存中仅能有一道程序运行</strong>，只有该程序运行结束之后才能进入到下一道程序，<strong>cpu有大量的时间都是在空闲等待I/O完成，</strong>资源利用率仍然很低。</p>
+<p><img src="https://s1.ax1x.com/2022/04/10/LA2nb9.png" alt="单道批处理系统"></p>
+<p><strong>（2）多道批处理系统</strong></p>
+<p> 在多道批处理系统中，<strong>操作系统</strong>开始出现。</p>
+<p>主要优点：多道程序<strong>并发</strong>执行，<strong>共享</strong>计算机资源，<strong>资源利用率大幅度提升</strong>。</p>
+<p>主要缺点：用户响应时间长，<strong>没有人机交互功能</strong>（用户不能对执行的程序进行任何操作）。</p>
+<blockquote>
+<p>在单道批处理系统中，输入，计算和输出都是串行进行，资源利用率低。</p>
+</blockquote>
+<p> <img src="https://s1.ax1x.com/2022/04/10/LA2gbj.png" alt="1"></p>
+<blockquote>
+<p>而在多道批处理系统中，当一个系统资源不再被使用时，可以提前进行下一个任务，系统<strong>并行执行任务</strong>，资源利用率大幅度提高。</p>
+</blockquote>
+<p><img src="https://s1.ax1x.com/2022/04/10/LA2Wan.png" alt="2"></p>
+<p><strong>（3）分时操作系统</strong></p>
+<p>计算机以<strong>时间片</strong>为单位<strong>轮流为各个用户/作业服务</strong>，各个用户可通过终端与计算机交互。</p>
+<p>主要优点：用户请求可以被即时响应，<strong>解决了人机交互的问题</strong>，允许多个用户同时使用一台计算机，并且用户对计算机的操作<strong>相互独立</strong>，感受不到别人的存在。</p>
+<p>主要却带你：<strong>不能优先处理一些紧急任务</strong>，操作系统的各个用户、作业都是完全公平的，循环为每个用户、作业服务一个时间片，不区分任务的紧急性。</p>
+<p><strong>（4）实时操作系统</strong></p>
+<p>主要优点：可以实时处理一些紧急任务，某些紧急任务不需要时间片排队。</p>
+<p>在实时操作系统的控制下，计算机接受到外部信号后及时进行处理，并且<strong>要在严格的时间限制内处理完成事件</strong>，实时操作系统的主要特点是<strong>及时性和可靠性</strong>。</p>
+<p>实时操作系统可分为：</p>
+<ul>
+<li><p>硬实时系统：必须在<strong>绝对严格</strong>的规定时间内完成处理。如导弹控制系统，自动驾驶系统。</p>
+</li>
+<li><p>软实时系统：能接受偶尔违反时间规定。如12306火车订票系统。</p>
+</li>
+</ul>
+<p><strong>（5）网络操作系统</strong></p>
+<p>伴随计算机网络的发展而诞生的，能把网络的各个计算机有机地结合起来，实现数据传送等功能，<strong>实现网络中各种资源的共享（如文件共享）和各个计算机之间的通信</strong>。</p>
+<p><strong>（6）分布式操作系统</strong></p>
+<p>主要特点是<strong>分布性和并行性</strong>，系统中的割台计算机地位相同，<strong>任何工作都可以分布在这些计算机上，由他们并行、协同完成这个任务。</strong></p>
+<p><strong>（7）个人计算机操作系统</strong></p>
+<p>略，如windows，macos等</p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -787,39 +788,6 @@
       </tags>
   </entry>
   <entry>
-    <title>八、进程的状态与转换</title>
-    <url>/2022/04/17/23-56-35/</url>
-    <content><![CDATA[<h4 id="1-进程的基本状态"><a href="#1-进程的基本状态" class="headerlink" title="1.进程的基本状态"></a>1.进程的基本状态</h4><p><strong>三种基本状态：</strong></p>
-<ol>
-<li><strong>运行态</strong>：占有cpu，并在cpu上运行</li>
-<li><strong>就绪态</strong>：已具备运行条件，但没有空闲CPU而暂时不能运行</li>
-<li><strong>阻塞态（或称等待态）</strong>：因等待某一事件而暂时不能执行</li>
-</ol>
-<span id="more"></span>
-
-<blockquote>
-<p>运行态：在单核处理及环境，每一时刻最多只能有一个进程处于运行态（双核环境下最多可以同时拥有两个进程处于运行态）</p>
-<p>就绪态：进程已经拥有了除处理及之外所有需要的资源，一旦获得处理机即可立即进入运行态开始运行。（万事俱备，只欠CPU）</p>
-<p>阻塞态：如：等待操作系统扽配打印机，等待读取磁盘操作的结果。为了提高CPU利用率，需要先将其他进程需要的资源分配到位，才能得到CPU的服务。</p>
-</blockquote>
-<p><strong>另外的两种状态：</strong></p>
-<p>进程运行结束（或者由于BUG导致进程无法继续下去，如数组越界）需要撤销进程，操作系统需要完成撤销进程的相关操作，完成将分配给进程的资源回收，撤销进程的PCB等操作。</p>
-<ol>
-<li><strong>创建态</strong>（新建态）：进程正在被创建，操作系统为其分配资源、创建PCB</li>
-<li><strong>终止态</strong>（结束态）：进程正在从系统中撤销，操作系统会回收分配给进程的资源，撤销其PCB</li>
-</ol>
-<h4 id="2-进程的状态转换"><a href="#2-进程的状态转换" class="headerlink" title="2.进程的状态转换"></a>2.进程的状态转换</h4><p><a href="https://imgtu.com/i/La3vzd"><img src="https://s1.ax1x.com/2022/04/18/La3vzd.png" alt="La3vzd.png"></a></p>
-<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p>绿框知识重要</p>
-<p><a href="https://imgtu.com/i/La8kFS"><img src="https://s1.ax1x.com/2022/04/18/La8kFS.png" alt="La8kFS.png"></a></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>五、中断和异常</title>
     <url>/2022/04/10/21-04-11/</url>
     <content><![CDATA[<h4 id="1-中断机制的诞生"><a href="#1-中断机制的诞生" class="headerlink" title="1.中断机制的诞生"></a>1.中断机制的诞生</h4><p>为了解决早期计算机资源利用率低的的问题，人们发明了<strong>操作系统</strong>，引入了<strong>中断机制</strong>，实现多道程序并发执行。</p>
@@ -865,6 +833,39 @@
 </ol>
 <hr>
 <h4 id="5-知识图谱"><a href="#5-知识图谱" class="headerlink" title="5.知识图谱"></a>5.知识图谱</h4><p><img src="https://s1.ax1x.com/2022/04/10/LA6gbR.png" alt="图谱"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>八、进程的状态与转换</title>
+    <url>/2022/04/17/23-56-35/</url>
+    <content><![CDATA[<h4 id="1-进程的基本状态"><a href="#1-进程的基本状态" class="headerlink" title="1.进程的基本状态"></a>1.进程的基本状态</h4><p><strong>三种基本状态：</strong></p>
+<ol>
+<li><strong>运行态</strong>：占有cpu，并在cpu上运行</li>
+<li><strong>就绪态</strong>：已具备运行条件，但没有空闲CPU而暂时不能运行</li>
+<li><strong>阻塞态（或称等待态）</strong>：因等待某一事件而暂时不能执行</li>
+</ol>
+<span id="more"></span>
+
+<blockquote>
+<p>运行态：在单核处理及环境，每一时刻最多只能有一个进程处于运行态（双核环境下最多可以同时拥有两个进程处于运行态）</p>
+<p>就绪态：进程已经拥有了除处理及之外所有需要的资源，一旦获得处理机即可立即进入运行态开始运行。（万事俱备，只欠CPU）</p>
+<p>阻塞态：如：等待操作系统扽配打印机，等待读取磁盘操作的结果。为了提高CPU利用率，需要先将其他进程需要的资源分配到位，才能得到CPU的服务。</p>
+</blockquote>
+<p><strong>另外的两种状态：</strong></p>
+<p>进程运行结束（或者由于BUG导致进程无法继续下去，如数组越界）需要撤销进程，操作系统需要完成撤销进程的相关操作，完成将分配给进程的资源回收，撤销进程的PCB等操作。</p>
+<ol>
+<li><strong>创建态</strong>（新建态）：进程正在被创建，操作系统为其分配资源、创建PCB</li>
+<li><strong>终止态</strong>（结束态）：进程正在从系统中撤销，操作系统会回收分配给进程的资源，撤销其PCB</li>
+</ol>
+<h4 id="2-进程的状态转换"><a href="#2-进程的状态转换" class="headerlink" title="2.进程的状态转换"></a>2.进程的状态转换</h4><p><a href="https://imgtu.com/i/La3vzd"><img src="https://s1.ax1x.com/2022/04/18/La3vzd.png" alt="La3vzd.png"></a></p>
+<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p>绿框知识重要</p>
+<p><a href="https://imgtu.com/i/La8kFS"><img src="https://s1.ax1x.com/2022/04/18/La8kFS.png" alt="La8kFS.png"></a></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -1075,18 +1076,6 @@
       </tags>
   </entry>
   <entry>
-    <title>十九、进程互斥的硬件实现方法</title>
-    <url>/2022/04/27/17-07-35/</url>
-    <content><![CDATA[<p>这里什么都没写，先占个坑以后再写。</p>
-<span id="more"></span>]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>十三、进程调度的时机，切换与过程调度方式</title>
     <url>/2022/04/20/11-29-52/</url>
     <content><![CDATA[<h4 id="1-进程调度的时机"><a href="#1-进程调度的时机" class="headerlink" title="1.进程调度的时机"></a>1.进程调度的时机</h4><p><strong>进程调度</strong>（低级调度），就是按照某种算法从就绪队列中选择一个进程为其分配处理机。</p>
@@ -1157,6 +1146,18 @@
       </tags>
   </entry>
   <entry>
+    <title>十九、进程互斥的硬件实现方法</title>
+    <url>/2022/04/27/17-07-35/</url>
+    <content><![CDATA[<p>这里什么都没写，先占个坑以后再写。</p>
+<span id="more"></span>]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十二、处理机调度的概念，层次</title>
     <url>/2022/04/20/10-26-47/</url>
     <content><![CDATA[<h4 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h4><p>当有一堆任务要处理，但由于资源有限，这些事情没办法同时处理，这就需要确定<strong>某种规则来决定处理这些任务的顺序</strong>，这就是“调度”研究的问题。在多道程序系统中，进程的数量往往是多于处理机个数的，这样不可能同时并行的处理各个进程。<strong>处理机调度</strong>，就是从就绪队列中<strong>按照一定的算法选择一个进程并将处理机分配给他</strong>运行，以实现进程的并发执行。</p>
@@ -1173,73 +1174,6 @@
 <h4 id="5-调度的三个层次——低级调度"><a href="#5-调度的三个层次——低级调度" class="headerlink" title="5.调度的三个层次——低级调度"></a>5.调度的三个层次——低级调度</h4><p><strong>低级调度（进程调度）</strong>其主要任务时按照某种方法和策略从就绪队列中选取一个进程，将处理机分配给他。进程调度是操作系统中<strong>最基本的一种调度</strong>，在一般的操作系统中都必须配置进程调度。进程调度的<strong>频率很高</strong>，一般几十毫秒一次。</p>
 <h4 id="6-三层调度的联系和对比"><a href="#6-三层调度的联系和对比" class="headerlink" title="6.三层调度的联系和对比"></a>6.三层调度的联系和对比</h4><p><img src="https://s1.ax1x.com/2022/04/20/LrKonA.png"></p>
 <h4 id="7-知识回顾"><a href="#7-知识回顾" class="headerlink" title="7.知识回顾"></a>7.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/20/LrKLh8.png"></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十八、进程互斥的软件实现方法</title>
-    <url>/2022/04/26/21-29-08/</url>
-    <content><![CDATA[<h4 id="1-单标志法"><a href="#1-单标志法" class="headerlink" title="1.单标志法"></a>1.单标志法</h4><p>算法思想：两个进程在<strong>访问完临界区后</strong>会把使用临界区的权限转交给另一个进程。也就是说<strong>每个进程进入临界区的权限只能被另一个进程赋予。</strong></p>
-<span id="more"></span>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> turn = <span class="number">0</span>; <span class="comment">//turn表示当前允许进入临界区的进程号</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>P0进程</strong>：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(turn != <span class="number">0</span>);    ①<span class="comment">//进入区</span></span><br><span class="line">critical section;  ②<span class="comment">//临界区</span></span><br><span class="line">turn = <span class="number">1</span>;          ③<span class="comment">//退出区</span></span><br><span class="line">remainder section; ④<span class="comment">//剩余区</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>P1进程</strong>：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(turn != <span class="number">1</span>);    ⑤</span><br><span class="line">critical section;  ⑥</span><br><span class="line">turn = <span class="number">1</span>;          ⑦</span><br><span class="line">remainder section; ⑧</span><br></pre></td></tr></table></figure>
-
-<p>turn的初始值为0，即刚开始只允许0号进程进入临界区。若P1先上处理机运行，则会一直卡在⑤。直到P1的时间片用完，发生调度，切换P0上处理机运行。</p>
-<p>代码①不会卡住P0，P0可以正常访问临界区，在P0访问临界区期间即时切换回P1，由于turn的初始值未改变，P1依然会卡在⑤。只有P0在退出区将turn改为1后，P1才能进入临界区。</p>
-<p>因此，该算法<strong>可以实现“同一时刻最多只允许一个进程访问临界区”</strong>。</p>
-<p>turn表示当前允许进入临界区的进程号，而只有当前允许进入临界区的进程在访问了临界区之后，才会修改turn的值。也就是说，对于临界区的访问，一定是按照P0→P1→P0→P1→……这样轮流访问。这种必须“轮流访问”带来的问题是，如果此时允许进入临界区的进程是P0，而P0一直不访问临界区，那么虽然此时临界区空闲，但是并不允许P1访问。</p>
-<p>因此，<strong>单标志法</strong>存在的主要问题是：<strong>违背“空闲让进”原则。</strong></p>
-<h4 id="2-双标志先检查法"><a href="#2-双标志先检查法" class="headerlink" title="2.双标志先检查法"></a>2.双标志先检查法</h4><p>算法思想：设置一个布尔型数组flag[]，数组中的各个元素用来<strong>标记各进程想进入临界区的意愿</strong>，比如“flag[0]=true”意味着0号进程P0现在想要进入临界区。每个进程在进入临界区之前检查当前有没有别的进程想进入临界区，如果没有，则把自身对应的标志flah[i]设置为ture，之后开始访问临界区。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">bool flag[<span class="number">2</span>]; <span class="comment">//表示进入临界区意愿的数组</span></span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;</span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>; <span class="comment">//刚开始设置为两个进程不想进入临界区</span></span><br></pre></td></tr></table></figure>
-
-<p>P0进程：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>]);      ①</span><br><span class="line">flag[<span class="number">0</span>] = ture;      ②</span><br><span class="line">critical section;    ③</span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;     ④</span><br><span class="line">remainder section;   </span><br></pre></td></tr></table></figure>
-
-<p>P1进程：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(flag[<span class="number">0</span>]);      ⑤  <span class="comment">//如果此时P0想进入临界区，P1就一直循环等待</span></span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">true</span>;      ⑥  <span class="comment">//标记为P1进程想要进入临界区</span></span><br><span class="line">critical section;    ⑦  <span class="comment">//访问临界区</span></span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>;     ⑧  <span class="comment">//访问完临界区，修改标记为P1不想使用临界区</span></span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
-
-<p>若按照1,5,2,6,3,7的顺序执行，P0和P1将会同时访问临界区。因此，双标志检查法的<strong>主要问题</strong>是：<strong>违反“忙则等待”原则。</strong>原因在于，<strong>进入区</strong>的“检查”和“上锁”<strong>两个处理不是一气呵成的</strong>，“检查”后，“上锁”前可能发生进程切换。</p>
-<h4 id="3-双标志后检查法"><a href="#3-双标志后检查法" class="headerlink" title="3.双标志后检查法"></a>3.双标志后检查法</h4><p>算法思想：双标志检查法的改版。前一个算法的问题是先“检查”后“上锁”，但是这两个操作又无法一气呵成，因此导致了两个进程同时进入临界区的问题。因此，人们又想到先“上锁”后“检查”的方法，来避免上述问题。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">bool flag[<span class="number">2</span>]; <span class="comment">//表示进入临界区意愿的始祖</span></span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;</span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>; <span class="comment">//刚开始设置为两个进程不想进入临界区</span></span><br></pre></td></tr></table></figure>
-
-<p>P0进程：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">0</span>] = ture;      ①</span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>]);      ②</span><br><span class="line">critical section;    ③</span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;     ④</span><br><span class="line">remainder section;   </span><br></pre></td></tr></table></figure>
-
-<p>P1进程：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">1</span>] = <span class="literal">true</span>;      ⑤  <span class="comment">//如果此时P0想进入临界区，P1就一直循环等待</span></span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">0</span>]);      ⑥  <span class="comment">//标记为P1进程想要进入临界区</span></span><br><span class="line">critical section;    ⑦  <span class="comment">//访问临界区</span></span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>;     ⑧  <span class="comment">//访问完临界区，修改标记为P1不想使用临界区</span></span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
-
-<p>若按照1,5,2,6….的顺序执行，P0和P1将都无法访问临界区。因此，双标志后检查法虽然<strong>解决了“忙则等待”的问题</strong>的问题，但是又<strong>违背了“空闲让进”和“有限等待”原则</strong>，会因各进程都长期无法访问临界区而<strong>产生“饥饿”</strong>现象。</p>
-<h4 id="4-皮特森（Peterson）算法"><a href="#4-皮特森（Peterson）算法" class="headerlink" title="4.皮特森（Peterson）算法"></a>4.皮特森（Peterson）算法</h4><p>算法思想：双标志后检查法中，两个进程都想争着进入临界区，但是谁也谁，最后谁都无法进入临界区。Gary L.Peterson想到了一种方法，如果双方都争着想要进入临界区，那可以让进程尝试“孔融让梨”，主动让对方使用临界区。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">bool flag[<span class="number">2</span>]; <span class="comment">//表示进入临界区意愿的数组，初始都是false</span></span><br><span class="line"><span class="type">int</span> <span class="variable">turn</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">//turn表示优先让那个进程进入临界区</span></span><br></pre></td></tr></table></figure>
-
-<p>P0进程：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">0</span>] = ture;               ①</span><br><span class="line">turn = <span class="number">1</span>;                     ②</span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>] &amp;&amp; turn == <span class="number">1</span>);  ③</span><br><span class="line">critical section;             ④</span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;              ⑤</span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
-
-<p>P2进程：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">1</span>] = ture;               ⑥ <span class="comment">//表示自己想进入临界区</span></span><br><span class="line">turn = <span class="number">0</span>;                     ⑦ <span class="comment">//可以优先让对方进入临界区</span></span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">0</span>] &amp;&amp; turn == <span class="number">0</span>);  ⑧ <span class="comment">//对方想进，且最后一次是自己“让梨”，拿自己就循环等待</span></span><br><span class="line">critical section;             ⑨ </span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>;              ⑩ <span class="comment">//访问完临界区，表示自己已经不想访问临界区了</span></span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
-
-<p>两种双标志检查法的问题都是由于进入区的几个操作不能一气呵成导致的。我们可以推理验证在Peterson算法中，两个进程进入区中的各个操作按不同顺序穿插执行会发生什么情况。</p>
-<blockquote>
-<p>进入区：</p>
-<ul>
-<li>①主动争取</li>
-<li>②主动谦让</li>
-<li>③检查对方是否也想使用，且最后一次是不是自己说了“客气话”</li>
-</ul>
-</blockquote>
-<p>皮特森算法是用软件方法解决了进程互斥的问题，<strong>遵循了空闲让进，忙则等待，有限等待三个原则</strong>，但是依然<strong>未遵循让权等待</strong>的原则。</p>
-<p><img src="https://s1.ax1x.com/2022/04/27/LqWWvR.png" alt="LqWWvR.png"></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -1488,6 +1422,73 @@
 <blockquote>
 <p>注：这几种算法主要关心对用户的公平性、平均周转时间、平均等待时间等评价系统整体性能指标，但是不关心“响应时间”。也不区分任务的紧急程度，因此对于用户来说，交互性很糟糕。因此这三种算法一般是用于<strong>早期的批处理系统</strong>。当然，FCFS也常结合其他的算法使用，在现在也扮演着很重要的角色。</p>
 </blockquote>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十八、进程互斥的软件实现方法</title>
+    <url>/2022/04/26/21-29-08/</url>
+    <content><![CDATA[<h4 id="1-单标志法"><a href="#1-单标志法" class="headerlink" title="1.单标志法"></a>1.单标志法</h4><p>算法思想：两个进程在<strong>访问完临界区后</strong>会把使用临界区的权限转交给另一个进程。也就是说<strong>每个进程进入临界区的权限只能被另一个进程赋予。</strong></p>
+<span id="more"></span>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> turn = <span class="number">0</span>; <span class="comment">//turn表示当前允许进入临界区的进程号</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>P0进程</strong>：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(turn != <span class="number">0</span>);    ①<span class="comment">//进入区</span></span><br><span class="line">critical section;  ②<span class="comment">//临界区</span></span><br><span class="line">turn = <span class="number">1</span>;          ③<span class="comment">//退出区</span></span><br><span class="line">remainder section; ④<span class="comment">//剩余区</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>P1进程</strong>：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(turn != <span class="number">1</span>);    ⑤</span><br><span class="line">critical section;  ⑥</span><br><span class="line">turn = <span class="number">1</span>;          ⑦</span><br><span class="line">remainder section; ⑧</span><br></pre></td></tr></table></figure>
+
+<p>turn的初始值为0，即刚开始只允许0号进程进入临界区。若P1先上处理机运行，则会一直卡在⑤。直到P1的时间片用完，发生调度，切换P0上处理机运行。</p>
+<p>代码①不会卡住P0，P0可以正常访问临界区，在P0访问临界区期间即时切换回P1，由于turn的初始值未改变，P1依然会卡在⑤。只有P0在退出区将turn改为1后，P1才能进入临界区。</p>
+<p>因此，该算法<strong>可以实现“同一时刻最多只允许一个进程访问临界区”</strong>。</p>
+<p>turn表示当前允许进入临界区的进程号，而只有当前允许进入临界区的进程在访问了临界区之后，才会修改turn的值。也就是说，对于临界区的访问，一定是按照P0→P1→P0→P1→……这样轮流访问。这种必须“轮流访问”带来的问题是，如果此时允许进入临界区的进程是P0，而P0一直不访问临界区，那么虽然此时临界区空闲，但是并不允许P1访问。</p>
+<p>因此，<strong>单标志法</strong>存在的主要问题是：<strong>违背“空闲让进”原则。</strong></p>
+<h4 id="2-双标志先检查法"><a href="#2-双标志先检查法" class="headerlink" title="2.双标志先检查法"></a>2.双标志先检查法</h4><p>算法思想：设置一个布尔型数组flag[]，数组中的各个元素用来<strong>标记各进程想进入临界区的意愿</strong>，比如“flag[0]=true”意味着0号进程P0现在想要进入临界区。每个进程在进入临界区之前检查当前有没有别的进程想进入临界区，如果没有，则把自身对应的标志flah[i]设置为ture，之后开始访问临界区。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">bool flag[<span class="number">2</span>]; <span class="comment">//表示进入临界区意愿的数组</span></span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;</span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>; <span class="comment">//刚开始设置为两个进程不想进入临界区</span></span><br></pre></td></tr></table></figure>
+
+<p>P0进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>]);      ①</span><br><span class="line">flag[<span class="number">0</span>] = ture;      ②</span><br><span class="line">critical section;    ③</span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;     ④</span><br><span class="line">remainder section;   </span><br></pre></td></tr></table></figure>
+
+<p>P1进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(flag[<span class="number">0</span>]);      ⑤  <span class="comment">//如果此时P0想进入临界区，P1就一直循环等待</span></span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">true</span>;      ⑥  <span class="comment">//标记为P1进程想要进入临界区</span></span><br><span class="line">critical section;    ⑦  <span class="comment">//访问临界区</span></span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>;     ⑧  <span class="comment">//访问完临界区，修改标记为P1不想使用临界区</span></span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
+
+<p>若按照1,5,2,6,3,7的顺序执行，P0和P1将会同时访问临界区。因此，双标志检查法的<strong>主要问题</strong>是：<strong>违反“忙则等待”原则。</strong>原因在于，<strong>进入区</strong>的“检查”和“上锁”<strong>两个处理不是一气呵成的</strong>，“检查”后，“上锁”前可能发生进程切换。</p>
+<h4 id="3-双标志后检查法"><a href="#3-双标志后检查法" class="headerlink" title="3.双标志后检查法"></a>3.双标志后检查法</h4><p>算法思想：双标志检查法的改版。前一个算法的问题是先“检查”后“上锁”，但是这两个操作又无法一气呵成，因此导致了两个进程同时进入临界区的问题。因此，人们又想到先“上锁”后“检查”的方法，来避免上述问题。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">bool flag[<span class="number">2</span>]; <span class="comment">//表示进入临界区意愿的始祖</span></span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;</span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>; <span class="comment">//刚开始设置为两个进程不想进入临界区</span></span><br></pre></td></tr></table></figure>
+
+<p>P0进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">0</span>] = ture;      ①</span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>]);      ②</span><br><span class="line">critical section;    ③</span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;     ④</span><br><span class="line">remainder section;   </span><br></pre></td></tr></table></figure>
+
+<p>P1进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">1</span>] = <span class="literal">true</span>;      ⑤  <span class="comment">//如果此时P0想进入临界区，P1就一直循环等待</span></span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">0</span>]);      ⑥  <span class="comment">//标记为P1进程想要进入临界区</span></span><br><span class="line">critical section;    ⑦  <span class="comment">//访问临界区</span></span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>;     ⑧  <span class="comment">//访问完临界区，修改标记为P1不想使用临界区</span></span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
+
+<p>若按照1,5,2,6….的顺序执行，P0和P1将都无法访问临界区。因此，双标志后检查法虽然<strong>解决了“忙则等待”的问题</strong>的问题，但是又<strong>违背了“空闲让进”和“有限等待”原则</strong>，会因各进程都长期无法访问临界区而<strong>产生“饥饿”</strong>现象。</p>
+<h4 id="4-皮特森（Peterson）算法"><a href="#4-皮特森（Peterson）算法" class="headerlink" title="4.皮特森（Peterson）算法"></a>4.皮特森（Peterson）算法</h4><p>算法思想：双标志后检查法中，两个进程都想争着进入临界区，但是谁也谁，最后谁都无法进入临界区。Gary L.Peterson想到了一种方法，如果双方都争着想要进入临界区，那可以让进程尝试“孔融让梨”，主动让对方使用临界区。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">bool flag[<span class="number">2</span>]; <span class="comment">//表示进入临界区意愿的数组，初始都是false</span></span><br><span class="line"><span class="type">int</span> <span class="variable">turn</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">//turn表示优先让那个进程进入临界区</span></span><br></pre></td></tr></table></figure>
+
+<p>P0进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">0</span>] = ture;               ①</span><br><span class="line">turn = <span class="number">1</span>;                     ②</span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>] &amp;&amp; turn == <span class="number">1</span>);  ③</span><br><span class="line">critical section;             ④</span><br><span class="line">flag[<span class="number">0</span>] = <span class="literal">false</span>;              ⑤</span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
+
+<p>P2进程：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">flag[<span class="number">1</span>] = ture;               ⑥ <span class="comment">//表示自己想进入临界区</span></span><br><span class="line">turn = <span class="number">0</span>;                     ⑦ <span class="comment">//可以优先让对方进入临界区</span></span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">0</span>] &amp;&amp; turn == <span class="number">0</span>);  ⑧ <span class="comment">//对方想进，且最后一次是自己“让梨”，拿自己就循环等待</span></span><br><span class="line">critical section;             ⑨ </span><br><span class="line">flag[<span class="number">1</span>] = <span class="literal">false</span>;              ⑩ <span class="comment">//访问完临界区，表示自己已经不想访问临界区了</span></span><br><span class="line">remainder section;</span><br></pre></td></tr></table></figure>
+
+<p>两种双标志检查法的问题都是由于进入区的几个操作不能一气呵成导致的。我们可以推理验证在Peterson算法中，两个进程进入区中的各个操作按不同顺序穿插执行会发生什么情况。</p>
+<blockquote>
+<p>进入区：</p>
+<ul>
+<li>①主动争取</li>
+<li>②主动谦让</li>
+<li>③检查对方是否也想使用，且最后一次是不是自己说了“客气话”</li>
+</ul>
+</blockquote>
+<p>皮特森算法是用软件方法解决了进程互斥的问题，<strong>遵循了空闲让进，忙则等待，有限等待三个原则</strong>，但是依然<strong>未遵循让权等待</strong>的原则。</p>
+<p><img src="https://s1.ax1x.com/2022/04/27/LqWWvR.png" alt="LqWWvR.png"></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -1870,80 +1871,6 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
       </tags>
   </entry>
   <entry>
-    <title>数据库之关系数据库</title>
-    <url>/2022/05/05/20-01-47/</url>
-    <content><![CDATA[<h5 id="（1）关系模式（了解即可）"><a href="#（1）关系模式（了解即可）" class="headerlink" title="（1）关系模式（了解即可）"></a>（1）关系模式（了解即可）</h5><p>关系模式：对关系的描述</p>
-<p>什么是关系？关系是一张表，一张二维表。</p>
-<p>关系有那些需要描述？P41</p>
-<p>1.关系中有哪些属性</p>
-<p>2.这些属性来自那些域</p>
-<span id="more"></span>
-
-<p>3.属性与域之间的映射关系</p>
-<p>可以形象的表示为：R(U,D,DOM,F)</p>
-<p>R：关系名</p>
-<p>U：所有属性名</p>
-<p>D：属性来自那些域</p>
-<p>DOM：属性和域的映射</p>
-<p>F：属性间的依赖关系</p>
-<p>关系数据库：关系数据库也有关系数据库模式</p>
-<h5 id="（2）关系操作"><a href="#（2）关系操作" class="headerlink" title="（2）关系操作"></a>（2）关系操作</h5><p>关系操作：插入，查询，删除，修改。</p>
-<p>其中，查询操作分为：选择，投影，连接，除法，并，差，交，笛卡尔积。</p>
-<p>查询操作的基本操作：选择，投影，并，差，笛卡尔积。</p>
-<h5 id="（3）关系语言的分类"><a href="#（3）关系语言的分类" class="headerlink" title="（3）关系语言的分类"></a>（3）关系语言的分类</h5><p>分为<font color=red>关系代数语言（重点）</font>，关系演算语言，<font color=red>SQL语言（这个不必多说）</font></p>
-<blockquote>
-<p>关系代数语言：</p>
-<p>关系代数语言是一种抽象的查询语言，它用对关系的运算来表达查询。</p>
-<p>三大要素：<strong>运算对象（关系），运算符（集合运算符和专门的关系运算符）和运算结果（关系）</strong></p>
-<p><img src="https://s1.ax1x.com/2022/05/05/Om8I3V.png" alt="Om8I3V.png"></p>
-<p>关系代数运算：5种基本运算：并，差，交，笛卡尔积，除，选择，投影，连接</p>
-<p>1.交（他俩的公共部分）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmJksU.png" alt="OmJksU.png"></p>
-<p>2.并（他俩的所有部分，不包含重复）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmJniR.png" alt="OmJniR.png"></p>
-<p>3.差（如A-B，去除A中B的部分）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmJ3LD.png" alt="OmJ3LD.png"></p>
-<p>4.笛卡尔积（假如A表中的数据为m行，B表中的数据有n行，那么A和B做笛卡尔积，结果为m*n行。）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmYp0e.png" alt="OmYp0e.png"></p>
-<p>如图，假设有表（a）和（b），则（c）为并集，（d）为交集，（e）为差，（f）为笛卡尔积，R表的第一行分别对应S表的第一行，第二行和第三行，R表的第二行对应S表的第一行，第二行和第三趟，R表的第三行同理。</p>
-<ol start="5">
-<li>选择（从表中选择符合条件的一行或多行记录）</li>
-</ol>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmtyPs.png" alt="OmtyPs.png"></p>
-<p>例子：</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmtOsK.png" alt="OmtOsK.png"></p>
-<p><img src="https://s1.ax1x.com/2022/05/05/Omtxde.png" alt="Omtxde.png"></p>
-<p>上图2.4的操作语句意为从student表中的sdept列里选择值为cs的记录。</p>
-<p>6.投影（使用一个类似于π的符号）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmN6Te.png" alt="OmN6Te.png"></p>
-<p>上图意为从sc表里选择列snp等于9500的列，但只显示cno这一列。</p>
-<p>连接又可分为：自然连接，外连接，左外连接和右外连接。</p>
-<p>（1）自然连接，把共同属性进行等值连接，把R和S中所有的属性名都放在一起，放的值满足共同属性的值都相等，如果值相等就连接起来拼接到后面。</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmDuHP.png" alt="OmDuHP.png"></p>
-<p>悬浮元祖：两个关系R和S在做自然连接时，关系R中的某些元祖有可能在S中不存在公共属性上值相等的元组，从而造成R中这些远足在操作时被舍弃了，这些被舍弃的元组被称为悬浮元祖。（即没有被用过的元组，被废弃了）</p>
-<p>（2）外连接</p>
-<p>如果把悬浮元祖也保存在结果关系中，而其他属性上填空值，就叫做外连接。</p>
-<p>（3）左外连接</p>
-<p>只保留左边关系R中的悬浮元祖。</p>
-<p>（4）右外连接</p>
-<p>只保留右边关系S中的悬浮元祖。</p>
-<p>7.除（保留R中满足S的，而且R中列要去掉S的列）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmsJwq.png" alt="OmsJwq.png"></p>
-<p>上图中只有张三和王五同时满足选修了数据库和网络这两门课。</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/Oms5Xd.png" alt="Oms5Xd.png"></p>
-</blockquote>
-<h5 id="（4）关系完整性"><a href="#（4）关系完整性" class="headerlink" title="（4）关系完整性"></a>（4）关系完整性</h5><p>1.实体完整性，主码为1且非空。如学生实体的学号唯一且非空。</p>
-<p>2.参照完整性，外码要么为空，要么对应另一表的主码。</p>
-<p>3.用户定义完整性，你自己写的要完整，比如学号多少，姓名，班级，专业之类。如需要自己填写的信息都填写上。</p>
-<h5 id="内容挺多且都比较重要。"><a href="#内容挺多且都比较重要。" class="headerlink" title="内容挺多且都比较重要。"></a>内容挺多且都比较重要。</h5>]]></content>
-      <categories>
-        <category>数据库系统概论</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据库之SQL语言（上）</title>
     <url>/2022/05/06/20-43-40/</url>
     <content><![CDATA[<h5 id="（1）SQL的基本概念"><a href="#（1）SQL的基本概念" class="headerlink" title="（1）SQL的基本概念"></a>（1）SQL的基本概念</h5><p>SQL是Structured Query Language的缩写，意思是<strong>结构化查询语言</strong>，是一种在数据库管理系统中查询或对数据库库里面的数据进行更改的语言。</p>
@@ -2087,6 +2014,189 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
       </categories>
       <tags>
         <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库之关系数据库</title>
+    <url>/2022/05/05/20-01-47/</url>
+    <content><![CDATA[<h5 id="（1）关系模式（了解即可）"><a href="#（1）关系模式（了解即可）" class="headerlink" title="（1）关系模式（了解即可）"></a>（1）关系模式（了解即可）</h5><p>关系模式：对关系的描述</p>
+<p>什么是关系？关系是一张表，一张二维表。</p>
+<p>关系有那些需要描述？P41</p>
+<p>1.关系中有哪些属性</p>
+<p>2.这些属性来自那些域</p>
+<span id="more"></span>
+
+<p>3.属性与域之间的映射关系</p>
+<p>可以形象的表示为：R(U,D,DOM,F)</p>
+<p>R：关系名</p>
+<p>U：所有属性名</p>
+<p>D：属性来自那些域</p>
+<p>DOM：属性和域的映射</p>
+<p>F：属性间的依赖关系</p>
+<p>关系数据库：关系数据库也有关系数据库模式</p>
+<h5 id="（2）关系操作"><a href="#（2）关系操作" class="headerlink" title="（2）关系操作"></a>（2）关系操作</h5><p>关系操作：插入，查询，删除，修改。</p>
+<p>其中，查询操作分为：选择，投影，连接，除法，并，差，交，笛卡尔积。</p>
+<p>查询操作的基本操作：选择，投影，并，差，笛卡尔积。</p>
+<h5 id="（3）关系语言的分类"><a href="#（3）关系语言的分类" class="headerlink" title="（3）关系语言的分类"></a>（3）关系语言的分类</h5><p>分为<font color=red>关系代数语言（重点）</font>，关系演算语言，<font color=red>SQL语言（这个不必多说）</font></p>
+<blockquote>
+<p>关系代数语言：</p>
+<p>关系代数语言是一种抽象的查询语言，它用对关系的运算来表达查询。</p>
+<p>三大要素：<strong>运算对象（关系），运算符（集合运算符和专门的关系运算符）和运算结果（关系）</strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/05/Om8I3V.png" alt="Om8I3V.png"></p>
+<p>关系代数运算：5种基本运算：并，差，交，笛卡尔积，除，选择，投影，连接</p>
+<p>1.交（他俩的公共部分）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmJksU.png" alt="OmJksU.png"></p>
+<p>2.并（他俩的所有部分，不包含重复）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmJniR.png" alt="OmJniR.png"></p>
+<p>3.差（如A-B，去除A中B的部分）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmJ3LD.png" alt="OmJ3LD.png"></p>
+<p>4.笛卡尔积（假如A表中的数据为m行，B表中的数据有n行，那么A和B做笛卡尔积，结果为m*n行。）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmYp0e.png" alt="OmYp0e.png"></p>
+<p>如图，假设有表（a）和（b），则（c）为并集，（d）为交集，（e）为差，（f）为笛卡尔积，R表的第一行分别对应S表的第一行，第二行和第三行，R表的第二行对应S表的第一行，第二行和第三趟，R表的第三行同理。</p>
+<ol start="5">
+<li>选择（从表中选择符合条件的一行或多行记录）</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmtyPs.png" alt="OmtyPs.png"></p>
+<p>例子：</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmtOsK.png" alt="OmtOsK.png"></p>
+<p><img src="https://s1.ax1x.com/2022/05/05/Omtxde.png" alt="Omtxde.png"></p>
+<p>上图2.4的操作语句意为从student表中的sdept列里选择值为cs的记录。</p>
+<p>6.投影（使用一个类似于π的符号）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmN6Te.png" alt="OmN6Te.png"></p>
+<p>上图意为从sc表里选择列snp等于9500的列，但只显示cno这一列。</p>
+<p>连接又可分为：自然连接，外连接，左外连接和右外连接。</p>
+<p>（1）自然连接，把共同属性进行等值连接，把R和S中所有的属性名都放在一起，放的值满足共同属性的值都相等，如果值相等就连接起来拼接到后面。</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmDuHP.png" alt="OmDuHP.png"></p>
+<p>悬浮元祖：两个关系R和S在做自然连接时，关系R中的某些元祖有可能在S中不存在公共属性上值相等的元组，从而造成R中这些远足在操作时被舍弃了，这些被舍弃的元组被称为悬浮元祖。（即没有被用过的元组，被废弃了）</p>
+<p>（2）外连接</p>
+<p>如果把悬浮元祖也保存在结果关系中，而其他属性上填空值，就叫做外连接。</p>
+<p>（3）左外连接</p>
+<p>只保留左边关系R中的悬浮元祖。</p>
+<p>（4）右外连接</p>
+<p>只保留右边关系S中的悬浮元祖。</p>
+<p>7.除（保留R中满足S的，而且R中列要去掉S的列）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmsJwq.png" alt="OmsJwq.png"></p>
+<p>上图中只有张三和王五同时满足选修了数据库和网络这两门课。</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/Oms5Xd.png" alt="Oms5Xd.png"></p>
+</blockquote>
+<h5 id="（4）关系完整性"><a href="#（4）关系完整性" class="headerlink" title="（4）关系完整性"></a>（4）关系完整性</h5><p>1.实体完整性，主码为1且非空。如学生实体的学号唯一且非空。</p>
+<p>2.参照完整性，外码要么为空，要么对应另一表的主码。</p>
+<p>3.用户定义完整性，你自己写的要完整，比如学号多少，姓名，班级，专业之类。如需要自己填写的信息都填写上。</p>
+<h5 id="内容挺多且都比较重要。"><a href="#内容挺多且都比较重要。" class="headerlink" title="内容挺多且都比较重要。"></a>内容挺多且都比较重要。</h5>]]></content>
+      <categories>
+        <category>数据库系统概论</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库之绪论</title>
+    <url>/2022/05/04/16-22-14/</url>
+    <content><![CDATA[<h4 id="数据库的四个基本概念"><a href="#数据库的四个基本概念" class="headerlink" title="数据库的四个基本概念"></a>数据库的四个基本概念</h4><p>①数据：描述事物的符号记录。</p>
+<p>②数据库：通俗的讲，数据库具有<strong>永久存储，有组织和可共享</strong>的三个基本特点</p>
+<p>严格地讲，<strong>数据是长期存储在计算机内、有组织的、可共享的大量数据的集合，数据库中的数据按一定的数据模型组织、描述和存储，具有较小的冗余度，较高的数据独立性和易扩展性，并可为各种用户共享。</strong></p>
+<span id="more"></span>
+
+<p>③数据库管理系统：是位于用户和操作系统之间的一层数据管理软件，和操作系统一样是<strong>计算机的基础软件</strong>。</p>
+<p>主要功能：1.数据定义功能；2.数据组织，存储和管理；3.数据操纵功能；4.数据库的事务管理和运行管理；5.数据库的建立和维护功能；6.其他功能（通信功能，数据转换功能，互访和互操作功能等）</p>
+<p>④数据库系统：由数据库、数据库管理系统（及应用开发工具）、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVeJmT.png" alt="OVeJmT.png"></p>
+<h4 id="数据库的发展阶段"><a href="#数据库的发展阶段" class="headerlink" title="数据库的发展阶段"></a>数据库的发展阶段</h4><p>①人工阶段：数据不保存、不共享，不具有独立性</p>
+<p>②文件系统阶段：可保存，但共享性差，冗余度大，独立性差</p>
+<p>③数据库管理系统：数据库系统的出现使得信息系统以<strong>加工数据的程序为中心</strong>转向围绕<strong>共享的数据库</strong>为中心的新阶段，实现整体数据的结构化。</p>
+<p><strong>数据的共享性高，冗余度低且易扩充，数据共享可以大大减少数据冗余，节约存储空间。</strong></p>
+<blockquote>
+<p>数据的独立性高：</p>
+<ul>
+<li>物理独立性：是指用户的应用程序与数据库中数据的<strong>物理存储</strong>是相互独立的。</li>
+<li>逻辑独立性：是指用户的应用程序与数据库的<strong>逻辑结构</strong>是相互独立的。</li>
+</ul>
+</blockquote>
+<p>数据库由<strong>数据库管理员（DBA）</strong>统一管理和控制。</p>
+<h4 id="数据模型（这个应该蛮重要的）"><a href="#数据模型（这个应该蛮重要的）" class="headerlink" title="数据模型（这个应该蛮重要的）"></a>数据模型<font color=red>（这个应该蛮重要的）</font></h4><h5 id="（1）两类数据模型："><a href="#（1）两类数据模型：" class="headerlink" title="（1）两类数据模型："></a>（1）两类数据模型：</h5><p><strong>概念模型+逻辑模型和物理模型</strong>（人们首先将现实世界抽象为信息世界，然后将信息世界转换为机器世界）</p>
+<p>1.概念模型：也称信息模型，它是按用户观点来对数据和信息建模，主要用于数据库设计。</p>
+<blockquote>
+<p>基本概念：</p>
+<ul>
+<li><strong>实体</strong>：客观存在可相互区别的事物，人</li>
+<li><strong>属性</strong>：实体所具有的某一特性。如人的鼻子，嘴巴。</li>
+<li><strong>码</strong>：唯一标识实体的属性。如学号</li>
+<li><strong>实体型</strong>：用实体名及其属性集合来抽象和刻画同类实体。如含有鼻子和嘴巴的人。</li>
+<li><strong>实体集</strong>：同一类型实体的集合。如学校。</li>
+<li><strong>联系</strong>：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。</li>
+</ul>
+</blockquote>
+<p>概念模型的一种表示方法：<strong>实体——联系</strong>方法，用<strong>E-R图</strong>来描述现实世界的概念模型。<strong>E-R图方法也称为E-R模型。</strong></p>
+<p>2.逻辑模型：它是按计算机系统的观点对数据建模，主要用于数据库管理系统的实现。</p>
+<p>包括：**①层次模型      ②网状模型       ③关系模型  **</p>
+<p>物理模型：是对数据最底层的抽象，它描述数据在系统内部的表示方法和存取方法，或在磁盘或磁带上的存储方式和存取方法，是面向计算机系统的。</p>
+<p>联系：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。实体内部的联系通常是指<strong>实体各属性之间的联系</strong>。</p>
+<blockquote>
+<p><strong><font color=red>E-R图</font></strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVKrPe.png" alt="OVKrPe.png"></p>
+<p>E-R图分为<strong>实体，属性和关系</strong>三个基本部分。<strong>实体用长方形，属性用椭圆形，关系用菱形。</strong></p>
+</blockquote>
+<h5 id="（2）常用的数据模型"><a href="#（2）常用的数据模型" class="headerlink" title="（2）常用的数据模型"></a>（2）常用的数据模型</h5><p>常用的数据模型：<strong>层次模型，网状模型，关系模型</strong>，面向对象数据模型，对象关系数据模型，半结构化数据模型</p>
+<blockquote>
+<p><strong>层次模型</strong>:</p>
+<p>1.有且只有一个节点没有双亲节点，这个节点被称为<strong>根节点</strong>。</p>
+<p>2.根以外的其他节点有且只有一个双亲结点。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVQIjs.png" alt="OVQIjs.png"></p>
+<p><strong>网状模型</strong>：</p>
+<p>1.允许一个以上的节点无双亲。</p>
+<p>2.一个节点可以有多于一个双亲。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVlKbt.png" alt="OVlKbt.png"></p>
+<p><strong>关系模型</strong>：</p>
+<p>关系：一个关系对应通常说的一张表。</p>
+<p>元组：表中的一行。</p>
+<p>属性：表中的一列。</p>
+<p>码：也称为码键，表中的某个属性组。（主键）</p>
+<p>域：是一组具有相同数据类型的值的集合。</p>
+<p>分量：元祖中的一个属性。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVlRq1.png" alt="OVlRq1.png"></p>
+</blockquote>
+<h5 id="（3）数据库系统的结构"><a href="#（3）数据库系统的结构" class="headerlink" title="（3）数据库系统的结构"></a>（3）数据库系统的结构</h5><p>1.模式数据库中全体数据的逻辑结构和特征的描述，它仅仅涉及型的描述，不涉及具体的值。其中一个具体值称为模式的一个实例。<strong>模式是相对稳定的，实例是相对变动的。</strong></p>
+<p>三级模式结构：<strong>外模式+模式+内模式</strong>。</p>
+<p>外模式：也称子模式或用户模式，它是数据库用户（包括应用程序猿和最终用户）能够看见和使用的局部数据的逻辑结构和特征的描述，是数据库用户的数据视图，是与某一应用有关的数据的逻辑表示。</p>
+<p>模式：也称逻辑模式。是数据库中全体数据的逻辑结构和特征的描述，是所有用户的公共数据视图。</p>
+<p>内模式：也称存储模式，一个数据库只有一个内模式，他是数据物理结构和存取方式的描述，是数据在数据库内部的组织方式。</p>
+<p>2.二级映像：</p>
+<p>外模式/模式映像：当模式改变时，由数据库管理员对各个外模式/模式映像作相应改变，可以使外模式不变，应用程序不必修改。保证了数据与程序的逻辑独立性。</p>
+<p>模式/内模式映像：当数据库的存取结构改变时，由数据库管理员对模式/内模式作相应改变，可以使模式保持不变，从而应用程序也不用改变，保证了数据与程序的物理独立性。</p>
+<p>数据与程序之间的独立性使得数据的定义和描述可以从应用程序中分离出去，另外，由于数据的存取由数据库管理系统管理，从而简化了应用程序的编制，大大减少了应用程序的维护和修改。</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/Om8yjS.png" alt="Om8yjS.png"></p>
+<h5 id="（4）数据库系统的组成"><a href="#（4）数据库系统的组成" class="headerlink" title="（4）数据库系统的组成"></a>（4）数据库系统的组成</h5><p>1.硬件平台及数据库：足够大内存、磁盘或磁盘阵列等设备，较高的通道能力以提高数据的传送率。</p>
+<p>2.软件：数据库管理系统，支持的数据库管理系统运行的操作系统，具有与数据库接口的高级语言及其编译系统，以数据库管理系统为核心的应用开发工具，为特定应用环境开发的数据库应用系统。</p>
+<p>3.人员：开发，管理和使用数据库的人员主要包括数据库管理员、系统分析员和数据库设计人员、应用程序猿和最终用户。</p>
+<p>数据库管理员职责：决定数据库中的信息内容和结构、决定数据库的存储结构和存取策略、定义数据的安全性要求和完整性约束条件。</p>
+]]></content>
+      <categories>
+        <category>数据库系统概论</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件工程笔记</title>
+    <url>/2022/04/24/18-23-26/</url>
+    <content><![CDATA[<blockquote>
+<p>软件工程别人整理的考研笔记</p>
+<p>整理的挺全面的</p>
+</blockquote>
+<span id="more"></span>
+
+<blockquote>
+<p><a href="https://cloud.189.cn/t/JfA3mmiUjaUf">https://cloud.189.cn/t/JfA3mmiUjaUf</a> (访问码:e6l2)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>笔记分享</category>
+      </categories>
+      <tags>
+        <tag>软件工程</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -2250,115 +2360,6 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软件工程笔记</title>
-    <url>/2022/04/24/18-23-26/</url>
-    <content><![CDATA[<blockquote>
-<p>软件工程别人整理的考研笔记</p>
-<p>整理的挺全面的</p>
-</blockquote>
-<span id="more"></span>
-
-<blockquote>
-<p><a href="https://cloud.189.cn/t/JfA3mmiUjaUf">https://cloud.189.cn/t/JfA3mmiUjaUf</a> (访问码:e6l2)</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>笔记分享</category>
-      </categories>
-      <tags>
-        <tag>软件工程</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库之绪论</title>
-    <url>/2022/05/04/16-22-14/</url>
-    <content><![CDATA[<h4 id="数据库的四个基本概念"><a href="#数据库的四个基本概念" class="headerlink" title="数据库的四个基本概念"></a>数据库的四个基本概念</h4><p>①数据：描述事物的符号记录。</p>
-<p>②数据库：通俗的讲，数据库具有<strong>永久存储，有组织和可共享</strong>的三个基本特点</p>
-<p>严格地讲，<strong>数据是长期存储在计算机内、有组织的、可共享的大量数据的集合，数据库中的数据按一定的数据模型组织、描述和存储，具有较小的冗余度，较高的数据独立性和易扩展性，并可为各种用户共享。</strong></p>
-<span id="more"></span>
-
-<p>③数据库管理系统：是位于用户和操作系统之间的一层数据管理软件，和操作系统一样是<strong>计算机的基础软件</strong>。</p>
-<p>主要功能：1.数据定义功能；2.数据组织，存储和管理；3.数据操纵功能；4.数据库的事务管理和运行管理；5.数据库的建立和维护功能；6.其他功能（通信功能，数据转换功能，互访和互操作功能等）</p>
-<p>④数据库系统：由数据库、数据库管理系统（及应用开发工具）、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVeJmT.png" alt="OVeJmT.png"></p>
-<h4 id="数据库的发展阶段"><a href="#数据库的发展阶段" class="headerlink" title="数据库的发展阶段"></a>数据库的发展阶段</h4><p>①人工阶段：数据不保存、不共享，不具有独立性</p>
-<p>②文件系统阶段：可保存，但共享性差，冗余度大，独立性差</p>
-<p>③数据库管理系统：数据库系统的出现使得信息系统以<strong>加工数据的程序为中心</strong>转向围绕<strong>共享的数据库</strong>为中心的新阶段，实现整体数据的结构化。</p>
-<p><strong>数据的共享性高，冗余度低且易扩充，数据共享可以大大减少数据冗余，节约存储空间。</strong></p>
-<blockquote>
-<p>数据的独立性高：</p>
-<ul>
-<li>物理独立性：是指用户的应用程序与数据库中数据的<strong>物理存储</strong>是相互独立的。</li>
-<li>逻辑独立性：是指用户的应用程序与数据库的<strong>逻辑结构</strong>是相互独立的。</li>
-</ul>
-</blockquote>
-<p>数据库由<strong>数据库管理员（DBA）</strong>统一管理和控制。</p>
-<h4 id="数据模型（这个应该蛮重要的）"><a href="#数据模型（这个应该蛮重要的）" class="headerlink" title="数据模型（这个应该蛮重要的）"></a>数据模型<font color=red>（这个应该蛮重要的）</font></h4><h5 id="（1）两类数据模型："><a href="#（1）两类数据模型：" class="headerlink" title="（1）两类数据模型："></a>（1）两类数据模型：</h5><p><strong>概念模型+逻辑模型和物理模型</strong>（人们首先将现实世界抽象为信息世界，然后将信息世界转换为机器世界）</p>
-<p>1.概念模型：也称信息模型，它是按用户观点来对数据和信息建模，主要用于数据库设计。</p>
-<blockquote>
-<p>基本概念：</p>
-<ul>
-<li><strong>实体</strong>：客观存在可相互区别的事物，人</li>
-<li><strong>属性</strong>：实体所具有的某一特性。如人的鼻子，嘴巴。</li>
-<li><strong>码</strong>：唯一标识实体的属性。如学号</li>
-<li><strong>实体型</strong>：用实体名及其属性集合来抽象和刻画同类实体。如含有鼻子和嘴巴的人。</li>
-<li><strong>实体集</strong>：同一类型实体的集合。如学校。</li>
-<li><strong>联系</strong>：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。</li>
-</ul>
-</blockquote>
-<p>概念模型的一种表示方法：<strong>实体——联系</strong>方法，用<strong>E-R图</strong>来描述现实世界的概念模型。<strong>E-R图方法也称为E-R模型。</strong></p>
-<p>2.逻辑模型：它是按计算机系统的观点对数据建模，主要用于数据库管理系统的实现。</p>
-<p>包括：**①层次模型      ②网状模型       ③关系模型  **</p>
-<p>物理模型：是对数据最底层的抽象，它描述数据在系统内部的表示方法和存取方法，或在磁盘或磁带上的存储方式和存取方法，是面向计算机系统的。</p>
-<p>联系：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。实体内部的联系通常是指<strong>实体各属性之间的联系</strong>。</p>
-<blockquote>
-<p><strong><font color=red>E-R图</font></strong></p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVKrPe.png" alt="OVKrPe.png"></p>
-<p>E-R图分为<strong>实体，属性和关系</strong>三个基本部分。<strong>实体用长方形，属性用椭圆形，关系用菱形。</strong></p>
-</blockquote>
-<h5 id="（2）常用的数据模型"><a href="#（2）常用的数据模型" class="headerlink" title="（2）常用的数据模型"></a>（2）常用的数据模型</h5><p>常用的数据模型：<strong>层次模型，网状模型，关系模型</strong>，面向对象数据模型，对象关系数据模型，半结构化数据模型</p>
-<blockquote>
-<p><strong>层次模型</strong>:</p>
-<p>1.有且只有一个节点没有双亲节点，这个节点被称为<strong>根节点</strong>。</p>
-<p>2.根以外的其他节点有且只有一个双亲结点。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVQIjs.png" alt="OVQIjs.png"></p>
-<p><strong>网状模型</strong>：</p>
-<p>1.允许一个以上的节点无双亲。</p>
-<p>2.一个节点可以有多于一个双亲。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVlKbt.png" alt="OVlKbt.png"></p>
-<p><strong>关系模型</strong>：</p>
-<p>关系：一个关系对应通常说的一张表。</p>
-<p>元组：表中的一行。</p>
-<p>属性：表中的一列。</p>
-<p>码：也称为码键，表中的某个属性组。（主键）</p>
-<p>域：是一组具有相同数据类型的值的集合。</p>
-<p>分量：元祖中的一个属性。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVlRq1.png" alt="OVlRq1.png"></p>
-</blockquote>
-<h5 id="（3）数据库系统的结构"><a href="#（3）数据库系统的结构" class="headerlink" title="（3）数据库系统的结构"></a>（3）数据库系统的结构</h5><p>1.模式数据库中全体数据的逻辑结构和特征的描述，它仅仅涉及型的描述，不涉及具体的值。其中一个具体值称为模式的一个实例。<strong>模式是相对稳定的，实例是相对变动的。</strong></p>
-<p>三级模式结构：<strong>外模式+模式+内模式</strong>。</p>
-<p>外模式：也称子模式或用户模式，它是数据库用户（包括应用程序猿和最终用户）能够看见和使用的局部数据的逻辑结构和特征的描述，是数据库用户的数据视图，是与某一应用有关的数据的逻辑表示。</p>
-<p>模式：也称逻辑模式。是数据库中全体数据的逻辑结构和特征的描述，是所有用户的公共数据视图。</p>
-<p>内模式：也称存储模式，一个数据库只有一个内模式，他是数据物理结构和存取方式的描述，是数据在数据库内部的组织方式。</p>
-<p>2.二级映像：</p>
-<p>外模式/模式映像：当模式改变时，由数据库管理员对各个外模式/模式映像作相应改变，可以使外模式不变，应用程序不必修改。保证了数据与程序的逻辑独立性。</p>
-<p>模式/内模式映像：当数据库的存取结构改变时，由数据库管理员对模式/内模式作相应改变，可以使模式保持不变，从而应用程序也不用改变，保证了数据与程序的物理独立性。</p>
-<p>数据与程序之间的独立性使得数据的定义和描述可以从应用程序中分离出去，另外，由于数据的存取由数据库管理系统管理，从而简化了应用程序的编制，大大减少了应用程序的维护和修改。</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/Om8yjS.png" alt="Om8yjS.png"></p>
-<h5 id="（4）数据库系统的组成"><a href="#（4）数据库系统的组成" class="headerlink" title="（4）数据库系统的组成"></a>（4）数据库系统的组成</h5><p>1.硬件平台及数据库：足够大内存、磁盘或磁盘阵列等设备，较高的通道能力以提高数据的传送率。</p>
-<p>2.软件：数据库管理系统，支持的数据库管理系统运行的操作系统，具有与数据库接口的高级语言及其编译系统，以数据库管理系统为核心的应用开发工具，为特定应用环境开发的数据库应用系统。</p>
-<p>3.人员：开发，管理和使用数据库的人员主要包括数据库管理员、系统分析员和数据库设计人员、应用程序猿和最终用户。</p>
-<p>数据库管理员职责：决定数据库中的信息内容和结构、决定数据库的存储结构和存取策略、定义数据的安全性要求和完整性约束条件。</p>
-]]></content>
-      <categories>
-        <category>数据库系统概论</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
       </tags>
   </entry>
 </search>
