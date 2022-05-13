@@ -186,6 +186,60 @@
       </tags>
   </entry>
   <entry>
+    <title>Python期末复习</title>
+    <url>/2022/05/12/14-38-52/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h4 id="第一章（没啥东西）"><a href="#第一章（没啥东西）" class="headerlink" title="第一章（没啥东西）"></a>第一章（没啥东西）</h4><p>没写完</p>
+<h4 id="第二章-Python程序实例解析"><a href="#第二章-Python程序实例解析" class="headerlink" title="第二章 Python程序实例解析"></a>第二章 Python程序实例解析</h4><p>第一个实例：温度转换</p>
+<blockquote>
+<p>1.为了使程序结构清晰，子语句采用“缩进”的格式进行编写。语句后不需要加符号，只有语句后有子语句的需要加冒号。</p>
+<p>2.标识符的命名规则：以字母，数字，下划线和汉字构成，并且首字母不能是数字，中间不能出现空格，且大小写敏感。</p>
+<p>3.Python中使用=进行赋值，可以同时对多个变量进行赋值。</p>
+<p>x,y,z = 2,5,6</p>
+<p>连续赋值：</p>
+<p>x = y = z = 1</p>
+<p>交换赋值：</p>
+<p>x,y = y,x</p>
+<p>4.Python中的字符串是用双引号或者单引号括起来的零到多个字符组成。字符串可以通过下表进行索引，正向递增索引（1，2，3，…）反向递减索引（…，-4，-3，-2，-1）</p>
+<p>这里有图</p>
+<p>可以使用区间索引的方式[N:M]表示从字符串的第N到M-1个字符，并且采用区间索引时可以正向和反向混合使用。</p>
+<p>5.eval函数：能以Python表达式的方式解析执行字符串</p>
+<p>6.input函数：从控制台获得用的输入。无论用户在控制台输入什么内容，input函数都是以字符串类型返回结果。</p>
+<p>7.print函数：实例中用print函数输出信息，当输出纯字符时，可直接将待输出的内容传递给print函数，当输出变量值时，需采用format（）方法格式化输出。</p>
+</blockquote>
+<p>第二个实例：Python绘制蟒蛇</p>
+<blockquote>
+<p>1.库导入</p>
+<p>import &lt;库名&gt;，此后可通过&lt;库名&gt;.&lt;函数名（参数）&gt;的方式中调用库的所有函数。</p>
+<p>form &lt;库名&gt; import &lt;函数1，函数2，…&gt;</p>
+<p>form &lt;库名&gt; import * ，其中*为通配符，表示&lt;库名&gt;的所有函数，调用函数，直接用&lt;函数名（参数）&gt;调用即可。</p>
+<p>2.turtle.setup(width,heigh,startx,startxy)：设置绘制区域大小和位置。</p>
+<p>penup()：抬起画笔</p>
+<p>pendown（）：落下画笔</p>
+<p>pensize（）：设置画笔的尺寸</p>
+<p>pencolor（）：设置画笔颜色</p>
+<p>fd(distance)：画笔前进distance距离</p>
+<p>seth(to_angle)：改变绘制方向</p>
+<p>circle(radius,extent)：绘制弧线，radius为半径，extent为弧形角度。</p>
+<p>range(start,stop[,step])</p>
+<blockquote>
+<ul>
+<li>start: 计数从 start 开始。默认是从 0 开始。例如range（5）等价于range（0， 5）;</li>
+<li>stop: 计数到 stop 结束，<strong>但不包括 stop</strong>。例如：range（0， 5） 是[0, 1, 2, 3, 4]没有5</li>
+<li>step：步长，默认为1。例如：range（0， 5） 等价于 range(0, 5, 1)</li>
+</ul>
+</blockquote>
+</blockquote>
+<h4 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h4>]]></content>
+      <categories>
+        <category>Python程序设计</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown笔记</title>
     <url>/2022/04/09/11-49-01/</url>
     <content><![CDATA[<h3 id="·-markdown笔记"><a href="#·-markdown笔记" class="headerlink" title="· markdown笔记"></a>· markdown笔记</h3><h5 id="1-代码块"><a href="#1-代码块" class="headerlink" title="1.代码块"></a>1.代码块</h5><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```java 语言代码</span></span><br></pre></td></tr></table></figure>
@@ -444,6 +498,47 @@
       </tags>
   </entry>
   <entry>
+    <title>九、进程控制</title>
+    <url>/2022/04/18/00-39-23/</url>
+    <content><![CDATA[<h4 id="1-什么是进程控制"><a href="#1-什么是进程控制" class="headerlink" title="1.什么是进程控制"></a>1.什么是进程控制</h4><p>进程控制的主要功能是对系统中的所有进程实施有效的管理，它具有创建进程，撤销进程，实现进程间的状态转换等功能。简而言之，<strong>进程控制就是要时间进程状态的转换。</strong></p>
+<span id="more"></span>
+
+<h4 id="2-如何实现进程控制"><a href="#2-如何实现进程控制" class="headerlink" title="2.如何实现进程控制"></a>2.如何实现进程控制</h4><p><a href="https://imgtu.com/i/LaGOvd"><img src="https://s1.ax1x.com/2022/04/18/LaGOvd.png" alt="LaGOvd.png"></a></p>
+<p>进程之间的状态切换中间都需要对PCB进行修改并且放入相应的队列中。假如说某一进程把PCB从某一队列放入另一个队列中，但PCB中状态标志并未被修改，这种情况会导致系统错误，因为PCB所处的队列与PCB中存储的状态标志位数据不一致。于是引入<strong>原语</strong>来实现进程控制。原语的特点是<strong>执行过程中不允许被中断。</strong>这种不可被中断的操作即<strong>原子操作</strong>。原语使用<strong>关中断指令</strong>和<strong>开中断指令</strong>实现。</p>
+<p>当原语开始执行时会先执行关中断指令，此时外部中断信号会被忽略。这样保证原语的操作不会被中断。当原语执行完毕后会执行开中断指令，这样外部中断信号又会被响应了，如下图：</p>
+<p><img src="https://s1.ax1x.com/2022/04/18/LaY3Y8.png" alt="LaY3Y8.png"></p>
+<p>由此可见，<strong>开/关中断指令的权限非常大，必须只允许在核心态下执行的 特权指令 。</strong></p>
+<h4 id="3-进程控制相关原语"><a href="#3-进程控制相关原语" class="headerlink" title="3.进程控制相关原语"></a>3.进程控制相关原语</h4><p>四种原语：</p>
+<ul>
+<li><strong>创建原语</strong></li>
+<li><strong>撤销原语</strong></li>
+<li><strong>阻塞原语</strong></li>
+<li><strong>唤醒原语</strong></li>
+<li><strong>切换原语</strong></li>
+</ul>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatY4K.png" alt="LatY4K.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatN9O.png" alt="LatN9O.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatdjH.png" alt="LatdjH.png"></p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/04/18/LatDHI.png" alt="LatDHI.png"></p>
+<hr>
+<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/18/LatoEq.png" alt="LatoEq.png"></p>
+<hr>
+<center>分割线</center>
+
+<hr>
+<p>这章疑问有点多，应该看看书。</p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>三、操作系统的发展和分类</title>
     <url>/2022/04/09/11-46-01/</url>
     <content><![CDATA[<h4 id="1-手工操作阶段"><a href="#1-手工操作阶段" class="headerlink" title="1. 手工操作阶段"></a>1. 手工操作阶段</h4><p>缺点：用户独占全机，人机速度矛盾导致资源利用率极低。人的速度慢，输入输出速度也慢，但计算机处理速度极快，人机速度矛盾。</p>
@@ -488,47 +583,6 @@
 <p>主要特点是<strong>分布性和并行性</strong>，系统中的割台计算机地位相同，<strong>任何工作都可以分布在这些计算机上，由他们并行、协同完成这个任务。</strong></p>
 <p><strong>（7）个人计算机操作系统</strong></p>
 <p>略，如windows，macos等</p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>九、进程控制</title>
-    <url>/2022/04/18/00-39-23/</url>
-    <content><![CDATA[<h4 id="1-什么是进程控制"><a href="#1-什么是进程控制" class="headerlink" title="1.什么是进程控制"></a>1.什么是进程控制</h4><p>进程控制的主要功能是对系统中的所有进程实施有效的管理，它具有创建进程，撤销进程，实现进程间的状态转换等功能。简而言之，<strong>进程控制就是要时间进程状态的转换。</strong></p>
-<span id="more"></span>
-
-<h4 id="2-如何实现进程控制"><a href="#2-如何实现进程控制" class="headerlink" title="2.如何实现进程控制"></a>2.如何实现进程控制</h4><p><a href="https://imgtu.com/i/LaGOvd"><img src="https://s1.ax1x.com/2022/04/18/LaGOvd.png" alt="LaGOvd.png"></a></p>
-<p>进程之间的状态切换中间都需要对PCB进行修改并且放入相应的队列中。假如说某一进程把PCB从某一队列放入另一个队列中，但PCB中状态标志并未被修改，这种情况会导致系统错误，因为PCB所处的队列与PCB中存储的状态标志位数据不一致。于是引入<strong>原语</strong>来实现进程控制。原语的特点是<strong>执行过程中不允许被中断。</strong>这种不可被中断的操作即<strong>原子操作</strong>。原语使用<strong>关中断指令</strong>和<strong>开中断指令</strong>实现。</p>
-<p>当原语开始执行时会先执行关中断指令，此时外部中断信号会被忽略。这样保证原语的操作不会被中断。当原语执行完毕后会执行开中断指令，这样外部中断信号又会被响应了，如下图：</p>
-<p><img src="https://s1.ax1x.com/2022/04/18/LaY3Y8.png" alt="LaY3Y8.png"></p>
-<p>由此可见，<strong>开/关中断指令的权限非常大，必须只允许在核心态下执行的 特权指令 。</strong></p>
-<h4 id="3-进程控制相关原语"><a href="#3-进程控制相关原语" class="headerlink" title="3.进程控制相关原语"></a>3.进程控制相关原语</h4><p>四种原语：</p>
-<ul>
-<li><strong>创建原语</strong></li>
-<li><strong>撤销原语</strong></li>
-<li><strong>阻塞原语</strong></li>
-<li><strong>唤醒原语</strong></li>
-<li><strong>切换原语</strong></li>
-</ul>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatY4K.png" alt="LatY4K.png"></p>
-<hr>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatN9O.png" alt="LatN9O.png"></p>
-<hr>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatdjH.png" alt="LatdjH.png"></p>
-<hr>
-<p><img src="https://s1.ax1x.com/2022/04/18/LatDHI.png" alt="LatDHI.png"></p>
-<hr>
-<h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/18/LatoEq.png" alt="LatoEq.png"></p>
-<hr>
-<center>分割线</center>
-
-<hr>
-<p>这章疑问有点多，应该看看书。</p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -668,6 +722,24 @@
       </tags>
   </entry>
   <entry>
+    <title>二十三、多生产者，消费者问题</title>
+    <url>/2022/05/10/17-20-14/</url>
+    <content><![CDATA[<h4 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1.问题描述"></a>1.问题描述</h4><p>桌子上有一只盘子，每次只能向其中放入一个水果，爸爸专向盘子中放水果，妈妈专向盘子中放橘子，儿子专等着吃盘子中的橘子，女儿专等着吃盘子中的苹果。只有盘子为空时，爸爸或妈妈才可向盘子中放一个水果。仅当盘子中有自己需要的水果时，儿子或女儿可以从盘子中取出水果。用PV操作实现上述过程。</p>
+<span id="more"></span>
+
+<p>可以将盘子看做大小为1，初始为空的缓冲区，爸爸和妈妈分别看做生产者进程1和生产者进程2，女儿和儿子看做消费者进程1和消费者进程2，</p>
+<blockquote>
+<p>1.关系分析：找出</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>二十二、生产者消费者问题</title>
     <url>/2022/05/01/19-43-28/</url>
     <content><![CDATA[<h4 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1.问题描述"></a>1.问题描述</h4><p>系统中有一组生产者进程和一组消费者进程，生产者进程每次生产一个产品放入缓冲区，消费者进程每次从缓冲区中去除一个产品并使用。（这里的“产品”理解为某种数据）</p>
@@ -706,6 +778,39 @@
 <h4 id="3-思考：能否改变相邻P，V操作的顺序？"><a href="#3-思考：能否改变相邻P，V操作的顺序？" class="headerlink" title="3.思考：能否改变相邻P，V操作的顺序？"></a>3.思考：能否改变相邻P，V操作的顺序？</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCUYTK.png" alt="OCUYTK.png"></p>
 <p>生产者生产产品和消费者消费产品从代码上看是放在PV操作之外。能不能放到PV操作之内呢？从逻辑上来看是没问题，可以让消费者从缓冲区中取出一个产品后就立即使用这个产品。但会导致临界区代码量变大，消费者进程在访问临界区的过程中就需要花费更多的时间，如果此时有别的进程也需要访问临界资源则消费者进程会被阻塞，会导致进程的并发度降低，尽量不要放入PV操作之中。</p>
 <h4 id="4-知识回顾"><a href="#4-知识回顾" class="headerlink" title="4.知识回顾"></a>4.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/05/01/OCaFhD.png" alt="OCaFhD.png"></p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>八、进程的状态与转换</title>
+    <url>/2022/04/17/23-56-35/</url>
+    <content><![CDATA[<h4 id="1-进程的基本状态"><a href="#1-进程的基本状态" class="headerlink" title="1.进程的基本状态"></a>1.进程的基本状态</h4><p><strong>三种基本状态：</strong></p>
+<ol>
+<li><strong>运行态</strong>：占有cpu，并在cpu上运行</li>
+<li><strong>就绪态</strong>：已具备运行条件，但没有空闲CPU而暂时不能运行</li>
+<li><strong>阻塞态（或称等待态）</strong>：因等待某一事件而暂时不能执行</li>
+</ol>
+<span id="more"></span>
+
+<blockquote>
+<p>运行态：在单核处理及环境，每一时刻最多只能有一个进程处于运行态（双核环境下最多可以同时拥有两个进程处于运行态）</p>
+<p>就绪态：进程已经拥有了除处理及之外所有需要的资源，一旦获得处理机即可立即进入运行态开始运行。（万事俱备，只欠CPU）</p>
+<p>阻塞态：如：等待操作系统扽配打印机，等待读取磁盘操作的结果。为了提高CPU利用率，需要先将其他进程需要的资源分配到位，才能得到CPU的服务。</p>
+</blockquote>
+<p><strong>另外的两种状态：</strong></p>
+<p>进程运行结束（或者由于BUG导致进程无法继续下去，如数组越界）需要撤销进程，操作系统需要完成撤销进程的相关操作，完成将分配给进程的资源回收，撤销进程的PCB等操作。</p>
+<ol>
+<li><strong>创建态</strong>（新建态）：进程正在被创建，操作系统为其分配资源、创建PCB</li>
+<li><strong>终止态</strong>（结束态）：进程正在从系统中撤销，操作系统会回收分配给进程的资源，撤销其PCB</li>
+</ol>
+<h4 id="2-进程的状态转换"><a href="#2-进程的状态转换" class="headerlink" title="2.进程的状态转换"></a>2.进程的状态转换</h4><p><a href="https://imgtu.com/i/La3vzd"><img src="https://s1.ax1x.com/2022/04/18/La3vzd.png" alt="La3vzd.png"></a></p>
+<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p>绿框知识重要</p>
+<p><a href="https://imgtu.com/i/La8kFS"><img src="https://s1.ax1x.com/2022/04/18/La8kFS.png" alt="La8kFS.png"></a></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -760,66 +865,6 @@
 </ol>
 <hr>
 <h4 id="5-知识图谱"><a href="#5-知识图谱" class="headerlink" title="5.知识图谱"></a>5.知识图谱</h4><p><img src="https://s1.ax1x.com/2022/04/10/LA6gbR.png" alt="图谱"></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>六、系统调用</title>
-    <url>/2022/04/13/20-45-57/</url>
-    <content><![CDATA[<h4 id="1-什么是系统调用"><a href="#1-什么是系统调用" class="headerlink" title="1.什么是系统调用"></a>1.什么是系统调用</h4><p>操作系统是用户和计算机硬件之间的接口需要向上层提供一些简单易用的服务。主要包括<strong>命令接口</strong>和<strong>程序接口</strong>。其中，程序接口由一组==<strong>系统调用</strong>==组成。</p>
-<span id="more"></span>
-
-
-<blockquote>
-<p>用户接口：</p>
-<ol>
-<li><p>命令接口（允许用户直接使用）</p>
-<ul>
-<li>联机命令接口：用户说一句，系统做一句</li>
-<li>脱机命令接口：用户说一堆，系统做一堆。</li>
-</ul>
-<ol start="2">
-<li>程序接口（允许用户通过程序间接使用）：由一组系统调用组成。</li>
-</ol>
-<p>系统调用就是操作系统提供给程序使用的接口，可以理解为一种可供应用程序调用的函数，应用程序可以发出系统调用请求来获得操作系统的服务。</p>
-</li>
-</ol>
-</blockquote>
-<h5 id="2-系统调用的作用："><a href="#2-系统调用的作用：" class="headerlink" title="2.系统调用的作用："></a>2.系统调用的作用：</h5><p>应用程序通过系统调用请求操作系统的服务。系统中的各种共享资源由操作系统统一管理，因此在用户程序中，凡事与资源有关的操作（如存储分配，I/O操作，文件管理等），都必须通过系统调用的方式像操作系统提出服务请求，由操作系统代为完成，这样<strong>可以保证系统的稳定性和安全性</strong>，防止用户进行非法操作。</p>
-<blockquote>
-<p><strong>系统调用</strong>（按功能分类）：</p>
-<ul>
-<li><strong>设备管理</strong>：完成设备的请求、释放、启动等工作</li>
-<li><strong>文件管理</strong>：完成文件的读写、创建、删除等功能</li>
-<li><strong>进程控制</strong>：完成进程的创建。撤销、阻塞、唤醒等功能</li>
-<li><strong>进程通信</strong>：完成进程之间的消息传递、信号传递等功能</li>
-<li><strong>内存管理</strong>：完成内存的分配、回收等功能</li>
-</ul>
-<blockquote>
-<p>系统调用相关处理涉及到对系统资源的管理，对进程的控制，这些功能需要执行一些<strong>特权指令</strong>才能完成，因此<strong>系统调用的相关处理</strong>需要在<strong>核心态</strong>下完成。</p>
-</blockquote>
-</blockquote>
-<h4 id="3-系统调用与库函数的区别"><a href="#3-系统调用与库函数的区别" class="headerlink" title="3.系统调用与库函数的区别"></a>3.系统调用与库函数的区别</h4><p><img src="https://s1.ax1x.com/2022/04/13/LMvy5D.png" alt="区别"></p>
-<h4 id="4-系统调用背后的过程"><a href="#4-系统调用背后的过程" class="headerlink" title="4.系统调用背后的过程"></a>4.系统调用背后的过程</h4><p>首先需要做的是把传入系统调用的参数用相应的指令放入相应的通用寄存器中并执行相应的陷入指令（interrupt的缩写，此汇编指令的作用是引发一次系统中断），指令运行在<strong>用户态</strong>。当指令被执行时系统会执行相应的系统调用服务程序，这时候系统中断开始并运行在<strong>核心态</strong>，待系统调用完成后会把执行结果返回给用户程序，重新回到用户态，继续执行后续操作。如下图所示：</p>
-<p><img src="https://s1.ax1x.com/2022/04/13/LMvRxA.png" alt="过程"></p>
-<blockquote>
-<p>有些书上陷入指令被叫做访管指令。概念是：因操作系统不允许用户态运行某些“危险性”高的指令，于是用户态运行这些指令的结果会转化成操作系统的核心态（管态）去运行。</p>
-<p>上图注意3补充：<strong>核心态只能执行系统调用，不能请求系统调用；用户态不能执行系统调用，只能请求系统调用</strong>。</p>
-<p><strong>系统调用发生在用户态，执行在核心态。</strong>比如说你去仓库提货，仓库有专门的管理员而且你并不能进入仓库。管理员在门口待命。你过去跟他说你要什么什么，仓库管理员就进仓库提你想要的货物，提完货物后会回到仓库门口把货物交给你。在这个过程中，门外就相当于用户态，仓库内就相当于核心态。你跟管理员要货就相当于请求一次系统调用，管理员进仓库给你拿货就相当于执行了一次系统调用，并在拿完货后出门给我你货物，这个过程就相当于返回系统调用的结果。很简单的道理。</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p><em><strong>吧啦吧啦：有的弹幕说中断就是切换任务的，我我个人觉得说的好像也蛮准确的</strong></em></p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h4 id="5-知识回顾"><a href="#5-知识回顾" class="headerlink" title="5.知识回顾"></a>5.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/13/LMxCiF.png" alt="回顾"></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -921,6 +966,66 @@
 <p>克服了多对一模型并发度不高的缺点，又克服了一对一模型中一个用户进程占用太多内核级线程，开销太大的缺点。算是一种折中的解决方案。</p>
 </blockquote>
 <h4 id="5-知识回顾"><a href="#5-知识回顾" class="headerlink" title="5.知识回顾"></a>5.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/19/LDCyYq.png">]</p>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>六、系统调用</title>
+    <url>/2022/04/13/20-45-57/</url>
+    <content><![CDATA[<h4 id="1-什么是系统调用"><a href="#1-什么是系统调用" class="headerlink" title="1.什么是系统调用"></a>1.什么是系统调用</h4><p>操作系统是用户和计算机硬件之间的接口需要向上层提供一些简单易用的服务。主要包括<strong>命令接口</strong>和<strong>程序接口</strong>。其中，程序接口由一组==<strong>系统调用</strong>==组成。</p>
+<span id="more"></span>
+
+
+<blockquote>
+<p>用户接口：</p>
+<ol>
+<li><p>命令接口（允许用户直接使用）</p>
+<ul>
+<li>联机命令接口：用户说一句，系统做一句</li>
+<li>脱机命令接口：用户说一堆，系统做一堆。</li>
+</ul>
+<ol start="2">
+<li>程序接口（允许用户通过程序间接使用）：由一组系统调用组成。</li>
+</ol>
+<p>系统调用就是操作系统提供给程序使用的接口，可以理解为一种可供应用程序调用的函数，应用程序可以发出系统调用请求来获得操作系统的服务。</p>
+</li>
+</ol>
+</blockquote>
+<h5 id="2-系统调用的作用："><a href="#2-系统调用的作用：" class="headerlink" title="2.系统调用的作用："></a>2.系统调用的作用：</h5><p>应用程序通过系统调用请求操作系统的服务。系统中的各种共享资源由操作系统统一管理，因此在用户程序中，凡事与资源有关的操作（如存储分配，I/O操作，文件管理等），都必须通过系统调用的方式像操作系统提出服务请求，由操作系统代为完成，这样<strong>可以保证系统的稳定性和安全性</strong>，防止用户进行非法操作。</p>
+<blockquote>
+<p><strong>系统调用</strong>（按功能分类）：</p>
+<ul>
+<li><strong>设备管理</strong>：完成设备的请求、释放、启动等工作</li>
+<li><strong>文件管理</strong>：完成文件的读写、创建、删除等功能</li>
+<li><strong>进程控制</strong>：完成进程的创建。撤销、阻塞、唤醒等功能</li>
+<li><strong>进程通信</strong>：完成进程之间的消息传递、信号传递等功能</li>
+<li><strong>内存管理</strong>：完成内存的分配、回收等功能</li>
+</ul>
+<blockquote>
+<p>系统调用相关处理涉及到对系统资源的管理，对进程的控制，这些功能需要执行一些<strong>特权指令</strong>才能完成，因此<strong>系统调用的相关处理</strong>需要在<strong>核心态</strong>下完成。</p>
+</blockquote>
+</blockquote>
+<h4 id="3-系统调用与库函数的区别"><a href="#3-系统调用与库函数的区别" class="headerlink" title="3.系统调用与库函数的区别"></a>3.系统调用与库函数的区别</h4><p><img src="https://s1.ax1x.com/2022/04/13/LMvy5D.png" alt="区别"></p>
+<h4 id="4-系统调用背后的过程"><a href="#4-系统调用背后的过程" class="headerlink" title="4.系统调用背后的过程"></a>4.系统调用背后的过程</h4><p>首先需要做的是把传入系统调用的参数用相应的指令放入相应的通用寄存器中并执行相应的陷入指令（interrupt的缩写，此汇编指令的作用是引发一次系统中断），指令运行在<strong>用户态</strong>。当指令被执行时系统会执行相应的系统调用服务程序，这时候系统中断开始并运行在<strong>核心态</strong>，待系统调用完成后会把执行结果返回给用户程序，重新回到用户态，继续执行后续操作。如下图所示：</p>
+<p><img src="https://s1.ax1x.com/2022/04/13/LMvRxA.png" alt="过程"></p>
+<blockquote>
+<p>有些书上陷入指令被叫做访管指令。概念是：因操作系统不允许用户态运行某些“危险性”高的指令，于是用户态运行这些指令的结果会转化成操作系统的核心态（管态）去运行。</p>
+<p>上图注意3补充：<strong>核心态只能执行系统调用，不能请求系统调用；用户态不能执行系统调用，只能请求系统调用</strong>。</p>
+<p><strong>系统调用发生在用户态，执行在核心态。</strong>比如说你去仓库提货，仓库有专门的管理员而且你并不能进入仓库。管理员在门口待命。你过去跟他说你要什么什么，仓库管理员就进仓库提你想要的货物，提完货物后会回到仓库门口把货物交给你。在这个过程中，门外就相当于用户态，仓库内就相当于核心态。你跟管理员要货就相当于请求一次系统调用，管理员进仓库给你拿货就相当于执行了一次系统调用，并在拿完货后出门给我你货物，这个过程就相当于返回系统调用的结果。很简单的道理。</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><em><strong>吧啦吧啦：有的弹幕说中断就是切换任务的，我我个人觉得说的好像也蛮准确的</strong></em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="5-知识回顾"><a href="#5-知识回顾" class="headerlink" title="5.知识回顾"></a>5.知识回顾</h4><p><img src="https://s1.ax1x.com/2022/04/13/LMxCiF.png" alt="回顾"></p>
 ]]></content>
       <categories>
         <category>操作系统</category>
@@ -1554,39 +1659,6 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
       </tags>
   </entry>
   <entry>
-    <title>八、进程的状态与转换</title>
-    <url>/2022/04/17/23-56-35/</url>
-    <content><![CDATA[<h4 id="1-进程的基本状态"><a href="#1-进程的基本状态" class="headerlink" title="1.进程的基本状态"></a>1.进程的基本状态</h4><p><strong>三种基本状态：</strong></p>
-<ol>
-<li><strong>运行态</strong>：占有cpu，并在cpu上运行</li>
-<li><strong>就绪态</strong>：已具备运行条件，但没有空闲CPU而暂时不能运行</li>
-<li><strong>阻塞态（或称等待态）</strong>：因等待某一事件而暂时不能执行</li>
-</ol>
-<span id="more"></span>
-
-<blockquote>
-<p>运行态：在单核处理及环境，每一时刻最多只能有一个进程处于运行态（双核环境下最多可以同时拥有两个进程处于运行态）</p>
-<p>就绪态：进程已经拥有了除处理及之外所有需要的资源，一旦获得处理机即可立即进入运行态开始运行。（万事俱备，只欠CPU）</p>
-<p>阻塞态：如：等待操作系统扽配打印机，等待读取磁盘操作的结果。为了提高CPU利用率，需要先将其他进程需要的资源分配到位，才能得到CPU的服务。</p>
-</blockquote>
-<p><strong>另外的两种状态：</strong></p>
-<p>进程运行结束（或者由于BUG导致进程无法继续下去，如数组越界）需要撤销进程，操作系统需要完成撤销进程的相关操作，完成将分配给进程的资源回收，撤销进程的PCB等操作。</p>
-<ol>
-<li><strong>创建态</strong>（新建态）：进程正在被创建，操作系统为其分配资源、创建PCB</li>
-<li><strong>终止态</strong>（结束态）：进程正在从系统中撤销，操作系统会回收分配给进程的资源，撤销其PCB</li>
-</ol>
-<h4 id="2-进程的状态转换"><a href="#2-进程的状态转换" class="headerlink" title="2.进程的状态转换"></a>2.进程的状态转换</h4><p><a href="https://imgtu.com/i/La3vzd"><img src="https://s1.ax1x.com/2022/04/18/La3vzd.png" alt="La3vzd.png"></a></p>
-<h4 id="3-知识回顾"><a href="#3-知识回顾" class="headerlink" title="3.知识回顾"></a>3.知识回顾</h4><p>绿框知识重要</p>
-<p><a href="https://imgtu.com/i/La8kFS"><img src="https://s1.ax1x.com/2022/04/18/La8kFS.png" alt="La8kFS.png"></a></p>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>四、操作系统的运行机制与体系系统</title>
     <url>/2022/04/10/19-57-02/</url>
     <content><![CDATA[<h4 id="1-运行机制"><a href="#1-运行机制" class="headerlink" title="1.运行机制"></a>1.运行机制</h4><p>什么是指令， “指令”和“代码”有什么区别？</p>
@@ -1684,6 +1756,425 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
         <tag>Hexo</tag>
         <tag>GithubPages</tag>
         <tag>Blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库之SQL语言（上）</title>
+    <url>/2022/05/06/20-43-40/</url>
+    <content><![CDATA[<h5 id="（1）SQL的基本概念"><a href="#（1）SQL的基本概念" class="headerlink" title="（1）SQL的基本概念"></a>（1）SQL的基本概念</h5><p>SQL是Structured Query Language的缩写，意思是<strong>结构化查询语言</strong>，是一种在数据库管理系统中查询或对数据库库里面的数据进行更改的语言。</p>
+<p>常见的数据库管理系统：关系型：MySql，OracleDatabase和SQL Server，非关系型：redis和mongoDB。不同数据库管理系统的SQL语言略有不同。</p>
+<span id="more"></span>
+
+<p>SQL语言包括：</p>
+<blockquote>
+<p>1.数据定义语言DDL（Data Ddefinition Language）</p>
+<p>SQL数据定义语言主要用来定义逻辑结构，包括定义基本表，试图和索引。</p>
+<p>删除表，定义表和修改表。</p>
+<p>2.数据库查询语言DQL（Data Query Language）</p>
+<p>SQL的数据库查询语言主要用来对数据库中的各种数据对象进行查询。</p>
+<p>3.数据操纵语言DML（Data Manipulation Language）</p>
+<p>SQL的数据库操纵语言勇于改变数据库中的数据，包括插入，删除和修改。</p>
+<p>4.数据控制功能DCL（Data Control Language）</p>
+<p>SQL的数据操纵语言是对表和视图的授权（比如不同的用户被授予不同的数据库权限），完整性规则的描述以及事务开始和结束等控制语句。</p>
+</blockquote>
+<p>SQL语言的特点：</p>
+<blockquote>
+<p>1.综合统一（独立完成数据库生命周期中的全部活动，包括定义关系模式、录入数据，建立数据库、查询、更新、维护、数据库重构、数据库安全等）</p>
+<p>2.高度非过程化（用户只需指明“做什么”，而不必指明“怎么做”）</p>
+<p>3.面向集合的操作方式（SQL采用集合操作模式）</p>
+<p>4.以同一种语法结构提供两种使用方式（SQL既是自含式语言，又是嵌入式语言，SQL语言能够嵌入到高级语言程序中。）</p>
+<p>5.语言简洁，易学易用（SQL语言语法简单，接近英语口语，因此易学习也易使用）</p>
+</blockquote>
+<h5 id="（3）SQL的基本语法"><a href="#（3）SQL的基本语法" class="headerlink" title="（3）SQL的基本语法"></a><font color=red>（3）SQL的基本语法</font></h5><h6 id="0-SQL语言的基本数据类型（变量类型）"><a href="#0-SQL语言的基本数据类型（变量类型）" class="headerlink" title="0.SQL语言的基本数据类型（变量类型）"></a>0.SQL语言的基本数据类型（变量类型）</h6><table>
+<thead>
+<tr>
+<th><center>数据类型</center></th>
+<th><center>含义</center></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><b>CHAR(n)</b>，CHARACTER(n)</td>
+<td>长度为n的变长字符串</td>
+</tr>
+<tr>
+<td><b>VARCHAR(n)</b>，CHARACTERVARYING(n)</td>
+<td>最大长度为n的变长字符串</td>
+</tr>
+<tr>
+<td>CLOB</td>
+<td>字符串大对象</td>
+</tr>
+<tr>
+<td>BLOB</td>
+<td>二进制大对象</td>
+</tr>
+<tr>
+<td><b>INT</b>，INTEGER</td>
+<td>长整数（4字节）</td>
+</tr>
+<tr>
+<td><b>SMALLINT</b></td>
+<td>短整数（2字节）</td>
+</tr>
+<tr>
+<td><b>BIGINT</b></td>
+<td>大整数（8字节）</td>
+</tr>
+<tr>
+<td><b>NUMERIC(p，d)</b></td>
+<td>定点数，由p位数字（不包括符号、小数点）组成，小数点后面有d位数字</td>
+</tr>
+<tr>
+<td><b>DECIMAL(p，d)</b>，DEC(p，d)</td>
+<td>同NUMERIC</td>
+</tr>
+<tr>
+<td>REAL</td>
+<td>取决于机器精度的单精度浮点数</td>
+</tr>
+<tr>
+<td>DOUBLE  PRECISION</td>
+<td>取决于机器精度的双精度浮点数</td>
+</tr>
+<tr>
+<td><b>FLOAT(n)</b></td>
+<td>可选精度的浮点数，精度至少为n位</td>
+</tr>
+<tr>
+<td>BOOLEAN</td>
+<td>逻辑布尔量</td>
+</tr>
+<tr>
+<td><b>DATE</b></td>
+<td>日期，包含年月日，格式为YYYY-MM-DD</td>
+</tr>
+<tr>
+<td><b>TIME</b></td>
+<td>时间，包含一日的时分秒，格式为HH:MM:SS</td>
+</tr>
+<tr>
+<td><b>TIMESTAMP</b></td>
+<td>时间戳类型（毫秒）</td>
+</tr>
+<tr>
+<td>INTERAVL</td>
+<td>时间间隔类型</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h6 id="1-模式的定义-amp-删除"><a href="#1-模式的定义-amp-删除" class="headerlink" title="1.模式的定义&amp;删除"></a>1.模式的定义&amp;删除</h6><p>模式定义：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> SCHEMA <span class="operator">&lt;</span>模式名<span class="operator">&gt;</span> <span class="keyword">AUTHORIZATION</span> <span class="operator">&lt;</span>用户名<span class="operator">&gt;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如：为用户WANG定义一个学生-课程模式S-T</span></span><br><span class="line"><span class="keyword">CREATE</span> SCHEMA &quot;S-T&quot; <span class="keyword">AUTHORIZATION</span> WANG;</span><br></pre></td></tr></table></figure>
+
+<p>模式定义+视图</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> SCHEMA <span class="operator">&lt;</span>模式名<span class="operator">&gt;</span> <span class="keyword">AUTHORIZATION</span> <span class="operator">&lt;</span>用户名<span class="operator">&gt;</span> [<span class="operator">&lt;</span>表定义子句<span class="operator">&gt;</span><span class="operator">|</span><span class="operator">&lt;</span>视图定义子句<span class="operator">&gt;</span><span class="operator">|</span><span class="operator">&lt;</span>授权定义子句<span class="operator">&gt;</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如：创建模式 + 表定义子句</span></span><br><span class="line"><span class="keyword">CREATE</span> SCHEMA &quot;learn&quot; <span class="keyword">AUTHORIZATION</span> zhangxu <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">user</span>(id <span class="type">INT</span> <span class="keyword">PRIMARY</span> KEY,age <span class="type">INT</span>,name <span class="type">VARCHAR</span>(<span class="number">255</span>));</span><br></pre></td></tr></table></figure>
+
+<p>模式删除</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DROP</span> SCHEMA <span class="operator">&lt;</span>模式名<span class="operator">&gt;</span> <span class="operator">&lt;</span>CASCADE<span class="operator">|</span>RESTRICT<span class="operator">&gt;</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">删除模式，其中参数CASCADE和RESTRICT必须二选一</span></span><br><span class="line"><span class="comment">1.CASCADE是级联，删除模式的时候同时也把该模式的所有数据库对象删除</span></span><br><span class="line"><span class="comment">2.RESTRICT是限制，如果该模式下有下属对象，比如表视图，就拒绝这个删除语句的执行。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>SQL语言关键字并不区分大小写，比如：<br>创建表Student:<br>        create table Student;<br>        CREATE TABLE Student;<br>效果完全相同，但表名Student必须严格区分大小写，字段名和属性值同理。</p>
+</blockquote>
+<h6 id="2-表的定义，删除和修改"><a href="#2-表的定义，删除和修改" class="headerlink" title="2.表的定义，删除和修改"></a>2.表的定义，删除和修改</h6><p>创建</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(字段名 类型 字段约束,字段名 类型);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">user</span>(</span><br><span class="line">    id <span class="type">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">PRIMARY</span> KEY,</span><br><span class="line">    name <span class="type">VARCHAR</span>(<span class="number">20</span>),</span><br><span class="line">    age <span class="type">INT</span>,</span><br><span class="line">    sec <span class="type">CHAR</span>&#123;<span class="number">1</span>&#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>删除</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> &#123;RESTRICT<span class="operator">|</span>CASCADE&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- CASCADE是如果表有外链，视图，触发器的话也会强行删除，RESTRICT相--- 反。</span></span><br><span class="line"><span class="comment">-- 如：删除Student表</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> Student CASCADE;</span><br></pre></td></tr></table></figure>
+
+<p>修改</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> </span><br><span class="line">[<span class="keyword">ADD</span> [<span class="keyword">COLUMN</span>] <span class="operator">&lt;</span>新列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span> [完整性约束]]</span><br><span class="line">[<span class="keyword">ADD</span> [表级完整性约束]]</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如：想Student表中添加“入学时间”列，其数据类型为日期型。</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">ADD</span> S_entrance DATA;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 将年龄的数据类型由字符型（假设原来的数据类型是字符型）改为整数。</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">ALTER</span> <span class="keyword">COLUMN</span> Sage <span class="type">INT</span>;</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-索引的建立、修改和删除"><a href="#3-索引的建立、修改和删除" class="headerlink" title="3.索引的建立、修改和删除"></a>3.索引的建立、修改和删除</h6><p>数据量比较大的时候，查询耗时长，建立索引可以有效减少消耗时间。索引可以建立在一列或者多列上。前提是保证索引列是唯一。</p>
+<p>创建</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> [<span class="keyword">UNIQUE</span>] [CLUSTER] INDEX <span class="operator">&lt;</span>索引名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">ON</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span>(<span class="operator">&lt;</span>列名<span class="operator">&gt;</span> [<span class="operator">&lt;</span>次序<span class="operator">&gt;</span>] [,<span class="operator">&lt;</span>列名<span class="operator">&gt;</span> [<span class="operator">&lt;</span>次序<span class="operator">&gt;</span>]] ...)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- CLUSTER是聚簇索引</span></span><br><span class="line"><span class="comment">-- UNIQUE是唯一索引</span></span><br><span class="line"><span class="comment">-- 如：</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> INDEX Stusno <span class="keyword">ON</span> Student(Sno);</span><br></pre></td></tr></table></figure>
+
+<p>修改</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> INDEX <span class="operator">&lt;</span>旧索引名<span class="operator">&gt;</span> RENAME <span class="keyword">TO</span> <span class="operator">&lt;</span>新索引名<span class="operator">&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如：将SC表的SCno索引名改为SCSno</span></span><br><span class="line"><span class="keyword">ALTER</span> INDEX SCno RENAME <span class="keyword">TO</span> SCSno;</span><br></pre></td></tr></table></figure>
+
+<p>删除</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DROP</span> INDEX <span class="operator">&lt;</span>索引名<span class="operator">&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如：删除Student表的Stusname索引</span></span><br><span class="line"><span class="keyword">DROP</span> INDEX Stusname;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据库系统概论</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库之SQL语言（中）</title>
+    <url>/2022/05/07/21-13-27/</url>
+    <content><![CDATA[<p><font color=red>基本上全是重点……………..</font></p>
+<span id="more"></span>
+
+<p>例：有三张表</p>
+<p><img src="https://s1.ax1x.com/2022/05/07/OlKOg0.png" alt="OlKOg0.png"></p>
+<h5 id="（1）查询所有-amp-查询部分列"><a href="#（1）查询所有-amp-查询部分列" class="headerlink" title="（1）查询所有 &amp; 查询部分列"></a>（1）查询所有 &amp; 查询部分列</h5><p>查询即选择，使用SELECT关键字</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- (1) 查询所有</span></span><br><span class="line"><span class="comment">-- 查询Student表中的所有学生信息。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student;</span><br><span class="line"><span class="comment">-- * 表示通配符，意为选择所有字段，等价于</span></span><br><span class="line"><span class="keyword">SELECT</span> Sno,Sname,Ssex,Sage,Sdept <span class="keyword">FROM</span> Student;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- （2）查询部分</span></span><br><span class="line"><span class="comment">-- 查询Student表中的所有学生的学号和姓名。</span></span><br><span class="line"><span class="keyword">SELECT</span> Sno,Sname <span class="keyword">FROM</span> Student;</span><br><span class="line"><span class="comment">-- 意为查询结果只显示Sno和Sname两列。</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="（2）给查询结果起别名"><a href="#（2）给查询结果起别名" class="headerlink" title="（2）给查询结果起别名"></a>（2）给查询结果起别名</h5><p>使用AS关键字即可</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 如</span></span><br><span class="line"><span class="comment">-- 查询Student表中的所有学生的学号和姓名。</span></span><br><span class="line"><span class="keyword">SELECT</span> Sno <span class="keyword">AS</span> &quot;学号&quot;,Sname <span class="keyword">AS</span> &quot;姓名&quot; <span class="keyword">FROM</span> Student <span class="keyword">AS</span> &quot;学生表&quot;; </span><br><span class="line"><span class="comment">-- 使用AS关键字,且关键字AS可省略。表名也一样。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="（3）结果去重"><a href="#（3）结果去重" class="headerlink" title="（3）结果去重"></a>（3）结果去重</h5><p>加上DISTINCT关键字就可以自动去重。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 比如：从Course查询课程名并删除重复结果。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Cname <span class="keyword">FROM</span> Course;</span><br></pre></td></tr></table></figure>
+
+<h5 id="（4）查询结果加条件"><a href="#（4）查询结果加条件" class="headerlink" title="（4）查询结果加条件"></a>（4）查询结果加条件</h5><table>
+<thead>
+<tr>
+<th><center>查询条件</center></th>
+<th><center>谓词</center></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>比较</td>
+<td>=，&gt;，&lt;，!=，&lt;=，&lt;&gt;，!&gt;，&lt;!，NOT+比较运算符</td>
+</tr>
+<tr>
+<td>确定范围</td>
+<td>BETWEEN AND，NOT BETWEEN AND</td>
+</tr>
+<tr>
+<td>确定集合</td>
+<td>IN，NOT IN</td>
+</tr>
+<tr>
+<td>字符匹配</td>
+<td>LIKE，NOT LIKE</td>
+</tr>
+<tr>
+<td>空值</td>
+<td>IS NULL，IS NOT NULL</td>
+</tr>
+<tr>
+<td>多重条件（逻辑运算）</td>
+<td>AND，OR，NOT</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 比较</span></span><br><span class="line"><span class="comment">-- 比如：查询年龄不小于19岁的学生所有信息。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sage <span class="operator">&gt;=</span> <span class="number">19</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 确定范围</span></span><br><span class="line"><span class="comment">-- 查询年龄在18到20岁之间的学生信息。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sage <span class="keyword">BETWEEN</span> <span class="number">18</span> <span class="keyword">AND</span> <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 确定集合</span></span><br><span class="line"><span class="comment">-- 比如：1是否在集合1，2中？3呢？</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="number">1</span> <span class="keyword">IN</span> (<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">-- 执行完成后会返回1，表示true，在里面。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="number">3</span> <span class="keyword">IN</span> (<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">-- 执行完成后会返回0，表示false，不在里面。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 字符匹配</span></span><br><span class="line"><span class="comment">-- 查询性别为王的学生信息。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Sname <span class="keyword">LIKE</span> &quot;王%&quot;;</span><br><span class="line"><span class="comment">-- 其中，%通配符可以代替任意多个字符，如果是只代表一个字符则用下划线_代替。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 空值</span></span><br><span class="line"><span class="comment">-- 查询先行课为空的课程信息。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Course <span class="keyword">WHERE</span> Cpno <span class="keyword">IS</span> <span class="keyword">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 多重条件</span></span><br><span class="line"><span class="comment">-- 查询性别为女并且所在系别为CS的学生信息。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">WHERE</span> Ssex<span class="operator">=</span><span class="string">&#x27;女&#x27;</span> <span class="keyword">AND</span> Sdept<span class="operator">=</span><span class="string">&#x27;CS&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h5 id="（5）聚集函数的使用"><a href="#（5）聚集函数的使用" class="headerlink" title="（5）聚集函数的使用"></a>（5）聚集函数的使用</h5><table>
+<thead>
+<tr>
+<th><center>函数名</center></th>
+<th><center>解释</center></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CENTER(*)</td>
+<td>统计元组个数</td>
+</tr>
+<tr>
+<td>COUNT([DISTINCT | ALL] &lt;列名&gt;)</td>
+<td>统计一列中值的个数</td>
+</tr>
+<tr>
+<td>AVG([DISTINCT | ALL] &lt;列名&gt;)</td>
+<td>计算一列值的总和（此列必须是整数型）</td>
+</tr>
+<tr>
+<td>SUM([DISTINCT | ALL] &lt;列名&gt;)</td>
+<td>计算一列值的总和（此列必须是整数型）</td>
+</tr>
+<tr>
+<td>MAX([DISTINCT | ALL] &lt;列名&gt;)</td>
+<td>求一列值中的最大值</td>
+</tr>
+<tr>
+<td>MIN([DISTINCT | ALL] &lt;列名&gt;)</td>
+<td>求一列值中的最小值</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 默认参数为ALL，如果需要去除重复值则需手动加入参数DISTINCT</span></span><br><span class="line"><span class="comment">-- 统计所有学生的人数。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> Student;</span><br><span class="line"><span class="comment">-- 其他函数用法类似</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="（6）分组查询"><a href="#（6）分组查询" class="headerlink" title="（6）分组查询"></a>（6）分组查询</h5><p>使用GROUP BY参数进行分组查询，如果要对分组进行查询则需使用HAVING关键字。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 如：查询所有学生的学号，姓名和性别，并按学院进行分组</span></span><br><span class="line"><span class="keyword">SELECT</span> Sno,Ssex,Sname,Sdept <span class="keyword">FROM</span> Student <span class="keyword">GROUP</span> <span class="keyword">BY</span> Sdept;</span><br><span class="line"><span class="comment">-- 分组时所查询的字段中必须包含要进行分组的字段。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询学院为CS学生的学号，姓名和性别，并按学院进行分组</span></span><br><span class="line"><span class="keyword">SELECT</span> Sno,Ssex,Sname,Sdept <span class="keyword">FROM</span> Student <span class="keyword">GROUP</span> <span class="keyword">BY</span> Sdept <span class="keyword">HAVING</span> Sdept<span class="operator">=</span><span class="string">&#x27;CS&#x27;</span>;</span><br><span class="line"><span class="comment">-- GROUP BY关键字之后是不可以使用WHERE关键字的，必须使用HAVING.</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="（7）连接"><a href="#（7）连接" class="headerlink" title="（7）连接"></a>（7）连接</h5><p>包含等值连接和非等值连接，以where为关键字</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 如：</span></span><br><span class="line"><span class="comment">-- 连接Student和SC两张表进行笛卡尔积查询。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student,SC <span class="keyword">where</span> Student.Sno <span class="operator">=</span> SC.Sno;</span><br><span class="line"><span class="comment">-- 这样查询出来的结果符合笛卡尔积的运算结果，否则查询出来的结果会随机排列在一起。加where为等值连接，不加为非等值连接。</span></span><br></pre></td></tr></table></figure>
+
+<p>自身连接</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 一个表与自身廉洁，为这两个表起两个别名，然后进行操作。</span></span><br><span class="line"><span class="comment">-- 如：使用Student表。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">AS</span> Stu1,Student <span class="keyword">AS</span> Stu2 <span class="keyword">WHERE</span> Stu1 <span class="operator">=</span> Stu2;</span><br></pre></td></tr></table></figure>
+
+<p>外连接</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 左外连接</span></span><br><span class="line"><span class="comment">-- 取Student和SC表的交集。被舍弃的值也会被保留在结果中，但是要加NULL。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> SC <span class="keyword">WHERE</span> Student.Sno <span class="operator">=</span> SC.Sno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 右外连接</span></span><br><span class="line"><span class="comment">-- 取Student和SC表的交集。被舍弃的值也会被保留在结果中，但是要加NULL。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">RIGHT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> SC <span class="keyword">WHERE</span> Student.Sno <span class="operator">=</span> SC.Sno;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 内连接</span></span><br><span class="line"><span class="comment">-- 两张表中共有的属性才能进行连接。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student <span class="keyword">INNER</span> <span class="keyword">JOIN</span> SC <span class="keyword">WHERE</span> Student.Sno <span class="operator">=</span> SC.Sno;</span><br></pre></td></tr></table></figure>
+
+<p>多表查询</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 两个或两个以上的表进行连接。</span></span><br><span class="line"><span class="comment">-- 同时使用开头的三张表进行查询。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student,SC,Course <span class="keyword">WHERE</span> Student.Sno <span class="operator">=</span> SC.Sno <span class="keyword">AND</span> SC.Cno <span class="operator">=</span> Course.Cno;</span><br></pre></td></tr></table></figure>
+
+<p>嵌套查询</p>
+]]></content>
+      <categories>
+        <category>数据库系统概论</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库之关系数据库</title>
+    <url>/2022/05/05/20-01-47/</url>
+    <content><![CDATA[<h5 id="（1）关系模式（了解即可）"><a href="#（1）关系模式（了解即可）" class="headerlink" title="（1）关系模式（了解即可）"></a>（1）关系模式（了解即可）</h5><p>关系模式：对关系的描述</p>
+<p>什么是关系？关系是一张表，一张二维表。</p>
+<p>关系有那些需要描述？P41</p>
+<p>1.关系中有哪些属性</p>
+<p>2.这些属性来自那些域</p>
+<span id="more"></span>
+
+<p>3.属性与域之间的映射关系</p>
+<p>可以形象的表示为：R(U,D,DOM,F)</p>
+<p>R：关系名</p>
+<p>U：所有属性名</p>
+<p>D：属性来自那些域</p>
+<p>DOM：属性和域的映射</p>
+<p>F：属性间的依赖关系</p>
+<p>关系数据库：关系数据库也有关系数据库模式</p>
+<h5 id="（2）关系操作"><a href="#（2）关系操作" class="headerlink" title="（2）关系操作"></a>（2）关系操作</h5><p>关系操作：插入，查询，删除，修改。</p>
+<p>其中，查询操作分为：选择，投影，连接，除法，并，差，交，笛卡尔积。</p>
+<p>查询操作的基本操作：选择，投影，并，差，笛卡尔积。</p>
+<h5 id="（3）关系语言的分类"><a href="#（3）关系语言的分类" class="headerlink" title="（3）关系语言的分类"></a>（3）关系语言的分类</h5><p>分为<font color=red>关系代数语言（重点）</font>，关系演算语言，<font color=red>SQL语言（这个不必多说）</font></p>
+<blockquote>
+<p>关系代数语言：</p>
+<p>关系代数语言是一种抽象的查询语言，它用对关系的运算来表达查询。</p>
+<p>三大要素：<strong>运算对象（关系），运算符（集合运算符和专门的关系运算符）和运算结果（关系）</strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/05/Om8I3V.png" alt="Om8I3V.png"></p>
+<p>关系代数运算：5种基本运算：并，差，交，笛卡尔积，除，选择，投影，连接</p>
+<p>1.交（他俩的公共部分）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmJksU.png" alt="OmJksU.png"></p>
+<p>2.并（他俩的所有部分，不包含重复）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmJniR.png" alt="OmJniR.png"></p>
+<p>3.差（如A-B，去除A中B的部分）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmJ3LD.png" alt="OmJ3LD.png"></p>
+<p>4.笛卡尔积（假如A表中的数据为m行，B表中的数据有n行，那么A和B做笛卡尔积，结果为m*n行。）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmYp0e.png" alt="OmYp0e.png"></p>
+<p>如图，假设有表（a）和（b），则（c）为并集，（d）为交集，（e）为差，（f）为笛卡尔积，R表的第一行分别对应S表的第一行，第二行和第三行，R表的第二行对应S表的第一行，第二行和第三趟，R表的第三行同理。</p>
+<ol start="5">
+<li>选择（从表中选择符合条件的一行或多行记录）</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmtyPs.png" alt="OmtyPs.png"></p>
+<p>例子：</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmtOsK.png" alt="OmtOsK.png"></p>
+<p><img src="https://s1.ax1x.com/2022/05/05/Omtxde.png" alt="Omtxde.png"></p>
+<p>上图2.4的操作语句意为从student表中的sdept列里选择值为cs的记录。</p>
+<p>6.投影（使用一个类似于π的符号）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmN6Te.png" alt="OmN6Te.png"></p>
+<p>上图意为从sc表里选择列snp等于9500的列，但只显示cno这一列。</p>
+<p>连接又可分为：自然连接，外连接，左外连接和右外连接。</p>
+<p>（1）自然连接，把共同属性进行等值连接，把R和S中所有的属性名都放在一起，放的值满足共同属性的值都相等，如果值相等就连接起来拼接到后面。</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmDuHP.png" alt="OmDuHP.png"></p>
+<p>悬浮元祖：两个关系R和S在做自然连接时，关系R中的某些元祖有可能在S中不存在公共属性上值相等的元组，从而造成R中这些远足在操作时被舍弃了，这些被舍弃的元组被称为悬浮元祖。（即没有被用过的元组，被废弃了）</p>
+<p>（2）外连接</p>
+<p>如果把悬浮元祖也保存在结果关系中，而其他属性上填空值，就叫做外连接。</p>
+<p>（3）左外连接</p>
+<p>只保留左边关系R中的悬浮元祖。</p>
+<p>（4）右外连接</p>
+<p>只保留右边关系S中的悬浮元祖。</p>
+<p>7.除（保留R中满足S的，而且R中列要去掉S的列）</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/OmsJwq.png" alt="OmsJwq.png"></p>
+<p>上图中只有张三和王五同时满足选修了数据库和网络这两门课。</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/Oms5Xd.png" alt="Oms5Xd.png"></p>
+</blockquote>
+<h5 id="（4）关系完整性"><a href="#（4）关系完整性" class="headerlink" title="（4）关系完整性"></a>（4）关系完整性</h5><p>1.实体完整性，主码为1且非空。如学生实体的学号唯一且非空。</p>
+<p>2.参照完整性，外码要么为空，要么对应另一表的主码。</p>
+<p>3.用户定义完整性，你自己写的要完整，比如学号多少，姓名，班级，专业之类。如需要自己填写的信息都填写上。</p>
+<h5 id="内容挺多且都比较重要。"><a href="#内容挺多且都比较重要。" class="headerlink" title="内容挺多且都比较重要。"></a>内容挺多且都比较重要。</h5>]]></content>
+      <categories>
+        <category>数据库系统概论</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库之绪论</title>
+    <url>/2022/05/04/16-22-14/</url>
+    <content><![CDATA[<h4 id="数据库的四个基本概念"><a href="#数据库的四个基本概念" class="headerlink" title="数据库的四个基本概念"></a>数据库的四个基本概念</h4><p>①数据：描述事物的符号记录。</p>
+<p>②数据库：通俗的讲，数据库具有<strong>永久存储，有组织和可共享</strong>的三个基本特点</p>
+<p>严格地讲，<strong>数据是长期存储在计算机内、有组织的、可共享的大量数据的集合，数据库中的数据按一定的数据模型组织、描述和存储，具有较小的冗余度，较高的数据独立性和易扩展性，并可为各种用户共享。</strong></p>
+<span id="more"></span>
+
+<p>③数据库管理系统：是位于用户和操作系统之间的一层数据管理软件，和操作系统一样是<strong>计算机的基础软件</strong>。</p>
+<p>主要功能：1.数据定义功能；2.数据组织，存储和管理；3.数据操纵功能；4.数据库的事务管理和运行管理；5.数据库的建立和维护功能；6.其他功能（通信功能，数据转换功能，互访和互操作功能等）</p>
+<p>④数据库系统：由数据库、数据库管理系统（及应用开发工具）、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVeJmT.png" alt="OVeJmT.png"></p>
+<h4 id="数据库的发展阶段"><a href="#数据库的发展阶段" class="headerlink" title="数据库的发展阶段"></a>数据库的发展阶段</h4><p>①人工阶段：数据不保存、不共享，不具有独立性</p>
+<p>②文件系统阶段：可保存，但共享性差，冗余度大，独立性差</p>
+<p>③数据库管理系统：数据库系统的出现使得信息系统以<strong>加工数据的程序为中心</strong>转向围绕<strong>共享的数据库</strong>为中心的新阶段，实现整体数据的结构化。</p>
+<p><strong>数据的共享性高，冗余度低且易扩充，数据共享可以大大减少数据冗余，节约存储空间。</strong></p>
+<blockquote>
+<p>数据的独立性高：</p>
+<ul>
+<li>物理独立性：是指用户的应用程序与数据库中数据的<strong>物理存储</strong>是相互独立的。</li>
+<li>逻辑独立性：是指用户的应用程序与数据库的<strong>逻辑结构</strong>是相互独立的。</li>
+</ul>
+</blockquote>
+<p>数据库由<strong>数据库管理员（DBA）</strong>统一管理和控制。</p>
+<h4 id="数据模型（这个应该蛮重要的）"><a href="#数据模型（这个应该蛮重要的）" class="headerlink" title="数据模型（这个应该蛮重要的）"></a>数据模型<font color=red>（这个应该蛮重要的）</font></h4><h5 id="（1）两类数据模型："><a href="#（1）两类数据模型：" class="headerlink" title="（1）两类数据模型："></a>（1）两类数据模型：</h5><p><strong>概念模型+逻辑模型和物理模型</strong>（人们首先将现实世界抽象为信息世界，然后将信息世界转换为机器世界）</p>
+<p>1.概念模型：也称信息模型，它是按用户观点来对数据和信息建模，主要用于数据库设计。</p>
+<blockquote>
+<p>基本概念：</p>
+<ul>
+<li><strong>实体</strong>：客观存在可相互区别的事物，人</li>
+<li><strong>属性</strong>：实体所具有的某一特性。如人的鼻子，嘴巴。</li>
+<li><strong>码</strong>：唯一标识实体的属性。如学号</li>
+<li><strong>实体型</strong>：用实体名及其属性集合来抽象和刻画同类实体。如含有鼻子和嘴巴的人。</li>
+<li><strong>实体集</strong>：同一类型实体的集合。如学校。</li>
+<li><strong>联系</strong>：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。</li>
+</ul>
+</blockquote>
+<p>概念模型的一种表示方法：<strong>实体——联系</strong>方法，用<strong>E-R图</strong>来描述现实世界的概念模型。<strong>E-R图方法也称为E-R模型。</strong></p>
+<p>2.逻辑模型：它是按计算机系统的观点对数据建模，主要用于数据库管理系统的实现。</p>
+<p>包括：**①层次模型      ②网状模型       ③关系模型  **</p>
+<p>物理模型：是对数据最底层的抽象，它描述数据在系统内部的表示方法和存取方法，或在磁盘或磁带上的存储方式和存取方法，是面向计算机系统的。</p>
+<p>联系：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。实体内部的联系通常是指<strong>实体各属性之间的联系</strong>。</p>
+<blockquote>
+<p><strong><font color=red>E-R图</font></strong></p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVKrPe.png" alt="OVKrPe.png"></p>
+<p>E-R图分为<strong>实体，属性和关系</strong>三个基本部分。<strong>实体用长方形，属性用椭圆形，关系用菱形。</strong></p>
+</blockquote>
+<h5 id="（2）常用的数据模型"><a href="#（2）常用的数据模型" class="headerlink" title="（2）常用的数据模型"></a>（2）常用的数据模型</h5><p>常用的数据模型：<strong>层次模型，网状模型，关系模型</strong>，面向对象数据模型，对象关系数据模型，半结构化数据模型</p>
+<blockquote>
+<p><strong>层次模型</strong>:</p>
+<p>1.有且只有一个节点没有双亲节点，这个节点被称为<strong>根节点</strong>。</p>
+<p>2.根以外的其他节点有且只有一个双亲结点。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVQIjs.png" alt="OVQIjs.png"></p>
+<p><strong>网状模型</strong>：</p>
+<p>1.允许一个以上的节点无双亲。</p>
+<p>2.一个节点可以有多于一个双亲。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVlKbt.png" alt="OVlKbt.png"></p>
+<p><strong>关系模型</strong>：</p>
+<p>关系：一个关系对应通常说的一张表。</p>
+<p>元组：表中的一行。</p>
+<p>属性：表中的一列。</p>
+<p>码：也称为码键，表中的某个属性组。（主键）</p>
+<p>域：是一组具有相同数据类型的值的集合。</p>
+<p>分量：元祖中的一个属性。</p>
+<p><img src="https://s1.ax1x.com/2022/05/04/OVlRq1.png" alt="OVlRq1.png"></p>
+</blockquote>
+<h5 id="（3）数据库系统的结构"><a href="#（3）数据库系统的结构" class="headerlink" title="（3）数据库系统的结构"></a>（3）数据库系统的结构</h5><p>1.模式数据库中全体数据的逻辑结构和特征的描述，它仅仅涉及型的描述，不涉及具体的值。其中一个具体值称为模式的一个实例。<strong>模式是相对稳定的，实例是相对变动的。</strong></p>
+<p>三级模式结构：<strong>外模式+模式+内模式</strong>。</p>
+<p>外模式：也称子模式或用户模式，它是数据库用户（包括应用程序猿和最终用户）能够看见和使用的局部数据的逻辑结构和特征的描述，是数据库用户的数据视图，是与某一应用有关的数据的逻辑表示。</p>
+<p>模式：也称逻辑模式。是数据库中全体数据的逻辑结构和特征的描述，是所有用户的公共数据视图。</p>
+<p>内模式：也称存储模式，一个数据库只有一个内模式，他是数据物理结构和存取方式的描述，是数据在数据库内部的组织方式。</p>
+<p>2.二级映像：</p>
+<p>外模式/模式映像：当模式改变时，由数据库管理员对各个外模式/模式映像作相应改变，可以使外模式不变，应用程序不必修改。保证了数据与程序的逻辑独立性。</p>
+<p>模式/内模式映像：当数据库的存取结构改变时，由数据库管理员对模式/内模式作相应改变，可以使模式保持不变，从而应用程序也不用改变，保证了数据与程序的物理独立性。</p>
+<p>数据与程序之间的独立性使得数据的定义和描述可以从应用程序中分离出去，另外，由于数据的存取由数据库管理系统管理，从而简化了应用程序的编制，大大减少了应用程序的维护和修改。</p>
+<p><img src="https://s1.ax1x.com/2022/05/05/Om8yjS.png" alt="Om8yjS.png"></p>
+<h5 id="（4）数据库系统的组成"><a href="#（4）数据库系统的组成" class="headerlink" title="（4）数据库系统的组成"></a>（4）数据库系统的组成</h5><p>1.硬件平台及数据库：足够大内存、磁盘或磁盘阵列等设备，较高的通道能力以提高数据的传送率。</p>
+<p>2.软件：数据库管理系统，支持的数据库管理系统运行的操作系统，具有与数据库接口的高级语言及其编译系统，以数据库管理系统为核心的应用开发工具，为特定应用环境开发的数据库应用系统。</p>
+<p>3.人员：开发，管理和使用数据库的人员主要包括数据库管理员、系统分析员和数据库设计人员、应用程序猿和最终用户。</p>
+<p>数据库管理员职责：决定数据库中的信息内容和结构、决定数据库的存储结构和存取策略、定义数据的安全性要求和完整性约束条件。</p>
+]]></content>
+      <categories>
+        <category>数据库系统概论</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -1868,333 +2359,6 @@ width="100%" heigh="600" high_quality="1" danmaku="0"> </iframe>
       <tags>
         <tag>软件工程</tag>
         <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库之关系数据库</title>
-    <url>/2022/05/05/20-01-47/</url>
-    <content><![CDATA[<h5 id="（1）关系模式（了解即可）"><a href="#（1）关系模式（了解即可）" class="headerlink" title="（1）关系模式（了解即可）"></a>（1）关系模式（了解即可）</h5><p>关系模式：对关系的描述</p>
-<p>什么是关系？关系是一张表，一张二维表。</p>
-<p>关系有那些需要描述？P41</p>
-<p>1.关系中有哪些属性</p>
-<p>2.这些属性来自那些域</p>
-<span id="more"></span>
-
-<p>3.属性与域之间的映射关系</p>
-<p>可以形象的表示为：R(U,D,DOM,F)</p>
-<p>R：关系名</p>
-<p>U：所有属性名</p>
-<p>D：属性来自那些域</p>
-<p>DOM：属性和域的映射</p>
-<p>F：属性间的依赖关系</p>
-<p>关系数据库：关系数据库也有关系数据库模式</p>
-<h5 id="（2）关系操作"><a href="#（2）关系操作" class="headerlink" title="（2）关系操作"></a>（2）关系操作</h5><p>关系操作：插入，查询，删除，修改。</p>
-<p>其中，查询操作分为：选择，投影，连接，除法，并，差，交，笛卡尔积。</p>
-<p>查询操作的基本操作：选择，投影，并，差，笛卡尔积。</p>
-<h5 id="（3）关系语言的分类"><a href="#（3）关系语言的分类" class="headerlink" title="（3）关系语言的分类"></a>（3）关系语言的分类</h5><p>分为<font color=red>关系代数语言（重点）</font>，关系演算语言，<font color=red>SQL语言（这个不必多说）</font></p>
-<blockquote>
-<p>关系代数语言：</p>
-<p>关系代数语言是一种抽象的查询语言，它用对关系的运算来表达查询。</p>
-<p>三大要素：<strong>运算对象（关系），运算符（集合运算符和专门的关系运算符）和运算结果（关系）</strong></p>
-<p><img src="https://s1.ax1x.com/2022/05/05/Om8I3V.png" alt="Om8I3V.png"></p>
-<p>关系代数运算：5种基本运算：并，差，交，笛卡尔积，除，选择，投影，连接</p>
-<p>1.交（他俩的公共部分）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmJksU.png" alt="OmJksU.png"></p>
-<p>2.并（他俩的所有部分，不包含重复）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmJniR.png" alt="OmJniR.png"></p>
-<p>3.差（如A-B，去除A中B的部分）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmJ3LD.png" alt="OmJ3LD.png"></p>
-<p>4.笛卡尔积（假如A表中的数据为m行，B表中的数据有n行，那么A和B做笛卡尔积，结果为m*n行。）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmYp0e.png" alt="OmYp0e.png"></p>
-<p>如图，假设有表（a）和（b），则（c）为并集，（d）为交集，（e）为差，（f）为笛卡尔积，R表的第一行分别对应S表的第一行，第二行和第三行，R表的第二行对应S表的第一行，第二行和第三趟，R表的第三行同理。</p>
-<ol start="5">
-<li>选择（从表中选择符合条件的一行或多行记录）</li>
-</ol>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmtyPs.png" alt="OmtyPs.png"></p>
-<p>例子：</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmtOsK.png" alt="OmtOsK.png"></p>
-<p><img src="https://s1.ax1x.com/2022/05/05/Omtxde.png" alt="Omtxde.png"></p>
-<p>上图2.4的操作语句意为从student表中的sdept列里选择值为cs的记录。</p>
-<p>6.投影（使用一个类似于π的符号）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmN6Te.png" alt="OmN6Te.png"></p>
-<p>上图意为从sc表里选择列snp等于9500的列，但只显示cno这一列。</p>
-<p>连接又可分为：自然连接，外连接，左外连接和右外连接。</p>
-<p>（1）自然连接，把共同属性进行等值连接，把R和S中所有的属性名都放在一起，放的值满足共同属性的值都相等，如果值相等就连接起来拼接到后面。</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmDuHP.png" alt="OmDuHP.png"></p>
-<p>悬浮元祖：两个关系R和S在做自然连接时，关系R中的某些元祖有可能在S中不存在公共属性上值相等的元组，从而造成R中这些远足在操作时被舍弃了，这些被舍弃的元组被称为悬浮元祖。（即没有被用过的元组，被废弃了）</p>
-<p>（2）外连接</p>
-<p>如果把悬浮元祖也保存在结果关系中，而其他属性上填空值，就叫做外连接。</p>
-<p>（3）左外连接</p>
-<p>只保留左边关系R中的悬浮元祖。</p>
-<p>（4）右外连接</p>
-<p>只保留右边关系S中的悬浮元祖。</p>
-<p>7.除（保留R中满足S的，而且R中列要去掉S的列）</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/OmsJwq.png" alt="OmsJwq.png"></p>
-<p>上图中只有张三和王五同时满足选修了数据库和网络这两门课。</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/Oms5Xd.png" alt="Oms5Xd.png"></p>
-</blockquote>
-<h5 id="（4）关系完整性"><a href="#（4）关系完整性" class="headerlink" title="（4）关系完整性"></a>（4）关系完整性</h5><p>1.实体完整性，主码为1且非空。如学生实体的学号唯一且非空。</p>
-<p>2.参照完整性，外码要么为空，要么对应另一表的主码。</p>
-<p>3.用户定义完整性，你自己写的要完整，比如学号多少，姓名，班级，专业之类。如需要自己填写的信息都填写上。</p>
-<h5 id="内容挺多且都比较重要。"><a href="#内容挺多且都比较重要。" class="headerlink" title="内容挺多且都比较重要。"></a>内容挺多且都比较重要。</h5>]]></content>
-      <categories>
-        <category>数据库系统概论</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库之绪论</title>
-    <url>/2022/05/04/16-22-14/</url>
-    <content><![CDATA[<h4 id="数据库的四个基本概念"><a href="#数据库的四个基本概念" class="headerlink" title="数据库的四个基本概念"></a>数据库的四个基本概念</h4><p>①数据：描述事物的符号记录。</p>
-<p>②数据库：通俗的讲，数据库具有<strong>永久存储，有组织和可共享</strong>的三个基本特点</p>
-<p>严格地讲，<strong>数据是长期存储在计算机内、有组织的、可共享的大量数据的集合，数据库中的数据按一定的数据模型组织、描述和存储，具有较小的冗余度，较高的数据独立性和易扩展性，并可为各种用户共享。</strong></p>
-<span id="more"></span>
-
-<p>③数据库管理系统：是位于用户和操作系统之间的一层数据管理软件，和操作系统一样是<strong>计算机的基础软件</strong>。</p>
-<p>主要功能：1.数据定义功能；2.数据组织，存储和管理；3.数据操纵功能；4.数据库的事务管理和运行管理；5.数据库的建立和维护功能；6.其他功能（通信功能，数据转换功能，互访和互操作功能等）</p>
-<p>④数据库系统：由数据库、数据库管理系统（及应用开发工具）、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVeJmT.png" alt="OVeJmT.png"></p>
-<h4 id="数据库的发展阶段"><a href="#数据库的发展阶段" class="headerlink" title="数据库的发展阶段"></a>数据库的发展阶段</h4><p>①人工阶段：数据不保存、不共享，不具有独立性</p>
-<p>②文件系统阶段：可保存，但共享性差，冗余度大，独立性差</p>
-<p>③数据库管理系统：数据库系统的出现使得信息系统以<strong>加工数据的程序为中心</strong>转向围绕<strong>共享的数据库</strong>为中心的新阶段，实现整体数据的结构化。</p>
-<p><strong>数据的共享性高，冗余度低且易扩充，数据共享可以大大减少数据冗余，节约存储空间。</strong></p>
-<blockquote>
-<p>数据的独立性高：</p>
-<ul>
-<li>物理独立性：是指用户的应用程序与数据库中数据的<strong>物理存储</strong>是相互独立的。</li>
-<li>逻辑独立性：是指用户的应用程序与数据库的<strong>逻辑结构</strong>是相互独立的。</li>
-</ul>
-</blockquote>
-<p>数据库由<strong>数据库管理员（DBA）</strong>统一管理和控制。</p>
-<h4 id="数据模型（这个应该蛮重要的）"><a href="#数据模型（这个应该蛮重要的）" class="headerlink" title="数据模型（这个应该蛮重要的）"></a>数据模型<font color=red>（这个应该蛮重要的）</font></h4><h5 id="（1）两类数据模型："><a href="#（1）两类数据模型：" class="headerlink" title="（1）两类数据模型："></a>（1）两类数据模型：</h5><p><strong>概念模型+逻辑模型和物理模型</strong>（人们首先将现实世界抽象为信息世界，然后将信息世界转换为机器世界）</p>
-<p>1.概念模型：也称信息模型，它是按用户观点来对数据和信息建模，主要用于数据库设计。</p>
-<blockquote>
-<p>基本概念：</p>
-<ul>
-<li><strong>实体</strong>：客观存在可相互区别的事物，人</li>
-<li><strong>属性</strong>：实体所具有的某一特性。如人的鼻子，嘴巴。</li>
-<li><strong>码</strong>：唯一标识实体的属性。如学号</li>
-<li><strong>实体型</strong>：用实体名及其属性集合来抽象和刻画同类实体。如含有鼻子和嘴巴的人。</li>
-<li><strong>实体集</strong>：同一类型实体的集合。如学校。</li>
-<li><strong>联系</strong>：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。</li>
-</ul>
-</blockquote>
-<p>概念模型的一种表示方法：<strong>实体——联系</strong>方法，用<strong>E-R图</strong>来描述现实世界的概念模型。<strong>E-R图方法也称为E-R模型。</strong></p>
-<p>2.逻辑模型：它是按计算机系统的观点对数据建模，主要用于数据库管理系统的实现。</p>
-<p>包括：**①层次模型      ②网状模型       ③关系模型  **</p>
-<p>物理模型：是对数据最底层的抽象，它描述数据在系统内部的表示方法和存取方法，或在磁盘或磁带上的存储方式和存取方法，是面向计算机系统的。</p>
-<p>联系：实体之间的联系通常是指不同实体之间的联系，实体之间的联系有<strong>一对一，一对多和多对多</strong>等多种联系。实体内部的联系通常是指<strong>实体各属性之间的联系</strong>。</p>
-<blockquote>
-<p><strong><font color=red>E-R图</font></strong></p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVKrPe.png" alt="OVKrPe.png"></p>
-<p>E-R图分为<strong>实体，属性和关系</strong>三个基本部分。<strong>实体用长方形，属性用椭圆形，关系用菱形。</strong></p>
-</blockquote>
-<h5 id="（2）常用的数据模型"><a href="#（2）常用的数据模型" class="headerlink" title="（2）常用的数据模型"></a>（2）常用的数据模型</h5><p>常用的数据模型：<strong>层次模型，网状模型，关系模型</strong>，面向对象数据模型，对象关系数据模型，半结构化数据模型</p>
-<blockquote>
-<p><strong>层次模型</strong>:</p>
-<p>1.有且只有一个节点没有双亲节点，这个节点被称为<strong>根节点</strong>。</p>
-<p>2.根以外的其他节点有且只有一个双亲结点。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVQIjs.png" alt="OVQIjs.png"></p>
-<p><strong>网状模型</strong>：</p>
-<p>1.允许一个以上的节点无双亲。</p>
-<p>2.一个节点可以有多于一个双亲。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVlKbt.png" alt="OVlKbt.png"></p>
-<p><strong>关系模型</strong>：</p>
-<p>关系：一个关系对应通常说的一张表。</p>
-<p>元组：表中的一行。</p>
-<p>属性：表中的一列。</p>
-<p>码：也称为码键，表中的某个属性组。（主键）</p>
-<p>域：是一组具有相同数据类型的值的集合。</p>
-<p>分量：元祖中的一个属性。</p>
-<p><img src="https://s1.ax1x.com/2022/05/04/OVlRq1.png" alt="OVlRq1.png"></p>
-</blockquote>
-<h5 id="（3）数据库系统的结构"><a href="#（3）数据库系统的结构" class="headerlink" title="（3）数据库系统的结构"></a>（3）数据库系统的结构</h5><p>1.模式数据库中全体数据的逻辑结构和特征的描述，它仅仅涉及型的描述，不涉及具体的值。其中一个具体值称为模式的一个实例。<strong>模式是相对稳定的，实例是相对变动的。</strong></p>
-<p>三级模式结构：<strong>外模式+模式+内模式</strong>。</p>
-<p>外模式：也称子模式或用户模式，它是数据库用户（包括应用程序猿和最终用户）能够看见和使用的局部数据的逻辑结构和特征的描述，是数据库用户的数据视图，是与某一应用有关的数据的逻辑表示。</p>
-<p>模式：也称逻辑模式。是数据库中全体数据的逻辑结构和特征的描述，是所有用户的公共数据视图。</p>
-<p>内模式：也称存储模式，一个数据库只有一个内模式，他是数据物理结构和存取方式的描述，是数据在数据库内部的组织方式。</p>
-<p>2.二级映像：</p>
-<p>外模式/模式映像：当模式改变时，由数据库管理员对各个外模式/模式映像作相应改变，可以使外模式不变，应用程序不必修改。保证了数据与程序的逻辑独立性。</p>
-<p>模式/内模式映像：当数据库的存取结构改变时，由数据库管理员对模式/内模式作相应改变，可以使模式保持不变，从而应用程序也不用改变，保证了数据与程序的物理独立性。</p>
-<p>数据与程序之间的独立性使得数据的定义和描述可以从应用程序中分离出去，另外，由于数据的存取由数据库管理系统管理，从而简化了应用程序的编制，大大减少了应用程序的维护和修改。</p>
-<p><img src="https://s1.ax1x.com/2022/05/05/Om8yjS.png" alt="Om8yjS.png"></p>
-<h5 id="（4）数据库系统的组成"><a href="#（4）数据库系统的组成" class="headerlink" title="（4）数据库系统的组成"></a>（4）数据库系统的组成</h5><p>1.硬件平台及数据库：足够大内存、磁盘或磁盘阵列等设备，较高的通道能力以提高数据的传送率。</p>
-<p>2.软件：数据库管理系统，支持的数据库管理系统运行的操作系统，具有与数据库接口的高级语言及其编译系统，以数据库管理系统为核心的应用开发工具，为特定应用环境开发的数据库应用系统。</p>
-<p>3.人员：开发，管理和使用数据库的人员主要包括数据库管理员、系统分析员和数据库设计人员、应用程序猿和最终用户。</p>
-<p>数据库管理员职责：决定数据库中的信息内容和结构、决定数据库的存储结构和存取策略、定义数据的安全性要求和完整性约束条件。</p>
-]]></content>
-      <categories>
-        <category>数据库系统概论</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库之SQL语言（上）</title>
-    <url>/2022/05/06/20-43-40/</url>
-    <content><![CDATA[<h5 id="（1）SQL的基本概念"><a href="#（1）SQL的基本概念" class="headerlink" title="（1）SQL的基本概念"></a>（1）SQL的基本概念</h5><p>SQL是Structured Query Language的缩写，意思是<strong>结构化查询语言</strong>，是一种在数据库管理系统中查询或对数据库库里面的数据进行更改的语言。</p>
-<p>常见的数据库管理系统：关系型：MySql，OracleDatabase和SQL Server，非关系型：redis和mongoDB。不同数据库管理系统的SQL语言略有不同。</p>
-<span id="more"></span>
-
-<p>SQL语言包括：</p>
-<blockquote>
-<p>1.数据定义语言DDL（Data Ddefinition Language）</p>
-<p>SQL数据定义语言主要用来定义逻辑结构，包括定义基本表，试图和索引。</p>
-<p>删除表，定义表和修改表。</p>
-<p>2.数据库查询语言DQL（Data Query Language）</p>
-<p>SQL的数据库查询语言主要用来对数据库中的各种数据对象进行查询。</p>
-<p>3.数据操纵语言DML（Data Manipulation Language）</p>
-<p>SQL的数据库操纵语言勇于改变数据库中的数据，包括插入，删除和修改。</p>
-<p>4.数据控制功能DCL（Data Control Language）</p>
-<p>SQL的数据操纵语言是对表和视图的授权（比如不同的用户被授予不同的数据库权限），完整性规则的描述以及事务开始和结束等控制语句。</p>
-</blockquote>
-<p>SQL语言的特点：</p>
-<blockquote>
-<p>1.综合统一（独立完成数据库生命周期中的全部活动，包括定义关系模式、录入数据，建立数据库、查询、更新、维护、数据库重构、数据库安全等）</p>
-<p>2.高度非过程化（用户只需指明“做什么”，而不必指明“怎么做”）</p>
-<p>3.面向集合的操作方式（SQL采用集合操作模式）</p>
-<p>4.以同一种语法结构提供两种使用方式（SQL既是自含式语言，又是嵌入式语言，SQL语言能够嵌入到高级语言程序中。）</p>
-<p>5.语言简洁，易学易用（SQL语言语法简单，接近英语口语，因此易学习也易使用）</p>
-</blockquote>
-<h5 id="（3）SQL的基本语法"><a href="#（3）SQL的基本语法" class="headerlink" title="（3）SQL的基本语法"></a><font color=red>（3）SQL的基本语法</font></h5><h6 id="0-SQL语言的基本数据类型（变量类型）"><a href="#0-SQL语言的基本数据类型（变量类型）" class="headerlink" title="0.SQL语言的基本数据类型（变量类型）"></a>0.SQL语言的基本数据类型（变量类型）</h6><table>
-<thead>
-<tr>
-<th><center>数据类型</center></th>
-<th><center>含义</center></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><b>CHAR(n)</b>，CHARACTER(n)</td>
-<td>长度为n的变长字符串</td>
-</tr>
-<tr>
-<td><b>VARCHAR(n)</b>，CHARACTERVARYING(n)</td>
-<td>最大长度为n的变长字符串</td>
-</tr>
-<tr>
-<td>CLOB</td>
-<td>字符串大对象</td>
-</tr>
-<tr>
-<td>BLOB</td>
-<td>二进制大对象</td>
-</tr>
-<tr>
-<td><b>INT</b>，INTEGER</td>
-<td>长整数（4字节）</td>
-</tr>
-<tr>
-<td><b>SMALLINT</b></td>
-<td>短整数（2字节）</td>
-</tr>
-<tr>
-<td><b>BIGINT</b></td>
-<td>大整数（8字节）</td>
-</tr>
-<tr>
-<td><b>NUMERIC(p，d)</b></td>
-<td>定点数，由p位数字（不包括符号、小数点）组成，小数点后面有d位数字</td>
-</tr>
-<tr>
-<td><b>DECIMAL(p，d)</b>，DEC(p，d)</td>
-<td>同NUMERIC</td>
-</tr>
-<tr>
-<td>REAL</td>
-<td>取决于机器精度的单精度浮点数</td>
-</tr>
-<tr>
-<td>DOUBLE  PRECISION</td>
-<td>取决于机器精度的双精度浮点数</td>
-</tr>
-<tr>
-<td><b>FLOAT(n)</b></td>
-<td>可选精度的浮点数，精度至少为n位</td>
-</tr>
-<tr>
-<td>BOOLEAN</td>
-<td>逻辑布尔量</td>
-</tr>
-<tr>
-<td><b>DATE</b></td>
-<td>日期，包含年月日，格式为YYYY-MM-DD</td>
-</tr>
-<tr>
-<td><b>TIME</b></td>
-<td>时间，包含一日的时分秒，格式为HH:MM:SS</td>
-</tr>
-<tr>
-<td><b>TIMESTAMP</b></td>
-<td>时间戳类型（毫秒）</td>
-</tr>
-<tr>
-<td>INTERAVL</td>
-<td>时间间隔类型</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h6 id="1-模式的定义-amp-删除"><a href="#1-模式的定义-amp-删除" class="headerlink" title="1.模式的定义&amp;删除"></a>1.模式的定义&amp;删除</h6><p>模式定义：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> SCHEMA <span class="operator">&lt;</span>模式名<span class="operator">&gt;</span> <span class="keyword">AUTHORIZATION</span> <span class="operator">&lt;</span>用户名<span class="operator">&gt;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如：为用户WANG定义一个学生-课程模式S-T</span></span><br><span class="line"><span class="keyword">CREATE</span> SCHEMA &quot;S-T&quot; <span class="keyword">AUTHORIZATION</span> WANG;</span><br></pre></td></tr></table></figure>
-
-<p>模式定义+视图</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> SCHEMA <span class="operator">&lt;</span>模式名<span class="operator">&gt;</span> <span class="keyword">AUTHORIZATION</span> <span class="operator">&lt;</span>用户名<span class="operator">&gt;</span> [<span class="operator">&lt;</span>表定义子句<span class="operator">&gt;</span><span class="operator">|</span><span class="operator">&lt;</span>视图定义子句<span class="operator">&gt;</span><span class="operator">|</span><span class="operator">&lt;</span>授权定义子句<span class="operator">&gt;</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如：创建模式 + 表定义子句</span></span><br><span class="line"><span class="keyword">CREATE</span> SCHEMA &quot;learn&quot; <span class="keyword">AUTHORIZATION</span> zhangxu <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">user</span>(id <span class="type">INT</span> <span class="keyword">PRIMARY</span> KEY,age <span class="type">INT</span>,name <span class="type">VARCHAR</span>(<span class="number">255</span>));</span><br></pre></td></tr></table></figure>
-
-<p>模式删除</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DROP</span> SCHEMA <span class="operator">&lt;</span>模式名<span class="operator">&gt;</span> <span class="operator">&lt;</span>CASCADE<span class="operator">|</span>RESTRICT<span class="operator">&gt;</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">删除模式，其中参数CASCADE和RESTRICT必须二选一</span></span><br><span class="line"><span class="comment">1.CASCADE是级联，删除模式的时候同时也把该模式的所有数据库对象删除</span></span><br><span class="line"><span class="comment">2.RESTRICT是限制，如果该模式下有下属对象，比如表视图，就拒绝这个删除语句的执行。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>SQL语言关键字并不区分大小写，比如：<br>创建表Student:<br>        create table Student;<br>        CREATE TABLE Student;<br>效果完全相同，但表名Student必须严格区分大小写，字段名和属性值同理。</p>
-</blockquote>
-<h6 id="2-表的定义，删除和修改"><a href="#2-表的定义，删除和修改" class="headerlink" title="2.表的定义，删除和修改"></a>2.表的定义，删除和修改</h6><p>创建</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(字段名 类型 字段约束,字段名 类型);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">user</span>(</span><br><span class="line">    id <span class="type">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">PRIMARY</span> KEY,</span><br><span class="line">    name <span class="type">VARCHAR</span>(<span class="number">20</span>),</span><br><span class="line">    age <span class="type">INT</span>,</span><br><span class="line">    sec <span class="type">CHAR</span>&#123;<span class="number">1</span>&#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-
-<p>删除</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> &#123;RESTRICT<span class="operator">|</span>CASCADE&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- CASCADE是如果表有外链，视图，触发器的话也会强行删除，RESTRICT相--- 反。</span></span><br><span class="line"><span class="comment">-- 如：删除Student表</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> Student CASCADE;</span><br></pre></td></tr></table></figure>
-
-<p>修改</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> </span><br><span class="line">[<span class="keyword">ADD</span> [<span class="keyword">COLUMN</span>] <span class="operator">&lt;</span>新列名<span class="operator">&gt;</span> <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span> [完整性约束]]</span><br><span class="line">[<span class="keyword">ADD</span> [表级完整性约束]]</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如：想Student表中添加“入学时间”列，其数据类型为日期型。</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">ADD</span> S_entrance DATA;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 将年龄的数据类型由字符型（假设原来的数据类型是字符型）改为整数。</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> Student <span class="keyword">ALTER</span> <span class="keyword">COLUMN</span> Sage <span class="type">INT</span>;</span><br></pre></td></tr></table></figure>
-
-<h6 id="3-索引的建立、修改和删除"><a href="#3-索引的建立、修改和删除" class="headerlink" title="3.索引的建立、修改和删除"></a>3.索引的建立、修改和删除</h6><p>数据量比较大的时候，查询耗时长，建立索引可以有效减少消耗时间。索引可以建立在一列或者多列上。前提是保证索引列是唯一。</p>
-<p>创建</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> [<span class="keyword">UNIQUE</span>] [CLUSTER] INDEX <span class="operator">&lt;</span>索引名<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">ON</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span>(<span class="operator">&lt;</span>列名<span class="operator">&gt;</span> [<span class="operator">&lt;</span>次序<span class="operator">&gt;</span>] [,<span class="operator">&lt;</span>列名<span class="operator">&gt;</span> [<span class="operator">&lt;</span>次序<span class="operator">&gt;</span>]] ...)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- CLUSTER是聚簇索引</span></span><br><span class="line"><span class="comment">-- UNIQUE是唯一索引</span></span><br><span class="line"><span class="comment">-- 如：</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> INDEX Stusno <span class="keyword">ON</span> Student(Sno);</span><br></pre></td></tr></table></figure>
-
-<p>修改</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> INDEX <span class="operator">&lt;</span>旧索引名<span class="operator">&gt;</span> RENAME <span class="keyword">TO</span> <span class="operator">&lt;</span>新索引名<span class="operator">&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如：将SC表的SCno索引名改为SCSno</span></span><br><span class="line"><span class="keyword">ALTER</span> INDEX SCno RENAME <span class="keyword">TO</span> SCSno;</span><br></pre></td></tr></table></figure>
-
-<p>删除</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DROP</span> INDEX <span class="operator">&lt;</span>索引名<span class="operator">&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 如：删除Student表的Stusname索引</span></span><br><span class="line"><span class="keyword">DROP</span> INDEX Stusname;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据库系统概论</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据库之SQL语言（中）</title>
-    <url>/2022/05/07/21-13-27/</url>
-    <content><![CDATA[<p>基本上全是重点……………..</p>
-<span id="more"></span>
-
-<p>例：有三张表</p>
-<p><img src="https://s1.ax1x.com/2022/05/07/OlKOg0.png" alt="OlKOg0.png"></p>
-<h5 id="（1）查询所有-amp-查询部分列"><a href="#（1）查询所有-amp-查询部分列" class="headerlink" title="（1）查询所有 &amp; 查询部分列"></a>（1）查询所有 &amp; 查询部分列</h5><p>查询即选择，使用SELECT关键字</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- (1) 查询所有</span></span><br><span class="line"><span class="comment">-- 查询Student表中的所有学生信息。</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Student;</span><br><span class="line"><span class="comment">-- * 表示通配符，意为选择所有字段，等价于</span></span><br><span class="line"><span class="keyword">SELECT</span> Sno,Sname,Ssex,Sage,Sdept <span class="keyword">FROM</span> Student;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- （2）查询部分</span></span><br><span class="line"><span class="comment">-- 查询Student表中的所有学生的学号和姓名。</span></span><br><span class="line"><span class="keyword">SELECT</span> Sno,Sname <span class="keyword">FROM</span> Student;</span><br><span class="line"><span class="comment">-- 意为查询结果只显示Sno和Sname两列。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- （3）起别名</span></span><br><span class="line"><span class="comment">-- 查询Student表中的所有学生的学号和姓名。</span></span><br><span class="line"><span class="keyword">SELECT</span> Sno <span class="keyword">AS</span> &quot;学号&quot;,Sname <span class="keyword">AS</span> &quot;姓名&quot; <span class="keyword">FROM</span> Student <span class="keyword">AS</span> &quot;学生表&quot;; </span><br><span class="line"><span class="comment">-- 使用AS关键字,且关键字AS可省略。表名也一样。</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据库系统概论</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
       </tags>
   </entry>
 </search>
