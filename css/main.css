@@ -2997,7 +2997,7 @@ mjx-container[display='true'] + br {
   cursor: url("https://deerblog.xyz/blog-image/Hand.cur"), auto;
 }
 body {
-  background: url("https://api.ixiaowai.cn/api/api.php");
+  background: url("https://tuapi.eees.cc/api.php?category={dongman}");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
